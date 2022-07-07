@@ -3,7 +3,7 @@ import Favicon from "../components/Favicon";
 
 export default function Document() {
   return (
-    <Html lang="es">
+    <Html lang="es" className="scroll-smooth">
       <Head>
         <Favicon />
       </Head>
