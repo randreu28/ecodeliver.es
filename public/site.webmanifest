@@ -1,6 +1,8 @@
 {
-  "name": "",
-  "short_name": "",
+  "lang": "es",
+  "dir": "ltr",
+  "name": "ecoDeliver",
+  "short_name": "ecoDeliver",
   "icons": [
     {
       "src": "media/favicon/android-chrome-192x192.png",
@@ -13,7 +15,10 @@
       "type": "image/png"
     }
   ],
+  "scope": "/",
+  "start_url": "/particular",
+  "display": "any",
+  "orientation": "any",
   "theme_color": "#ffffff",
-  "background_color": "#ffffff",
-  "display": "standalone"
+  "background_color": "#ffffff"
 }
