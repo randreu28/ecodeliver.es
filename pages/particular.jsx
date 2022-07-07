@@ -1,8 +1,13 @@
 import Navbar from "../components/Navbar";
+import Head from "next/head";
 
-export default function Particulares() {
+export default function Particular() {
   return (
     <>
+      <Head>
+        <title>Particular</title>
+        {/* <body className="bg-neutral" /> */}
+      </Head>
       <Navbar />
       <section id="inicio" className="h-screen flex bg-slate-200">
         <h1 className="m-auto text-5xl">inicio</h1>
