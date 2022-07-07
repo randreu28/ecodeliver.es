@@ -28,7 +28,7 @@ export default function Navbar() {
         <Link href="/">
           <a className="flex flex-row">
             <Image
-              src="/media/brand/icon.svg"
+              src="/media/brand/logo.svg"
               width={50}
               height={50}
               alt="logo"
