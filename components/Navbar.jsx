@@ -23,7 +23,7 @@ export default function Navbar() {
   const router = useRouter();
 
   return (
-    <navbar className="fixed justify-between flex w-full py-3 px-4 xl:px-[10vh] z-50 bg-white text-secondary text-lg">
+    <nav className="fixed justify-between flex w-full py-3 px-4 xl:px-[10vh] z-50 bg-white text-secondary text-lg">
       <div className=" flex-row space-x-8 flex">
         <Link href="/">
           <a className="flex flex-row">
@@ -117,6 +117,6 @@ export default function Navbar() {
           </a>
         </Link>
       </div>
-    </navbar>
+    </nav>
   );
 }
