@@ -1,7 +1,9 @@
 import Navbar from "../components/Navbar";
 import Head from "next/head";
+import Cookies from "js-cookie";
 
 export default function Empresa() {
+  Cookies.set("isBusiness", true);
   return (
     <>
       <Head>
