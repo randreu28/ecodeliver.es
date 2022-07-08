@@ -1,7 +1,9 @@
-import { useEffect, useState } from "react";
-import Image from "next/image";
+import { useEffect, useState, Fragment } from "react";
+import { Popover, Transition } from "@headlessui/react";
+import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Logo from "./Logo";
 
 export default function Navbar() {
   const [section, setSection] = useState("inicio");
@@ -24,22 +26,8 @@ export default function Navbar() {
 
   return (
     <nav className="fixed justify-between flex w-full py-3 px-4 xl:px-[10vh] z-50 bg-white text-secondary text-lg">
-      <div className=" flex-row space-x-8 flex">
-        <Link href="/">
-          <a className="flex flex-row">
-            <Image
-              src="/media/brand/logo.svg"
-              width={50}
-              height={50}
-              alt="logo"
-              priority
-            />
-            <h2 className="my-auto pl-3 text-2xl font-semibold">
-              <span className="text-primary">eco</span>
-              <span>Deliver</span>
-            </h2>
-          </a>
-        </Link>
+      <div className="flex-row space-x-8 flex">
+        <Logo />
         <ul className="my-auto space-x-8 hidden lg:inline">
           <a
             href="#inicio"
@@ -117,6 +105,134 @@ export default function Navbar() {
           </a>
         </Link>
       </div>
+      <Popover className="lg:hidden my-auto">
+        <nav
+          className="relative flex items-center justify-between sm:h-10 lg:justify-start"
+          aria-label="Global"
+        >
+          <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
+            <div className="flex items-center justify-between w-full lg:w-auto">
+              <div className="-mr-2 flex items-center">
+                <Popover.Button className="bg-myDark rounded-md p-2 inline-flex items-center justify-center hover:opacity-75focus:outline-none focus:ring-2 focus:ring-inset focus:ring-myPrimary">
+                  <span className="sr-only">Open main menu</span>
+                  <MenuIcon className="h-6 w-6" aria-hidden="true" />
+                </Popover.Button>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <Transition
+          as={Fragment}
+          enter="duration-150 ease-out"
+          enterFrom="opacity-0 scale-95"
+          enterTo="opacity-100 scale-100"
+          leave="duration-100 ease-in"
+          leaveFrom="opacity-100 scale-100"
+          leaveTo="opacity-0 scale-95"
+        >
+          <Popover.Panel
+            focus
+            className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right"
+          >
+            <div className="rounded-lg ring-1 ring-black ring-opacity-5 overflow-hidden bg-white">
+              <div className="px-5 pt-4 flex items-center justify-between">
+                <Logo />
+                <div className="-mr-2">
+                  <Popover.Button className="rounded-md p-2 inline-flex items-center justify-center  hover:opacity-75 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-myPrimary">
+                    <span className="sr-only">Close main menu</span>
+                    <XIcon className="h-6 w-6" aria-hidden="true" />
+                  </Popover.Button>
+                </div>
+              </div>
+              <div className="px-2 pt-2 pb-3 space-y-1 divide-y">
+                <div>
+                  <Popover.Button
+                    className={
+                      section === "inicio"
+                        ? "block text-lg font-medium px-3 py-2 hover:opacity-75 duration-300 text-primary"
+                        : "block text-lg font-medium px-3 py-2 hover:opacity-75 duration-300"
+                    }
+                    href="#inicio"
+                    as="a"
+                  >
+                    Inicio
+                  </Popover.Button>
+                  <Popover.Button
+                    className={
+                      section === "como-funciona"
+                        ? "block text-lg font-medium px-3 py-2 hover:opacity-75 duration-300 text-primary"
+                        : "block text-lg font-medium px-3 py-2 hover:opacity-75 duration-300"
+                    }
+                    href="#como-funciona"
+                    as="a"
+                  >
+                    Cómo funciona
+                  </Popover.Button>
+                  <Popover.Button
+                    className={
+                      section === "valores"
+                        ? "block text-lg font-medium px-3 py-2 hover:opacity-75 duration-300 text-primary"
+                        : "block text-lg font-medium px-3 py-2 hover:opacity-75 duration-300"
+                    }
+                    href="#valores"
+                    as="a"
+                  >
+                    Valores
+                  </Popover.Button>
+                  <Popover.Button
+                    className={
+                      section === "noticias"
+                        ? "block text-lg font-medium px-3 py-2 hover:opacity-75 duration-300 text-primary"
+                        : "block text-lg font-medium px-3 py-2 hover:opacity-75 duration-300"
+                    }
+                    href="#noticias"
+                    as="a"
+                  >
+                    Noticias
+                  </Popover.Button>
+                  <Popover.Button
+                    className={
+                      section === "faq"
+                        ? "block text-lg font-medium px-3 py-2 hover:opacity-75 duration-300 text-primary"
+                        : "block text-lg font-medium px-3 py-2 hover:opacity-75 duration-300"
+                    }
+                    href="#faq"
+                    as="a"
+                  >
+                    FAQ
+                  </Popover.Button>
+                </div>
+
+                <div>
+                  <Link href="/particular">
+                    <a
+                      className={
+                        router.asPath.includes("/particular")
+                          ? "block text-lg font-medium px-3 py-2 hover:opacity-75 duration-300 text-primary"
+                          : "block text-lg font-medium px-3 py-2 hover:opacity-75 duration-300"
+                      }
+                    >
+                      Particular
+                    </a>
+                  </Link>
+                  <Link href="/empresa">
+                    <a
+                      className={
+                        router.asPath.includes("/empresa")
+                          ? "block text-lg font-medium px-3 py-2 hover:opacity-75 duration-300 text-primary"
+                          : "block text-lg font-medium px-3 py-2 hover:opacity-75 duration-300"
+                      }
+                    >
+                      Empresa
+                    </a>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </Popover.Panel>
+        </Transition>
+      </Popover>
     </nav>
   );
 }
