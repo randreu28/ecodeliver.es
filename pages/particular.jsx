@@ -4,6 +4,14 @@ import Image from "next/image";
 import Cookies from "js-cookie";
 import Link from "next/link";
 import Button from "../components/Button";
+import {
+  BadgeCheckIcon,
+  FingerPrintIcon,
+  ShieldCheckIcon,
+  SparklesIcon,
+  UserAddIcon,
+  UserGroupIcon,
+} from "@heroicons/react/outline";
 
 export default function Particular() {
   Cookies.set("isBusiness", false);
@@ -34,7 +42,7 @@ export default function Particular() {
               <div className="flex flex-row gap-5 flex-wrap">
                 <input
                   type="text"
-                  className="px-4 py-2 text-lg text-gray-700 bg-white border border-gray-300 rounded-md focus:border-primary-40 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                  className="px-4 py-2 text-lg text-secondary bg-white border border-gray-300 rounded-md focus:border-primary-40 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
                   placeholder="Número de seguimiento"
                 />
                 <Button text="Busca" className="text-lg" />
@@ -163,7 +171,7 @@ export default function Particular() {
                   <p className="px-2 font-bold text-xl">1</p>
                 </span>
                 <div className="mt-4 md:mx-4 md:mt-0">
-                  <h1 className="text-2xl font-semibold text-gray-700">
+                  <h1 className="text-2xl font-semibold text-secondary">
                     Publica tu viaje en la App
                   </h1>
                   <p className="mt-3 text-gray-500">
@@ -177,7 +185,7 @@ export default function Particular() {
                   <p className="px-2 font-bold text-xl">2</p>
                 </span>
                 <div className="mt-4 md:mx-4 md:mt-0">
-                  <h1 className="text-2xl font-semibold text-gray-700">
+                  <h1 className="text-2xl font-semibold text-secondary">
                     Recoge los paquetes en nuestro almacén
                   </h1>
                   <p className="mt-3 text-gray-500 ">
@@ -191,7 +199,7 @@ export default function Particular() {
                   <p className="px-2 font-bold text-xl">3</p>
                 </span>
                 <div className="mt-4 md:mx-4 md:mt-0">
-                  <h1 className="text-2xl font-semibold text-gray-700">
+                  <h1 className="text-2xl font-semibold text-secondary">
                     Deja los paquetes al llegar a tu destino
                   </h1>
                   <p className="mt-3 text-gray-500">
@@ -205,7 +213,7 @@ export default function Particular() {
                   <p className="px-2 font-bold text-xl">4</p>
                 </span>
                 <div className="mt-4 md:mx-4 md:mt-0">
-                  <h1 className="text-2xl font-semibold text-gray-700">
+                  <h1 className="text-2xl font-semibold text-secondary">
                     Recibe el pago y ¡listo!
                   </h1>
                   <p className="mt-3 text-gray-500">
@@ -266,7 +274,7 @@ export default function Particular() {
               <input
                 id="email"
                 type="text"
-                className="px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md sm:mx-2  focus:border-primary-40 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                className="px-4 py-2 text-secondary bg-white border border-gray-300 rounded-md sm:mx-2  focus:border-primary-40 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
                 placeholder="Correo electrónico"
               />
 
@@ -288,8 +296,110 @@ export default function Particular() {
           </div>
         </div>
       </section>
-      <section id={navData[2].href} className="h-screen flex bg-slate-200">
-        <h1 className="m-auto text-5xl">{navData[2].name}</h1>
+      <section id={navData[2].href} className="container px-6 py-10 mx-auto">
+        <h1 className="text-3xl font-semibold text-center text-secondary lg:text-4xl ">
+          Valores de nuestro servicio
+        </h1>
+        <p className="text-center text-gray-500 pt-2 text-lg">
+          Porque el <b className="text-primary">por qué</b> importa
+        </p>
+
+        <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3">
+          <div className="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl">
+            <span className="inline-block p-3 text-green-500 bg-green-100 rounded-full">
+              <FingerPrintIcon className="h-6 w-6" />
+            </span>
+
+            <h1 className="text-2xl font-semibold text-secondary capitalize ">
+              Somos{" "}
+              <span className="text-primary font-semibold">eco-friendly</span>
+            </h1>
+
+            <p className="text-gray-500">
+              Ya que siendo un ecoDriver ibas a viajar de todas formas, evitas
+              que un camión tenga que transportar esos paquetes.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl ">
+            <span className="inline-block p-3 text-green-500 bg-green-100 rounded-full">
+              <UserGroupIcon className="h-6 w-6" />
+            </span>
+
+            <h1 className="text-2xl font-semibold text-secondary">
+              Cuidamos de las{" "}
+              <span className="text-primary font-semibold">personas</span>
+            </h1>
+
+            <p className="text-gray-500">
+              Transportamos paquetes pero tratamos con personas. Por eso, te
+              cuidamos tanto a ti como a nuestros repartidores.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl ">
+            <span className="inline-block p-3 text-green-500 bg-green-100 rounded-full">
+              <UserAddIcon className="h-6 w-6" />
+            </span>
+
+            <h1 className="text-2xl font-semibold text-secondary">
+              Creamos{" "}
+              <span className="text-primary font-semibold">comunidad</span>
+            </h1>
+
+            <p className="text-gray-500">
+              Al ofrecer un servicio en comunidad, compartimos recursos y
+              salimos ganando todos!
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl">
+            <span className="inline-block p-3 text-green-500 bg-green-100 rounded-full">
+              <SparklesIcon className="h-6 w-6" />
+            </span>
+
+            <h1 className="text-2xl font-semibold text-secondary">
+              Muy <span className="text-primary font-semibold">práctico</span>
+            </h1>
+
+            <p className="text-gray-500">
+              Disrumpimos el mercado, pero sin disrumpir tu viaje! Nos centramos
+              en que para ti todo vaya <i>sobre ruedas</i>.
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl ">
+            <span className="inline-block p-3 text-green-500 bg-green-100 rounded-full">
+              <BadgeCheckIcon className="w-6 h-6" />
+            </span>
+
+            <h1 className="text-2xl font-semibold text-secondary">
+              <span className="text-primary font-semibold">Transparencia</span>{" "}
+              ante todo
+            </h1>
+
+            <p className="text-gray-500">
+              Al ofrecer un servicio en comunidad, compartimos recursos y
+              salimos ganando todos!
+            </p>
+          </div>
+
+          <div className="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl ">
+            <span className="inline-block p-3 text-green-500 bg-green-100 rounded-full">
+              <ShieldCheckIcon className="h-6 w-6" />
+            </span>
+
+            <h1 className="text-2xl font-semibold text-secondary">
+              Cuidando de tu{" "}
+              <span className="text-primary font-semibold">seguridad</span>
+            </h1>
+
+            <p className="text-gray-500">
+              Cuidamos de los ecoDrivers y de los paquetes, verificando que se
+              cumplen nuestros protocolos de seguridad.
+            </p>
+          </div>
+        </div>
       </section>
       <section id={navData[3].href} className="h-screen flex bg-slate-300">
         <h1 className="m-auto text-5xl">{navData[3].name}</h1>
