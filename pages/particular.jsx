@@ -3,6 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Cookies from "js-cookie";
 import Link from "next/link";
+import Button from "../components/Button";
 
 export default function Particular() {
   Cookies.set("isBusiness", false);
@@ -28,17 +29,15 @@ export default function Particular() {
               Viaja y únete a la comunidad de entregas de paquetería{" "}
               <span className="text-primary">100% sostenible</span>
             </h1>
-            <div className="space-y-2 mt-10">
-              <p>Haz el seguimiento de tu paquete</p>
+            <div className="space-y-2 mt-10 text-gray-500">
+              <p className="text-xl pb-2">Haz el seguimiento de tu paquete:</p>
               <div className="flex flex-row gap-5 flex-wrap">
                 <input
                   type="text"
-                  className="bg-neutral rounded-lg p-2 drop-shadow w-[17.5rem] focus:outline-primary"
-                  placeholder="Introduce tu número de seguimiento"
+                  className="px-4 py-2 text-lg text-gray-700 bg-white border border-gray-300 rounded-md focus:border-primary-40 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                  placeholder="Número de seguimiento"
                 />
-                <button className="py-2 px-5 bg-primary rounded font-semibold text-lg text-white drop-shadow focus:outline-secondary hover:opacity-75 duration-200">
-                  Buscar
-                </button>
+                <Button text="Busca" className="text-lg" />
               </div>
             </div>
           </div>
@@ -271,9 +270,7 @@ export default function Particular() {
                 placeholder="Correo electrónico"
               />
 
-              <button className="px-4 py-2 font-semibold tracking-wide text-white capitalize transition-colors duration-200 transform bg-primary rounded-md focus:ring focus:ring-green-300 focus:ring-opacity-80 fo sm:mx-2 hover:bg-green-500 focus:outline-none focus:bg-green-600">
-                Notificame
-              </button>
+              <Button text="Notificame" />
             </div>
 
             <p className="mt-3 text-sm text-gray-500 ">
