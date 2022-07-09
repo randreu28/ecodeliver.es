@@ -12,6 +12,7 @@ import {
   UserAddIcon,
   UserGroupIcon,
 } from "@heroicons/react/outline";
+import Value from "../components/Value";
 
 export default function Particular() {
   Cookies.set("isBusiness", false);
@@ -305,100 +306,108 @@ export default function Particular() {
         </p>
 
         <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3">
-          <div className="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl">
-            <span className="inline-block p-3 text-green-500 bg-green-100 rounded-full">
-              <FingerPrintIcon className="h-6 w-6" />
-            </span>
+          <Value
+            title={
+              <>
+                Somos{" "}
+                <span className="text-primary font-semibold">eco-friendly</span>
+              </>
+            }
+            text={
+              <>
+                Ya que siendo un ecoDriver ibas a viajar de todas formas, evitas
+                que un camión tenga que transportar esos paquetes.
+              </>
+            }
+          >
+            <FingerPrintIcon className="h-6 w-6" />
+          </Value>
 
-            <h1 className="text-2xl font-semibold text-secondary capitalize ">
-              Somos{" "}
-              <span className="text-primary font-semibold">eco-friendly</span>
-            </h1>
+          <Value
+            title={
+              <>
+                Cuidamos de las{" "}
+                <span className="text-primary font-semibold">personas</span>
+              </>
+            }
+            text={
+              <>
+                Transportamos paquetes pero tratamos con personas. Por eso, te
+                cuidamos tanto a ti como a nuestros repartidores.
+              </>
+            }
+          >
+            <UserGroupIcon className="h-6 w-6" />
+          </Value>
 
-            <p className="text-gray-500">
-              Ya que siendo un ecoDriver ibas a viajar de todas formas, evitas
-              que un camión tenga que transportar esos paquetes.
-            </p>
-          </div>
+          <Value
+            title={
+              <>
+                Creamos{" "}
+                <span className="text-primary font-semibold">comunidad</span>
+              </>
+            }
+            text={
+              <>
+                Al ofrecer un servicio en comunidad, compartimos recursos y
+                salimos ganando todos!
+              </>
+            }
+          >
+            <UserAddIcon className="h-6 w-6" />
+          </Value>
 
-          <div className="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl ">
-            <span className="inline-block p-3 text-green-500 bg-green-100 rounded-full">
-              <UserGroupIcon className="h-6 w-6" />
-            </span>
+          <Value
+            title={
+              <>
+                Muy <span className="text-primary font-semibold">práctico</span>
+              </>
+            }
+            text={
+              <>
+                Disrumpimos el mercado, pero sin disrumpir tu viaje! Nos
+                centramos en que para ti todo vaya <i>sobre ruedas</i>.
+              </>
+            }
+          >
+            <SparklesIcon className="h-6 w-6" />
+          </Value>
 
-            <h1 className="text-2xl font-semibold text-secondary">
-              Cuidamos de las{" "}
-              <span className="text-primary font-semibold">personas</span>
-            </h1>
+          <Value
+            title={
+              <>
+                <span className="text-primary font-semibold">
+                  Transparencia
+                </span>{" "}
+                ante todo
+              </>
+            }
+            text={
+              <>
+                Al ofrecer un servicio en comunidad, compartimos recursos y
+                salimos ganando todos!
+              </>
+            }
+          >
+            <BadgeCheckIcon className="w-6 h-6" />
+          </Value>
 
-            <p className="text-gray-500">
-              Transportamos paquetes pero tratamos con personas. Por eso, te
-              cuidamos tanto a ti como a nuestros repartidores.
-            </p>
-          </div>
-
-          <div className="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl ">
-            <span className="inline-block p-3 text-green-500 bg-green-100 rounded-full">
-              <UserAddIcon className="h-6 w-6" />
-            </span>
-
-            <h1 className="text-2xl font-semibold text-secondary">
-              Creamos{" "}
-              <span className="text-primary font-semibold">comunidad</span>
-            </h1>
-
-            <p className="text-gray-500">
-              Al ofrecer un servicio en comunidad, compartimos recursos y
-              salimos ganando todos!
-            </p>
-          </div>
-
-          <div className="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl">
-            <span className="inline-block p-3 text-green-500 bg-green-100 rounded-full">
-              <SparklesIcon className="h-6 w-6" />
-            </span>
-
-            <h1 className="text-2xl font-semibold text-secondary">
-              Muy <span className="text-primary font-semibold">práctico</span>
-            </h1>
-
-            <p className="text-gray-500">
-              Disrumpimos el mercado, pero sin disrumpir tu viaje! Nos centramos
-              en que para ti todo vaya <i>sobre ruedas</i>.
-            </p>
-          </div>
-
-          <div className="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl ">
-            <span className="inline-block p-3 text-green-500 bg-green-100 rounded-full">
-              <BadgeCheckIcon className="w-6 h-6" />
-            </span>
-
-            <h1 className="text-2xl font-semibold text-secondary">
-              <span className="text-primary font-semibold">Transparencia</span>{" "}
-              ante todo
-            </h1>
-
-            <p className="text-gray-500">
-              Al ofrecer un servicio en comunidad, compartimos recursos y
-              salimos ganando todos!
-            </p>
-          </div>
-
-          <div className="flex flex-col items-center p-6 space-y-3 text-center bg-gray-100 rounded-xl ">
-            <span className="inline-block p-3 text-green-500 bg-green-100 rounded-full">
-              <ShieldCheckIcon className="h-6 w-6" />
-            </span>
-
-            <h1 className="text-2xl font-semibold text-secondary">
-              Cuidando de tu{" "}
-              <span className="text-primary font-semibold">seguridad</span>
-            </h1>
-
-            <p className="text-gray-500">
-              Cuidamos de los ecoDrivers y de los paquetes, verificando que se
-              cumplen nuestros protocolos de seguridad.
-            </p>
-          </div>
+          <Value
+            title={
+              <>
+                Cuidando de tu{" "}
+                <span className="text-primary font-semibold">seguridad</span>
+              </>
+            }
+            text={
+              <>
+                Cuidamos de los ecoDrivers y de los paquetes, verificando que se
+                cumplen nuestros protocolos de seguridad.
+              </>
+            }
+          >
+            <ShieldCheckIcon className="h-6 w-6" />
+          </Value>
         </div>
       </section>
       <section id={navData[3].href} className="h-screen flex bg-slate-300">
