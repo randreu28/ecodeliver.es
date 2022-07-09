@@ -14,6 +14,8 @@ import {
 } from "@heroicons/react/outline";
 import Value from "../components/Value";
 import Article from "../components/Article";
+import Disclosure from "../components/Disclosure";
+import Footer from "../components/Footer";
 
 export default function Particular() {
   Cookies.set("isBusiness", false);
@@ -411,7 +413,7 @@ export default function Particular() {
           </Value>
         </div>
       </section>
-      <section id={navData[3].href} className="container mx-auto">
+      <section id={navData[3].href} className="container mx-auto px-6">
         <p className="text-center text-primary font-semibold pt-2 text-lg">
           Noticias
         </p>
@@ -464,8 +466,84 @@ export default function Particular() {
           />
         </div>
       </section>
-      <section id={navData[4].href} className="h-screen flex bg-slate-200">
-        <h1 className="m-auto text-5xl">{navData[4].name}</h1>
+      <section id={navData[4].href} className="max-w-5xl px-5 mx-auto">
+        <p className="text-center text-primary font-semibold pb-2 text-lg">
+          FAQ
+        </p>
+        <h1 className="text-center text-4xl lg:text-5xl font-bold md:px-10 mb-8">
+          Preguntas frecuentes
+        </h1>
+        <div className="divide-y container pb-10">
+          <Disclosure
+            isOpen={true}
+            title={<>¿Cuándo podré participar como ecoDriver? </>}
+            text={
+              <>
+                Actualmente estamos en las etapas finales de desarrollo y
+                nuestra aplicación estará disponible muy pronto! Además estamos
+                realizando pruebas piloto para las que tu colaboración será muy
+                bienvenida. Déjanos tu correo electrónico para que te avisemos
+                del launch ;)
+              </>
+            }
+          />
+          <Disclosure
+            title={<>¿El contenido de los paquetes es seguro?</>}
+            text={
+              <>
+                Si. Sólo transportamos paquetes de ecommerce (tiendas online) y
+                el contenido es conocido y declarado para cada paquete. El
+                contenido son artículos de cosmética, calzado, ropa y no se
+                transportan paquetes con contenido peligroso.
+              </>
+            }
+          />
+          <Disclosure
+            title={
+              <>
+                ¿Cómo se garantiza la seguridad tanto del ecoDriver como de los
+                paquetes?
+              </>
+            }
+            text={
+              <>
+                Como ecoDriver, eres un miembro verificado de nuestra comunidad
+                con tu identificación. Además, los paquetes se transportarán en
+                bolsas selladas hechas a medida, lo que garantiza que nadie más
+                que el remitente y el receptor puedan acceder a su interior a
+                menos que la bolsa se rompa. De esta forma, podemos garantizar
+                la seguridad del ecoDriver y del paquete gracias a nuestro
+                seguimiento constante de todo el proceso.
+              </>
+            }
+          />
+          <Disclosure
+            title={<>¿Realizar un transporte es legal?</>}
+            text={
+              <>
+                Si. De la misma manera en que funcionan otros servicios
+                parecidos como BlaBlaCar, al tratarse de un transporte no
+                profesional (donde no se genera un beneficio neto) no es
+                necesario contar con un título de transporte y se considera un
+                transporte particular, de toda la vida. .
+              </>
+            }
+          />
+          <Disclosure
+            title={
+              <>¿Cuánto dinero se paga por hacer un viaje como ecoDriver?</>
+            }
+            text={
+              <>
+                La remuneración se calcula teniendo en cuenta diferentes
+                parámetros, como el número de paquetes, la distancia recorrida,
+                el tipo de transporte… No obstante, en ningún caso se tendrá una
+                remuneración que sobrepase el coste del viaje.
+              </>
+            }
+          />
+        </div>
+        <Footer />
       </section>
     </>
   );
