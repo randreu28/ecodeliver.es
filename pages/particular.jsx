@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import Head from "next/head";
 import Image from "next/image";
 import Cookies from "js-cookie";
+import Link from "next/link";
 
 export default function Particular() {
   Cookies.set("isBusiness", false);
@@ -60,7 +61,7 @@ export default function Particular() {
             <div className="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5">
               <div className="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
                 <svg
-                  className="h-12 text-gray-500 fill-current dark:text-gray-300"
+                  className="h-12 text-gray-500 fill-current "
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 266 100"
                 >
@@ -71,7 +72,7 @@ export default function Particular() {
 
               <div className="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
                 <svg
-                  className="h-10 text-gray-500 fill-current dark:text-gray-300"
+                  className="h-10 text-gray-500 fill-current"
                   xmlns="http://www.w3.org/2000/svg"
                   xmlnsXlink="http://www.w3.org/1999/xlink"
                   viewBox="0 0 316 60"
@@ -96,7 +97,7 @@ export default function Particular() {
 
               <div className="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
                 <svg
-                  className="h-8 mt-2 text-gray-500 fill-current dark:text-gray-300"
+                  className="h-8 mt-2 text-gray-500 fill-current"
                   viewBox="0 0 398 120"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -109,7 +110,7 @@ export default function Particular() {
 
               <div className="flex items-center justify-center col-span-1 md:col-span-3 lg:col-span-1">
                 <svg
-                  className="h-5 mt-1 text-gray-500 fill-current dark:text-gray-300"
+                  className="h-5 mt-1 text-gray-500 fill-current"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 278.7 36.3"
                 >
@@ -124,7 +125,7 @@ export default function Particular() {
 
               <div className="flex items-center justify-center col-span-2 md:col-span-3 lg:col-span-1">
                 <svg
-                  className="h-8 text-gray-500 fill-current dark:text-gray-300"
+                  className="h-8 text-gray-500 fill-current"
                   viewBox="0 0 2270 546"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -141,8 +142,154 @@ export default function Particular() {
           </div>
         </div>
       </section>
-      <section id={navData[1].href} className="h-screen flex bg-slate-300">
-        <h1 className="m-auto text-5xl">{navData[1].name}</h1>
+      <section id={navData[1].href} className="bg-green-50 space-y-10">
+        <div className="container px-6 py-10 mx-auto">
+          <div className="lg:flex lg:items-center">
+            <div className="w-full space-y-12 lg:w-1/2 ">
+              <div>
+                <p className="text-primary font-semibold pb-2">
+                  Nuestro modelo
+                </p>
+                <h1 className="text-3xl font-semibold text-gray-800 lg:text-4xl">
+                  ¿Cómo funciona?
+                </h1>
+                <div className="mt-2">
+                  <span className="inline-block w-40 h-1 rounded-full bg-green-500" />
+                  <span className="inline-block w-3 h-1 ml-1 rounded-full bg-green-500" />
+                  <span className="inline-block w-1 h-1 ml-1 rounded-full bg-green-500" />
+                </div>
+              </div>
+              <div className="md:flex md:items-start md:-mx-4">
+                <span className="inline-block p-2 text-green-500 bg-green-200 rounded-xl md:mx-4">
+                  <p className="px-2 font-bold text-xl">1</p>
+                </span>
+                <div className="mt-4 md:mx-4 md:mt-0">
+                  <h1 className="text-2xl font-semibold text-gray-700">
+                    Publica tu viaje en la App
+                  </h1>
+                  <p className="mt-3 text-gray-500">
+                    Completando tu perfil en nuestra App e indicando la
+                    información de tu viaje.
+                  </p>
+                </div>
+              </div>
+              <div className="md:flex md:items-start md:-mx-4">
+                <span className="inline-block p-2 text-green-500 bg-green-200 rounded-xl md:mx-4">
+                  <p className="px-2 font-bold text-xl">2</p>
+                </span>
+                <div className="mt-4 md:mx-4 md:mt-0">
+                  <h1 className="text-2xl font-semibold text-gray-700">
+                    Recoge los paquetes en nuestro almacén
+                  </h1>
+                  <p className="mt-3 text-gray-500 ">
+                    Te estaremos esperando con bolsas de paquetes en nuestro
+                    almacén, a la salida de la ciudad.
+                  </p>
+                </div>
+              </div>
+              <div className="md:flex md:items-start md:-mx-4">
+                <span className="inline-block p-2 text-green-500 bg-green-200 rounded-xl md:mx-4">
+                  <p className="px-2 font-bold text-xl">3</p>
+                </span>
+                <div className="mt-4 md:mx-4 md:mt-0">
+                  <h1 className="text-2xl font-semibold text-gray-700">
+                    Deja los paquetes al llegar a tu destino
+                  </h1>
+                  <p className="mt-3 text-gray-500">
+                    ¡Dejas los paquetes en nuestro almacén en destino y te
+                    olvidas! Cinco minutos de desvío en cada ciudad.
+                  </p>
+                </div>
+              </div>
+              <div className="md:flex md:items-start md:-mx-4">
+                <span className="inline-block p-2 text-green-500 bg-green-200 rounded-xl md:mx-4">
+                  <p className="px-2 font-bold text-xl">4</p>
+                </span>
+                <div className="mt-4 md:mx-4 md:mt-0">
+                  <h1 className="text-2xl font-semibold text-gray-700">
+                    Recibe el pago y ¡listo!
+                  </h1>
+                  <p className="mt-3 text-gray-500">
+                    Cubriendo los costes del viaje y evitando que un camión
+                    tenga que hacer el transporte.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="hidden lg:flex lg:items-center lg:w-1/2 lg:justify-center">
+              <Image
+                className="w-[28rem] h-[28rem] object-cover xl:w-[34rem] xl:h-[34rem] rounded-full"
+                src="/media/howItWorks.jpg"
+                alt=""
+                height={500}
+                width={500}
+              />
+            </div>
+          </div>
+        </div>
+        <div className="p-5 flex flex-col md:flex-row rounded-lg w-fit shadow-lg mx-auto pt-10 bg-white gap-20">
+          <div className="p-5 space-y-5">
+            <h1 className="text-4xl lg:text-5xl font-bold text-center text-primary">
+              15.7 kgCO<sub>2</sub>
+            </h1>
+            <p className="text-center text-gray-500 ">
+              Ahorrados en un viaje
+              <br /> Barcelona-Madrid*
+            </p>
+          </div>
+          <div className="p-5 space-y-5">
+            <h1 className="text-4xl lg:text-5xl font-bold text-center text-primary">
+              ~50€
+            </h1>
+            <p className="text-center text-gray-500">
+              De remuneración en un viaje <br />
+              Barcelona-Valencia
+            </p>
+          </div>
+          <div className="p-5 space-y-5">
+            <h1 className="text-4xl lg:text-5xl font-bold text-center text-primary">
+              100%
+            </h1>
+            <p className="text-center text-gray-500">Sonrisas garantizadas</p>
+          </div>
+        </div>
+        <div className="container px-4 py-10 mx-auto lg:flex lg:items-center lg:justify-between">
+          <div className="flex flex-col gap-3">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-800 xl:text-4xl ">
+              ¿List@ para convertirte <br /> en un{" "}
+              <span className="text-primary">eco</span>Driver?
+            </h2>
+            <p className="text-gray-500">Te damos un toque cuando esté listo</p>
+          </div>
+
+          <div className="mt-8 lg:mt-0">
+            <div className="flex flex-col space-y-3 sm:space-y-0 sm:flex-row sm:-mx-2">
+              <input
+                id="email"
+                type="text"
+                className="px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md sm:mx-2  focus:border-primary-40 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                placeholder="Correo electrónico"
+              />
+
+              <button className="px-4 py-2 font-semibold tracking-wide text-white capitalize transition-colors duration-200 transform bg-primary rounded-md focus:ring focus:ring-green-300 focus:ring-opacity-80 fo sm:mx-2 hover:bg-green-500 focus:outline-none focus:bg-green-600">
+                Notificame
+              </button>
+            </div>
+
+            <p className="mt-3 text-sm text-gray-500 ">
+              Tranquilo, no enviamos spam. Nunca. ¡Sólo actualizaciones <br />{" "}
+              importantes! Revisa nuestra{" "}
+              <Link href="/privacidad">
+                <a
+                  target="_blank "
+                  className="text-primary underline hover:opacity-75 duration-200"
+                >
+                  politica de privacidad
+                </a>
+              </Link>
+            </p>
+          </div>
+        </div>
       </section>
       <section id={navData[2].href} className="h-screen flex bg-slate-200">
         <h1 className="m-auto text-5xl">{navData[2].name}</h1>
