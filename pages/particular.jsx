@@ -13,6 +13,7 @@ import {
   UserGroupIcon,
 } from "@heroicons/react/outline";
 import Value from "../components/Value";
+import Article from "../components/Article";
 
 export default function Particular() {
   Cookies.set("isBusiness", false);
@@ -410,8 +411,58 @@ export default function Particular() {
           </Value>
         </div>
       </section>
-      <section id={navData[3].href} className="h-screen flex bg-slate-300">
-        <h1 className="m-auto text-5xl">{navData[3].name}</h1>
+      <section id={navData[3].href} className="container mx-auto">
+        <p className="text-center text-primary font-semibold pt-2 text-lg">
+          Noticias
+        </p>
+        <h1 className="text-3xl font-semibold text-center text-secondary lg:text-4xl ">
+          Nos mencionan
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 m-auto py-10">
+          <Article
+            type="Articulo"
+            title="TItle test"
+            text={
+              <>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Reiciendis sit consectetur, at ducimus autem aspernatur iusto
+                cumque commodi magnam deleniti aut earum suscipit natus?
+                Repellendus nisi id perferendis mollitia! Adipisci.
+              </>
+            }
+            extLink="https://google.com"
+            imgLink="/media/heroImage.jpg"
+          />
+          <Article
+            type="Articulo"
+            title="TItle test"
+            text={
+              <>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Reiciendis sit consectetur, at ducimus autem aspernatur iusto
+                cumque commodi magnam deleniti aut earum suscipit natus?
+                Repellendus nisi id perferendis mollitia! Adipisci.
+              </>
+            }
+            extLink="https://google.com"
+            imgLink="/media/heroImage.jpg"
+          />
+          <Article
+            className="md:col-span-2 lg:col-span-1"
+            type="Articulo"
+            title="TItle test"
+            text={
+              <>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Reiciendis sit consectetur, at ducimus autem aspernatur iusto
+                cumque commodi magnam deleniti aut earum suscipit natus?
+                Repellendus nisi id perferendis mollitia! Adipisci.
+              </>
+            }
+            extLink="https://google.com"
+            imgLink="/media/heroImage.jpg"
+          />
+        </div>
       </section>
       <section id={navData[4].href} className="h-screen flex bg-slate-200">
         <h1 className="m-auto text-5xl">{navData[4].name}</h1>
