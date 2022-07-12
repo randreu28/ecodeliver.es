@@ -1,9 +1,16 @@
 import Button from "./Button";
 import Link from "next/link";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function Form() {
+  //Animations
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <div className="mt-8 lg:mt-0">
+    <div className="mt-8 lg:mt-0" data-aos="fade-left">
       <div className="flex flex-col space-y-3 sm:space-y-0 sm:flex-row sm:-mx-2">
         <input
           id="email"

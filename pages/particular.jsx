@@ -2,7 +2,6 @@ import Navbar from "../components/Navbar";
 import Head from "next/head";
 import Image from "next/image";
 import Cookies from "js-cookie";
-import Link from "next/link";
 import Button from "../components/Button";
 import {
   BadgeCheckIcon,
@@ -17,8 +16,10 @@ import Article from "../components/Article";
 import Disclosure from "../components/Disclosure";
 import Footer from "../components/Footer";
 import Alert from "../components/Alert";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Form from "../components/Form";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Particular() {
   Cookies.set("isBusiness", false);
@@ -34,6 +35,11 @@ export default function Particular() {
   const [isShowing, setIsShowing] = useState(false);
   const search = useRef();
 
+  //Animations
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <>
       <Head>
@@ -42,7 +48,11 @@ export default function Particular() {
       <Navbar navData={navData} />
       <section id={navData[0].href} className="space-y-5">
         <main className="min-h-screen pt-20 flex flex-row flex-wrap gap-5 p-5">
-          <div className="m-auto font-semibold">
+          <div
+            className="m-auto font-semibold"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          >
             <h1 className="text-secondary text-4xl md:text-6xl max-w-3xl !leading-[1.15]">
               Viaja y únete a la comunidad de entregas de paquetería{" "}
               <span className="text-primary">100% sostenible</span>
@@ -66,7 +76,7 @@ export default function Particular() {
               </div>
             </div>
           </div>
-          <div className="m-auto">
+          <div className="m-auto" data-aos="fade-left" data-aos-delay="100">
             <Image
               className="hidden rounded-lg"
               src="/media/heroImage.jpg"
@@ -78,7 +88,10 @@ export default function Particular() {
           </div>
         </main>
         <div>
-          <h1 className="text-center text-secodary text-4xl font-semibold">
+          <h1
+            className="text-center text-secodary text-4xl font-semibold"
+            data-aos="fade-up"
+          >
             Con el apoyo de...
           </h1>
           <div className="max-w-screen-xl mx-auto my-20">
@@ -178,7 +191,7 @@ export default function Particular() {
       <section id={navData[1].href} className="bg-green-50 space-y-10">
         <div className="container px-6 py-10 mx-auto">
           <div className="lg:flex lg:items-center">
-            <div className="w-full space-y-12 lg:w-1/2 ">
+            <div className="w-full space-y-12 lg:w-1/2" data-aos="fade-right">
               <div>
                 <p className="text-primary font-semibold pb-1">
                   Nuestro modelo
@@ -257,7 +270,10 @@ export default function Particular() {
                 </div>
               </div>
             </div>
-            <div className="hidden lg:flex lg:items-center lg:w-1/2 lg:justify-center">
+            <div
+              className="hidden lg:flex lg:items-center lg:w-1/2 lg:justify-center"
+              data-aos="fade-left"
+            >
               <Image
                 className="w-[28rem] h-[28rem] object-cover xl:w-[34rem] xl:h-[34rem] rounded-full"
                 src="/media/howItWorks.jpg"
@@ -268,7 +284,7 @@ export default function Particular() {
             </div>
           </div>
         </div>
-        <div>
+        <div data-aos="fade-in">
           <div className="p-5 flex flex-col md:flex-row rounded-lg w-fit shadow-lg mx-auto pt-10 bg-white gap-20">
             <div className="p-5 space-y-5">
               <h1 className="text-4xl lg:text-5xl font-bold text-center text-primary">
@@ -301,7 +317,7 @@ export default function Particular() {
           </p>
         </div>
         <div className="container px-4 py-10 mx-auto lg:flex lg:items-center lg:justify-between">
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3" data-aos="fade-right">
             <h2 className="text-5xl font-bold tracking-tight text-gray-800 xl:text-6xl ">
               ¿List@ para convertirte <br /> en un{" "}
               <span className="text-primary">eco</span>Driver?
@@ -315,14 +331,23 @@ export default function Particular() {
         </div>
       </section>
       <section id={navData[2].href} className="container px-6 py-10 mx-auto">
-        <h1 className="text-3xl font-semibold text-center text-secondary lg:text-4xl ">
+        <h1
+          className="text-3xl font-semibold text-center text-secondary lg:text-4xl "
+          data-aos="fade-in"
+        >
           Valores de nuestro servicio
         </h1>
-        <p className="text-center text-gray-500 pt-2 text-lg">
+        <p
+          className="text-center text-gray-500 pt-2 text-lg"
+          data-aos="fade-in"
+        >
           Porque el <b className="text-primary">por qué</b> importa
         </p>
 
-        <div className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3">
+        <div
+          className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3"
+          data-aos="fade-in"
+        >
           <Value
             title={
               <>
@@ -428,13 +453,22 @@ export default function Particular() {
         </div>
       </section>
       <section id={navData[3].href} className="container mx-auto px-6">
-        <p className="text-center text-primary font-semibold pt-2 text-lg">
+        <p
+          className="text-center text-primary font-semibold pt-2 text-lg"
+          data-aos="fade-in"
+        >
           Noticias
         </p>
-        <h1 className="text-3xl font-semibold text-center text-secondary lg:text-4xl ">
+        <h1
+          className="text-3xl font-semibold text-center text-secondary lg:text-4xl "
+          data-aos="fade-in"
+        >
           Nos mencionan
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 m-auto py-10">
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 m-auto py-10"
+          data-aos="fade-in"
+        >
           <Article
             type="Articulo"
             title="TItle test"
@@ -481,10 +515,16 @@ export default function Particular() {
         </div>
       </section>
       <section id={navData[4].href} className="max-w-5xl px-5 mx-auto">
-        <p className="text-center text-primary font-semibold pb-2 text-lg">
+        <p
+          className="text-center text-primary font-semibold pb-2 text-lg"
+          data-aos="fade-in"
+        >
           FAQ
         </p>
-        <h1 className="text-center text-4xl lg:text-5xl font-bold md:px-10 mb-8">
+        <h1
+          className="text-center text-4xl lg:text-5xl font-bold md:px-10 mb-8"
+          data-aos="fade-in"
+        >
           Preguntas frecuentes
         </h1>
         <div className="divide-y container pb-10">

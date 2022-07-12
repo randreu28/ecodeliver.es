@@ -27,3 +27,8 @@ html::-webkit-scrollbar-thumb:active {
   background: rgb(68, 68, 68);
   border-radius: 5px;
 }
+
+html,
+body {
+  overflow-x: hidden;
+}

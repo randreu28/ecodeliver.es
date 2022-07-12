@@ -1,8 +1,17 @@
-import React from "react";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Footer() {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <footer className="bg-green-50 container px-6 py-4 mx-auto">
+    <footer
+      className="bg-green-50 container px-6 py-4 mx-auto"
+      data-aos="fade-down"
+    >
       <div className="lg:flex">
         <div className="w-full -mx-6 lg:w-2/5">
           <div className="px-6">

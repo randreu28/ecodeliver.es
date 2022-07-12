@@ -1,6 +1,8 @@
 import { PlusCircleIcon, MinusCircleIcon } from "@heroicons/react/solid";
 import { useState, useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Disclosure(props) {
   const [isOpen, setisOpen] = useState(props.isOpen);
@@ -18,6 +20,7 @@ export default function Disclosure(props) {
         10
       )
     );
+    AOS.init();
   }, []);
 
   const handleOpen = () => {
@@ -31,7 +34,7 @@ export default function Disclosure(props) {
   };
 
   return (
-    <div className="space-y-3 py-5">
+    <div className="space-y-3 py-5" data-aos="fade-left">
       <div className="flex space-x-3" onClick={handleOpen}>
         {isOpen ? (
           <MinusCircleIcon className="h-6 my-auto text-primary cursor-pointer" />
