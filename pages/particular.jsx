@@ -158,13 +158,21 @@ export default function Particular() {
           <div className="lg:flex lg:items-center">
             <div className="w-full space-y-12 lg:w-1/2 ">
               <div>
-                <p className="text-primary font-semibold pb-2">
+                <p className="text-primary font-semibold pb-1">
                   Nuestro modelo
                 </p>
-                <h1 className="text-3xl font-semibold text-gray-800 lg:text-4xl">
+                <h1 className="text-3xl font-semibold text-gray-800 lg:text-4xl pb-3">
                   ¿Cómo funciona?
                 </h1>
-                <div className="mt-2">
+                <p className="text-gray-500 text-xl">
+                  Cualquiera que vaya a viajar entre ciudades puede ser un{" "}
+                  <b>
+                    <span className="text-primary">eco</span>Driver
+                  </b>
+                  , transportando paquetes consigo y cubriendo los gastos del
+                  viaje!
+                </p>
+                <div>
                   <span className="inline-block w-40 h-1 rounded-full bg-green-500" />
                   <span className="inline-block w-3 h-1 ml-1 rounded-full bg-green-500" />
                   <span className="inline-block w-1 h-1 ml-1 rounded-full bg-green-500" />
