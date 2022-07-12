@@ -18,6 +18,7 @@ import Disclosure from "../components/Disclosure";
 import Footer from "../components/Footer";
 import Alert from "../components/Alert";
 import { useState, useRef } from "react";
+import Form from "../components/Form";
 
 export default function Particular() {
   Cookies.set("isBusiness", false);
@@ -301,38 +302,16 @@ export default function Particular() {
         </div>
         <div className="container px-4 py-10 mx-auto lg:flex lg:items-center lg:justify-between">
           <div className="flex flex-col gap-3">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-800 xl:text-4xl ">
+            <h2 className="text-5xl font-bold tracking-tight text-gray-800 xl:text-6xl ">
               ¿List@ para convertirte <br /> en un{" "}
               <span className="text-primary">eco</span>Driver?
             </h2>
-            <p className="text-gray-500">Te damos un toque cuando esté listo</p>
-          </div>
-
-          <div className="mt-8 lg:mt-0">
-            <div className="flex flex-col space-y-3 sm:space-y-0 sm:flex-row sm:-mx-2">
-              <input
-                id="email"
-                type="text"
-                className="px-4 py-2 text-secondary bg-white border border-gray-300 rounded-md sm:mx-2  focus:border-primary-40 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
-                placeholder="Correo electrónico"
-              />
-
-              <Button text="Notificame" />
-            </div>
-
-            <p className="mt-3 text-sm text-gray-500 ">
-              Tranquilo, no enviamos spam. Nunca. ¡Sólo actualizaciones <br />{" "}
-              importantes! Revisa nuestra{" "}
-              <Link href="/privacidad">
-                <a
-                  target="_blank "
-                  className="text-primary underline hover:opacity-75 duration-200"
-                >
-                  politica de privacidad
-                </a>
-              </Link>
+            <p className="text-gray-500 text-xl">
+              Te damos un toque cuando esté listo
             </p>
           </div>
+
+          <Form />
         </div>
       </section>
       <section id={navData[2].href} className="container px-6 py-10 mx-auto">
