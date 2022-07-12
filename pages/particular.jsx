@@ -16,6 +16,8 @@ import Value from "../components/Value";
 import Article from "../components/Article";
 import Disclosure from "../components/Disclosure";
 import Footer from "../components/Footer";
+import Alert from "../components/Alert";
+import { useState, useRef } from "react";
 
 export default function Particular() {
   Cookies.set("isBusiness", false);
@@ -27,6 +29,9 @@ export default function Particular() {
     { name: "Noticias", href: "noticias" },
     { name: "FAQ", href: "faq" },
   ];
+
+  const [isShowing, setIsShowing] = useState(false);
+  const search = useRef();
 
   return (
     <>
@@ -48,8 +53,15 @@ export default function Particular() {
                   type="text"
                   className="px-4 py-2 text-lg text-secondary bg-white border border-gray-300 rounded-md focus:border-primary-40 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
                   placeholder="Número de seguimiento"
+                  ref={search}
                 />
-                <Button text="Busca" className="text-lg" />
+                <Button
+                  text="Busca"
+                  event={() => {
+                    setIsShowing(true);
+                    search.current.value = "";
+                  }}
+                />
               </div>
             </div>
           </div>
@@ -153,6 +165,15 @@ export default function Particular() {
           </div>
         </div>
       </section>
+
+      <Alert
+        type="warning"
+        title="Servidores no disponibles"
+        text="Porfavor, intente de nuevo luego"
+        isShowing={isShowing}
+        setIsShowing={setIsShowing}
+      />
+
       <section id={navData[1].href} className="bg-green-50 space-y-10">
         <div className="container px-6 py-10 mx-auto">
           <div className="lg:flex lg:items-center">
