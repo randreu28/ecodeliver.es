@@ -246,31 +246,37 @@ export default function Particular() {
             </div>
           </div>
         </div>
-        <div className="p-5 flex flex-col md:flex-row rounded-lg w-fit shadow-lg mx-auto pt-10 bg-white gap-20">
-          <div className="p-5 space-y-5">
-            <h1 className="text-4xl lg:text-5xl font-bold text-center text-primary">
-              15.7 kgCO<sub>2</sub>
-            </h1>
-            <p className="text-center text-gray-500 ">
-              Ahorrados en un viaje
-              <br /> Barcelona-Madrid*
-            </p>
+        <div>
+          <div className="p-5 flex flex-col md:flex-row rounded-lg w-fit shadow-lg mx-auto pt-10 bg-white gap-20">
+            <div className="p-5 space-y-5">
+              <h1 className="text-4xl lg:text-5xl font-bold text-center text-primary">
+                15.7 kgCO<sub>2</sub>
+              </h1>
+              <p className="text-center text-gray-500 ">
+                Ahorrados en un viaje
+                <br /> Barcelona-Madrid*
+              </p>
+            </div>
+            <div className="p-5 space-y-5">
+              <h1 className="text-4xl lg:text-5xl font-bold text-center text-primary">
+                ~50€
+              </h1>
+              <p className="text-center text-gray-500">
+                De remuneración en un viaje <br />
+                Barcelona-Valencia
+              </p>
+            </div>
+            <div className="p-5 space-y-5">
+              <h1 className="text-4xl lg:text-5xl font-bold text-center text-primary">
+                100%
+              </h1>
+              <p className="text-center text-gray-500">Sonrisas garantizadas</p>
+            </div>
           </div>
-          <div className="p-5 space-y-5">
-            <h1 className="text-4xl lg:text-5xl font-bold text-center text-primary">
-              ~50€
-            </h1>
-            <p className="text-center text-gray-500">
-              De remuneración en un viaje <br />
-              Barcelona-Valencia
-            </p>
-          </div>
-          <div className="p-5 space-y-5">
-            <h1 className="text-4xl lg:text-5xl font-bold text-center text-primary">
-              100%
-            </h1>
-            <p className="text-center text-gray-500">Sonrisas garantizadas</p>
-          </div>
+          <p className="text-gray-400 text-xs p-5 text-center">
+            *Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
+            aperiam non neque?
+          </p>
         </div>
         <div className="container px-4 py-10 mx-auto lg:flex lg:items-center lg:justify-between">
           <div className="flex flex-col gap-3">
