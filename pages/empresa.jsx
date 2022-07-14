@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import Webholder from "../components/Webholder";
 import Head from "next/head";
 import Cookies from "js-cookie";
 
@@ -18,7 +19,8 @@ export default function Empresa() {
       <Head>
         <title>Empresa</title>
       </Head>
-      <Navbar navData={navData} />
+      <Webholder />
+      {/* <Navbar navData={navData} />
       <section id={navData[0].href} className="h-screen flex bg-slate-200">
         <h1 className="m-auto text-5xl">{navData[0].name}</h1>
       </section>
@@ -33,7 +35,7 @@ export default function Empresa() {
       </section>
       <section id={navData[4].href} className="h-screen flex bg-slate-200">
         <h1 className="m-auto text-5xl">{navData[4].name}</h1>
-      </section>
+      </section> */}
     </>
   );
 }
