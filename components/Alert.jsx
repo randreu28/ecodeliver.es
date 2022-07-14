@@ -1,29 +1,8 @@
 import { Transition } from "@headlessui/react";
 import { XIcon } from "@heroicons/react/solid";
-import { useEffect } from "react";
 
-export default function Alert({
-  type,
-  title,
-  text,
-  timer,
-  isShowing,
-  setIsShowing,
-}) {
+export default function Alert({ type, title, text, isShowing, setIsShowing }) {
   let color = null;
-
-  useEffect(() => {
-    let interval = setInterval(
-      () => {
-        setIsShowing(false);
-      },
-      timer ? timer : 7000
-    );
-    return () => {
-      clearInterval(interval);
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [timer]);
 
   switch (type) {
     case "info":
