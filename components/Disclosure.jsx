@@ -35,13 +35,13 @@ export default function Disclosure(props) {
 
   return (
     <div className="space-y-3 py-5" data-aos="fade-left">
-      <div className="flex space-x-3" onClick={handleOpen}>
+      <div className="flex" onClick={handleOpen}>
         {isOpen ? (
-          <MinusCircleIcon className="h-6 my-auto text-primary cursor-pointer" />
+          <MinusCircleIcon className="absolute h-6 w-6 my-auto text-primary cursor-pointer" />
         ) : (
-          <PlusCircleIcon className="h-6 my-auto text-primary cursor-pointer" />
+          <PlusCircleIcon className="absolute h-6 w-6 my-auto text-primary cursor-pointer" />
         )}
-        <h1 className="text-2xl md:text-3xl font-bold cursor-pointer">
+        <h1 className="text-2xl md:text-3xl mx-10 font-bold cursor-pointer">
           {props.title}
         </h1>
       </div>
