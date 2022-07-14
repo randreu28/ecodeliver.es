@@ -38,7 +38,7 @@ export default function Alert({ type, title, text, isShowing, setIsShowing }) {
     >
       <div
         className={
-          "p-4 mb-4 text-sm rounded-lg fixed bottom-3 flex gap-2 " + color
+          "p-4 mb-4 text-sm rounded-lg fixed bottom-3 flex gap-2 z-10 " + color
         }
         role="alert"
       >
