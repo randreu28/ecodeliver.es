@@ -48,6 +48,12 @@ export default function Particular() {
       <Navbar navData={navData} />
       <section id={navData[0].href} className="space-y-5">
         <main className="min-h-screen pt-20 flex flex-row flex-wrap gap-5 p-5">
+          {/*  eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/media/brand/line-6.svg"
+            className="hidden xl:block absolute right-1/2"
+            alt=""
+          />
           <div
             className="m-auto font-semibold"
             data-aos="fade-right"
@@ -87,6 +93,12 @@ export default function Particular() {
             />
           </div>
         </main>
+        {/*  eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/media/brand/line-4.svg"
+          className="hidden xl:block absolute -translate-y-48 translate-x-1/3 right-0 h-1/6 scale-x-[-1] -z-10"
+          alt=""
+        />
         <div>
           <h1
             className="text-center text-secodary text-4xl font-semibold"
@@ -284,8 +296,14 @@ export default function Particular() {
             </div>
           </div>
         </div>
+        {/*  eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/media/brand/line-3.svg"
+          className="hidden xl:block absolute translate-x-1/3 -translate-y-40 right-0 h-1/6 scale-x-[-1]"
+          alt=""
+        />
         <div data-aos="fade-in">
-          <div className="p-5 flex flex-col md:flex-row rounded-lg w-fit shadow-lg mx-auto pt-10 bg-white gap-20">
+          <div className="p-5 flex flex-col lg:flex-row rounded-lg w-fit shadow-lg mx-auto pt-10 bg-white gap-20">
             <div className="p-5 space-y-5">
               <h1 className="text-4xl lg:text-5xl font-bold text-center text-primary">
                 15.7 kgCO<sub>2</sub>
@@ -316,6 +334,7 @@ export default function Particular() {
             aperiam non neque?
           </p>
         </div>
+
         <div className="container px-4 py-10 mx-auto lg:flex lg:items-center lg:justify-between">
           <div className="flex flex-col gap-3" data-aos="fade-right">
             <h2 className="text-5xl font-bold tracking-tight text-gray-800 xl:text-6xl ">
@@ -527,6 +546,12 @@ export default function Particular() {
         >
           Preguntas frecuentes
         </h1>
+        {/*  eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/media/brand/line-3.svg"
+          className="hidden xl:block absolute left-0 h-1/6 -translate-x-1/2"
+          alt=""
+        />
         <div className="divide-y container pb-10">
           <Disclosure
             isOpen={true}
@@ -597,6 +622,12 @@ export default function Particular() {
             }
           />
         </div>
+        {/*  eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/media/brand/line-1.svg"
+          className="hidden xl:block absolute right-0 h-1/3 scale-x-[-1] -translate-y-48 translate-x-1/2"
+          alt=""
+        />
         <Footer />
       </section>
     </>
