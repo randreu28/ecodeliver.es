@@ -421,7 +421,6 @@ export default function Particular() {
             imgLink="/media/articles/caixaBankArticle.jpg"
           />
           <Article
-            className="md:col-span-2 lg:col-span-1"
             type="Diari Ara"
             title="Imagin premia a un 'Blablacar' de paquetería y una plataforma de juguetes compartidos"
             text="La primera competición de emprendimiento medioambiental de Imagin, la
@@ -438,6 +437,7 @@ export default function Particular() {
             imgLink="media/articles/araArticle.webp"
           />
           <Article
+            className="md:col-span-2 lg:col-span-1"
             type="lavanguardia"
             title="ecoDeliver y Kidalos ganan la primera edición del imaginPlanet Challenge"
             text="ecoDeliver y Kidalos han sido elegidos entre los 230 equipos participantes,
