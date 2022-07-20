@@ -30,13 +30,13 @@ export default function Article({
           >
             {title}
           </a>
-          <p className="mt-2 text-sm text-gray-600">{text}</p>
+          <p className="mt-2 text-gray-500">{text}</p>
         </div>
 
         <a
           target="_blank"
           href={extLink}
-          className="flex items-center -mx-1 text-sm text-green-500 capitalize transition-colors duration-200 transform  hover:underline hover:text-green-600"
+          className="flex items-center -mx-1 text-green-500 capitalize transition-colors duration-200 transform  hover:underline hover:text-green-600"
           rel="noreferrer"
         >
           <span className="mx-1">Ver más</span>
