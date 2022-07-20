@@ -1,5 +1,4 @@
 import { ArrowNarrowRightIcon } from "@heroicons/react/outline";
-import Image from "next/image";
 
 export default function Article({
   className,
@@ -21,16 +20,16 @@ export default function Article({
 
       <div className="p-6 space-y-3">
         <div>
-          <span className="text-xs font-medium text-green-600 uppercase ">
+          <span className="text-xs font-medium text-green-600 uppercase">
             {type}
           </span>
           <a
             href="#"
-            className="block mt-2 text-2xl font-semibold text-gray-800 transition-colors duration-200 transform  hover:text-gray-600 hover:underline"
+            className="block mt-2 text-2xl font-semibold text-gray-800 transition-colors duration-200 transform  hover:text-gray-600 hover:underline line-clamp-2"
           >
             {title}
           </a>
-          <p className="mt-2 text-gray-500">{text}</p>
+          <p className="mt-2 text-gray-500 line-clamp-3">{text}</p>
         </div>
 
         <a

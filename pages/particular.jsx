@@ -408,47 +408,43 @@ export default function Particular() {
           data-aos="fade-in"
         >
           <Article
-            type="Articulo"
-            title="TItle test"
-            text={
-              <>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Reiciendis sit consectetur, at ducimus autem aspernatur iusto
-                cumque commodi magnam deleniti aut earum suscipit natus?
-                Repellendus nisi id perferendis mollitia! Adipisci.
-              </>
-            }
-            extLink="https://google.com"
-            imgLink="/media/heroImage.jpg"
-          />
-          <Article
-            type="Articulo"
-            title="TItle test"
-            text={
-              <>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Reiciendis sit consectetur, at ducimus autem aspernatur iusto
-                cumque commodi magnam deleniti aut earum suscipit natus?
-                Repellendus nisi id perferendis mollitia! Adipisci.
-              </>
-            }
-            extLink="https://google.com"
-            imgLink="/media/heroImage.jpg"
+            type="CaixaBank"
+            title="Imagin conecta a inversores con los emprendedores ganadores del ImaginPlanetChallenge"
+            text="imagin, la plataforma de servicios digitales y estilo de vida
+                impulsada por CaixaBank, ha organizado una sesión Demo Day en la
+                que los emprendedores ganadores de la primera edición del
+                imaginPlanet Challenge han tenido la oportunidad de presentar
+                sus iniciativas ante inversores, business angels, plataformas
+                aceleradoras y organizaciones de referencia del ecosistema
+                emprendedor."
+            extLink="https://www.caixabank.com/comunicacion/noticia/imagin-conecta-a-inversores-con-los-emprendedores-ganadores-del-imaginplanet-challenge_es.html?id=43056#"
+            imgLink="/media/articles/caixaBankArticle.jpg"
           />
           <Article
             className="md:col-span-2 lg:col-span-1"
-            type="Articulo"
-            title="TItle test"
-            text={
-              <>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Reiciendis sit consectetur, at ducimus autem aspernatur iusto
-                cumque commodi magnam deleniti aut earum suscipit natus?
-                Repellendus nisi id perferendis mollitia! Adipisci.
-              </>
-            }
-            extLink="https://google.com"
-            imgLink="/media/heroImage.jpg"
+            type="Diari Ara"
+            title="Imagin premia a un 'Blablacar' de paquetería y una plataforma de juguetes compartidos"
+            text="La primera competición de emprendimiento medioambiental de Imagin, la
+                plataforma para jóvenes de CaixaBank, ya tiene ganadores. Se trata
+                de una solución que pretende utilizar vehículos privados para
+                transportar paquetes y de un proyecto que plantea alquilar juguetes
+                en lugar de comprarlas. Los jóvenes detrás de eCodeliver y
+                Kidalos, como se llaman estas dos ideas de empresa, han
+                marchado a un laboratorio en Lanzarote donde expertos de la misma
+                Imagin y un equipo de profesionales dedicados al emprendimiento, la
+                sostenibilidad y la innovación les ayudarán a desarrollar una
+                primera versión del producto que intentan construir."
+            extLink="https://www.ara.cat/economia/imagin-premia-blablacar-paqueteria-plataforma-joguines-compartides_1_4052007.html"
+            imgLink="media/articles/araArticle.webp"
+          />
+          <Article
+            type="lavanguardia"
+            title="ecoDeliver y Kidalos ganan la primera edición del imaginPlanet Challenge"
+            text="ecoDeliver y Kidalos han sido elegidos entre los 230 equipos participantes,
+             formados por más de 700 jóvenes de 16 universidades españolas que,
+              de la mano de imagin, han dado forma a sus ideas durante los tres últimos meses."
+            extLink="https://www.lavanguardia.com/vida/20210713/7597222/ecodeliver-kidalos-ganan-primera-edicion-imaginplanet-challenge.html"
+            imgLink="/media/articles/lavanguardiaArticle.webp"
           />
         </div>
       </section>
