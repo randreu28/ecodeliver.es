@@ -330,8 +330,8 @@ export default function Particular() {
             </div>
           </div>
           <p className="text-gray-400 text-xs p-5 text-center">
-            *Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
-            aperiam non neque?
+            *Datos de la guía de cálculo de emisiones de la Generalitat de
+            Catalunya y la CNMC
           </p>
         </div>
 
