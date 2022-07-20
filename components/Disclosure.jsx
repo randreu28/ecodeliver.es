@@ -49,8 +49,8 @@ export default function Disclosure(props) {
         id="disc"
         className={
           props.isOpen
-            ? "px-10 overflow-hidden h-auto"
-            : "px-10 overflow-hidden h-0"
+            ? "px-10 text-lg text-gray-500 overflow-hidden h-auto"
+            : "px-10 text-lg text-gray-500 overflow-hidden h-0"
         }
         ref={discRef}
       >
