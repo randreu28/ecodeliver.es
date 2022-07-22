@@ -32,6 +32,11 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
+"@formcarry/react@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@formcarry/react/-/react-1.0.3.tgz#6a664f7bd6ab0c09c9f317392980db95cdde5be1"
+  integrity sha512-bJ+vv+cic8pba1+zL0rubQAxnYhZRCJLz1Y1oEqN2FickShLMHIfmVt4wB0wlovgaeZxwEFxjbiIxv4MplL6vg==
+
 "@headlessui/react@^1.6.6":
   version "1.6.6"
   resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-1.6.6.tgz#3073c066b85535c9d28783da0a4d9288b5354d0c"
