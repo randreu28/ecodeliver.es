@@ -47,6 +47,7 @@ export default function Particular() {
         <title>Particular</title>
       </Head>
       <Navbar navData={navData} />
+
       <section id={navData[0].href} className="space-y-5">
         <main className="min-h-screen pt-20 flex flex-row flex-wrap gap-5 p-5">
           {/*  eslint-disable-next-line @next/next/no-img-element */}
@@ -83,6 +84,13 @@ export default function Particular() {
               </div>
             </div>
           </div>
+          <Alert
+            type="warning"
+            title="Servidores no disponibles"
+            text="Porfavor, intente de nuevo luego"
+            isShowing={isShowing}
+            setIsShowing={setIsShowing}
+          />
           <div className="m-auto" data-aos="fade-left" data-aos-delay="100">
             <Image
               className="hidden rounded-lg"
@@ -110,14 +118,6 @@ export default function Particular() {
           <CloudLogo />
         </div>
       </section>
-
-      <Alert
-        type="warning"
-        title="Servidores no disponibles"
-        text="Porfavor, intente de nuevo luego"
-        isShowing={isShowing}
-        setIsShowing={setIsShowing}
-      />
 
       <section id={navData[1].href} className="bg-green-50 space-y-10">
         <div className="container px-6 py-10 mx-auto">
@@ -264,10 +264,10 @@ export default function Particular() {
               Te damos un toque cuando esté listo
             </p>
           </div>
-
           <Form />
         </div>
       </section>
+
       <section id={navData[2].href} className="container px-6 py-10 mx-auto">
         <h1
           className="text-3xl font-semibold text-center text-secondary lg:text-4xl "
@@ -390,6 +390,7 @@ export default function Particular() {
           </Value>
         </div>
       </section>
+
       <section id={navData[3].href} className="container mx-auto px-6">
         <p
           className="text-center text-primary font-semibold pt-2 text-lg"
@@ -448,6 +449,7 @@ export default function Particular() {
           />
         </div>
       </section>
+
       <section id={navData[4].href} className="max-w-5xl px-5 mx-auto">
         <p
           className="text-center text-primary font-semibold pb-2 text-lg"
