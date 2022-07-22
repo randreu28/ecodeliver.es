@@ -35,18 +35,17 @@ export default function Alert({ type, title, text, isShowing, setIsShowing }) {
       leave="transition-opacity duration-200"
       leaveFrom="opacity-100"
       leaveTo="opacity-0"
+      as="div"
+      className={
+        "p-4 mb-4 text-sm rounded-lg fixed left-0 bottom-3 flex gap-2 z-10 " +
+        color
+      }
+      role="alert"
     >
-      <div
-        className={
-          "p-4 mb-4 text-sm rounded-lg fixed bottom-3 flex gap-2 z-10 " + color
-        }
-        role="alert"
-      >
-        <span className="font-bold">{title}</span> {text}
-        <button onClick={() => setIsShowing(false)}>
-          <XIcon className="h-4 w-4 my-auto" />
-        </button>
-      </div>
+      <span className="font-bold">{title}</span> {text}
+      <button onClick={() => setIsShowing(false)}>
+        <XIcon className="h-4 w-4 my-auto" />
+      </button>
     </Transition>
   );
 }
