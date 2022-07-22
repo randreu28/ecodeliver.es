@@ -80,7 +80,7 @@ export default function Footer() {
                 Sobre nosotros
               </h3>
               <a
-                href="mailto:webmaster@example.com"
+                href="mailto:hola@ecodeliver.tech"
                 className="block mt-2 text-gray-600 hover:underline"
               >
                 Trabaja con nosotros
@@ -107,9 +107,12 @@ export default function Footer() {
               <h3 className="text-gray-700 font-semibold text-lg">
                 Contáctanos
               </h3>
-              <span className="block mt-2 text-gray-600  hover:underline">
-                example@email.com
-              </span>
+              <a
+                href="mailto:hola@ecodeliver.tech"
+                className="block mt-2 text-gray-600 hover:underline"
+              >
+                hola@ecodeliver.tech
+              </a>
             </div>
           </div>
         </div>
