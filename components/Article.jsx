@@ -23,12 +23,9 @@ export default function Article({
           <span className="text-xs font-medium text-green-600 uppercase">
             {type}
           </span>
-          <a
-            href="#"
-            className="block mt-2 text-2xl font-semibold text-gray-800 transition-colors duration-200 transform  hover:text-gray-600 hover:underline line-clamp-2"
-          >
+          <h2 className="block mt-2 text-2xl font-semibold text-gray-800 line-clamp-2">
             {title}
-          </a>
+          </h2>
           <p className="mt-2 text-gray-500 line-clamp-3">{text}</p>
         </div>
 
