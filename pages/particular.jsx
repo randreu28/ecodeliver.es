@@ -250,7 +250,7 @@ export default function Particular() {
           </div>
           <p className="text-gray-400 text-xs p-5 text-center">
             *Datos de la guía de cálculo de emisiones de la Generalitat de
-            Catalunya y la CNMC
+            Cataluña y la CNMC
           </p>
         </div>
 
