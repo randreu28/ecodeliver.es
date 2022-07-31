@@ -16,7 +16,9 @@
     "aos": "^2.3.4",
     "js-cookie": "^3.0.1",
     "next": "12.2.0",
+    "next-mdx-remote": "^4.1.0",
     "nextjs-google-analytics": "^1.2.1",
+    "raw-loader": "^4.0.2",
     "react": "18.2.0",
     "react-animate-height": "^3.0.4",
     "react-dom": "18.2.0"

@@ -1,6 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  webpack: (config) => {
+    /* Used for importing md/mdx files as strings */
+    config.module.rules.push({
+      test: /\.(md|mdx)$/,
+      use: ["raw-loader"],
+    });
+
+    return config;
+  },
   async redirects() {
     return [
       {
