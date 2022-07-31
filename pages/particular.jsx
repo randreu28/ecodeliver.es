@@ -49,7 +49,7 @@ export default function Particular() {
       <Navbar navData={navData} />
 
       <section id={navData[0].href} className="space-y-5">
-        <main className="min-h-screen pt-20 flex flex-row flex-wrap gap-5 p-5">
+        <main className="min-h-screen pt-20 flex flex-row flex-wrap gap-1 md:gap-5 p-5">
           {/*  eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/media/brand/line-6.svg"
@@ -91,7 +91,11 @@ export default function Particular() {
             isShowing={isShowing}
             setIsShowing={setIsShowing}
           />
-          <div className="m-auto" data-aos="fade-left" data-aos-delay="100">
+          <div
+            className="mx-auto md:m-auto"
+            data-aos="fade-left"
+            data-aos-delay="100"
+          >
             <Image
               className="hidden rounded-lg"
               src="/media/heroImage.jpg"
