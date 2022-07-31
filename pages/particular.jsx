@@ -139,8 +139,8 @@ export default function Particular() {
                   <b>
                     <span className="text-primary">eco</span>Driver
                   </b>
-                  , transportando paquetes consigo y cubriendo los gastos del
-                  viaje!
+                  , aprovechando el espacio libre en el coche, transportando
+                  paquetes consigo y cubriendo los gastos del viaje!
                 </p>
                 <div>
                   <span className="inline-block w-40 h-1 rounded-full bg-green-500" />
@@ -157,8 +157,12 @@ export default function Particular() {
                     Publica tu viaje en la App
                   </h1>
                   <p className="mt-3 text-gray-500">
-                    Completando tu perfil en nuestra App e indicando la
-                    información de tu viaje.
+                    Tienes planeado viajar en coche? Completa tu perfil e
+                    indícanos la información de tu viaje en la app de{" "}
+                    <b>
+                      <span className="text-primary">eco</span>Deliver
+                    </b>
+                    .
                   </p>
                 </div>
               </div>
@@ -171,8 +175,8 @@ export default function Particular() {
                     Recoge los paquetes en nuestro almacén
                   </h1>
                   <p className="mt-3 text-gray-500 ">
-                    Te estaremos esperando con bolsas de paquetes en nuestro
-                    almacén, a la salida de la ciudad.
+                    Te estaremos esperando con bolsas de paquetes a la salida de
+                    la ciudad.
                   </p>
                 </div>
               </div>
@@ -185,8 +189,9 @@ export default function Particular() {
                     Deja los paquetes al llegar a tu destino
                   </h1>
                   <p className="mt-3 text-gray-500">
-                    ¡Dejas los paquetes en nuestro almacén en destino y te
-                    olvidas! Cinco minutos de desvío en cada ciudad.
+                    Cuando llegues a tu destino, dejas las bolsas con paquetes
+                    en nuestro almacén a la entrada de la ciudad y te listo! Son
+                    5 minutos de desvío en cada ciudad.
                   </p>
                 </div>
               </div>
@@ -200,7 +205,8 @@ export default function Particular() {
                   </h1>
                   <p className="mt-3 text-gray-500">
                     Cubriendo los costes del viaje y evitando que un camión
-                    tenga que hacer el transporte.
+                    tenga que hacer el transporte (ahorrando todas esas
+                    emisiones!)
                   </p>
                 </div>
               </div>
