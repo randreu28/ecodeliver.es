@@ -555,7 +555,7 @@ export default function Particular() {
           className="hidden xl:block absolute right-0 h-1/3 scale-x-[-1] -translate-y-48 translate-x-1/2"
           alt=""
         />
-        <Footer />
+        <Footer animated={true} />
       </section>
     </>
   );

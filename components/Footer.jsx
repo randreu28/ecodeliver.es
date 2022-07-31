@@ -3,15 +3,17 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Link from "next/link";
 
-export default function Footer() {
+export default function Footer({ animated, className }) {
   useEffect(() => {
     AOS.init();
   }, []);
 
   return (
     <footer
-      className="bg-green-50 container pt-5 pb-2 mx-auto space-y-2"
-      data-aos="fade-down"
+      className={
+        "bg-green-50 container pt-5 pb-2 mx-auto space-y-2 " + className
+      }
+      data-aos={animated ? "fade-down" : null}
     >
       <div className="lg:flex">
         <div className="lg:w-full">
