@@ -1,61 +1,38 @@
 import { PlusCircleIcon, MinusCircleIcon } from "@heroicons/react/solid";
-import { useState, useEffect, useRef } from "react";
-import { gsap } from "gsap";
+import { useState, useEffect } from "react";
+
+import AnimateHeight from "react-animate-height";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-export default function Disclosure(props) {
-  const [isOpen, setisOpen] = useState(props.isOpen);
-
-  const discRef = useRef();
-
-  const [height, setHeight] = useState(null);
+export default function Disclosure({ title, text, isOpen }) {
+  const [Open, setOpen] = useState(isOpen);
+  const [height, setHeight] = useState(0);
 
   useEffect(() => {
-    setHeight(
-      parseInt(
-        getComputedStyle(document.getElementById("disc")).getPropertyValue(
-          "height"
-        ),
-        10
-      )
-    );
     AOS.init();
   }, []);
 
   const handleOpen = () => {
-    if (isOpen === true) {
-      gsap.to(discRef.current, { height: "-=" + height });
-    } else {
-      gsap.to(discRef.current, { height: "+=" + height });
-    }
-
-    setisOpen(!isOpen);
+    setHeight(height === 0 ? "auto" : 0);
+    setOpen(!Open);
   };
 
   return (
     <div className="space-y-3 py-5" data-aos="fade-left">
       <div className="flex" onClick={handleOpen}>
-        {isOpen ? (
+        {Open ? (
           <MinusCircleIcon className="absolute h-6 w-6 my-auto text-primary cursor-pointer" />
         ) : (
           <PlusCircleIcon className="absolute h-6 w-6 my-auto text-primary cursor-pointer" />
         )}
         <h1 className="text-2xl md:text-3xl mx-10 font-bold cursor-pointer">
-          {props.title}
+          {title}
         </h1>
       </div>
-      <p
-        id="disc"
-        className={
-          props.isOpen
-            ? "px-10 text-lg text-gray-500 overflow-hidden h-auto"
-            : "px-10 text-lg text-gray-500 overflow-hidden h-0"
-        }
-        ref={discRef}
-      >
-        {props.text}
-      </p>
+      <AnimateHeight duration={500} height={height}>
+        <p className="px-10 text-lg text-gray-500 overflow-hidden">{text}</p>
+      </AnimateHeight>
     </div>
   );
 }
