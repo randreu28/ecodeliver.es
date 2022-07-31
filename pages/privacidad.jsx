@@ -2,15 +2,21 @@ import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 
 import Insight from "../components/Insight";
-import content from "./privacidad.mdx";
+import content from "./privacidad.md";
+import SmNavbar from "../components/SmNavbar";
+import Footer from "../components/Footer";
 
 const components = { Insight };
 
 export default function Privacidad({ source }) {
   return (
-    <div className="container">
-      <MDXRemote {...source} components={components} />
-    </div>
+    <>
+      <SmNavbar />
+      <div className="prose prose-lg max-w-5xl space-y-10 container pt-20 p-5 mx-auto">
+        <MDXRemote {...source} components={components} />
+      </div>
+      <Footer className="max-w-5xl m-auto" animated={false} />
+    </>
   );
 }
 
