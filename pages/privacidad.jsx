@@ -5,17 +5,19 @@ import Insight from "../components/Insight";
 import content from "./privacidad.md";
 import SmNavbar from "../components/SmNavbar";
 import Footer from "../components/Footer";
+import WebHolder from "../components/Webholder";
 
 const components = { Insight };
 
 export default function Privacidad({ source }) {
   return (
     <>
-      <SmNavbar />
+      <WebHolder />
+      {/* <SmNavbar />
       <div className="prose prose-lg max-w-5xl space-y-10 container pt-20 p-5 mx-auto">
         <MDXRemote {...source} components={components} />
       </div>
-      <Footer className="max-w-5xl m-auto" animated={false} />
+      <Footer className="max-w-5xl m-auto" animated={false} /> */}
     </>
   );
 }
