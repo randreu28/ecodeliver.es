@@ -11,6 +11,10 @@ export default function Disclosure({ title, text, isOpen }) {
 
   useEffect(() => {
     AOS.init();
+    if (isOpen) {
+      setHeight("auto");
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleOpen = () => {
