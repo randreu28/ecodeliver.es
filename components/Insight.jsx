@@ -29,13 +29,9 @@ export default function Insight({ children, emoji, type }) {
   }
 
   return (
-    <div
-      className={
-        "flex flex-row gap-5 rounded-lg px-2 pt-5 pr-6 text-justify " + color
-      }
-    >
-      <span className="text-2xl pt-2 pl-2 w-10">{emoji}</span>
-      <span>{children}</span>
+    <div className={"flex flex-row gap-5 rounded-lg px-2 pr-6 " + color}>
+      {emoji ? <span className="text-2xl pt-6 pl-2 w-10">{emoji}</span> : null}
+      <span className={emoji ? null : "pl-4"}>{children}</span>
     </div>
   );
 }
