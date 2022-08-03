@@ -13,7 +13,7 @@ export default function SeoTags() {
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={process.env.VERCEL_URL} />
+      <meta property="og:url" content={process.env.SITE_URL} />
       <meta
         property="og:title"
         content="ecoDeliver - Entrega de paqueteria sostenible"
