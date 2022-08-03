@@ -98,7 +98,7 @@ export default function Particular() {
           >
             <Image
               className="hidden rounded-lg"
-              src="/media/heroImage.jpg"
+              src="/media/pilotTest.jpg"
               alt="logo"
               height={1000 / 3}
               width={1500 / 3}
@@ -217,7 +217,7 @@ export default function Particular() {
             >
               <Image
                 className="w-[28rem] h-[28rem] object-cover xl:w-[34rem] xl:h-[34rem] rounded-full"
-                src="/media/howItWorks.jpg"
+                src="/media/stockImage2.jpg"
                 alt=""
                 height={500}
                 width={500}
