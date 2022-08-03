@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
 const config = {
-  siteUrl: process.env.VERCEL_URL,
+  siteUrl: process.env.SITE_URL ? process.env.SITE_URL : process.env.VERCEL_URL,
   generateRobotsTxt: true, // (optional)
   // ...other options
 };
