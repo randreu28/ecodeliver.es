@@ -190,8 +190,8 @@ export default function Particular() {
                   </h1>
                   <p className="mt-3 text-gray-500">
                     Cuando llegues a tu destino, dejas las bolsas con paquetes
-                    en nuestro almacén a la entrada de la ciudad y te listo! Son
-                    5 minutos de desvío en cada ciudad.
+                    en nuestro almacén a la entrada de la ciudad y listo! Son 5
+                    minutos de desvío en cada ciudad.
                   </p>
                 </div>
               </div>
