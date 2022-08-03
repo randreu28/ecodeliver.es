@@ -48,6 +48,7 @@ export default function Navbar({ navData }) {
       <div className="my-auto divide-x divide-gray-300 hidden lg:inline">
         <Link href="/particular">
           <a
+            rel="canonical"
             className={
               router.asPath.includes("/particular")
                 ? "pr-3 text-primary duration-200 hover:opacity-50"
@@ -59,6 +60,7 @@ export default function Navbar({ navData }) {
         </Link>
         <Link href="/empresa">
           <a
+            rel="canonical"
             className={
               router.asPath.includes("/empresa")
                 ? "pl-3 text-primary duration-200 hover:opacity-50"

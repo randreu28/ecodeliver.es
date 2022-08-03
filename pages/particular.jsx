@@ -44,7 +44,11 @@ export default function Particular() {
   return (
     <>
       <Head>
-        <title>Particular</title>
+        <title>ecoDeliver - El BlaBlaCar de la paquetería, sostenible</title>
+        <meta
+          name="description"
+          content="Transporte de paquetería sostenible, mediante una entrega colaborativa que te permite cubrir los costes de tus viajes en coche por España"
+        />
       </Head>
       <Navbar navData={navData} />
 

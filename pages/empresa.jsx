@@ -17,7 +17,17 @@ export default function Empresa() {
   return (
     <>
       <Head>
-        <title>Empresa</title>
+        <title>
+          ecoDeliver - Entrega de paqueteria sostenible para e-commerce
+        </title>
+        <meta
+          name="description"
+          content="Transporte de paquetería colaborativo y de última milla verde mediante vehículos eléctricos en España."
+        />
+        <meta
+          property="og:image"
+          content="https://res.cloudinary.com/ecodeliver-es/image/upload/v1659538036/stockImage3_podaof.jpg"
+        />
       </Head>
       <Webholder />
       {/* <Navbar navData={navData} />
