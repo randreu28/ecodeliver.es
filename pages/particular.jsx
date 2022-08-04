@@ -104,8 +104,8 @@ export default function Particular() {
               className="hidden rounded-lg"
               src="/media/pilotTest.jpg"
               alt="logo"
-              height={1000 / 3}
-              width={1500 / 3}
+              height={1000 / 2.5}
+              width={1500 / 2.5}
               priority
             />
           </div>
