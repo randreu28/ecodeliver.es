@@ -1,14 +1,21 @@
+/* eslint-disable @next/next/no-img-element */
 import Navbar from "../components/Navbar";
 import {
   FingerPrintIcon,
   LightningBoltIcon,
   AnnotationIcon,
   ShieldCheckIcon,
+  OfficeBuildingIcon,
+  UserGroupIcon,
 } from "@heroicons/react/outline";
 import CloudLogo from "../components/CloudLogo";
 import Image from "next/image";
 import Head from "next/head";
 import Cookies from "js-cookie";
+import Value from "../components/Value";
+import Article from "../components/Article";
+import Disclosure from "../components/Disclosure";
+import Footer from "../components/Footer";
 
 import { useEffect } from "react";
 import AOS from "aos";
@@ -48,7 +55,6 @@ export default function Empresa() {
 
       <section id={navData[0].href} className="space-y-5">
         <main className="min-h-screen pt-20 flex flex-row-reverse flex-wrap gap-1 md:gap-5 p-5">
-          {/*  eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/media/brand/line-4.svg"
             className="hidden xl:block absolute left-0 h-1/6 -translate-x-1/2"
@@ -87,7 +93,6 @@ export default function Empresa() {
             />
           </div>
         </main>
-        {/*  eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/media/brand/line-6.svg"
           className="hidden xl:block absolute -translate-y-64 translate-x-1/3 right-0 h-1/6 scale-x-[-1] -z-10"
@@ -104,6 +109,12 @@ export default function Empresa() {
         </div>
       </section>
       <section id={navData[1].href} className="space-y-5">
+        <p
+          className="text-center text-primary font-semibold pt-10 text-lg"
+          data-aos="fade-in"
+        >
+          Valores
+        </p>
         <h1
           className="text-4xl text-center text-secondary font-bold "
           data-aos="fade-in"
@@ -151,19 +162,25 @@ export default function Empresa() {
 
         <div className="bg-green-50">
           <div className="container px-6 py-10 mx-auto">
-            <h1 className="text-3xl font-semibold text-gray-800 lg:text-4xl max-w-lg pb-5">
+            <h1
+              className="text-3xl font-semibold text-gray-800 lg:text-4xl max-w-lg pb-5"
+              data-aos="fade-left"
+            >
               Con valores que complementan a los de tu marca
             </h1>
-            <p className="text-gray-500 text-xl">
+            <p className="text-gray-500 text-xl" data-aos="fade-left">
               Juntos, hacemos la diferencia
             </p>
-            <div className="mt-2">
+            <div className="mt-2" data-aos="fade-left">
               <span className="inline-block w-40 h-1 rounded-full bg-green-500" />
               <span className="inline-block w-3 h-1 ml-1 rounded-full bg-green-500" />
               <span className="inline-block w-1 h-1 ml-1 rounded-full bg-green-500" />
             </div>
             <div className="mt-8 xl:mt-12 lg:flex lg:items-center">
-              <div className="w-full lg:w-1/2 grid grid-cols-1 gap-8 xl:gap-16 md:grid-cols-2">
+              <div
+                className="w-full lg:w-1/2 grid grid-cols-1 gap-8 xl:gap-16 md:grid-cols-2"
+                data-aos="fade-left"
+              >
                 <div className="space-y-3">
                   <span className="inline-block p-3 text-green-500 bg-green-100 rounded-xl">
                     <FingerPrintIcon className="w-6 h-6" />
@@ -215,7 +232,10 @@ export default function Empresa() {
                   </p>
                 </div>
               </div>
-              <div className="hidden lg:flex lg:w-1/2 lg:justify-end">
+              <div
+                className="hidden lg:flex lg:w-1/2 lg:justify-end"
+                data-aos="fade-right"
+              >
                 <Image
                   width={500}
                   height={500}
@@ -228,11 +248,198 @@ export default function Empresa() {
           </div>
         </div>
       </section>
-      <section id={navData[2].href} className="h-screen flex bg-slate-200">
-        <h1 className="m-auto text-5xl">{navData[2].name}</h1>
+      <section id={navData[2].href} className="container px-6 py-10 mx-auto">
+        <p
+          className="text-center text-primary font-semibold text-lg pb-2"
+          data-aos="fade-in"
+        >
+          Sobre nosotros
+        </p>
+        <h1
+          className="text-4xl text-center text-secondary font-bold "
+          data-aos="fade-in"
+        >
+          ¿Cómo lo hacemos?
+        </h1>
+        <p
+          className="md:text-center text-gray-500 pt-2 px-5 text-lg max-w-3xl mx-auto"
+          data-aos="fade-in"
+        >
+          Combinando nuestra flota de furgonetas totalmente eléctricas y la
+          colaboración de nuestra comunidad de{" "}
+          <span className="text-secondary font-semibold">
+            <span className="text-primary">eco</span>Drivers
+          </span>
+        </p>
+        <div
+          className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3"
+          data-aos="fade-in"
+        >
+          <Value
+            title="Gestión centralizada"
+            text="Agrupamos y organizamos los paquetes en nuestro almacén para su recogida por los ecoDrivers."
+          >
+            <OfficeBuildingIcon className="h-6 w-6" />
+          </Value>
+
+          <Value
+            title="Transporte colaborativo"
+            text="Los ecoDrivers, de camino a su destino, pasan por el almacén a recoger paquetes en bolsas seguras y convenientes y las entregan en su ciudad de destino."
+          >
+            <UserGroupIcon className="h-6 w-6" />
+          </Value>
+
+          <Value
+            className="md:col-span-2 xl:col-span-1"
+            title="Última milla eléctrica"
+            text="Realizamos las entregas de última milla con nuestra flota de vehículos 100% eléctricos!"
+          >
+            <LightningBoltIcon className="h-6 w-6" />
+          </Value>
+        </div>
+        <p
+          className="text-center text-primary font-semibold pt-10 text-lg"
+          data-aos="fade-in"
+        >
+          Noticias
+        </p>
+        <h1
+          className="text-3xl font-semibold text-center text-secondary lg:text-4xl "
+          data-aos="fade-in"
+        >
+          Nos mencionan
+        </h1>
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 m-auto py-10"
+          data-aos="fade-in"
+        >
+          <Article
+            type="CaixaBank"
+            title="Imagin conecta a inversores con los emprendedores ganadores del ImaginPlanetChallenge"
+            text="imagin, la plataforma de servicios digitales y estilo de vida
+                impulsada por CaixaBank, ha organizado una sesión Demo Day en la
+                que los emprendedores ganadores de la primera edición del
+                imaginPlanet Challenge han tenido la oportunidad de presentar
+                sus iniciativas ante inversores, business angels, plataformas
+                aceleradoras y organizaciones de referencia del ecosistema
+                emprendedor."
+            extLink="https://www.caixabank.com/comunicacion/noticia/imagin-conecta-a-inversores-con-los-emprendedores-ganadores-del-imaginplanet-challenge_es.html?id=43056#"
+            imgLink="/media/articles/caixaBankArticle.jpg"
+          />
+          <Article
+            type="Diari Ara"
+            title="Imagin premia a un 'Blablacar' de paquetería y una plataforma de juguetes compartidos"
+            text="La primera competición de emprendimiento medioambiental de Imagin, la
+                plataforma para jóvenes de CaixaBank, ya tiene ganadores. Se trata
+                de una solución que pretende utilizar vehículos privados para
+                transportar paquetes y de un proyecto que plantea alquilar juguetes
+                en lugar de comprarlas. Los jóvenes detrás de eCodeliver y
+                Kidalos, como se llaman estas dos ideas de empresa, han
+                marchado a un laboratorio en Lanzarote donde expertos de la misma
+                Imagin y un equipo de profesionales dedicados al emprendimiento, la
+                sostenibilidad y la innovación les ayudarán a desarrollar una
+                primera versión del producto que intentan construir."
+            extLink="https://www.ara.cat/economia/imagin-premia-blablacar-paqueteria-plataforma-joguines-compartides_1_4052007.html"
+            imgLink="media/articles/araArticle.webp"
+          />
+          <Article
+            className="md:col-span-2 lg:col-span-1"
+            type="lavanguardia"
+            title="ecoDeliver y Kidalos ganan la primera edición del imaginPlanet Challenge"
+            text="ecoDeliver y Kidalos han sido elegidos entre los 230 equipos participantes,
+             formados por más de 700 jóvenes de 16 universidades españolas que,
+              de la mano de imagin, han dado forma a sus ideas durante los tres últimos meses."
+            extLink="https://www.lavanguardia.com/vida/20210713/7597222/ecodeliver-kidalos-ganan-primera-edicion-imaginplanet-challenge.html"
+            imgLink="/media/articles/lavanguardiaArticle.webp"
+          />
+        </div>
+        {/* CTA */}
       </section>
-      <section id={navData[3].href} className="h-screen flex bg-slate-300">
-        <h1 className="m-auto text-5xl">{navData[3].name}</h1>
+      <section id={navData[3].href} className="max-w-5xl px-5 mx-auto">
+        <p
+          className="text-center text-primary font-semibold pb-2 text-lg"
+          data-aos="fade-in"
+        >
+          FAQ
+        </p>
+        <h1
+          className="text-center text-4xl lg:text-5xl font-bold md:px-10 mb-8"
+          data-aos="fade-in"
+        >
+          Preguntas frecuentes
+        </h1>
+        <img
+          src="/media/brand/line-3.svg"
+          className="hidden xl:block absolute left-0 h-1/6 -translate-x-1/2"
+          alt=""
+        />
+        <div className="divide-y container pb-10">
+          <Disclosure
+            isOpen={true}
+            title={<>¿Cómo se garantiza la seguridad de los envíos? </>}
+            text={
+              <>
+                Tratamos tu envíos con el máximo cariño posible! Los ecoDrivers
+                los recogen en bolsas seguras y selladas con una abrazadera
+                única, que permite asegurar que no se ha accedido a la mercancía
+                desde el momento en que el usuario sale del almacén hasta que lo
+                entrega en destino. Además, tenemos la mercancía asegurada con
+                un seguro de mercancías.
+              </>
+            }
+          />
+          <Disclosure
+            title={
+              <>
+                ¿Cómo se garantiza que los envíos lleguen en el plazo esperado?
+              </>
+            }
+            text={
+              <>
+                Sabemos que como negocio, tu preocupación es vender y cuidar de
+                tus clientes, no la de hacer entregas. Para eso estamos
+                nosotros, y nuestra responsabilidad como courier es hacer la
+                entrega en el plazo acordado, por lo que incluso en el caso de
+                que no haya ecoDrivers disponibles para hacer el transporte de
+                una ruta determinada, contamos con medios alternativos de
+                transporte que garantizan la entrega y nos permiten seguir
+                actuando de acorde a nuestros valores.
+              </>
+            }
+          />
+          <Disclosure
+            title={<>¿Qué diferencia a ecoDeliver de las otras plataformas?</>}
+            text={
+              <>
+                El sector de envíos y entregas está viviendo un cambio muy
+                importante hacia la entrega sostenible, y hay otros servicios
+                que ofrecen esta posibilidad. No obstante, aún no existe un
+                método alternativo a la comunidad de ecoDeliver para hacer el
+                transporte de larga distancia. Nos diferencia este compromiso
+                medioambiental, el cuidado hacia las personas que nos
+                representan como nuestros repartidores, y nuestro compromiso
+                para ofrecer un servicio de calidad que no represente un
+                sobrecoste para nuestros clientes.
+              </>
+            }
+          />
+          <Disclosure
+            title={<>¿ecoDeliver sólo hace entregas para e-commerce?</>}
+            text={
+              <>
+                Pese a que tenemos la infraestructura y capacidad para
+                involucrarnos en diferentes tipos de entregas y proyectos, nos
+                centramos principalmente en entregas de paquetería pequeña.
+              </>
+            }
+          />
+        </div>
+        <img
+          src="/media/brand/line-1.svg"
+          className="hidden xl:block absolute right-0 h-1/3 scale-x-[-1] -translate-y-48 translate-x-1/2"
+          alt=""
+        />
+        <Footer animated={true} />
       </section>
     </>
   );
