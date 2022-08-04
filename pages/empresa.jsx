@@ -7,6 +7,7 @@ import {
   ShieldCheckIcon,
   OfficeBuildingIcon,
   UserGroupIcon,
+  MailIcon,
 } from "@heroicons/react/outline";
 import CloudLogo from "../components/CloudLogo";
 import Image from "next/image";
@@ -16,10 +17,12 @@ import Value from "../components/Value";
 import Article from "../components/Article";
 import Disclosure from "../components/Disclosure";
 import Footer from "../components/Footer";
+import BusinessForm from "../components/BusinessForm";
 
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Button from "../components/Button";
 
 export default function Empresa() {
   Cookies.set("isBusiness", true);
@@ -75,7 +78,9 @@ export default function Empresa() {
               <p className="text-lg font-normal pb-2">
                 Tienes una cuenta? Accede a la información de tus envíos aquí:
               </p>
-              <div className="flex flex-row gap-5 flex-wrap">{/* ? */}</div>
+              <div className="flex flex-row gap-5 flex-wrap">
+                <Button text="Test button" />
+              </div>
             </div>
           </div>
           <div
@@ -164,14 +169,14 @@ export default function Empresa() {
           <div className="container px-6 py-10 mx-auto">
             <h1
               className="text-3xl font-semibold text-gray-800 lg:text-4xl max-w-lg pb-5"
-              data-aos="fade-left"
+              data-aos="fade-right"
             >
               Con valores que complementan a los de tu marca
             </h1>
-            <p className="text-gray-500 text-xl" data-aos="fade-left">
+            <p className="text-gray-500 text-xl" data-aos="fade-right">
               Juntos, hacemos la diferencia
             </p>
-            <div className="mt-2" data-aos="fade-left">
+            <div className="mt-2" data-aos="fade-right">
               <span className="inline-block w-40 h-1 rounded-full bg-green-500" />
               <span className="inline-block w-3 h-1 ml-1 rounded-full bg-green-500" />
               <span className="inline-block w-1 h-1 ml-1 rounded-full bg-green-500" />
@@ -179,7 +184,7 @@ export default function Empresa() {
             <div className="mt-8 xl:mt-12 lg:flex lg:items-center">
               <div
                 className="w-full lg:w-1/2 grid grid-cols-1 gap-8 xl:gap-16 md:grid-cols-2"
-                data-aos="fade-left"
+                data-aos="fade-right"
               >
                 <div className="space-y-3">
                   <span className="inline-block p-3 text-green-500 bg-green-100 rounded-xl">
@@ -234,7 +239,7 @@ export default function Empresa() {
               </div>
               <div
                 className="hidden lg:flex lg:w-1/2 lg:justify-end"
-                data-aos="fade-right"
+                data-aos="fade-left"
               >
                 <Image
                   width={500}
@@ -353,7 +358,23 @@ export default function Empresa() {
             imgLink="/media/articles/lavanguardiaArticle.webp"
           />
         </div>
-        {/* CTA */}
+        <div className="flex flex-col md:flex-row gap-5">
+          <div className="bg-green-50 space-y-5 p-10" data-aos="fade-right">
+            <h1 className="text-5xl font-bold text-secondary">Hablemos!</h1>
+            <p className="text-gray-500 text-lg max-w-lg">
+              Déjanos tus datos y te contactaremos para darte información o un
+              presupuesto personalizado en base a tus necesidades y volumen de
+              entregas.
+            </p>
+            <span className="flex flex-row gap-2 text-gray-500 text-lg">
+              <MailIcon className="w-6 h-6 my-auto" />
+              <a className="hover:underline" href="mailto:hola@ecodeliver.tech">
+                hola@ecodeliver.tech
+              </a>
+            </span>
+          </div>
+          <BusinessForm />
+        </div>
       </section>
       <section id={navData[3].href} className="max-w-5xl px-5 mx-auto">
         <p
