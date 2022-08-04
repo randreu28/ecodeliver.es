@@ -24,8 +24,11 @@ export default function Navbar({ navData }) {
   const router = useRouter();
 
   return (
-    <nav className="fixed justify-between flex w-full py-3 px-4 xl:px-[10vh] z-50 bg-white text-secondary text-lg">
-      <div className="flex-row space-x-8 flex">
+    <div
+      data-nosnippet
+      className="fixed justify-between flex w-full py-3 px-4 xl:px-[10vh] z-50 bg-white text-secondary text-lg"
+    >
+      <div data-nosnippet className="flex-row space-x-8 flex">
         <Logo />
         <ul className="my-auto space-x-8 hidden lg:inline">
           {navData.map((currentSection) => {
@@ -160,6 +163,6 @@ export default function Navbar({ navData }) {
           </Popover.Panel>
         </Transition>
       </Popover>
-    </nav>
+    </div>
   );
 }
