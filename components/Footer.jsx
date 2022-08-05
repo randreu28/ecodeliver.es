@@ -95,14 +95,14 @@ export default function Footer({ animated, className }) {
                   Politica de privacidad
                 </a>
               </Link>
-              <a
-                href="https://www.behance.net/gallery/125864213/ecoDeliver-Brand-Guidlines-20"
-                className="block mt-2 text-gray-600 hover:underline"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Marca corporativa
-              </a>
+              <Link href="/identidad-corporativa">
+                <a
+                  href="#"
+                  className="block mt-2 text-gray-600  hover:underline"
+                >
+                  Identidad corporativa
+                </a>
+              </Link>
             </div>
 
             <div>
