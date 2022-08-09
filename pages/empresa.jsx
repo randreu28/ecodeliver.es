@@ -21,8 +21,10 @@ import BusinessForm from "../components/BusinessForm";
 
 import { useEffect } from "react";
 import AOS from "aos";
+import { useState } from "react";
 import "aos/dist/aos.css";
-import Button from "../components/Button";
+import Alert from "../components/Alert";
+import { ArrowRightIcon } from "@heroicons/react/solid";
 
 export default function Empresa() {
   Cookies.set("isBusiness", true);
@@ -38,6 +40,8 @@ export default function Empresa() {
   useEffect(() => {
     AOS.init();
   }, []);
+
+  const [isShowing, setIsShowing] = useState(false);
 
   return (
     <>
@@ -78,11 +82,34 @@ export default function Empresa() {
               <p className="text-lg font-normal pb-2">
                 Tienes una cuenta? Accede a la información de tus envíos aquí:
               </p>
-              <div className="flex flex-row gap-5 flex-wrap">
-                <Button text="Test button" />
+              <div className="flex flex-col sm:flex-row gap-5 w-full">
+                <button
+                  onClick={() => {
+                    setIsShowing(true);
+                  }}
+                  className="px-4 py-2 justify-center flex font-semibold tracking-wide text-lg text-white capitalize transition-colors duration-200 transform bg-primary rounded-md focus:ring focus:ring-green-300 focus:ring-opacity-80 hover:bg-green-500 focus:outline-none focus:bg-green-600"
+                >
+                  Inicia sesión
+                </button>
+                <button
+                  onClick={() => {
+                    setIsShowing(true);
+                  }}
+                  className="px-4 py-2 justify-center flex gap-5 font-semibold border border-green-100 tracking-wide text-lg text-primary capitalize transition-colors duration-200 transform bg-white shadow-md rounded-md focus:ring focus:ring-green-300 focus:ring-opacity-80 hover:bg-green-100 focus:outline-none focus:bg-green-100"
+                >
+                  Regístrate
+                  <ArrowRightIcon className="w-6 h-6 my-auto" />
+                </button>
               </div>
             </div>
           </div>
+          <Alert
+            isShowing={isShowing}
+            setIsShowing={setIsShowing}
+            type="warning"
+            title="Servidores no disponibles"
+            text="Porfavor, inténtelo de nuevo luego"
+          />
           <div
             className="mx-auto md:m-auto"
             data-aos="fade-right"
