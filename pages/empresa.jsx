@@ -68,7 +68,7 @@ export default function Empresa() {
             data-aos="fade-left"
             data-aos-delay="100"
           >
-            <h1 className="text-secondary text-4xl md:text-6xl max-w-3xl !leading-[1.15] font-semibold">
+            <h1 className="text-secondary text-4xl md:text-5xl 2xl:text-6xl max-w-3xl !leading-[1.15] font-semibold">
               Entrega de paquetería{" "}
               <span className="text-primary">100% sostenible</span>, más allá de
               la movilidad eléctrica

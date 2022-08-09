@@ -65,7 +65,7 @@ export default function Particular() {
             data-aos="fade-right"
             data-aos-delay="100"
           >
-            <h1 className="text-secondary text-4xl md:text-6xl max-w-3xl !leading-[1.15]">
+            <h1 className="text-secondary text-4xl md:text-5xl 2xl:text-6xl max-w-3xl !leading-[1.15]">
               Viaja y únete a la comunidad de entregas de paquetería{" "}
               <span className="text-primary">100% sostenible</span>
             </h1>
