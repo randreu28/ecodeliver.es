@@ -22,7 +22,7 @@ export default function CloudLogo() {
         <div className="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
           <img
             className="grayscale max-w-full h-24"
-            src="/media/cloudLogos/caixaEnginyers.png"
+            src="/media/cloudLogos/imaginBank.png"
             alt="cloud logo"
           />
         </div>
@@ -38,7 +38,7 @@ export default function CloudLogo() {
         <div className="flex items-center justify-center col-span-2 md:col-span-3 lg:col-span-1">
           <img
             className="grayscale max-w-full h-24"
-            src="/media/cloudLogos/imaginBank.png"
+            src="/media/cloudLogos/caixaEnginyers.png"
             alt="cloud logo"
           />
         </div>
