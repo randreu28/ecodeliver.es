@@ -15,15 +15,16 @@ import Value from "../components/Value";
 import Article from "../components/Article";
 import Disclosure from "../components/Disclosure";
 import Footer from "../components/Footer";
-import Alert from "../components/Alert";
 import CloudLogo from "../components/CloudLogo";
 import { useState, useRef, useEffect } from "react";
 import Form from "../components/Form";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useRouter } from "next/router";
 
 export default function Particular() {
   Cookies.set("isBusiness", false);
+  const router = useRouter();
 
   const navData = [
     { name: "Inicio", href: "inicio" },
@@ -33,7 +34,6 @@ export default function Particular() {
     { name: "FAQ", href: "faq" },
   ];
 
-  const [isShowing, setIsShowing] = useState(false);
   const search = useRef();
 
   //Animations
@@ -81,20 +81,14 @@ export default function Particular() {
                 <Button
                   text="Busca"
                   event={() => {
-                    setIsShowing(true);
-                    search.current.value = "";
+                    router.push(
+                      `/rastrea-tu-paquete/${search.current.value}`
+                    );
                   }}
                 />
               </div>
             </div>
           </div>
-          <Alert
-            type="warning"
-            title="Servidores no disponibles"
-            text="Porfavor, intente de nuevo luego"
-            isShowing={isShowing}
-            setIsShowing={setIsShowing}
-          />
           <div
             className="mx-auto md:m-auto"
             data-aos="fade-left"
