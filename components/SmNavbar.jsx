@@ -1,9 +1,14 @@
 import Link from "next/link";
 import Logo from "./Logo";
 
-export default function Navbar() {
+export default function Navbar({ className }) {
   return (
-    <nav className="fixed justify-between flex w-full py-3 px-4 xl:px-[10vh] z-50 bg-white text-secondary text-lg">
+    <nav
+      className={
+        "fixed justify-between flex w-full py-3 px-4 xl:px-[10vh] z-50 bg-white text-secondary text-lg " +
+        className
+      }
+    >
       <Logo />
       <div className="my-auto divide-x divide-gray-300 hidden lg:inline">
         <Link href="/particular">
