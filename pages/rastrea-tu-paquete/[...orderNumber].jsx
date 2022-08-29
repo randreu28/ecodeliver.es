@@ -1,5 +1,4 @@
 import SmNavbar from "../../components/SmNavbar";
-import Button from "../../components/Button";
 import Step from "../../components/Step";
 import { EmojiHappyIcon } from "@heroicons/react/outline";
 import { useRef } from "react";
@@ -18,40 +17,85 @@ function TrackYourParcel({ slug, data }) {
   return (
     <>
       <SmNavbar className="sticky" />
-      <h1 className="text-center font-bold text-3xl">Rastrea tu paquete</h1>
+      <h1 className="text-center font-bold text-4xl">Rastrea tu paquete</h1>
       <div className="m-5 p-5 sm:m-10 sm:p-10 shadow-lg rounded-xl border border-gray-200">
         <div className="flex flex-col sm:flex-row gap-4 justify-between text-md">
-          <b className="my-auto text-xl text-center sm:text-left">{slug}</b>
-          <button className="px-4 py-2 font-semibold text-white capitalize transition-colors duration-200 transform bg-primary rounded-md focus:ring focus:ring-green-300 focus:ring-opacity-80 hover:bg-green-500 focus:outline-none focus:bg-green-600">
+          <b className="my-auto text-2xl text-center sm:text-left">
+            {slug} - En reparto
+          </b>
+          <button className="px-4 py-2 hover:cursor-not-allowed font-semibold text-white capitalize transition-colors duration-200 transform bg-primary rounded-md focus:ring focus:ring-green-300 focus:ring-opacity-80 hover:bg-green-500 focus:outline-none focus:bg-green-600">
             Modificar Entrega
           </button>
         </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 pt-10 gap-5">
+          <div>
+            <h3 className="font-bold text-lg">Ciudad de destino: </h3>
+            <p>{data[0].CityName}</p>
+          </div>
+          <div>
+            <h3 className="font-bold text-lg">Estado: </h3>
+            <p>
+              {data[0].DeliveryStatus ? data[0].DeliveryStatus : "En reparto"}
+            </p>
+          </div>
+          <div>
+            <h3 className="font-bold text-lg">Fecha estimada de entrega: </h3>
+            <p>{data[0].EstimatedDeliveryDate}</p>
+          </div>
+
+          <div>
+            <h3 className="font-bold text-lg">Dirección de entrega: </h3>
+            <p>{data[0].ReceiverAddress1}</p>
+          </div>
+          <div>
+            <h3 className="font-bold text-lg">Número de teléfono asociado: </h3>
+            <p>{data[0].ReceiverContactNo}</p>
+          </div>
+          <div>
+            <h3 className="font-bold text-lg">Correo electrónico asociado: </h3>
+            <p>{data[0].ReceiverEmailAddress}</p>
+          </div>
+          <div>
+            <h3 className="font-bold text-lg">Código postal: </h3>
+            <p>{data[0].ReceiverPostalCode}</p>
+          </div>
+          <div>
+            <h3 className="font-bold text-lg">Nombre asociado: </h3>
+            <p>{data[0].ReceiverName}</p>
+          </div>
+        </div>
         <hr className="my-10" />
         <ol className="flex flex-col space-y-10">
-          <Step title="Preadmitido" date="2 de Agosto, 2022 · 9:16">
+          <Step
+            state="done"
+            title="1. Preadmitido"
+            date="2 de Agosto, 2022 · 9:16"
+          >
             <h1>The description goes here</h1>
             <p>Lorem ipsum siamet dolorum ipsamet retorum licatrosu</p>
           </Step>
           <Step
             state="done"
-            title="En reparto"
+            title="2. En reparto"
             date="3 de Agosto, 2022 · 12:22"
           >
             <h1>The description goes here</h1>
             <p>Lorem ipsum siamet dolorum ipsamet retorum licatrosu</p>
           </Step>
           <Step
-            state="doing"
-            title="Entregado"
+            state="warning"
+            title="3. Entregado"
             date="3 de Agosto, 2022 · 16:41"
+            active
           >
             <h1>The description goes here</h1>
             <p>Lorem ipsum siamet dolorum ipsamet retorum licatrosu</p>
           </Step>
           <Step
-            state="warning"
-            title="En espera"
+            state="idle"
+            title="4. En espera"
             date="3 de Agosto, 2022 · 15:48"
+            last
           >
             <h1>The description goes here</h1>
             <p>Lorem ipsum siamet dolorum ipsamet retorum licatrosu</p>
@@ -94,14 +138,15 @@ function NotFound({ slug }) {
               placeholder="Número de seguimiento"
               ref={search}
             />
-            <Button
-              className="w-full mt-2 !mx-0"
-              text="Busca"
-              event={() => {
+            <button
+              onClick={() => {
                 router.push(`/rastrea-tu-paquete/${search.current.value}`);
                 search.current.value = "";
               }}
-            />
+              className="px-4 py-2 w-full mt-2 font-semibold tracking-wide text-lg text-white capitalize transition-colors duration-200 transform bg-primary rounded-md focus:ring focus:ring-green-300 focus:ring-opacity-80 hover:bg-green-500 focus:outline-none focus:bg-green-600"
+            >
+              Busca
+            </button>
           </div>
         </div>
         <div className="m-auto">

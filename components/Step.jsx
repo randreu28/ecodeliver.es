@@ -7,14 +7,14 @@ import {
 import AnimateHeight from "react-animate-height";
 import { useState } from "react";
 
-export default function Step({ title, date, children, state }) {
-  const [height, setHeight] = useState(0);
+export default function Step({ title, date, children, state, active, last }) {
+  const [height, setHeight] = useState(active ? "auto" : 0);
 
-  function getState() {
+  function StateIcon() {
     switch (state) {
       case "done":
-        return <CheckCircleIcon className="h-10 w-10 text-primary z-10" />;
-      case "doing":
+        return <CheckCircleIcon className="h-10 w-10 text-primary z-20" />;
+      case "idle":
         return (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -23,17 +23,17 @@ export default function Step({ title, date, children, state }) {
             strokeWidth="2"
             stroke="currentColor"
             aria-hidden="true"
-            className="h-10 w-10 text-gray-500 z-10"
+            className="h-10 w-10 text-gray-500 z-20"
           >
             <circle cx="12" cy="12" r="9" strokeWidth="2" />
           </svg>
         );
       case "warning":
         return (
-          <ExclamationCircleIcon className="h-10 w-10 text-yellow-500 z-10" />
+          <ExclamationCircleIcon className="h-10 w-10 text-yellow-500 z-20" />
         );
       default:
-        return <CheckCircleIcon className="h-10 w-10 text-primary z-10" />;
+        return <CheckCircleIcon className="h-10 w-10 text-primary z-20" />;
     }
   }
 
@@ -46,19 +46,9 @@ export default function Step({ title, date, children, state }) {
       className="flex justify-between hover:cursor-pointer hover:bg-gray-50 duration-200"
       onClick={openStep}
     >
-      <div id="test" className="flex gap-5">
-        {getState()}
-        <div
-        /*  
-          Failed attempt to have a connecting line between each step. 
-
-          className="
-          before:absolute before:h-10 before:w-1 before:-translate-x-[42px] before:-translate-y-[35px] before:bg-primary
-          
-          after:absolute after:h-10 after:w-1 after:-translate-x-[42px] after:-translate-y-[15px] after:bg-red-500 after:z-20
-          " 
-        */
-        >
+      <div className="flex gap-5">
+        <StateIcon />
+        <div>
           <b className="text-xl">{title}</b>
           <p className="text-gray-600">{date}</p>
           <AnimateHeight
