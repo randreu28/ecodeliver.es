@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import Alert from "./Alert";
 import { useForm } from "@formcarry/react";
 
-export default function Form() {
+export default function EcoDriverForm() {
   //Animations
   useEffect(() => {
     AOS.init();

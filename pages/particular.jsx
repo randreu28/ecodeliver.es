@@ -16,7 +16,7 @@ import Disclosure from "../components/Disclosure";
 import Footer from "../components/Footer";
 import CloudLogo from "../components/CloudLogo";
 import { useRef, useEffect } from "react";
-import Form from "../components/Form";
+import EcoDriverForm from "../components/EcoDriverForm";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useRouter } from "next/router";
@@ -271,7 +271,7 @@ export default function Particular() {
               Te damos un toque cuando esté listo
             </p>
           </div>
-          <Form />
+          <EcoDriverForm />
         </div>
       </section>
 
