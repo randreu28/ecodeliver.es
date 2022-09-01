@@ -18,7 +18,7 @@ import Footer from "../components/Footer";
 import Alert from "../components/Alert";
 import CloudLogo from "../components/CloudLogo";
 import { useState, useRef, useEffect } from "react";
-import Form from "../components/Form";
+import EcoDriverForm from "../components/EcoDriverForm";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -278,7 +278,7 @@ export default function Particular() {
               Te damos un toque cuando esté listo
             </p>
           </div>
-          <Form />
+          <EcoDriverForm />
         </div>
       </section>
 

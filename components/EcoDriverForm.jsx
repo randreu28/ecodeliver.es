@@ -7,7 +7,7 @@ import Alert from "./Alert";
 import { useForm } from "@formcarry/react";
 import { event } from "nextjs-google-analytics";
 
-export default function Form() {
+export default function EcoDriverForm() {
   //Animations
   useEffect(() => {
     AOS.init();
