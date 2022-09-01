@@ -2,7 +2,6 @@ import Navbar from "../components/Navbar";
 import Head from "next/head";
 import Image from "next/image";
 import Cookies from "js-cookie";
-import Button from "../components/Button";
 import {
   BadgeCheckIcon,
   FingerPrintIcon,
@@ -16,7 +15,7 @@ import Article from "../components/Article";
 import Disclosure from "../components/Disclosure";
 import Footer from "../components/Footer";
 import CloudLogo from "../components/CloudLogo";
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
 import Form from "../components/Form";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -74,18 +73,18 @@ export default function Particular() {
               <div className="flex flex-row gap-5 flex-wrap">
                 <input
                   type="text"
-                  className="px-4 py-2 text-lg text-secondary bg-white border border-gray-300 rounded-md focus:border-primary-40 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                  className="px-4 py-2 w-full md:w-fit text-lg text-secondary bg-white border border-gray-300 rounded-md focus:border-primary-40 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
                   placeholder="Número de seguimiento"
                   ref={search}
                 />
-                <Button
-                  text="Busca"
-                  event={() => {
-                    router.push(
-                      `/rastrea-tu-paquete/${search.current.value}`
-                    );
+                <button
+                  onClick={() => {
+                    router.push(`/rastrea-tu-paquete/${search.current.value}`);
                   }}
-                />
+                  className="px-4 py-2 w-full md:w-fit font-semibold tracking-wide text-lg text-white capitalize transition-colors duration-200 transform bg-primary rounded-md focus:ring focus:ring-green-300 focus:ring-opacity-80 sm:mx-2 hover:bg-green-500 focus:outline-none focus:bg-green-600"
+                >
+                  Busca
+                </button>
               </div>
             </div>
           </div>

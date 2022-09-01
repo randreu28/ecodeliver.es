@@ -1,4 +1,3 @@
-import Button from "./Button";
 import Link from "next/link";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -43,7 +42,9 @@ export default function Form() {
             placeholder="Correo electrónico"
           />
 
-          <Button text="Notificame" />
+          <button className="px-4 py-2 font-semibold tracking-wide text-lg text-white capitalize transition-colors duration-200 transform bg-primary rounded-md focus:ring focus:ring-green-300 focus:ring-opacity-80 hover:bg-green-500 focus:outline-none focus:bg-green-600 ">
+            Notifícame
+          </button>
         </form>
 
         <p className="mt-3 text-sm text-gray-500 ">
