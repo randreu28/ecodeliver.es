@@ -4,6 +4,7 @@ import { EmojiHappyIcon } from "@heroicons/react/outline";
 import { useRef } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import Head from "next/head";
 
 export default function Tracking({ data, slug }) {
   if (data[0]) {
@@ -16,6 +17,9 @@ export default function Tracking({ data, slug }) {
 function TrackYourParcel({ slug, data }) {
   return (
     <>
+      <Head>
+        <title>Rastrea tu paquete</title>
+      </Head>
       <SmNavbar className="sticky" />
       <h1 className="text-center font-bold text-4xl">Rastrea tu paquete</h1>
       <div className="m-5 p-5 sm:m-10 sm:p-10 shadow-lg rounded-xl border border-gray-200">
@@ -111,6 +115,9 @@ function NotFound({ slug }) {
   const router = useRouter();
   return (
     <>
+      <Head>
+        <title>Sad story...</title>
+      </Head>
       <SmNavbar />
       <div className="h-screen flex flex-col lg:flex-row p-10 md:p-20 gap-10 md:gap-20">
         <div className="m-auto text-gray-700 text-center">
