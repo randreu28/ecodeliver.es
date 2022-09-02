@@ -41,6 +41,19 @@ export default function Step({ title, date, children, state, active, last }) {
     setHeight(height === 0 ? "auto" : 0);
   }
 
+  function getStateColor() {
+    switch (state) {
+      case "done":
+        return "text-primary";
+      case "idle":
+        return "text-gray-600";
+      case "warning":
+        return "text-yellow-500";
+      default:
+        return "text-primary";
+    }
+  }
+
   return (
     <li
       className="flex justify-between hover:cursor-pointer hover:bg-gray-50 duration-200"
@@ -49,7 +62,7 @@ export default function Step({ title, date, children, state, active, last }) {
       <div className="flex gap-5">
         <StateIcon />
         <div>
-          <b className="text-xl">{title}</b>
+          <b className={"text-xl " + getStateColor()}>{title}</b>
           <p className="text-gray-600">{state == "idle" ? "" : date}</p>
           <AnimateHeight
             className="text-gray-600"
