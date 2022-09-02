@@ -50,7 +50,7 @@ export default function Step({ title, date, children, state, active, last }) {
         <StateIcon />
         <div>
           <b className="text-xl">{title}</b>
-          <p className="text-gray-600">{date}</p>
+          <p className="text-gray-600">{state == "idle" ? "" : date}</p>
           <AnimateHeight
             className="text-gray-600"
             duration={500}
