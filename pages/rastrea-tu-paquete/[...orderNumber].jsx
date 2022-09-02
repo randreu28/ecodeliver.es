@@ -21,7 +21,9 @@ function TrackYourParcel({ slug, data }) {
         <title>Rastrea tu paquete</title>
       </Head>
       <SmNavbar className="sticky" />
-      <h1 className="text-center font-bold text-4xl">Rastrea tu paquete</h1>
+      <h1 className="text-center font-bold text-3xl sm:text-4xl">
+        Rastrea tu paquete
+      </h1>
       <div className="m-5 p-5 sm:m-10 sm:p-10 shadow-lg rounded-xl border border-gray-200">
         <div className="flex flex-col sm:flex-row gap-4 justify-between text-md">
           <b className="my-auto text-2xl text-center sm:text-left">
@@ -31,48 +33,15 @@ function TrackYourParcel({ slug, data }) {
             Modificar Entrega
           </button>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 pt-10 gap-5">
-          <div>
-            <h3 className="font-bold text-lg">Ciudad de destino: </h3>
-            <p>{data[0].CityName}</p>
-          </div>
-          <div>
-            <h3 className="font-bold text-lg">Estado: </h3>
-            <p>
-              {data[0].DeliveryStatus ? data[0].DeliveryStatus : "En reparto"}
-            </p>
-          </div>
-          <div>
-            <h3 className="font-bold text-lg">Fecha estimada de entrega: </h3>
-            <p>{data[0].EstimatedDeliveryDate}</p>
-          </div>
 
-          <div>
-            <h3 className="font-bold text-lg">Dirección de entrega: </h3>
-            <p>{data[0].ReceiverAddress1}</p>
-          </div>
-          <div>
-            <h3 className="font-bold text-lg">Número de teléfono asociado: </h3>
-            <p>{data[0].ReceiverContactNo}</p>
-          </div>
-          <div>
-            <h3 className="font-bold text-lg">Correo electrónico asociado: </h3>
-            <p>{data[0].ReceiverEmailAddress}</p>
-          </div>
-          <div>
-            <h3 className="font-bold text-lg">Código postal: </h3>
-            <p>{data[0].ReceiverPostalCode}</p>
-          </div>
-          <div>
-            <h3 className="font-bold text-lg">Nombre asociado: </h3>
-            <p>{data[0].ReceiverName}</p>
-          </div>
-        </div>
+        <p className="text-gray-600 pt-4">
+          La fecha de entrega estimada es el 2 de Agosto, 2022
+        </p>
         <hr className="my-10" />
         <ol className="flex flex-col space-y-10">
           <Step
             state="done"
-            title="1. Preadmitido"
+            title="1. Admitido"
             date="2 de Agosto, 2022 · 9:16"
           >
             <h1>The description goes here</h1>
@@ -80,15 +49,15 @@ function TrackYourParcel({ slug, data }) {
           </Step>
           <Step
             state="done"
-            title="2. En reparto"
+            title="2. Recibido"
             date="3 de Agosto, 2022 · 12:22"
           >
             <h1>The description goes here</h1>
             <p>Lorem ipsum siamet dolorum ipsamet retorum licatrosu</p>
           </Step>
           <Step
-            state="warning"
-            title="3. Entregado"
+            state="idle"
+            title="3. En reparto"
             date="3 de Agosto, 2022 · 16:41"
             active
           >
@@ -97,7 +66,7 @@ function TrackYourParcel({ slug, data }) {
           </Step>
           <Step
             state="idle"
-            title="4. En espera"
+            title="4. Entregado"
             date="3 de Agosto, 2022 · 15:48"
             last
           >
