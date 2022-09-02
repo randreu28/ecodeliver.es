@@ -3,6 +3,7 @@ import {
   ChevronDownIcon,
   ChevronUpIcon,
   ExclamationCircleIcon,
+  ExclamationIcon,
 } from "@heroicons/react/outline";
 import AnimateHeight from "react-animate-height";
 import { useState } from "react";
@@ -32,6 +33,8 @@ export default function Step({ title, date, children, state, active, last }) {
         return (
           <ExclamationCircleIcon className="h-10 w-10 text-yellow-500 z-20" />
         );
+      case "error":
+        return <ExclamationIcon className="h-10 w-10 text-red-500 z-20" />;
       default:
         return <CheckCircleIcon className="h-10 w-10 text-primary z-20" />;
     }
@@ -49,6 +52,8 @@ export default function Step({ title, date, children, state, active, last }) {
         return "text-gray-600";
       case "warning":
         return "text-yellow-500";
+      case "error":
+        return "text-red-500";
       default:
         return "text-primary";
     }
