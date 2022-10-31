@@ -6,12 +6,17 @@ import content from "./privacidad.md";
 import SmNavbar from "../components/SmNavbar";
 import Footer from "../components/Footer";
 import WebHolder from "../components/Webholder";
+import Head from "next/head";
 
 const components = { Insight };
 
 export default function Privacidad({ source }) {
   return (
     <>
+      <Head>
+        <title>Política de privacidad</title>
+        <meta name="robots" content="noindex,nofollow" />
+      </Head>
       <WebHolder />
       {/* <SmNavbar />
       <div className="prose prose-lg max-w-5xl space-y-10 container pt-20 p-5 mx-auto">
