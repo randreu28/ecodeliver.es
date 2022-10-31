@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import { useEffect, useRef, useState } from "react";
 import Alert from "./Alert";
 import { useForm } from "@formcarry/react";
+import { event } from "nextjs-google-analytics";
 
 export default function Form() {
   //Animations
@@ -21,6 +22,7 @@ export default function Form() {
 
   function handleSubmit(e) {
     submit(e);
+    event("send_email", {}, process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID);
 
     e.preventDefault();
     form.current.reset();
