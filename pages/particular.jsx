@@ -21,6 +21,7 @@ import { useState, useRef, useEffect } from "react";
 import EcoDriverForm from "../components/EcoDriverForm";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import TextTransition, { presets } from "react-text-transition";
 
 export default function Particular() {
   Cookies.set("isBusiness", false);
@@ -39,6 +40,15 @@ export default function Particular() {
   //Animations
   useEffect(() => {
     AOS.init();
+  }, []);
+
+  const TEXTS = ["sostenible", "transparente", "diferente"];
+
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => setIndex((index) => index + 1), 2000);
+    return () => clearTimeout(intervalId);
   }, []);
 
   return (
@@ -65,20 +75,27 @@ export default function Particular() {
             data-aos="fade-right"
             data-aos-delay="100"
           >
-            <h1 className="text-secondary text-4xl md:text-5xl 2xl:text-6xl max-w-3xl !leading-[1.15]">
-              Viaja y únete a la comunidad de entregas de paquetería{" "}
-              <span className="text-primary">100% sostenible</span>
+            <h1 className="text-secondary text-4xl md:text-5xl 2xl:text-6xl max-w-2xl !leading-[1.15]">
+              Viaja y únete a la comunidad de entrega de paquetería más{" "}
+              <TextTransition
+                inline={true}
+                className="text-primary"
+                springConfig={presets.wobbly}
+              >
+                <span>{TEXTS[index % TEXTS.length]}</span>
+              </TextTransition>
             </h1>
             <div className="space-y-2 mt-10 text-gray-500">
               <p className="text-xl pb-2">Haz el seguimiento de tu paquete:</p>
               <div className="flex flex-row gap-5 flex-wrap">
                 <input
                   type="text"
-                  className="px-4 py-2 text-lg text-secondary bg-white border border-gray-300 rounded-md focus:border-primary-40 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
+                  className="px-4 py-2 text-lg text-secondary bg-white border border-gray-300 rounded-md focus:border-primary-40 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40 w-full sm:w-fit"
                   placeholder="Número de seguimiento"
                   ref={search}
                 />
                 <Button
+                  className="w-full sm:w-fit"
                   text="Busca"
                   event={() => {
                     setIsShowing(true);

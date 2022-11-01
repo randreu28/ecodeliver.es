@@ -25,6 +25,7 @@ import { useState } from "react";
 import "aos/dist/aos.css";
 import Alert from "../components/Alert";
 import { ArrowRightIcon } from "@heroicons/react/solid";
+import TextTransition, { presets } from "react-text-transition";
 
 export default function Empresa() {
   Cookies.set("isBusiness", true);
@@ -42,6 +43,15 @@ export default function Empresa() {
   }, []);
 
   const [isShowing, setIsShowing] = useState(false);
+
+  const TEXTS = ["sostenible", "transparente", "diferente"];
+
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => setIndex((index) => index + 1), 2000);
+    return () => clearTimeout(intervalId);
+  }, []);
 
   return (
     <>
@@ -61,28 +71,34 @@ export default function Empresa() {
       <Navbar navData={navData} />
 
       <section id={navData[0].href}>
-        <main className="min-h-screen pt-20 flex flex-row-reverse flex-wrap gap-1 md:gap-5 p-5">
+        <main className="min-h-screen pt-20 grid grid-cols-1 xl:grid-cols-2 gap-1 md:gap-5 p-5 xl:max-w-[100rem] mx-auto">
           <img
             src="/media/brand/line-4.svg"
             className="hidden xl:block absolute left-0 h-1/6 -translate-x-1/2"
             alt=""
           />
           <div
-            className="m-auto font-semibold"
+            className="m-auto font-semibold xl:text-right xl:order-2"
             data-aos="fade-left"
             data-aos-delay="100"
           >
-            <h1 className="text-secondary text-4xl md:text-5xl 2xl:text-6xl max-w-3xl !leading-[1.15] font-semibold">
-              Entrega de paquetería{" "}
-              <span className="text-primary">100% sostenible</span>, más allá de
-              la movilidad eléctrica
+            <h1 className="text-secondary text-4xl md:text-5xl 2xl:text-6xl max-w-xl xl:max-w-4xl !leading-[1.15] font-semibold">
+              Más allá de la movilidad eléctrica, la entrega de paquetería más{" "}
+              <br />
+              <TextTransition
+                inline={true}
+                className="text-primary"
+                springConfig={presets.wobbly}
+              >
+                <span>{TEXTS[index % TEXTS.length]}</span>
+              </TextTransition>
             </h1>
 
             <div className="space-y-2 mt-10 text-gray-500">
               <p className="text-lg font-normal pb-2">
                 Tienes una cuenta? Accede a la información de tus envíos aquí:
               </p>
-              <div className="flex flex-col sm:flex-row gap-5 w-full">
+              <div className="flex flex-col sm:flex-row gap-5 w-full xl:justify-end">
                 <button
                   onClick={() => {
                     setIsShowing(true);
@@ -111,7 +127,7 @@ export default function Empresa() {
             text="Porfavor, inténtelo de nuevo luego"
           />
           <div
-            className="mx-auto md:m-auto"
+            className="m-auto xl:my-auto xl:mx-0"
             data-aos="fade-right"
             data-aos-delay="100"
           >
@@ -127,7 +143,7 @@ export default function Empresa() {
         </main>
         <img
           src="/media/brand/line-6.svg"
-          className="hidden xl:block absolute -translate-y-64 translate-x-1/3 right-0 h-1/6 scale-x-[-1] -z-10"
+          className="hidden xl:block absolute -translate-y-56 translate-x-1/3 right-0 h-1/6 scale-x-[-1] -z-10"
           alt=""
         />
         <div>
