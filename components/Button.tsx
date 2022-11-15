@@ -1,6 +1,6 @@
 interface Props {
   className?: string;
-  children: JSX.Element;
+  children: JSX.Element | string;
   event?: () => void;
 }
 

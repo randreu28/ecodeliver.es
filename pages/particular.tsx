@@ -79,7 +79,7 @@ export default function Particular() {
                     search.current.value = "";
                   }}
                 >
-                  <>Busca</>
+                  Busca
                 </Button>
               </div>
             </div>
