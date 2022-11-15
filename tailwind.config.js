@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./app/**/*.{js,ts,jsx,tsx}",
@@ -6,7 +5,19 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ["Urbanist"],
+      },
+      colors: {
+        primary: "#2caf75", //Salsify glass
+        secondary: "#06222b", //Stellar explorer
+        neutral: "#e9f0e4", //Sweet white
+      },
+    },
   },
-  plugins: [],
-}
+  plugins: [
+    require("@tailwindcss/line-clamp"),
+    require("@tailwindcss/typography"),
+  ],
+};
