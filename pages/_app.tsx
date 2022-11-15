@@ -1,5 +1,9 @@
 import "../globals.css";
+import "aos/dist/aos.css";
+
 import { GoogleAnalytics, usePageViews, event } from "nextjs-google-analytics";
+import AOS from "aos";
+import { useEffect } from "react";
 
 import type { NextWebVitalsMetric } from "next/app";
 import type { AppProps } from "next/app";
@@ -20,6 +24,12 @@ export function reportWebVitals({
 
 function MyApp({ Component, pageProps }: AppProps) {
   usePageViews();
+
+  useEffect(() => {
+    AOS.init({
+      //...AOS options
+    });
+  }, []);
 
   return (
     <>
