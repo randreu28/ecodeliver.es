@@ -5,6 +5,7 @@ import TextTransition, { presets } from "react-text-transition";
 import { useEffect, useRef, useState } from "react";
 import Button from "../components/Button";
 import CloudLogo from "../components/CloudLogo";
+import toast, { Toaster } from "react-hot-toast";
 
 const navData = [
   { name: "Inicio", href: "inicio" },
@@ -36,7 +37,7 @@ export default function Particular() {
         />
       </Head>
       <Navbar navData={navData} />
-
+      <Toaster position="bottom-left" />
       <section id={navData[0].href} className="space-y-5">
         <main className="min-h-screen pt-20 grid grid-cols-1 xl:grid-cols-2 gap-1 md:gap-5 p-5">
           {/*  eslint-disable-next-line @next/next/no-img-element */}
@@ -72,7 +73,9 @@ export default function Particular() {
                 <Button
                   className="w-full sm:w-fit"
                   event={() => {
-                    //TODO
+                    toast.error(
+                      "Servidores no disponibles. Porfavor inténtalo mas tarde"
+                    );
                     search.current.value = "";
                   }}
                 >
