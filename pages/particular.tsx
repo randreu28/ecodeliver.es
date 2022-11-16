@@ -7,6 +7,15 @@ import Button from "../components/Button";
 import CloudLogo from "../components/CloudLogo";
 import toast, { Toaster } from "react-hot-toast";
 import EcoDriverForm from "../components/EcoDriverForm";
+import Value from "../components/Value";
+import {
+  BadgeCheckIcon,
+  FingerPrintIcon,
+  ShieldCheckIcon,
+  SparklesIcon,
+  UserAddIcon,
+  UserGroupIcon,
+} from "@heroicons/react/outline";
 
 const navData = [
   { name: "Inicio", href: "inicio" },
@@ -269,6 +278,129 @@ export default function Particular() {
             </p>
           </div>
           <EcoDriverForm />
+        </div>
+      </section>
+
+      <section id={navData[2].href} className="container px-6 py-10 mx-auto">
+        <h1
+          className="text-3xl font-semibold text-center text-secondary lg:text-4xl "
+          data-aos="fade-in"
+        >
+          Valores de nuestro servicio
+        </h1>
+        <p
+          className="text-center text-gray-500 pt-2 text-lg"
+          data-aos="fade-in"
+        >
+          Porque el <b className="text-primary">por qué</b> importa
+        </p>
+
+        <div
+          className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3"
+          data-aos="fade-in"
+        >
+          <Value
+            title={
+              <>
+                Somos{" "}
+                <span className="text-primary font-semibold">eco-friendly</span>
+              </>
+            }
+            text={
+              <>
+                Ya que siendo un ecoDriver ibas a viajar de todas formas, evitas
+                que un camión tenga que transportar esos paquetes.
+              </>
+            }
+          >
+            <FingerPrintIcon className="h-6 w-6" />
+          </Value>
+
+          <Value
+            title={
+              <>
+                Cuidamos de las{" "}
+                <span className="text-primary font-semibold">personas</span>
+              </>
+            }
+            text={
+              <>
+                Transportamos paquetes pero tratamos con personas. Por eso, te
+                cuidamos tanto a ti como a nuestros repartidores.
+              </>
+            }
+          >
+            <UserGroupIcon className="h-6 w-6" />
+          </Value>
+
+          <Value
+            title={
+              <>
+                Creamos{" "}
+                <span className="text-primary font-semibold">comunidad</span>
+              </>
+            }
+            text={
+              <>
+                Al ofrecer un servicio en comunidad, compartimos recursos y
+                salimos ganando todos!
+              </>
+            }
+          >
+            <UserAddIcon className="h-6 w-6" />
+          </Value>
+
+          <Value
+            title={
+              <>
+                Muy <span className="text-primary font-semibold">práctico</span>
+              </>
+            }
+            text={
+              <>
+                Disrumpimos el mercado, pero sin disrumpir tu viaje! Nos
+                centramos en que para ti todo vaya <i>sobre ruedas</i>.
+              </>
+            }
+          >
+            <SparklesIcon className="h-6 w-6" />
+          </Value>
+
+          <Value
+            title={
+              <>
+                <span className="text-primary font-semibold">
+                  Transparencia
+                </span>{" "}
+                ante todo
+              </>
+            }
+            text={
+              <>
+                Al ofrecer un servicio en comunidad, compartimos recursos y
+                salimos ganando todos!
+              </>
+            }
+          >
+            <BadgeCheckIcon className="w-6 h-6" />
+          </Value>
+
+          <Value
+            title={
+              <>
+                Cuidando de tu{" "}
+                <span className="text-primary font-semibold">seguridad</span>
+              </>
+            }
+            text={
+              <>
+                Cuidamos de los ecoDrivers y de los paquetes, verificando que se
+                cumplen nuestros protocolos de seguridad.
+              </>
+            }
+          >
+            <ShieldCheckIcon className="h-6 w-6" />
+          </Value>
         </div>
       </section>
     </>
