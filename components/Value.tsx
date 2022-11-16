@@ -1,9 +1,9 @@
 import { PropsWithoutRef } from "react";
 interface Props {
   children: JSX.Element;
-  title: string;
-  text: string;
-  className: string;
+  title: string | JSX.Element;
+  text: string | JSX.Element;
+  className?: string;
 }
 
 export default function Value({ children, title, text, className }: Props) {
