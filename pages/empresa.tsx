@@ -25,9 +25,8 @@ type Props = {};
 
 const navData = [
   { name: "Inicio", href: "inicio" },
-  { name: "Cómo funciona", href: "como-funciona" },
   { name: "Valores", href: "valores" },
-  { name: "Noticias", href: "noticias" },
+  { name: "Sobre nosotros", href: "nosotros" },
   { name: "FAQ", href: "faq" },
 ];
 
