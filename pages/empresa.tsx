@@ -3,7 +3,10 @@ import {
   ArrowRightIcon,
   FingerPrintIcon,
   LightningBoltIcon,
+  MailIcon,
+  OfficeBuildingIcon,
   ShieldCheckIcon,
+  UserGroupIcon,
 } from "@heroicons/react/outline";
 import Head from "next/head";
 import { useEffect, useState } from "react";
@@ -12,6 +15,9 @@ import Navbar from "../components/Navbar";
 import Image from "next/image";
 import CloudLogo from "../components/CloudLogo";
 import { toast, Toaster } from "react-hot-toast";
+import Value from "../components/Value";
+import Article from "../components/Article";
+import BusinessForm from "../components/BusinessForm";
 
 type Props = {};
 
@@ -275,6 +281,121 @@ export default function Empresa({}: Props) {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id={navData[2].href} className="container px-6 py-10 mx-auto">
+        <p
+          className="text-center text-primary font-semibold text-lg pb-2"
+          data-aos="fade-in"
+        >
+          Sobre nosotros
+        </p>
+        <h1
+          className="text-4xl text-center text-secondary font-bold "
+          data-aos="fade-in"
+        >
+          ¿Cómo lo hacemos?
+        </h1>
+        <p
+          className="md:text-center text-gray-500 pt-2 px-5 text-lg max-w-3xl mx-auto"
+          data-aos="fade-in"
+        >
+          Combinando nuestra flota de furgonetas totalmente eléctricas y la
+          colaboración de nuestra comunidad de{" "}
+          <span className="text-secondary font-semibold">
+            <span className="text-primary">eco</span>Drivers
+          </span>
+        </p>
+        <div
+          className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3"
+          data-aos="fade-in"
+        >
+          <Value
+            title="Gestión centralizada"
+            text="Agrupamos y organizamos los paquetes en nuestro almacén para su recogida por los ecoDrivers."
+          >
+            <OfficeBuildingIcon className="h-6 w-6" />
+          </Value>
+
+          <Value
+            title="Transporte colaborativo"
+            text="Los ecoDrivers, de camino a su destino, pasan por el almacén a recoger paquetes en bolsas seguras y convenientes y las entregan en su ciudad de destino."
+          >
+            <UserGroupIcon className="h-6 w-6" />
+          </Value>
+
+          <Value
+            className="md:col-span-2 xl:col-span-1"
+            title="Última milla eléctrica"
+            text="Realizamos las entregas de última milla con nuestra flota de vehículos 100% eléctricos!"
+          >
+            <LightningBoltIcon className="h-6 w-6" />
+          </Value>
+        </div>
+        <div className="flex flex-col md:flex-row gap-5 pt-10">
+          <div className="bg-green-50 space-y-5 p-10" data-aos="fade-right">
+            <h1 className="text-5xl font-bold text-secondary">Hablemos!</h1>
+            <p className="text-gray-500 text-lg max-w-lg">
+              Déjanos tus datos y te contactaremos para darte información o un
+              presupuesto personalizado en base a tus necesidades y volumen de
+              entregas.
+            </p>
+            <span className="flex flex-row gap-2 text-gray-500 text-lg">
+              <MailIcon className="w-6 h-6 my-auto" />
+              <a className="hover:underline" href="mailto:hola@ecodeliver.tech">
+                hola@ecodeliver.tech
+              </a>
+            </span>
+          </div>
+          <BusinessForm />
+        </div>
+        <p
+          className="text-center text-primary font-semibold pt-10 text-lg"
+          data-aos="fade-in"
+        >
+          Noticias
+        </p>
+        <h1
+          className="text-3xl font-semibold text-center text-secondary lg:text-4xl "
+          data-aos="fade-in"
+        >
+          Nos mencionan
+        </h1>
+        <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 m-auto py-10"
+          data-aos="fade-in"
+        >
+          <Article
+            type="CaixaBank"
+            title="Imagin conecta a inversores con los emprendedores ganadores del ImaginPlanetChallenge"
+            text="imagin, la plataforma de servicios digitales y estilo de vida
+                impulsada por CaixaBank, ha organizado una sesión Demo Day en la
+                que los emprendedores ganadores de la primera edición del
+                imaginPlanet Challenge han tenido la oportunidad de presentar
+                sus iniciativas ante inversores, business angels, plataformas
+                aceleradoras y organizaciones de referencia del ecosistema
+                emprendedor."
+            extLink="https://www.caixabank.com/comunicacion/noticia/imagin-conecta-a-inversores-con-los-emprendedores-ganadores-del-imaginplanet-challenge_es.html?id=43056#"
+            imgLink="/media/articles/caixaBankArticle.jpg"
+          />
+          <Article
+            type="Via empresa"
+            title="EcoDeliver, el BlaBlaCar de los paquetes, a punto de empezar a operar en Barcelona"
+            text="La startup propone un modelo en el que la persona que tiene previsto hacer un trayecto aprovecha el espacio disponible para transportar paquetes"
+            extLink="https://www.viaempresa.cat/es/empresa/ecodeliver-blablacar-paquetes-barcelona_2170552_102.html"
+            imgLink="media/pilotTest.jpg"
+          />
+          <Article
+            className="md:col-span-2 lg:col-span-1"
+            type="lavanguardia"
+            title="ecoDeliver y Kidalos ganan la primera edición del imaginPlanet Challenge"
+            text="ecoDeliver y Kidalos han sido elegidos entre los 230 equipos participantes,
+             formados por más de 700 jóvenes de 16 universidades españolas que,
+              de la mano de imagin, han dado forma a sus ideas durante los tres últimos meses."
+            extLink="https://www.lavanguardia.com/vida/20210713/7597222/ecodeliver-kidalos-ganan-primera-edicion-imaginplanet-challenge.html"
+            imgLink="/media/articles/lavanguardiaArticle.webp"
+          />
         </div>
       </section>
     </>
