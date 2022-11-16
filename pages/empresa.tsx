@@ -18,6 +18,8 @@ import { toast, Toaster } from "react-hot-toast";
 import Value from "../components/Value";
 import Article from "../components/Article";
 import BusinessForm from "../components/BusinessForm";
+import Disclosure from "../components/Disclousure";
+import Footer from "../components/Footer";
 
 type Props = {};
 
@@ -397,6 +399,95 @@ export default function Empresa({}: Props) {
             imgLink="/media/articles/lavanguardiaArticle.webp"
           />
         </div>
+      </section>
+
+      <section id={navData[3].href} className="max-w-5xl px-5 mx-auto">
+        <p
+          className="text-center text-primary font-semibold pb-2 text-lg"
+          data-aos="fade-in"
+        >
+          FAQ
+        </p>
+        <h1
+          className="text-center text-4xl lg:text-5xl font-bold md:px-10 mb-8"
+          data-aos="fade-in"
+        >
+          Preguntas frecuentes
+        </h1>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/media/brand/line-3.svg"
+          className="hidden xl:block absolute left-0 h-1/6 -translate-x-1/2"
+          alt=""
+        />
+        <div className="divide-y container pb-10">
+          <Disclosure
+            isOpen={true}
+            title={<>¿Cómo se garantiza la seguridad de los envíos? </>}
+            text={
+              <>
+                Tratamos tu envíos con el máximo cariño posible! Los ecoDrivers
+                los recogen en bolsas seguras y selladas con una abrazadera
+                única, que permite asegurar que no se ha accedido a la mercancía
+                desde el momento en que el usuario sale del almacén hasta que lo
+                entrega en destino. Además, tenemos la mercancía asegurada con
+                un seguro de mercancías.
+              </>
+            }
+          />
+          <Disclosure
+            title={
+              <>
+                ¿Cómo se garantiza que los envíos lleguen en el plazo esperado?
+              </>
+            }
+            text={
+              <>
+                Sabemos que como negocio, tu preocupación es vender y cuidar de
+                tus clientes, no la de hacer entregas. Para eso estamos
+                nosotros, y nuestra responsabilidad como courier es hacer la
+                entrega en el plazo acordado, por lo que incluso en el caso de
+                que no haya ecoDrivers disponibles para hacer el transporte de
+                una ruta determinada, contamos con medios alternativos de
+                transporte que garantizan la entrega y nos permiten seguir
+                actuando de acorde a nuestros valores.
+              </>
+            }
+          />
+          <Disclosure
+            title={<>¿Qué diferencia a ecoDeliver de las otras plataformas?</>}
+            text={
+              <>
+                El sector de envíos y entregas está viviendo un cambio muy
+                importante hacia la entrega sostenible, y hay otros servicios
+                que ofrecen esta posibilidad. No obstante, aún no existe un
+                método alternativo a la comunidad de ecoDeliver para hacer el
+                transporte de larga distancia. Nos diferencia este compromiso
+                medioambiental, el cuidado hacia las personas que nos
+                representan como nuestros repartidores, y nuestro compromiso
+                para ofrecer un servicio de calidad que no represente un
+                sobrecoste para nuestros clientes.
+              </>
+            }
+          />
+          <Disclosure
+            title={<>¿ecoDeliver sólo hace entregas para e-commerce?</>}
+            text={
+              <>
+                Pese a que tenemos la infraestructura y capacidad para
+                involucrarnos en diferentes tipos de entregas y proyectos, nos
+                centramos principalmente en entregas de paquetería pequeña.
+              </>
+            }
+          />
+        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/media/brand/line-1.svg"
+          className="hidden xl:block absolute right-0 h-1/3 scale-x-[-1] -translate-y-48 translate-x-1/2"
+          alt=""
+        />
+        <Footer />
       </section>
     </>
   );
