@@ -1,7 +1,7 @@
 import { ArrowNarrowRightIcon } from "@heroicons/react/outline";
 
 interface Props {
-  className: string;
+  className?: string;
   type: string;
   title: string;
   text: string;
