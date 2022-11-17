@@ -4,7 +4,7 @@ import SeoTags from "../components/SeoTags";
 
 export default function Document() {
   return (
-    <Html lang="es" className="scroll-smooth">
+    <Html className="scroll-smooth">
       <Head>
         <SeoTags />
         <Favicon />
