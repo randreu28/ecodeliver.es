@@ -19,7 +19,7 @@ import {
 import Article from "../components/Article";
 import Disclosure from "../components/Disclousure";
 import Footer from "../components/Footer";
-
+import Cookies from "js-cookie";
 const navData = [
   { name: "Inicio", href: "inicio" },
   { name: "Cómo funciona", href: "como-funciona" },
@@ -31,6 +31,7 @@ const navData = [
 const WobblyTexts: string[] = ["sostenible", "transparente", "diferente"];
 
 export default function Particular() {
+  Cookies.set("isBusiness", "false");
   const [index, setIndex] = useState<number>(0);
 
   useEffect(() => {

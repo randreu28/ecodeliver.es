@@ -20,6 +20,7 @@ import Article from "../components/Article";
 import BusinessForm from "../components/BusinessForm";
 import Disclosure from "../components/Disclousure";
 import Footer from "../components/Footer";
+import Cookies from "js-cookie";
 
 type Props = {};
 
@@ -33,6 +34,7 @@ const navData = [
 const WobblyTexts: string[] = ["sostenible", "transparente", "diferente"];
 
 export default function Empresa({}: Props) {
+  Cookies.set("isBusiness", "true");
   const [index, setIndex] = useState<number>(0);
 
   useEffect(() => {
