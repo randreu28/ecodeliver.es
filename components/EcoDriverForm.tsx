@@ -38,7 +38,7 @@ export default function EcoDriverForm() {
         <form
           ref={form}
           onSubmit={handleSubmit}
-          className="flex flex-col space-y-3 sm:space-y-0 sm:flex-row sm:-mx-2"
+          className="flex flex-col space-y-3 gap-3 sm:space-y-0 sm:flex-row sm:-mx-2"
         >
           <input
             id="email"

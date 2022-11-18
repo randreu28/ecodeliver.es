@@ -62,7 +62,7 @@ export default function BusinessForm() {
           placeholder="Mensaje"
           required
         />
-        <Button className="lg:max-w-fit"> Enviar</Button>
+        <Button className="lg:max-w-fit sm:mx-2"> Enviar</Button>
       </form>
     </>
   );
