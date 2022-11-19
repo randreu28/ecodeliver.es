@@ -876,6 +876,17 @@ export const i18nEmpresa = {
         children: <LightningBoltIcon className="h-6 w-6" />,
       },
     ],
+
+    /* CTA */
+
+    ctaTitle: "Hablemos!",
+    ctaDescription: (
+      <>
+        Déjanos tus datos y te contactaremos para darte información o un
+        presupuesto personalizado en base a tus necesidades y volumen de
+        entregas.
+      </>
+    ),
   },
   en: {
     /* MetaData */
@@ -1005,6 +1016,17 @@ export const i18nEmpresa = {
         children: <LightningBoltIcon className="h-6 w-6" />,
       },
     ],
+
+    /* CTA */
+
+    ctaTitle: "Let's talk!",
+    ctaDescription: (
+      <>
+        Leave us your information and we will get in touch to give you
+        information or a personalized budget based on your needs and volume of
+        deliveries.
+      </>
+    ),
   },
 };
 
@@ -1072,5 +1094,30 @@ export const i18nFooter = {
     brandIdentity: "Brand identity",
 
     contactUs: "Contact us",
+  },
+};
+
+export const i18nBusinessForm = {
+  es: {
+    name: "Nombre",
+    email: "Correo electrónico",
+    businessName: "Nombre de empresa",
+    message: "Mensaje",
+    call: "Enviar",
+
+    onLoad: "Enviando...",
+    onSuccess: "Tu correo ha sido enviado correctamente!",
+    onError: "Lo sentimos, ha ocurrido un error. Porfavor inténtalo más tarde",
+  },
+  en: {
+    name: "Name",
+    email: "Email",
+    businessName: "Business name",
+    message: "Message",
+    call: "Send",
+
+    onLoad: "Sending...",
+    onSuccess: "Your email was sent succesfully!",
+    onError: "An error occured, please try again later",
   },
 };

@@ -2,9 +2,12 @@ import Button from "./Button";
 import { useForm } from "@formcarry/react";
 import { useEffect, useRef } from "react";
 import toast from "react-hot-toast";
+import { i18nBusinessForm } from "../i18n";
+import { useRouter } from "next/router";
 
 export default function BusinessForm() {
   const form = useRef<HTMLFormElement>(null!);
+  const translations = i18nBusinessForm[useRouter().locale as "es" | "en"];
 
   const { state, submit } = useForm({
     id: process.env.NEXT_PUBLIC_FORMCARRY_ID!,
@@ -19,16 +22,23 @@ export default function BusinessForm() {
 
   useEffect(() => {
     if (state.submitting) {
-      toast.loading("Sending...");
+      toast.loading(translations.onLoad);
     }
     if (state.submitted) {
       toast.dismiss(); //all toasts
-      toast.success("Your email was sent succesfully!");
+      toast.success(translations.onSuccess);
     } else if (state.error) {
       toast.dismiss();
-      toast.error("An error occured, please try again later");
+      toast.error(translations.onError);
     }
-  }, [state.error, state.submitted, state.submitting]);
+  }, [
+    state.error,
+    state.submitted,
+    state.submitting,
+    translations.onError,
+    translations.onLoad,
+    translations.onSuccess,
+  ]);
 
   return (
     <>
@@ -41,28 +51,28 @@ export default function BusinessForm() {
         <input
           name="Nombre"
           className="px-4 py-2 text-secondary bg-white border border-gray-300 rounded-md sm:mx-2 text-lg focus:border-primary-40 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
-          placeholder="Nombre"
+          placeholder={translations.name}
         />
         <input
           type="email"
           name="Email"
           className="px-4 py-2 text-secondary bg-white border border-gray-300 rounded-md sm:mx-2 text-lg focus:border-primary-40 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
-          placeholder="Correo electrónico"
+          placeholder={translations.email}
           required
         />
         <input
           name="Business name"
           className="px-4 py-2 text-secondary bg-white border border-gray-300 rounded-md sm:mx-2 text-lg focus:border-primary-40 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
-          placeholder="Nombre de empresa"
+          placeholder={translations.businessName}
           required
         />
         <textarea
           name="Message"
           className="px-4 py-2 h-32 text-secondary bg-white border border-gray-300 rounded-md sm:mx-2 text-lg focus:border-primary-40 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
-          placeholder="Mensaje"
+          placeholder={translations.message}
           required
         />
-        <Button className="lg:max-w-fit sm:mx-2"> Enviar</Button>
+        <Button className="lg:max-w-fit sm:mx-2">{translations.call}</Button>
       </form>
     </>
   );

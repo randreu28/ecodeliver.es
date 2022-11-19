@@ -248,11 +248,11 @@ export default function Empresa({}: Props) {
         </div>
         <div className="flex flex-col md:flex-row gap-5 pt-10">
           <div className="bg-green-50 space-y-5 p-10" data-aos="fade-right">
-            <h1 className="text-5xl font-bold text-secondary">Hablemos!</h1>
+            <h1 className="text-5xl font-bold text-secondary">
+              {translations.ctaTitle}
+            </h1>
             <p className="text-gray-500 text-lg max-w-lg">
-              Déjanos tus datos y te contactaremos para darte información o un
-              presupuesto personalizado en base a tus necesidades y volumen de
-              entregas.
+              {translations.ctaDescription}
             </p>
             <span className="flex flex-row gap-2 text-gray-500 text-lg">
               <MailIcon className="w-6 h-6 my-auto" />
