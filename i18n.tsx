@@ -84,6 +84,38 @@ export const i18nParticular = {
           "Cubriendo los costes del viaje y evitando que un camión tenga que hacer el transporte (ahorrando todas esas emisiones!).",
       },
     ],
+
+    /* Numbers */
+    numbers: [
+      {
+        title: (
+          <>
+            15.7 kgCO<sub>2</sub>
+          </>
+        ),
+        description: (
+          <>
+            Ahorrados en un viaje
+            <br /> Barcelona-Madrid*
+          </>
+        ),
+      },
+      {
+        title: "~50€",
+        description: (
+          <>
+            De remuneración en un viaje <br />
+            Barcelona-Valencia
+          </>
+        ),
+      },
+      {
+        title: "100%",
+        description: "Sonrisas garantizadas",
+      },
+    ],
+    numberDisclaimer:
+      "*Datos de la guía de cálculo de emisiones de la Generalitat de Cataluña y la CNMC",
   },
   en: {
     /* MetaData */
@@ -146,5 +178,42 @@ export const i18nParticular = {
           "Covering the costs of the trip and saving a truck from having to do that transportation (saving all those emissions!)",
       },
     ],
+
+    /* Numbers */
+    numbers: [
+      {
+        title: (
+          <>
+            15.7 kgCO<sub>2</sub>
+          </>
+        ),
+        description: (
+          <>
+            Saved on a
+            <br /> Barcelona-Madrid trip*
+          </>
+        ),
+      },
+      {
+        title: "~50€",
+        description: (
+          <>
+            Remuneration on a
+            <br />
+            Barcelona-Valencia trip
+          </>
+        ),
+      },
+      {
+        title: "100%",
+        description: (
+          <>
+            Guaranteed <br /> smiles
+          </>
+        ),
+      },
+    ],
+    numberDisclaimer:
+      "*Data from the emission calculation guide of the Generalitat of Catalonia and the CNMC",
   },
 };

@@ -23,6 +23,7 @@ import Cookies from "js-cookie";
 import { i18nNavBar, i18nParticular } from "../i18n";
 import { useRouter } from "next/router";
 import Step from "../components/Step";
+import Number from "../components/Number";
 
 export default function Particular() {
   const locale = useRouter().locale as "es" | "en";
@@ -177,34 +178,16 @@ export default function Particular() {
         />
         <div data-aos="fade-in">
           <div className="p-5 flex flex-col lg:flex-row rounded-lg w-fit shadow-lg mx-auto pt-10 bg-white gap-20">
-            <div className="p-5 space-y-5">
-              <h1 className="text-4xl lg:text-5xl font-bold text-center text-primary">
-                15.7 kgCO<sub>2</sub>
-              </h1>
-              <p className="text-center text-gray-500 ">
-                Ahorrados en un viaje
-                <br /> Barcelona-Madrid*
-              </p>
-            </div>
-            <div className="p-5 space-y-5">
-              <h1 className="text-4xl lg:text-5xl font-bold text-center text-primary">
-                ~50€
-              </h1>
-              <p className="text-center text-gray-500">
-                De remuneración en un viaje <br />
-                Barcelona-Valencia
-              </p>
-            </div>
-            <div className="p-5 space-y-5">
-              <h1 className="text-4xl lg:text-5xl font-bold text-center text-primary">
-                100%
-              </h1>
-              <p className="text-center text-gray-500">Sonrisas garantizadas</p>
-            </div>
+            {translations.numbers.map((number, index) => {
+              return (
+                <Number title={number.title} key={index}>
+                  {number.description}
+                </Number>
+              );
+            })}
           </div>
           <p className="text-gray-400 text-xs p-5 text-center">
-            *Datos de la guía de cálculo de emisiones de la Generalitat de
-            Cataluña y la CNMC
+            {translations.numberDisclaimer}
           </p>
         </div>
 
