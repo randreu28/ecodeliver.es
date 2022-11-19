@@ -246,13 +246,13 @@ export default function Particular() {
           className="text-center text-primary font-semibold pt-2 text-lg"
           data-aos="fade-in"
         >
-          Noticias
+          {translations.newsSubtitle}
         </p>
         <h1
           className="text-3xl font-semibold text-center text-secondary lg:text-4xl "
           data-aos="fade-in"
         >
-          Nos mencionan
+          {translations.newsTitle}
         </h1>
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 m-auto py-10"
@@ -283,13 +283,13 @@ export default function Particular() {
           className="text-center text-primary font-semibold pb-2 text-lg"
           data-aos="fade-in"
         >
-          FAQ
+          {translations.faqSubtitle}
         </p>
         <h1
           className="text-center text-4xl lg:text-5xl font-bold md:px-10 mb-8"
           data-aos="fade-in"
         >
-          Preguntas frecuentes
+          {translations.faqTitle}
         </h1>
         {/*  eslint-disable-next-line @next/next/no-img-element */}
         <img

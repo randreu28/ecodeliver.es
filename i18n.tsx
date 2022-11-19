@@ -171,12 +171,12 @@ export const i18nParticular = {
         ),
         text: (
           <>
-            Since being an{" "}
+            Ya que siendo un{" "}
             <b>
               <span className="text-primary">eco</span>Driver
             </b>{" "}
-            you were going to travel anyway, you save a truck from having to
-            transport those packages.
+            ibas a viajar de todas formas, evitas que un camión tenga que
+            transportar esos paquetes.
           </>
         ),
         children: <FingerPrintIcon className="h-6 w-6" />,
@@ -262,8 +262,8 @@ export const i18nParticular = {
     ],
 
     /* News */
-    newsTitle: "News",
-    newsSubtitle: "Our mentionts",
+    newsTitle: "Nos mencionan",
+    newsSubtitle: "Noticias",
     articles: [
       {
         source: "CaixaBank",
@@ -617,7 +617,7 @@ export const i18nParticular = {
 
     /* News */
     newsTitle: "News",
-    newsSubtitle: "Our mentionts",
+    newsSubtitle: "Our mentions",
     articles: [
       {
         source: "CaixaBank",
@@ -1161,7 +1161,7 @@ export const i18nEmpresa = {
 
     /* News */
     newsSubtitle: "News",
-    newsTitle: "Our mentionts",
+    newsTitle: "Our mentions",
     news: [
       {
         className: "",

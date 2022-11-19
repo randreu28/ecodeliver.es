@@ -307,13 +307,13 @@ export default function Empresa({}: Props) {
           className="text-center text-primary font-semibold pb-2 text-lg"
           data-aos="fade-in"
         >
-          FAQ
+          {translations.faqSubtitle}
         </p>
         <h1
           className="text-center text-4xl lg:text-5xl font-bold md:px-10 mb-8"
           data-aos="fade-in"
         >
-          Preguntas frecuentes
+          {translations.faqTitle}
         </h1>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
