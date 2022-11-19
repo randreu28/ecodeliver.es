@@ -47,9 +47,12 @@ export default function Particular() {
         <title>{translations.metaTitle}</title>
         <meta name="description" content={translations.metaDescription} />
       </Head>
-      <Navbar navData={i18nNavBar[locale].navData} />
+      <Navbar navData={i18nNavBar[locale].navParticular} />
       <Toaster position="bottom-left" />
-      <section id={i18nNavBar[locale].navData[0].href} className="space-y-5">
+      <section
+        id={i18nNavBar[locale].navParticular[0].href}
+        className="space-y-5"
+      >
         <main className="min-h-screen pt-20 grid grid-cols-1 xl:grid-cols-2 gap-1 md:gap-5 p-5">
           {/*  eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -126,7 +129,7 @@ export default function Particular() {
       </section>
 
       <section
-        id={i18nNavBar[locale].navData[1].href}
+        id={i18nNavBar[locale].navParticular[1].href}
         className="bg-green-50 space-y-10"
       >
         <div className="container px-6 py-10 mx-auto">
@@ -205,7 +208,7 @@ export default function Particular() {
       </section>
 
       <section
-        id={i18nNavBar[locale].navData[2].href}
+        id={i18nNavBar[locale].navParticular[2].href}
         className="container px-6 py-10 mx-auto"
       >
         <h1
@@ -236,7 +239,7 @@ export default function Particular() {
       </section>
 
       <section
-        id={i18nNavBar[locale].navData[3].href}
+        id={i18nNavBar[locale].navParticular[3].href}
         className="container mx-auto px-6"
       >
         <p
@@ -273,7 +276,7 @@ export default function Particular() {
       </section>
 
       <section
-        id={i18nNavBar[locale].navData[4].href}
+        id={i18nNavBar[locale].navParticular[4].href}
         className="max-w-5xl px-5 mx-auto"
       >
         <p

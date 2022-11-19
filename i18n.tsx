@@ -13,22 +13,34 @@ import Link from "next/link";
 
 export const i18nNavBar = {
   es: {
-    navData: [
+    navParticular: [
       { name: "Inicio", href: "inicio" },
       { name: "Cómo funciona", href: "como-funciona" },
       { name: "Valores", href: "valores" },
       { name: "Noticias", href: "noticias" },
       { name: "FAQ", href: "faq" },
     ],
+    navBusiness: [
+      { name: "Inicio", href: "inicio" },
+      { name: "Valores", href: "valores" },
+      { name: "Sobre nosotros", href: "sobre-nosotros" },
+      { name: "FAQ", href: "faq" },
+    ],
     individual: "Particular",
     business: "Empresa",
   },
   en: {
-    navData: [
+    navParticular: [
       { name: "Home", href: "home" },
       { name: "Our model", href: "our-model" },
       { name: "Values", href: "values" },
       { name: "News", href: "news" },
+      { name: "FAQ", href: "faq" },
+    ],
+    navBusiness: [
+      { name: "Home", href: "home" },
+      { name: "Values", href: "values" },
+      { name: "About us", href: "about-us" },
       { name: "FAQ", href: "faq" },
     ],
     individual: "Individuals",
@@ -771,7 +783,7 @@ export const i18nEmpresa = {
 
     /* Numbers */
     numbersTitle: "El courier sostenible para E-commerce",
-    numbersSubtitle: "Nuestro modelo",
+    numbersSubtitle: "Nuestros valores",
     numbersDescription: (
       <>
         El único servicio capaz de hacer una entrega desde tu almacén al
@@ -846,7 +858,7 @@ export const i18nEmpresa = {
 
     /* Values */
     valuesTitle: "¿Cómo lo hacemos?",
-    valuesSubtitle: "Valores",
+    valuesSubtitle: "Sobre nosotros",
     valuesDescription: (
       <>
         Combinando nuestra flota de furgonetas totalmente eléctricas y la
@@ -912,7 +924,7 @@ export const i18nEmpresa = {
 
     /* Numbers */
     numbersTitle: "The sustainable courier for E-commerce",
-    numbersSubtitle: "Our model",
+    numbersSubtitle: "Our values",
     numbersDescription: (
       <>
         The only service capable of delivering from your warehouse to your
@@ -986,7 +998,7 @@ export const i18nEmpresa = {
 
     /* Values */
     valuesTitle: "How do we do it?",
-    valuesSubtitle: "Our values",
+    valuesSubtitle: "About us",
     valuesDescription: (
       <>
         Combining our fleet of fully electric vans and the collaboration of our
