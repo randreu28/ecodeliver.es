@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const i18nNavBar = {
   es: {
     navData: [
@@ -116,7 +118,20 @@ export const i18nParticular = {
     ],
     numberDisclaimer:
       "*Datos de la guía de cálculo de emisiones de la Generalitat de Cataluña y la CNMC",
+
+    /* CTA */
+    ctaTitle: (
+      <>
+        List@ para convertirte en un{" "}
+        <b>
+          <span className="text-primary">eco</span>Driver
+        </b>
+        ?
+      </>
+    ),
+    ctaDescription: "Te damos un toque cuando esté listo",
   },
+
   en: {
     /* MetaData */
     metaTitle: "ecoDeliver - The sustainable BlaBlacar of deliveries",
@@ -215,5 +230,60 @@ export const i18nParticular = {
     ],
     numberDisclaimer:
       "*Data from the emission calculation guide of the Generalitat of Catalonia and the CNMC",
+
+    /* CTA */
+    ctaTitle: (
+      <>
+        Ready to become an{" "}
+        <b>
+          <span className="text-primary">eco</span>Driver
+        </b>
+        ?
+      </>
+    ),
+    ctaDescription: "We'll let you know when it's ready",
+  },
+};
+
+export const CTA = {
+  es: {
+    call: "Notifícame",
+    placeholder: "Correo electrónico",
+    disclaimer: (
+      <>
+        Tranquilo, no enviamos spam. Nunca. ¡Sólo actualizaciones <br />{" "}
+        importantes! Revisa nuestra{" "}
+        <Link
+          href="/privacidad"
+          target="_blank"
+          className="text-primary underline hover:opacity-75 duration-200"
+        >
+          politica de privacidad.
+        </Link>
+      </>
+    ),
+    onLoad: "Enviando...",
+    onSuccess: "Tu correo ha sido enviado exitosamente",
+    onError: "Ha ocurrido un error, porfavor inténtalo de nuevo más tarde",
+  },
+  en: {
+    call: "Notify me",
+    placeholder: "Your email",
+    disclaimer: (
+      <>
+        Don&apos;t worry, we don&apos;t send spam. Ever.
+        <br /> Only important updates! Review our{" "}
+        <Link
+          href="/privacidad"
+          target="_blank"
+          className="text-primary underline hover:opacity-75 duration-200"
+        >
+          privacy policy.
+        </Link>
+      </>
+    ),
+    onLoad: "Sending...",
+    onSuccess: "Your email was sent succesfully!",
+    onError: "An error occured, please try again later",
   },
 };

@@ -193,12 +193,11 @@ export default function Particular() {
 
         <div className="container px-4 py-10 mx-auto lg:flex lg:items-center lg:justify-between">
           <div className="flex flex-col gap-3" data-aos="fade-right">
-            <h2 className="text-5xl font-bold tracking-tight text-gray-800 xl:text-6xl ">
-              ¿List@ para convertirte <br /> en un{" "}
-              <span className="text-primary">eco</span>Driver?
+            <h2 className="text-5xl font-bold tracking-tight text-gray-800 xl:text-6xl max-w-xl">
+              {translations.ctaTitle}
             </h2>
             <p className="text-gray-500 text-xl">
-              Te damos un toque cuando esté listo
+              {translations.ctaDescription}
             </p>
           </div>
           <EcoDriverForm />
