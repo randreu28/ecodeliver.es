@@ -9,8 +9,6 @@ import {
   UserGroupIcon,
 } from "@heroicons/react/outline";
 import Head from "next/head";
-import { useEffect, useState } from "react";
-import TextTransition, { presets } from "react-text-transition";
 import Navbar from "../components/Navbar";
 import Image from "next/image";
 import CloudLogo from "../components/CloudLogo";
@@ -22,31 +20,20 @@ import Disclosure from "../components/Disclousure";
 import Footer from "../components/Footer";
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
-import { i18nNavBar } from "../i18n";
+import { i18nEmpresa, i18nNavBar } from "../i18n";
 
 type Props = {};
 
-const WobblyTexts: string[] = ["sostenible", "transparente", "diferente"];
-
 export default function Empresa({}: Props) {
   Cookies.set("isBusiness", "true");
-  const [index, setIndex] = useState<number>(0);
   const locale = useRouter().locale as "es" | "en";
+  const translations = i18nEmpresa[locale];
 
-  useEffect(() => {
-    const intervalId = setInterval(() => setIndex((index) => index + 1), 2000);
-    return () => clearTimeout(intervalId);
-  }, []);
   return (
     <>
       <Head>
-        <title>
-          ecoDeliver - Entrega de paqueteria sostenible para e-commerce
-        </title>
-        <meta
-          name="description"
-          content="Transporte de paquetería colaborativo y de última milla verde mediante vehículos eléctricos en España."
-        />
+        <title>{translations.metaTitle}</title>
+        <meta name="description" content={translations.metaDescription} />
         <meta
           property="og:image"
           content="https://res.cloudinary.com/ecodeliver-es/image/upload/v1659538036/stockImage3_podaof.jpg"
@@ -69,41 +56,29 @@ export default function Empresa({}: Props) {
             data-aos-delay="100"
           >
             <h1 className="text-secondary text-4xl md:text-5xl 2xl:text-6xl max-w-xl xl:max-w-4xl !leading-[1.15] font-semibold">
-              Más allá de la movilidad eléctrica, la entrega de paquetería más{" "}
-              <br />
-              <TextTransition
-                inline={true}
-                className="text-primary"
-                springConfig={presets.wobbly}
-              >
-                <span>{WobblyTexts[index % WobblyTexts.length]}</span>
-              </TextTransition>
+              {translations.heroSentence}
             </h1>
 
-            <div className="space-y-2 mt-10 text-gray-500">
+            <div className="space-y-2 mt-5 text-gray-500">
               <p className="text-lg font-normal pb-2">
-                Tienes una cuenta? Accede a la información de tus envíos aquí:
+                {translations.heroCtaDescription}
               </p>
               <div className="flex flex-col sm:flex-row gap-5 w-full">
                 <button
                   onClick={() => {
-                    toast.error(
-                      "Nuestros servidores no están disponibles. Porfavor, inténtalo de nuevo más tarde"
-                    );
+                    toast.error(translations.heroCtaToast);
                   }}
                   className="px-4 py-2 justify-center flex font-semibold tracking-wide text-lg text-white capitalize transition-colors duration-200 transform bg-primary rounded-md focus:ring focus:ring-green-300 focus:ring-opacity-80 hover:bg-green-500 focus:outline-none focus:bg-green-600"
                 >
-                  Inicia sesión
+                  {translations.heroCta}
                 </button>
                 <button
                   onClick={() => {
-                    toast.error(
-                      "Nuestros servidores no están disponibles. Porfavor, inténtalo de nuevo más tarde"
-                    );
+                    toast.error(translations.heroCtaToast);
                   }}
                   className="px-4 py-2 justify-center flex gap-5 font-semibold border border-green-100 tracking-wide text-lg text-primary capitalize transition-colors duration-200 transform bg-white shadow-md rounded-md focus:ring focus:ring-green-300 focus:ring-opacity-80 hover:bg-green-100 focus:outline-none focus:bg-green-100"
                 >
-                  Regístrate
+                  {translations.heroCta2}
                   <ArrowRightIcon className="w-6 h-6 my-auto" />
                 </button>
               </div>
@@ -135,7 +110,7 @@ export default function Empresa({}: Props) {
             className="text-center text-secondary text-4xl font-bold"
             data-aos="fade-up"
           >
-            Con la confianza de...
+            {translations.logosHeader}
           </h1>
           <CloudLogo />
         </div>

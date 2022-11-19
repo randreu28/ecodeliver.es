@@ -743,6 +743,53 @@ export const i18nParticular = {
   },
 };
 
+export const i18nEmpresa = {
+  es: {
+    /* MetaData */
+    metaTitle: "ecoDeliver - El BlaBlaCar de la paquetería, sostenible",
+    metaDescription:
+      "Transporte de paquetería sostenible, mediante una entrega colaborativa que te permite cubrir los costes de tus viajes en coche por España",
+
+    /* Header */
+    heroSentence: (
+      <>
+        La entrega de paquetería más sostenible va{" "}
+        <span className="text-primary">más allá</span> de la movilidad eléctrica{" "}
+      </>
+    ),
+    heroCtaDescription:
+      "Tienes una cuenta? Accede a la información de tus envíos aquí:",
+    heroCta: "Inicia sesión",
+    heroCta2: "Regístrate",
+    heroCtaToast: "Servidores no disponibles. Porfavor inténtalo mas tarde",
+
+    /* Logos */
+    logosHeader: "Con el apoyo de...",
+  },
+  en: {
+    /* MetaData */
+    metaTitle: "ecoDeliver - The sustainable BlaBlacar of deliveries",
+    metaDescription:
+      "Sustainable parcel delivery transportation, through a collaborative delivery that allows you to cover the costs of your car trips in Spain",
+
+    /* Header */
+    heroSentence: (
+      <>
+        The most sustainable parcel delivery goes{" "}
+        <span className="text-primary">beyond</span> electric mobility
+      </>
+    ),
+    heroCtaDescription:
+      "Do you have an account? Access your shipments' information here:",
+    heroCta: "Log in",
+    heroCta2: "Register",
+    heroCtaToast: "Servidores not available. Please try again later",
+
+    /* Logos */
+    logosHeader: "With the trust of...",
+  },
+};
+
 export const i18nCTA = {
   es: {
     call: "Notifícame",
