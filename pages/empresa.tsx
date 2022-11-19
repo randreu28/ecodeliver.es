@@ -21,21 +21,17 @@ import BusinessForm from "../components/BusinessForm";
 import Disclosure from "../components/Disclousure";
 import Footer from "../components/Footer";
 import Cookies from "js-cookie";
+import { useRouter } from "next/router";
+import { navBar } from "../i18n";
 
 type Props = {};
-
-const navData = [
-  { name: "Inicio", href: "inicio" },
-  { name: "Valores", href: "valores" },
-  { name: "Sobre nosotros", href: "nosotros" },
-  { name: "FAQ", href: "faq" },
-];
 
 const WobblyTexts: string[] = ["sostenible", "transparente", "diferente"];
 
 export default function Empresa({}: Props) {
   Cookies.set("isBusiness", "true");
   const [index, setIndex] = useState<number>(0);
+  const locale = useRouter().locale as "es" | "en";
 
   useEffect(() => {
     const intervalId = setInterval(() => setIndex((index) => index + 1), 2000);
@@ -56,10 +52,10 @@ export default function Empresa({}: Props) {
           content="https://res.cloudinary.com/ecodeliver-es/image/upload/v1659538036/stockImage3_podaof.jpg"
         />
       </Head>
-      <Navbar navData={navData} />
+      <Navbar navData={navBar[locale].navData} />
       <Toaster position="bottom-left" />
 
-      <section id={navData[0].href}>
+      <section id={navBar[locale].navData[0].href}>
         <main className="min-h-screen pt-20 grid grid-cols-1 xl:grid-cols-2 gap-1 md:gap-5 p-5 xl:max-w-[100rem] mx-auto">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -145,7 +141,7 @@ export default function Empresa({}: Props) {
         </div>
       </section>
 
-      <section id={navData[1].href} className="space-y-5">
+      <section id={navBar[locale].navData[1].href} className="space-y-5">
         <p
           className="text-center text-primary font-semibold text-lg"
           data-aos="fade-in"
@@ -287,7 +283,10 @@ export default function Empresa({}: Props) {
         </div>
       </section>
 
-      <section id={navData[2].href} className="container px-6 py-10 mx-auto">
+      <section
+        id={navBar[locale].navData[2].href}
+        className="container px-6 py-10 mx-auto"
+      >
         <p
           className="text-center text-primary font-semibold text-lg pb-2"
           data-aos="fade-in"
@@ -402,7 +401,10 @@ export default function Empresa({}: Props) {
         </div>
       </section>
 
-      <section id={navData[3].href} className="max-w-5xl px-5 mx-auto">
+      <section
+        id={navBar[locale].navData[3].href}
+        className="max-w-5xl px-5 mx-auto"
+      >
         <p
           className="text-center text-primary font-semibold pb-2 text-lg"
           data-aos="fade-in"

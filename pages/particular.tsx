@@ -20,17 +20,14 @@ import Article from "../components/Article";
 import Disclosure from "../components/Disclousure";
 import Footer from "../components/Footer";
 import Cookies from "js-cookie";
-const navData = [
-  { name: "Inicio", href: "inicio" },
-  { name: "Cómo funciona", href: "como-funciona" },
-  { name: "Valores", href: "valores" },
-  { name: "Noticias", href: "noticias" },
-  { name: "FAQ", href: "faq" },
-];
+import { navBar } from "../i18n";
+import { useRouter } from "next/router";
 
 const WobblyTexts: string[] = ["sostenible", "transparente", "diferente"];
 
 export default function Particular() {
+  const locale = useRouter().locale as "es" | "en";
+
   Cookies.set("isBusiness", "false");
   const [index, setIndex] = useState<number>(0);
 
@@ -50,9 +47,9 @@ export default function Particular() {
           content="Transporte de paquetería sostenible, mediante una entrega colaborativa que te permite cubrir los costes de tus viajes en coche por España"
         />
       </Head>
-      <Navbar navData={navData} />
+      <Navbar navData={navBar[locale].navData} />
       <Toaster position="bottom-left" />
-      <section id={navData[0].href} className="space-y-5">
+      <section id={navBar[locale].navData[0].href} className="space-y-5">
         <main className="min-h-screen pt-20 grid grid-cols-1 xl:grid-cols-2 gap-1 md:gap-5 p-5">
           {/*  eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -130,7 +127,10 @@ export default function Particular() {
         </div>
       </section>
 
-      <section id={navData[1].href} className="bg-green-50 space-y-10">
+      <section
+        id={navBar[locale].navData[1].href}
+        className="bg-green-50 space-y-10"
+      >
         <div className="container px-6 py-10 mx-auto">
           <div className="lg:flex lg:items-center">
             <div className="w-full space-y-12 lg:w-1/2" data-aos="fade-right">
@@ -285,7 +285,10 @@ export default function Particular() {
         </div>
       </section>
 
-      <section id={navData[2].href} className="container px-6 py-10 mx-auto">
+      <section
+        id={navBar[locale].navData[2].href}
+        className="container px-6 py-10 mx-auto"
+      >
         <h1
           className="text-3xl font-semibold text-center text-secondary lg:text-4xl "
           data-aos="fade-in"
@@ -408,7 +411,10 @@ export default function Particular() {
         </div>
       </section>
 
-      <section id={navData[3].href} className="container mx-auto px-6">
+      <section
+        id={navBar[locale].navData[3].href}
+        className="container mx-auto px-6"
+      >
         <p
           className="text-center text-primary font-semibold pt-2 text-lg"
           data-aos="fade-in"
@@ -467,7 +473,10 @@ export default function Particular() {
         </div>
       </section>
 
-      <section id={navData[4].href} className="max-w-5xl px-5 mx-auto">
+      <section
+        id={navBar[locale].navData[4].href}
+        className="max-w-5xl px-5 mx-auto"
+      >
         <p
           className="text-center text-primary font-semibold pb-2 text-lg"
           data-aos="fade-in"
