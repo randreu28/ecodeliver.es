@@ -1,3 +1,11 @@
+import {
+  BadgeCheckIcon,
+  FingerPrintIcon,
+  ShieldCheckIcon,
+  SparklesIcon,
+  UserAddIcon,
+  UserGroupIcon,
+} from "@heroicons/react/outline";
 import Link from "next/link";
 
 export const i18nNavBar = {
@@ -130,6 +138,113 @@ export const i18nParticular = {
       </>
     ),
     ctaDescription: "Te damos un toque cuando esté listo",
+
+    /* Values */
+    valuesTitle: "Valores de nuestro servicio",
+    valuesSubtitle: (
+      <>
+        Porque el <b className="text-primary">por qué</b> importa
+      </>
+    ),
+    values: [
+      {
+        title: (
+          <>
+            Somos{" "}
+            <span className="text-primary font-semibold">eco-friendly</span>
+          </>
+        ),
+        text: (
+          <>
+            Since being an{" "}
+            <b>
+              <span className="text-primary">eco</span>Driver
+            </b>{" "}
+            you were going to travel anyway, you save a truck from having to
+            transport those packages.
+          </>
+        ),
+        children: <FingerPrintIcon className="h-6 w-6" />,
+      },
+      {
+        title: (
+          <>
+            Cuidamos de las{" "}
+            <span className="text-primary font-semibold">personas</span>
+          </>
+        ),
+        text: (
+          <>
+            Transportamos paquetes pero tratamos con personas. Por eso, te
+            cuidamos tanto a ti como a nuestros repartidores.
+          </>
+        ),
+        children: <UserGroupIcon className="h-6 w-6" />,
+      },
+      {
+        title: (
+          <>
+            Creamos{" "}
+            <span className="text-primary font-semibold">comunidad</span>
+          </>
+        ),
+        text: (
+          <>
+            Al ofrecer un servicio en comunidad, compartimos recursos y salimos
+            ganando todos!
+          </>
+        ),
+        children: <UserAddIcon className="h-6 w-6" />,
+      },
+      {
+        title: (
+          <>
+            Muy <span className="text-primary font-semibold">práctico</span>
+          </>
+        ),
+        text: (
+          <>
+            Disrumpimos el mercado, pero sin disrumpir tu viaje! Nos centramos
+            en que para ti todo vaya <i>sobre ruedas</i>.
+          </>
+        ),
+        children: <SparklesIcon className="h-6 w-6" />,
+      },
+      {
+        title: (
+          <>
+            <span className="text-primary font-semibold">Transparencia</span>{" "}
+            ante todo
+          </>
+        ),
+        text: (
+          <>
+            Al ofrecer un servicio en comunidad, compartimos recursos y salimos
+            ganando todos!
+          </>
+        ),
+        children: <BadgeCheckIcon className="w-6 h-6" />,
+      },
+      {
+        title: (
+          <>
+            Cuidando de tu{" "}
+            <span className="text-primary font-semibold">seguridad</span>
+          </>
+        ),
+        text: (
+          <>
+            Cuidamos de los{" "}
+            <b>
+              <span className="text-primary">eco</span>Deliver
+            </b>{" "}
+            y de los paquetes, verificando que se cumplen nuestros protocolos de
+            seguridad.
+          </>
+        ),
+        children: <ShieldCheckIcon className="h-6 w-6" />,
+      },
+    ],
   },
 
   en: {
@@ -242,6 +357,112 @@ export const i18nParticular = {
       </>
     ),
     ctaDescription: "We'll let you know when it's ready",
+
+    /* Values */
+    valuesTitle: "Values of our service",
+    valuesSubtitle: (
+      <>
+        Because the <b className="text-primary">why</b> matters
+      </>
+    ),
+    values: [
+      {
+        title: (
+          <>
+            We are{" "}
+            <span className="text-primary font-semibold">eco-friendly</span>
+          </>
+        ),
+        text: (
+          <>
+            Since being an{" "}
+            <b>
+              <span className="text-primary">eco</span>Driver
+            </b>{" "}
+            you were going to travel anyway, you save a truck from having to
+            transport those packages.
+          </>
+        ),
+        children: <FingerPrintIcon className="h-6 w-6" />,
+      },
+      {
+        title: (
+          <>
+            We take care of{" "}
+            <span className="text-primary font-semibold">people</span>
+          </>
+        ),
+        text: (
+          <>
+            We transport packages but we deal with people. For this reason, we
+            take care of both you and our Last-Mile delivery Drivers.
+          </>
+        ),
+        children: <UserGroupIcon className="h-6 w-6" />,
+      },
+      {
+        title: (
+          <>
+            We create{" "}
+            <span className="text-primary font-semibold">community</span>
+          </>
+        ),
+        text: (
+          <>
+            By offering a service in community, we share resources. It&apos;s a
+            win win!
+          </>
+        ),
+        children: <UserAddIcon className="h-6 w-6" />,
+      },
+      {
+        title: (
+          <>
+            Very <span className="text-primary font-semibold">practical</span>
+          </>
+        ),
+        text: (
+          <>
+            We disrupt the market, but without disrupting your journey! We
+            strive for your trip to run <i>on wheels</i>.
+          </>
+        ),
+        children: <SparklesIcon className="h-6 w-6" />,
+      },
+      {
+        title: (
+          <>
+            <span className="text-primary font-semibold">Transparency</span>{" "}
+            above everything
+          </>
+        ),
+        text: (
+          <>
+            We work hard to have a service and a community based on trust and
+            things well done.
+          </>
+        ),
+        children: <BadgeCheckIcon className="w-6 h-6" />,
+      },
+      {
+        title: (
+          <>
+            Taking care of your{" "}
+            <span className="text-primary font-semibold">safety</span>
+          </>
+        ),
+        text: (
+          <>
+            We take care of both{" "}
+            <b>
+              <span className="text-primary">eco</span>Drivers
+            </b>{" "}
+            and packages, verifying that our security protocols are followed.
+          </>
+        ),
+        children: <ShieldCheckIcon className="h-6 w-6" />,
+      },
+    ],
   },
 };
 
