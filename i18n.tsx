@@ -956,6 +956,69 @@ export const i18nEmpresa = {
         imgLink: "/media/articles/lavanguardiaArticle.webp",
       },
     ],
+
+    /* FAQ */
+    faqSubtitle: "FAQ",
+    faqTitle: "Preguntas frecuentes",
+    disclousures: [
+      {
+        title: "¿Cómo se garantiza la seguridad de los envíos?",
+        isOpen: true,
+        children: (
+          <>
+            Tratamos tu envíos con el máximo cariño posible! Los ecoDrivers los
+            recogen en bolsas seguras y selladas con una abrazadera única, que
+            permite asegurar que no se ha accedido a la mercancía desde el
+            momento en que el usuario sale del almacén hasta que lo entrega en
+            destino. Además, tenemos la mercancía asegurada con un seguro de
+            mercancías.
+          </>
+        ),
+      },
+      {
+        title:
+          "¿Cómo se garantiza que los envíos lleguen en el plazo esperado?",
+        isOpen: false,
+        children: (
+          <>
+            Sabemos que como negocio, tu preocupación es vender y cuidar de tus
+            clientes, no la de hacer entregas. Para eso estamos nosotros, y
+            nuestra responsabilidad como courier es hacer la entrega en el plazo
+            acordado, por lo que incluso en el caso de que no haya ecoDrivers
+            disponibles para hacer el transporte de una ruta determinada,
+            contamos con medios alternativos de transporte que garantizan la
+            entrega y nos permiten seguir actuando de acorde a nuestros valores.
+          </>
+        ),
+      },
+      {
+        title: "¿Qué diferencia a ecoDeliver de las otras plataformas?",
+        isOpen: false,
+        children: (
+          <>
+            El sector de envíos y entregas está viviendo un cambio muy
+            importante hacia la entrega sostenible, y hay otros servicios que
+            ofrecen esta posibilidad. No obstante, aún no existe un método
+            alternativo a la comunidad de ecoDeliver para hacer el transporte de
+            larga distancia. Nos diferencia este compromiso medioambiental, el
+            cuidado hacia las personas que nos representan como nuestros
+            repartidores, y nuestro compromiso para ofrecer un servicio de
+            calidad que no represente un sobrecoste para nuestros clientes.
+          </>
+        ),
+      },
+      {
+        title: "¿ecoDeliver sólo hace entregas para e-commerce?",
+        isOpen: false,
+        children: (
+          <>
+            Pese a que tenemos la infraestructura y capacidad para involucrarnos
+            en diferentes tipos de entregas y proyectos, nos centramos
+            principalmente en entregas de paquetería pequeña.
+          </>
+        ),
+      },
+    ],
   },
   en: {
     /* MetaData */
@@ -1158,6 +1221,69 @@ export const i18nEmpresa = {
         extLink:
           "https://www.lavanguardia.com/vida/20210713/7597222/ecodeliver-kidalos-ganan-primera-edicion-imaginplanet-challenge.html",
         imgLink: "/media/articles/lavanguardiaArticle.webp",
+      },
+    ],
+
+    /* FAQ */
+    faqSubtitle: "FAQ",
+    faqTitle: "Frequently asked questions",
+    disclousures: [
+      {
+        title: "How is the security of shipments guaranteed?",
+        isOpen: true,
+        children: (
+          <>
+            We treat your shipments with the utmost affection possible! The
+            ecoDrivers collect them in secure bags sealed with a unique lock,
+            which ensures that the merchandise has not been accessed to, from
+            the moment the user leaves the warehouse until it is delivered to
+            its destination. In addition, we have the items insured with
+            merchandise insurance.
+          </>
+        ),
+      },
+      {
+        title:
+          "How do you guarantee that shipments arrive within the expected time frame?",
+        isOpen: false,
+        children: (
+          <>
+            We know that as a business, your concern is selling and taking care
+            of your customers, not making deliveries. That is what we are here
+            for, and our responsibility as a courier is to make the delivery
+            within the agreed period, so even in the event that there are no
+            ecoDrivers available to transport a given route, we have alternative
+            means of transportation that guarantee our commitment and allow us
+            to continue acting in accordance with our values.
+          </>
+        ),
+      },
+      {
+        title: "What makes ecoDeliver different from other platforms?",
+        isOpen: false,
+        children: (
+          <>
+            The shipping and delivery industry is undergoing a very important
+            shift towards sustainable deliveries, and there are other services
+            that offer this possibility. However, there is still no alternative
+            method to ecoDeliver’s community to make long-distance transport
+            sustainable. What sets us apart is this environmental commitment,
+            the care towards the people who represent us as our distributors,
+            and our commitment to offer a quality service that does not
+            represent overrun costs for our customers.
+          </>
+        ),
+      },
+      {
+        title: "Does ecoDeliver only deliver for e-commerce?",
+        isOpen: false,
+        children: (
+          <>
+            Although we have the infrastructure and capacity to get involved in
+            different types of deliveries and projects, we mainly focus on small
+            package deliveries for e-commerce.
+          </>
+        ),
       },
     ],
   },
