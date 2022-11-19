@@ -4,7 +4,7 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Logo from "./Logo";
-import { navBar } from "../i18n";
+import { i18nNavBar } from "../i18n";
 
 interface Props {
   navData: {
@@ -67,7 +67,7 @@ export default function Navbar({ navData }: Props) {
               : "pr-3 duration-200 hover:opacity-50"
           }
         >
-          {navBar[locale].individual}
+          {i18nNavBar[locale].individual}
         </Link>
         <Link
           href="/empresa"
@@ -78,7 +78,7 @@ export default function Navbar({ navData }: Props) {
               : "pl-3 duration-200 hover:opacity-50"
           }
         >
-          {navBar[locale].business}
+          {i18nNavBar[locale].business}
         </Link>
       </div>
       <Popover className="lg:hidden my-auto">
@@ -150,7 +150,7 @@ export default function Navbar({ navData }: Props) {
                         : "block text-lg font-medium px-3 py-2 hover:opacity-75 duration-300"
                     }
                   >
-                    {navBar[locale].individual}
+                    {i18nNavBar[locale].individual}
                   </Link>
                   <Link
                     href="/empresa"
@@ -160,7 +160,7 @@ export default function Navbar({ navData }: Props) {
                         : "block text-lg font-medium px-3 py-2 hover:opacity-75 duration-300"
                     }
                   >
-                    {navBar[locale].business}
+                    {i18nNavBar[locale].business}
                   </Link>
                 </div>
               </div>

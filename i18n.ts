@@ -1,4 +1,4 @@
-export const navBar = {
+export const i18nNavBar = {
   es: {
     navData: [
       { name: "Inicio", href: "inicio" },
@@ -7,7 +7,7 @@ export const navBar = {
       { name: "Noticias", href: "noticias" },
       { name: "FAQ", href: "faq" },
     ],
-    individual: "Particulares",
+    individual: "Particular",
     business: "Empresa",
   },
   en: {
@@ -23,7 +23,7 @@ export const navBar = {
   },
 };
 
-export const particular = {
+export const i18nParticular = {
   es: {
     /* MetaData */
     metaTitle: "ecoDeliver - El BlaBlaCar de la paquetería, sostenible",

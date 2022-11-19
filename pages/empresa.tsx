@@ -22,7 +22,7 @@ import Disclosure from "../components/Disclousure";
 import Footer from "../components/Footer";
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
-import { navBar } from "../i18n";
+import { i18nNavBar } from "../i18n";
 
 type Props = {};
 
@@ -52,10 +52,10 @@ export default function Empresa({}: Props) {
           content="https://res.cloudinary.com/ecodeliver-es/image/upload/v1659538036/stockImage3_podaof.jpg"
         />
       </Head>
-      <Navbar navData={navBar[locale].navData} />
+      <Navbar navData={i18nNavBar[locale].navData} />
       <Toaster position="bottom-left" />
 
-      <section id={navBar[locale].navData[0].href}>
+      <section id={i18nNavBar[locale].navData[0].href}>
         <main className="min-h-screen pt-20 grid grid-cols-1 xl:grid-cols-2 gap-1 md:gap-5 p-5 xl:max-w-[100rem] mx-auto">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -141,7 +141,7 @@ export default function Empresa({}: Props) {
         </div>
       </section>
 
-      <section id={navBar[locale].navData[1].href} className="space-y-5">
+      <section id={i18nNavBar[locale].navData[1].href} className="space-y-5">
         <p
           className="text-center text-primary font-semibold text-lg"
           data-aos="fade-in"
@@ -284,7 +284,7 @@ export default function Empresa({}: Props) {
       </section>
 
       <section
-        id={navBar[locale].navData[2].href}
+        id={i18nNavBar[locale].navData[2].href}
         className="container px-6 py-10 mx-auto"
       >
         <p
@@ -402,7 +402,7 @@ export default function Empresa({}: Props) {
       </section>
 
       <section
-        id={navBar[locale].navData[3].href}
+        id={i18nNavBar[locale].navData[3].href}
         className="max-w-5xl px-5 mx-auto"
       >
         <p

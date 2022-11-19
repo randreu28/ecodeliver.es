@@ -20,7 +20,7 @@ import Article from "../components/Article";
 import Disclosure from "../components/Disclousure";
 import Footer from "../components/Footer";
 import Cookies from "js-cookie";
-import { navBar, particular } from "../i18n";
+import { i18nNavBar, i18nParticular } from "../i18n";
 import { useRouter } from "next/router";
 
 export default function Particular() {
@@ -29,7 +29,8 @@ export default function Particular() {
   Cookies.set("isBusiness", "false");
   const [index, setIndex] = useState<number>(0);
 
-  const WobblyTexts: string[] = particular[locale].wooblyTexts;
+  const WobblyTexts: string[] = i18nParticular[locale].wooblyTexts;
+  const translations = i18nParticular[locale];
 
   useEffect(() => {
     const intervalId = setInterval(() => setIndex((index) => index + 1), 2000);
@@ -41,12 +42,12 @@ export default function Particular() {
   return (
     <>
       <Head>
-        <title>{particular[locale].metaTitle}</title>
-        <meta name="description" content={particular[locale].metaDescription} />
+        <title>{translations.metaTitle}</title>
+        <meta name="description" content={translations.metaDescription} />
       </Head>
-      <Navbar navData={navBar[locale].navData} />
+      <Navbar navData={i18nNavBar[locale].navData} />
       <Toaster position="bottom-left" />
-      <section id={navBar[locale].navData[0].href} className="space-y-5">
+      <section id={i18nNavBar[locale].navData[0].href} className="space-y-5">
         <main className="min-h-screen pt-20 grid grid-cols-1 xl:grid-cols-2 gap-1 md:gap-5 p-5">
           {/*  eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -60,7 +61,7 @@ export default function Particular() {
             data-aos-delay="100"
           >
             <h1 className="text-secondary text-4xl md:text-5xl 2xl:text-6xl max-w-2xl !leading-[1.15]">
-              {particular[locale].heroSentence}{" "}
+              {translations.heroSentence}{" "}
               <TextTransition
                 inline={true}
                 className="text-primary"
@@ -70,24 +71,22 @@ export default function Particular() {
               </TextTransition>
             </h1>
             <div className="space-y-2 lg:mt-10 text-gray-500">
-              <p className="text-xl pb-2">
-                {particular[locale].heroCtaDescription}
-              </p>
+              <p className="text-xl pb-2">{translations.heroCtaDescription}</p>
               <div className="flex flex-row gap-5 flex-wrap">
                 <input
                   type="text"
                   className="px-4 py-2 text-lg text-secondary bg-white border border-gray-300 rounded-md focus:border-primary-40 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40 w-full sm:w-fit"
-                  placeholder={particular[locale].heroCtaPlaceholder}
+                  placeholder={translations.heroCtaPlaceholder}
                   ref={search}
                 />
                 <Button
                   className="w-full sm:w-fit"
                   event={() => {
-                    toast.error(particular[locale].heroCtaToast);
+                    toast.error(translations.heroCtaToast);
                     search.current.value = "";
                   }}
                 >
-                  {particular[locale].heroCta}
+                  {translations.heroCta}
                 </Button>
               </div>
             </div>
@@ -118,14 +117,14 @@ export default function Particular() {
             className="text-center text-secodary text-4xl font-semibold"
             data-aos="fade-up"
           >
-            {particular[locale].logosHeader}
+            {translations.logosHeader}
           </h1>
           <CloudLogo />
         </div>
       </section>
 
       <section
-        id={navBar[locale].navData[1].href}
+        id={i18nNavBar[locale].navData[1].href}
         className="bg-green-50 space-y-10"
       >
         <div className="container px-6 py-10 mx-auto">
@@ -283,7 +282,7 @@ export default function Particular() {
       </section>
 
       <section
-        id={navBar[locale].navData[2].href}
+        id={i18nNavBar[locale].navData[2].href}
         className="container px-6 py-10 mx-auto"
       >
         <h1
@@ -409,7 +408,7 @@ export default function Particular() {
       </section>
 
       <section
-        id={navBar[locale].navData[3].href}
+        id={i18nNavBar[locale].navData[3].href}
         className="container mx-auto px-6"
       >
         <p
@@ -471,7 +470,7 @@ export default function Particular() {
       </section>
 
       <section
-        id={navBar[locale].navData[4].href}
+        id={i18nNavBar[locale].navData[4].href}
         className="max-w-5xl px-5 mx-auto"
       >
         <p
