@@ -768,10 +768,10 @@ export const i18nEmpresa = {
     /* Logos */
     logosHeader: "Con el apoyo de...",
 
-    /* Values */
-    valuesTitle: "El courier sostenible para E-commerce",
-    valuesSubtitle: "Nuestro modelo",
-    valuesDescription: (
+    /* Numbers */
+    numbersTitle: "El courier sostenible para E-commerce",
+    numbersSubtitle: "Nuestro modelo",
+    numbersDescription: (
       <>
         El único servicio capaz de hacer una entrega desde tu almacén al
         domicilio de tu cliente de forma{" "}
@@ -865,10 +865,10 @@ export const i18nEmpresa = {
     /* Logos */
     logosHeader: "With the trust of...",
 
-    /* Values */
-    valuesTitle: "The sustainable courier for E-commerce",
-    valuesSubtitle: "Our model",
-    valuesDescription: (
+    /* Numbers */
+    numbersTitle: "The sustainable courier for E-commerce",
+    numbersSubtitle: "Our model",
+    numbersDescription: (
       <>
         The only service capable of delivering from your warehouse to your
         client&apos;s home in a <b className="text-primary">sustainable</b> way,

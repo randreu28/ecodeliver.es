@@ -123,19 +123,19 @@ export default function Empresa({}: Props) {
           className="text-center text-primary font-semibold text-lg"
           data-aos="fade-in"
         >
-          {translations.valuesSubtitle}
+          {translations.numbersSubtitle}
         </p>
         <h1
           className="text-4xl text-center text-secondary font-bold "
           data-aos="fade-in"
         >
-          {translations.valuesTitle}
+          {translations.numbersTitle}
         </h1>
         <p
           className="md:text-center text-gray-500 pt-2 px-5 text-lg max-w-3xl mx-auto"
           data-aos="fade-in"
         >
-          {translations.valuesDescription}
+          {translations.numbersDescription}
         </p>
         <div data-aos="fade-in" className="pb-16 pt-10">
           <div className="p-5 flex flex-col lg:flex-row rounded-lg w-fit drop-shadow-lg shadow-lg mx-auto pt-10 bg-white gap-20">
