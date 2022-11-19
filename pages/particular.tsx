@@ -22,6 +22,7 @@ import Footer from "../components/Footer";
 import Cookies from "js-cookie";
 import { i18nNavBar, i18nParticular } from "../i18n";
 import { useRouter } from "next/router";
+import Step from "../components/Step";
 
 export default function Particular() {
   const locale = useRouter().locale as "es" | "en";
@@ -132,18 +133,13 @@ export default function Particular() {
             <div className="w-full space-y-12 lg:w-1/2" data-aos="fade-right">
               <div>
                 <p className="text-primary font-semibold pb-1">
-                  Nuestro modelo
+                  {translations.hiwSubtitle}
                 </p>
                 <h1 className="text-3xl font-semibold text-gray-800 lg:text-4xl pb-3">
-                  ¿Cómo funciona?
+                  {translations.hiwTitle}
                 </h1>
                 <p className="text-gray-500 text-xl">
-                  Cualquiera que vaya a viajar entre ciudades puede ser un{" "}
-                  <b>
-                    <span className="text-primary">eco</span>Driver
-                  </b>
-                  , aprovechando el espacio libre en el coche, transportando
-                  paquetes consigo y cubriendo los gastos del viaje!
+                  {translations.hiwDescription}
                 </p>
                 <div>
                   <span className="inline-block w-40 h-1 rounded-full bg-green-500" />
@@ -151,68 +147,13 @@ export default function Particular() {
                   <span className="inline-block w-1 h-1 ml-1 rounded-full bg-green-500" />
                 </div>
               </div>
-              <div className="md:flex md:items-start md:-mx-4">
-                <span className="inline-block p-2 text-green-500 bg-green-200 rounded-xl md:mx-4">
-                  <p className="px-2 font-bold text-xl">1</p>
-                </span>
-                <div className="mt-4 md:mx-4 md:mt-0">
-                  <h1 className="text-2xl font-semibold text-secondary">
-                    Publica tu viaje en la App
-                  </h1>
-                  <p className="mt-3 text-gray-500">
-                    Tienes planeado viajar en coche? Completa tu perfil e
-                    indícanos la información de tu viaje en la app de{" "}
-                    <b>
-                      <span className="text-primary">eco</span>Deliver
-                    </b>
-                    .
-                  </p>
-                </div>
-              </div>
-              <div className="md:flex md:items-start md:-mx-4">
-                <span className="inline-block p-2 text-green-500 bg-green-200 rounded-xl md:mx-4">
-                  <p className="px-2 font-bold text-xl">2</p>
-                </span>
-                <div className="mt-4 md:mx-4 md:mt-0">
-                  <h1 className="text-2xl font-semibold text-secondary">
-                    Recoge los paquetes en nuestro almacén
-                  </h1>
-                  <p className="mt-3 text-gray-500 ">
-                    Te estaremos esperando con bolsas de paquetes a la salida de
-                    la ciudad.
-                  </p>
-                </div>
-              </div>
-              <div className="md:flex md:items-start md:-mx-4">
-                <span className="inline-block p-2 text-green-500 bg-green-200 rounded-xl md:mx-4">
-                  <p className="px-2 font-bold text-xl">3</p>
-                </span>
-                <div className="mt-4 md:mx-4 md:mt-0">
-                  <h1 className="text-2xl font-semibold text-secondary">
-                    Deja los paquetes al llegar a tu destino
-                  </h1>
-                  <p className="mt-3 text-gray-500">
-                    Cuando llegues a tu destino, dejas las bolsas con paquetes
-                    en nuestro almacén a la entrada de la ciudad y listo! Son 5
-                    minutos de desvío en cada ciudad.
-                  </p>
-                </div>
-              </div>
-              <div className="md:flex md:items-start md:-mx-4">
-                <span className="inline-block p-2 text-green-500 bg-green-200 rounded-xl md:mx-4">
-                  <p className="px-2 font-bold text-xl">4</p>
-                </span>
-                <div className="mt-4 md:mx-4 md:mt-0">
-                  <h1 className="text-2xl font-semibold text-secondary">
-                    Recibe el pago y ¡listo!
-                  </h1>
-                  <p className="mt-3 text-gray-500">
-                    Cubriendo los costes del viaje y evitando que un camión
-                    tenga que hacer el transporte (ahorrando todas esas
-                    emisiones!)
-                  </p>
-                </div>
-              </div>
+              {translations.hiwSteps.map((step, index) => {
+                return (
+                  <Step title={step.title} step={index + 1} key={index}>
+                    {step.description}
+                  </Step>
+                );
+              })}
             </div>
             <div
               className="hidden lg:flex lg:items-center lg:w-1/2 lg:justify-center"
