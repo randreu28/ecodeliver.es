@@ -1,6 +1,8 @@
 import {
+  AnnotationIcon,
   BadgeCheckIcon,
   FingerPrintIcon,
+  LightningBoltIcon,
   ShieldCheckIcon,
   SparklesIcon,
   UserAddIcon,
@@ -768,7 +770,7 @@ export const i18nEmpresa = {
 
     /* Values */
     valuesTitle: "El courier sostenible para E-commerce",
-    valuesSubtitle: "Valores",
+    valuesSubtitle: "Nuestro modelo",
     valuesDescription: (
       <>
         El único servicio capaz de hacer una entrega desde tu almacén al
@@ -790,6 +792,54 @@ export const i18nEmpresa = {
       {
         title: "€",
         children: "Precio competitivo",
+      },
+    ],
+
+    /* How it works */
+    hiwTitle: "Con valores que complementan a los de tu marca",
+    hiwDescription: "Juntos, hacemos la diferencia",
+
+    hiwValuePropositions: [
+      {
+        title: "Sostenibilidad",
+        description: (
+          <>
+            Al ofrecer un servicio en comunidad, compartimos recursos y salimos
+            ganando todos! Ahorramos que camiones tengan que hacer el trayecto y
+            salvamos emisiones.
+          </>
+        ),
+        children: <FingerPrintIcon className="w-6 h-6" />,
+      },
+      {
+        title: "Fiabilidad",
+        description: (
+          <>
+            El compromiso con nuestros clientes es lo más importante, por lo que
+            te aseguramos que tu envío llegará bien y a tiempo.
+          </>
+        ),
+        children: <ShieldCheckIcon className="h-6 w-6" />,
+      },
+      {
+        title: "Comunicación",
+        description: (
+          <>
+            La transparencia, eficacia y reflexión en cuanto a la entrega y la
+            sostenibilidad es algo que nos identifica.
+          </>
+        ),
+        children: <AnnotationIcon className="w-6 h-6" />,
+      },
+      {
+        title: "Rapidez",
+        description: (
+          <>
+            Entrega 24/28h, incluso el mismo día en las ciudades más importantes
+            de España.
+          </>
+        ),
+        children: <LightningBoltIcon className="w-6 h-6" />,
       },
     ],
   },
@@ -817,7 +867,7 @@ export const i18nEmpresa = {
 
     /* Values */
     valuesTitle: "The sustainable courier for E-commerce",
-    valuesSubtitle: "Values",
+    valuesSubtitle: "Our model",
     valuesDescription: (
       <>
         The only service capable of delivering from your warehouse to your
@@ -838,6 +888,54 @@ export const i18nEmpresa = {
       {
         title: "€",
         children: "Competitive price",
+      },
+    ],
+
+    /* How it works */
+    hiwTitle: "With values that complement those of your brand",
+    hiwDescription: "Together, we make a difference",
+
+    hiwValuePropositions: [
+      {
+        title: "Sustainability",
+        description: (
+          <>
+            By offering a service in community, we share resources and we all
+            win! We save trucks from having to make the journey and we save
+            emissions.
+          </>
+        ),
+        children: <FingerPrintIcon className="w-6 h-6" />,
+      },
+      {
+        title: "Reliability",
+        description: (
+          <>
+            Our commitment to our clients is the most important compromise, so
+            we ensure that your shipment will arrive safely and on time.
+          </>
+        ),
+        children: <ShieldCheckIcon className="h-6 w-6" />,
+      },
+      {
+        title: "Communication",
+        description: (
+          <>
+            Transparency, efficiency and conscientiousness in terms of delivery
+            and sustainability is something that identifies us.
+          </>
+        ),
+        children: <AnnotationIcon className="w-6 h-6" />,
+      },
+      {
+        title: "Speed",
+        description: (
+          <>
+            24/28h delivery, even same-day in the most important cities in
+            Spain.
+          </>
+        ),
+        children: <LightningBoltIcon className="w-6 h-6" />,
       },
     ],
   },

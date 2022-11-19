@@ -22,6 +22,7 @@ import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 import { i18nEmpresa, i18nNavBar } from "../i18n";
 import Number from "../components/Number";
+import ValueProposition from "../components/ValueProposition";
 
 type Props = {};
 
@@ -160,10 +161,10 @@ export default function Empresa({}: Props) {
               className="text-3xl font-semibold text-gray-800 lg:text-4xl max-w-lg pb-5"
               data-aos="fade-right"
             >
-              Con valores que complementan a los de tu marca
+              {translations.hiwTitle}
             </h1>
             <p className="text-gray-500 text-xl" data-aos="fade-right">
-              Juntos, hacemos la diferencia
+              {translations.hiwDescription}
             </p>
             <div className="mt-2" data-aos="fade-right">
               <span className="inline-block w-40 h-1 rounded-full bg-green-500" />
@@ -175,56 +176,19 @@ export default function Empresa({}: Props) {
                 className="w-full lg:w-1/2 grid grid-cols-1 gap-8 xl:gap-16 md:grid-cols-2"
                 data-aos="fade-right"
               >
-                <div className="space-y-3">
-                  <span className="inline-block p-3 text-green-500 bg-green-100 rounded-xl">
-                    <FingerPrintIcon className="w-6 h-6" />
-                  </span>
-                  <h1 className="text-2xl font-semibold text-gray-700 capitalize">
-                    Sostenibilidad
-                  </h1>
-                  <p className="text-gray-500">
-                    Al ofrecer un servicio en comunidad, compartimos recursos y
-                    salimos ganando todos! Ahorramos que camiones tengan que
-                    hacer el trayecto y salvamos emisiones.
-                  </p>
-                </div>
-                <div className="space-y-3">
-                  <span className="inline-block p-3 text-green-500 bg-green-100 rounded-xl">
-                    <ShieldCheckIcon className="h-6 w-6" />
-                  </span>
-                  <h1 className="text-2xl font-semibold text-gray-700 capitalize">
-                    Fiabilidad
-                  </h1>
-                  <p className="text-gray-500">
-                    El compromiso con nuestros clientes es lo más importante,
-                    por lo que te aseguramos que tu envío llegará bien y a
-                    tiempo.
-                  </p>
-                </div>
-                <div className="space-y-3">
-                  <span className="inline-block p-3 text-green-500 bg-green-100 rounded-xl">
-                    <AnnotationIcon className="h-6 w-6" />
-                  </span>
-                  <h1 className="text-2xl font-semibold text-gray-700 capitalize">
-                    Comunicación
-                  </h1>
-                  <p className="text-gray-500">
-                    La transparencia, eficacia y reflexión en cuanto a la
-                    entrega y la sostenibilidad es algo que nos identifica.
-                  </p>
-                </div>
-                <div className="space-y-3">
-                  <span className="inline-block p-3 text-green-500 bg-green-100 rounded-xl">
-                    <LightningBoltIcon className="h-6 w-6" />
-                  </span>
-                  <h1 className="text-2xl font-semibold text-gray-700 capitalize">
-                    Rapidez
-                  </h1>
-                  <p className="text-gray-500">
-                    Entrega 24/28h, incluso el mismo día en las ciudades más
-                    importantes de España.
-                  </p>
-                </div>
+                {translations.hiwValuePropositions.map(
+                  (valueProposition, index) => {
+                    return (
+                      <ValueProposition
+                        title={valueProposition.title}
+                        description={valueProposition.description}
+                        key={index}
+                      >
+                        {valueProposition.children}
+                      </ValueProposition>
+                    );
+                  }
+                )}
               </div>
               <div
                 className="hidden lg:flex lg:w-1/2 lg:justify-end"
