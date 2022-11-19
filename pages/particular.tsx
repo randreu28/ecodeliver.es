@@ -20,16 +20,16 @@ import Article from "../components/Article";
 import Disclosure from "../components/Disclousure";
 import Footer from "../components/Footer";
 import Cookies from "js-cookie";
-import { navBar } from "../i18n";
+import { navBar, particular } from "../i18n";
 import { useRouter } from "next/router";
-
-const WobblyTexts: string[] = ["sostenible", "transparente", "diferente"];
 
 export default function Particular() {
   const locale = useRouter().locale as "es" | "en";
 
   Cookies.set("isBusiness", "false");
   const [index, setIndex] = useState<number>(0);
+
+  const WobblyTexts: string[] = particular[locale].wooblyTexts;
 
   useEffect(() => {
     const intervalId = setInterval(() => setIndex((index) => index + 1), 2000);
@@ -41,11 +41,8 @@ export default function Particular() {
   return (
     <>
       <Head>
-        <title>ecoDeliver - El BlaBlaCar de la paquetería, sostenible</title>
-        <meta
-          name="description"
-          content="Transporte de paquetería sostenible, mediante una entrega colaborativa que te permite cubrir los costes de tus viajes en coche por España"
-        />
+        <title>{particular[locale].metaTitle}</title>
+        <meta name="description" content={particular[locale].metaDescription} />
       </Head>
       <Navbar navData={navBar[locale].navData} />
       <Toaster position="bottom-left" />
@@ -63,7 +60,7 @@ export default function Particular() {
             data-aos-delay="100"
           >
             <h1 className="text-secondary text-4xl md:text-5xl 2xl:text-6xl max-w-2xl !leading-[1.15]">
-              Viaja y únete a la comunidad de entrega de paquetería más{" "}
+              {particular[locale].heroSentence}{" "}
               <TextTransition
                 inline={true}
                 className="text-primary"
@@ -73,24 +70,24 @@ export default function Particular() {
               </TextTransition>
             </h1>
             <div className="space-y-2 lg:mt-10 text-gray-500">
-              <p className="text-xl pb-2">Haz el seguimiento de tu paquete:</p>
+              <p className="text-xl pb-2">
+                {particular[locale].heroCtaDescription}
+              </p>
               <div className="flex flex-row gap-5 flex-wrap">
                 <input
                   type="text"
                   className="px-4 py-2 text-lg text-secondary bg-white border border-gray-300 rounded-md focus:border-primary-40 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40 w-full sm:w-fit"
-                  placeholder="Número de seguimiento"
+                  placeholder={particular[locale].heroCtaPlaceholder}
                   ref={search}
                 />
                 <Button
                   className="w-full sm:w-fit"
                   event={() => {
-                    toast.error(
-                      "Servidores no disponibles. Porfavor inténtalo mas tarde"
-                    );
+                    toast.error(particular[locale].heroCtaToast);
                     search.current.value = "";
                   }}
                 >
-                  Busca
+                  {particular[locale].heroCta}
                 </Button>
               </div>
             </div>
@@ -121,7 +118,7 @@ export default function Particular() {
             className="text-center text-secodary text-4xl font-semibold"
             data-aos="fade-up"
           >
-            Con el apoyo de...
+            {particular[locale].logosHeader}
           </h1>
           <CloudLogo />
         </div>
