@@ -1399,3 +1399,159 @@ export const i18n404 = {
       "To cheer you up, we introduce you to Roberto, the official ecoDeliver's pet! :)",
   },
 };
+
+export const i18IdentidadCorporativa = {
+  es: {
+    metaTitle: "ecoDeliver - Identidad corporativa",
+    title: "Nuestra identidad corporativa 🙌",
+    description: (
+      <>
+        El propósito de estas pautas es facilitar que cualquiera que quiera usar
+        nuestra imagen corporativa pueda hacerlo respetando nuestra marca y
+        valores corporativos. Han sido diseñadas para asegurar que la marca
+        represente nuestros valores de la forma en que lo pretendíamos.
+      </>
+    ),
+    plug: (
+      <>
+        ¿Eres un creativo? Considera valorarnos en{" "}
+        <a
+          href="https://www.behance.net/gallery/125864213/ecoDeliver-Brand-Guidlines-20"
+          target="_blank"
+          rel="noreferrer"
+          className="text-blue-500 hover:underline"
+        >
+          Behance
+        </a>
+        !
+      </>
+    ),
+    cards: [
+      {
+        title: "Manual de identidad",
+        imgLink: "/media/brand/manual.png",
+        download: "Identity_Manual_ecoDeliver.pdf",
+        href: "/media/brand/manual.pdf",
+        children: (
+          <>
+            El manual contiene todo lo que necesitas para utilizar nuestra marca
+            de la manera en que lo pretendíamos.
+          </>
+        ),
+      },
+      {
+        title: "Logo",
+        imgLink: "/media/brand/logo.png",
+        download: "Logo_ecoDeliver.zip",
+        href: "/media/brand/logo.zip",
+        children: (
+          <>
+            Incluye el logo en diferentes formatos (rasterizado, vectorial) y en
+            diferentes temas (claro, oscuro).
+          </>
+        ),
+      },
+      {
+        title: "Tipografía",
+        imgLink: "/media/brand/typography.png",
+        download: undefined,
+        href: "https://fonts.google.com/specimen/Urbanist?query=urbanist",
+        children: (
+          <>
+            Nuestra tipografía de preferencia es Urbanist, diseñada por Corey Hu
+            y una de las fuentes libres de Google Fonts.
+          </>
+        ),
+      },
+      {
+        title: "Líneas de soporte",
+        imgLink: "/media/brand/support-lines.png",
+        download: "Support_Lines.zip",
+        href: "/media/brand/support-lines.zip",
+        children: (
+          <>
+            Incluye diferentes líneas de soporte con diferentes tamaños, formas
+            y longitudes.
+          </>
+        ),
+      },
+    ],
+    call: "Descargar",
+  },
+  en: {
+    metaTitle: "ecoDeliver - Corporate image",
+    title: "Our corporate image 🙌",
+    description: (
+      <>
+        The purpose of these guidelines is to make it easy for anyone who wants
+        to use our corporate image can do so while respecting our brand and
+        corporate values. They have been designed to ensure that the brand
+        represent our values the way we intended.
+      </>
+    ),
+    plug: (
+      <>
+        Are you a creative? Rate us in{" "}
+        <a
+          href="https://www.behance.net/gallery/125864213/ecoDeliver-Brand-Guidlines-20"
+          target="_blank"
+          rel="noreferrer"
+          className="text-blue-500 hover:underline"
+        >
+          Behance
+        </a>
+        !
+      </>
+    ),
+    cards: [
+      {
+        title: "Identity manual",
+        imgLink: "/media/brand/manual.png",
+        download: "Identity_Manual_ecoDeliver.pdf",
+        href: "/media/brand/manual.pdf",
+        children: (
+          <>
+            The manual contains everything you need to use our brand the way we
+            intended.
+          </>
+        ),
+      },
+      {
+        title: "Logo",
+        imgLink: "/media/brand/logo.png",
+        href: "/media/brand/logo.zip",
+        children: (
+          <>
+            Includes the logo in different formats (raster, vector) and in
+            different themes (light, dark).
+          </>
+        ),
+      },
+      {
+        title: "Typography",
+        imgLink: "/media/brand/typography.png",
+        href: "https://fonts.google.com/specimen/Urbanist?query=urbanist",
+        download: undefined,
+        children: (
+          <>
+            Our font of choice is Urbanist, designed by Corey Hu and one of the
+            free fonts from Google Fonts.
+          </>
+        ),
+      },
+      {
+        title: "Support lines",
+        imgLink: "/media/brand/support-lines.png",
+        download: "Support_Lines.zip",
+        href: "/media/brand/support-lines.zip",
+        children: (
+          <>
+            It includes different support lines with different sizes, shapes and
+            lengths.
+          </>
+        ),
+      },
+    ],
+    call: "Download",
+  },
+};
