@@ -1380,3 +1380,22 @@ export const i18nBusinessForm = {
     onError: "An error occured, please try again later",
   },
 };
+
+export const i18n404 = {
+  es: {
+    metaTitle: "ecoDeliver - Página no encontrada",
+
+    title: "Error 404",
+    subtitle: "No hemos encontrado lo que buscabas...",
+    description:
+      "Para que nos sirva de consuelo, te presentamos a Roberto, la mascota oficial de ecoDeliver :)",
+  },
+  en: {
+    metaTitle: "ecoDeliver - Page not found",
+
+    title: "404 Error",
+    subtitle: "We couldn't find what you were looking for...",
+    description:
+      "To cheer you up, we introduce you to Roberto, the official ecoDeliver's pet! :)",
+  },
+};
