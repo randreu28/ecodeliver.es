@@ -270,48 +270,32 @@ export default function Empresa({}: Props) {
           className="text-center text-primary font-semibold pt-10 text-lg"
           data-aos="fade-in"
         >
-          Noticias
+          {translations.newsSubtitle}
         </p>
         <h1
           className="text-3xl font-semibold text-center text-secondary lg:text-4xl "
           data-aos="fade-in"
         >
-          Nos mencionan
+          {translations.newsTitle}
         </h1>
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 m-auto py-10"
           data-aos="fade-in"
         >
-          <Article
-            type="CaixaBank"
-            title="Imagin conecta a inversores con los emprendedores ganadores del ImaginPlanetChallenge"
-            text="imagin, la plataforma de servicios digitales y estilo de vida
-                impulsada por CaixaBank, ha organizado una sesión Demo Day en la
-                que los emprendedores ganadores de la primera edición del
-                imaginPlanet Challenge han tenido la oportunidad de presentar
-                sus iniciativas ante inversores, business angels, plataformas
-                aceleradoras y organizaciones de referencia del ecosistema
-                emprendedor."
-            extLink="https://www.caixabank.com/comunicacion/noticia/imagin-conecta-a-inversores-con-los-emprendedores-ganadores-del-imaginplanet-challenge_es.html?id=43056#"
-            imgLink="/media/articles/caixaBankArticle.jpg"
-          />
-          <Article
-            type="Via empresa"
-            title="EcoDeliver, el BlaBlaCar de los paquetes, a punto de empezar a operar en Barcelona"
-            text="La startup propone un modelo en el que la persona que tiene previsto hacer un trayecto aprovecha el espacio disponible para transportar paquetes"
-            extLink="https://www.viaempresa.cat/es/empresa/ecodeliver-blablacar-paquetes-barcelona_2170552_102.html"
-            imgLink="media/pilotTest.jpg"
-          />
-          <Article
-            className="md:col-span-2 lg:col-span-1"
-            type="lavanguardia"
-            title="ecoDeliver y Kidalos ganan la primera edición del imaginPlanet Challenge"
-            text="ecoDeliver y Kidalos han sido elegidos entre los 230 equipos participantes,
-             formados por más de 700 jóvenes de 16 universidades españolas que,
-              de la mano de imagin, han dado forma a sus ideas durante los tres últimos meses."
-            extLink="https://www.lavanguardia.com/vida/20210713/7597222/ecodeliver-kidalos-ganan-primera-edicion-imaginplanet-challenge.html"
-            imgLink="/media/articles/lavanguardiaArticle.webp"
-          />
+          {translations.news.map((article, index) => {
+            return (
+              <Article
+                key={index}
+                extLink={article.extLink}
+                imgLink={article.imgLink}
+                source={article.source}
+                title={article.title}
+                className={article.className}
+              >
+                {article.children}
+              </Article>
+            );
+          })}
         </div>
       </section>
 

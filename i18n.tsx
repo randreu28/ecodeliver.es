@@ -890,7 +890,6 @@ export const i18nEmpresa = {
     ],
 
     /* CTA */
-
     ctaTitle: "Hablemos!",
     ctaDescription: (
       <>
@@ -899,6 +898,64 @@ export const i18nEmpresa = {
         entregas.
       </>
     ),
+
+    /* News */
+    newsSubtitle: "Noticias",
+    newsTitle: "Nos mencionan",
+    news: [
+      {
+        className: "",
+        source: "CaixaBank",
+        title:
+          "Imagin conecta a inversores con los emprendedores ganadores del ImaginPlanetChallenge",
+        children: (
+          <>
+            Imagin, la plataforma de servicios digitales y estilo de vida
+            impulsada por CaixaBank, ha organizado una sesión Demo Day en la que
+            los emprendedores ganadores de la primera edición del imaginPlanet
+            Challenge han tenido la oportunidad de presentar sus iniciativas
+            ante inversores, business angels, plataformas aceleradoras y
+            organizaciones de referencia del ecosistema emprendedor.
+          </>
+        ),
+        extLink:
+          "https://www.caixabank.com/comunicacion/noticia/imagin-conecta-a-inversores-con-los-emprendedores-ganadores-del-imaginplanet-challenge_es.html?id=43056#",
+        imgLink: "/media/articles/caixaBankArticle.jpg",
+      },
+      {
+        className: "",
+        source: "Via empresa",
+        title:
+          "EcoDeliver, el BlaBlaCar de los paquetes, a punto de empezar a operar en Barcelona",
+        children: (
+          <>
+            La startup propone un modelo en el que la persona que tiene previsto
+            hacer un trayecto aprovecha el espacio disponible para transportar
+            paquetes
+          </>
+        ),
+        extLink:
+          "https://www.viaempresa.cat/es/empresa/ecodeliver-blablacar-paquetes-barcelona_2170552_102.html",
+        imgLink: "/media/pilotTest.jpg",
+      },
+      {
+        className: "md:col-span-2 lg:col-span-1",
+        source: "LaVanguardia",
+        title:
+          "ecoDeliver y Kidalos ganan la primera edición del imaginPlanet Challenge",
+        children: (
+          <>
+            ecoDeliver y Kidalos han sido elegidos entre los 230 equipos
+            participantes, formados por más de 700 jóvenes de 16 universidades
+            españolas que, de la mano de imagin, han dado forma a sus ideas
+            durante los tres últimos meses.
+          </>
+        ),
+        extLink:
+          "https://www.lavanguardia.com/vida/20210713/7597222/ecodeliver-kidalos-ganan-primera-edicion-imaginplanet-challenge.html",
+        imgLink: "/media/articles/lavanguardiaArticle.webp",
+      },
+    ],
   },
   en: {
     /* MetaData */
@@ -1030,7 +1087,6 @@ export const i18nEmpresa = {
     ],
 
     /* CTA */
-
     ctaTitle: "Let's talk!",
     ctaDescription: (
       <>
@@ -1039,6 +1095,71 @@ export const i18nEmpresa = {
         deliveries.
       </>
     ),
+
+    /* News */
+    newsSubtitle: "News",
+    newsTitle: "Our mentionts",
+    news: [
+      {
+        className: "",
+        source: "CaixaBank",
+        title:
+          "Imagin connects investors with the winning entrepreneurs of the ImaginPlanetChallenge",
+        children: (
+          <>
+            Imagin rewards a parcel &apos;Blablacar&apos; and a shared toy
+            platform The first environmental entrepreneurship competition for
+            Imagin, CaixaBank&apos;s platform for young people, already has
+            winners. It is a solution that intends to use private vehicles to
+            transport packages and a project that proposes renting toys instead
+            of buying them. The young people behind eCodeliver and Kidalos, as
+            these two business ideas are called, have participated in a program
+            in Lanzarote where experts from Imagin itself and a team of
+            professionals dedicated to entrepreneurship, sustainability and
+            innovation will help them develop a first version of the product
+            they are striving to build.
+          </>
+        ),
+        extLink:
+          "https://www.caixabank.com/comunicacion/noticia/imagin-conecta-a-inversores-con-los-emprendedores-ganadores-del-imaginplanet-challenge_es.html?id=43056#",
+        imgLink: "/media/articles/caixaBankArticle.jpg",
+      },
+      {
+        className: "",
+        source: "Via empresa",
+        title:
+          "EcoDeliver, the BlaBlaCar of packages, about to start operating in Barcelona.",
+        children: (
+          <>
+            EcoDeliver, the BlaBlaCar of packages, about to start operating in
+            Barcelona. The startup proposes a model in which anyone who plans to
+            make a journey takes advantage of the available space to transport
+            packages.
+          </>
+        ),
+        extLink:
+          "https://www.viaempresa.cat/es/empresa/ecodeliver-blablacar-paquetes-barcelona_2170552_102.html",
+        imgLink: "/media/pilotTest.jpg",
+      },
+      {
+        className: "md:col-span-2 lg:col-span-1",
+        source: "LaVanguardia",
+        title:
+          "ecoDeliver and Kidalos win the first edition of the imaginPlanetChallenge",
+        children: (
+          <>
+            ecoDeliver and Kidalos win the first edition of the imaginPlanet
+            Challenge. ecoDeliver and Kidalos have been chosen among the 230
+            participating teams, made up of more than 700 young people from 16
+            Spanish universities who, hand in hand with imagin, have shaped
+            their ideas during the last three months.
+          </>
+        ),
+        extLink:
+          "https://www.lavanguardia.com/vida/20210713/7597222/ecodeliver-kidalos-ganan-primera-edicion-imaginplanet-challenge.html",
+        imgLink: "/media/articles/lavanguardiaArticle.webp",
+      },
+    ],
   },
 };
 
