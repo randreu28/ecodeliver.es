@@ -3,6 +3,7 @@ import {
   BadgeCheckIcon,
   FingerPrintIcon,
   LightningBoltIcon,
+  OfficeBuildingIcon,
   ShieldCheckIcon,
   SparklesIcon,
   UserAddIcon,
@@ -842,6 +843,39 @@ export const i18nEmpresa = {
         children: <LightningBoltIcon className="w-6 h-6" />,
       },
     ],
+
+    /* Values */
+    valuesTitle: "¿Cómo lo hacemos?",
+    valuesSubtitle: "Valores",
+    valuesDescription: (
+      <>
+        Combinando nuestra flota de furgonetas totalmente eléctricas y la
+        colaboración de nuestra comunidad de{" "}
+        <b>
+          <span className="text-primary">eco</span>Drivers
+        </b>
+      </>
+    ),
+    values: [
+      {
+        title: "Gestión centralizada",
+        className: "",
+        text: "Agrupamos y organizamos los paquetes en nuestro almacén para su recogida por los ecoDrivers.",
+        children: <OfficeBuildingIcon className="h-6 w-6" />,
+      },
+      {
+        title: "Transporte colaborativo",
+        className: "",
+        text: "Los ecoDrivers, de camino a su destino, pasan por el almacén a recoger paquetes en bolsas seguras y convenientes y las entregan en su ciudad de destino.",
+        children: <UserGroupIcon className="h-6 w-6" />,
+      },
+      {
+        title: "Última milla eléctrica",
+        className: "md:col-span-2 xl:col-span-1",
+        text: "Realizamos las entregas de última milla con nuestra flota de vehículos 100% eléctricos!",
+        children: <LightningBoltIcon className="h-6 w-6" />,
+      },
+    ],
   },
   en: {
     /* MetaData */
@@ -936,6 +970,39 @@ export const i18nEmpresa = {
           </>
         ),
         children: <LightningBoltIcon className="w-6 h-6" />,
+      },
+    ],
+
+    /* Values */
+    valuesTitle: "How do we do it?",
+    valuesSubtitle: "Our values",
+    valuesDescription: (
+      <>
+        Combining our fleet of fully electric vans and the collaboration of our
+        community of{" "}
+        <b>
+          <span className="text-primary">eco</span>Drivers
+        </b>
+      </>
+    ),
+    values: [
+      {
+        title: "Centralized management",
+        className: "",
+        text: "We group and organize the packages in our warehouse for collection by the ecoDrivers.",
+        children: <OfficeBuildingIcon className="h-6 w-6" />,
+      },
+      {
+        title: "Collaborative transport",
+        className: "",
+        text: "ecoDrivers, on their way to their destination, stop by our warehouse to pick up packages in secure and convenient bags and deliver them to their destination city.",
+        children: <UserGroupIcon className="h-6 w-6" />,
+      },
+      {
+        title: "Electric last mile",
+        className: "md:col-span-2 xl:col-span-1",
+        text: "We make last mile deliveries with our fleet of 100% electric vehicles!",
+        children: <LightningBoltIcon className="h-6 w-6" />,
       },
     ],
   },

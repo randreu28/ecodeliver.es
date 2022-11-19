@@ -215,49 +215,36 @@ export default function Empresa({}: Props) {
           className="text-center text-primary font-semibold text-lg pb-2"
           data-aos="fade-in"
         >
-          Sobre nosotros
+          {translations.valuesSubtitle}
         </p>
         <h1
           className="text-4xl text-center text-secondary font-bold "
           data-aos="fade-in"
         >
-          ¿Cómo lo hacemos?
+          {translations.valuesTitle}
         </h1>
         <p
           className="md:text-center text-gray-500 pt-2 px-5 text-lg max-w-3xl mx-auto"
           data-aos="fade-in"
         >
-          Combinando nuestra flota de furgonetas totalmente eléctricas y la
-          colaboración de nuestra comunidad de{" "}
-          <span className="text-secondary font-semibold">
-            <span className="text-primary">eco</span>Drivers
-          </span>
+          {translations.valuesDescription}
         </p>
         <div
           className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3"
           data-aos="fade-in"
         >
-          <Value
-            title="Gestión centralizada"
-            text="Agrupamos y organizamos los paquetes en nuestro almacén para su recogida por los ecoDrivers."
-          >
-            <OfficeBuildingIcon className="h-6 w-6" />
-          </Value>
-
-          <Value
-            title="Transporte colaborativo"
-            text="Los ecoDrivers, de camino a su destino, pasan por el almacén a recoger paquetes en bolsas seguras y convenientes y las entregan en su ciudad de destino."
-          >
-            <UserGroupIcon className="h-6 w-6" />
-          </Value>
-
-          <Value
-            className="md:col-span-2 xl:col-span-1"
-            title="Última milla eléctrica"
-            text="Realizamos las entregas de última milla con nuestra flota de vehículos 100% eléctricos!"
-          >
-            <LightningBoltIcon className="h-6 w-6" />
-          </Value>
+          {translations.values.map((value, index) => {
+            return (
+              <Value
+                key={index}
+                text={value.text}
+                title={value.title}
+                className={value.className}
+              >
+                {value.children}
+              </Value>
+            );
+          })}
         </div>
         <div className="flex flex-col md:flex-row gap-5 pt-10">
           <div className="bg-green-50 space-y-5 p-10" data-aos="fade-right">
