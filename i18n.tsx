@@ -765,6 +765,33 @@ export const i18nEmpresa = {
 
     /* Logos */
     logosHeader: "Con el apoyo de...",
+
+    /* Values */
+    valuesTitle: "El courier sostenible para E-commerce",
+    valuesSubtitle: "Valores",
+    valuesDescription: (
+      <>
+        El único servicio capaz de hacer una entrega desde tu almacén al
+        domicilio de tu cliente de forma{" "}
+        <b className="text-primary">sostenible</b>, no sólo cubriendo los
+        trayectos de última milla.
+      </>
+    ),
+
+    numbers: [
+      {
+        title: "100%",
+        children: "Del trayecto sostenible",
+      },
+      {
+        title: "24/48h",
+        children: "Servicio rápido",
+      },
+      {
+        title: "€",
+        children: "Precio competitivo",
+      },
+    ],
   },
   en: {
     /* MetaData */
@@ -787,6 +814,32 @@ export const i18nEmpresa = {
 
     /* Logos */
     logosHeader: "With the trust of...",
+
+    /* Values */
+    valuesTitle: "The sustainable courier for E-commerce",
+    valuesSubtitle: "Values",
+    valuesDescription: (
+      <>
+        The only service capable of delivering from your warehouse to your
+        client&apos;s home in a <b className="text-primary">sustainable</b> way,
+        not only covering last mile journeys.
+      </>
+    ),
+
+    numbers: [
+      {
+        title: "100%",
+        children: "Of the journey sustainably",
+      },
+      {
+        title: "24/48h",
+        children: "Fast service",
+      },
+      {
+        title: "€",
+        children: "Competitive price",
+      },
+    ],
   },
 };
 

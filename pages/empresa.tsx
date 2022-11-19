@@ -21,6 +21,7 @@ import Footer from "../components/Footer";
 import Cookies from "js-cookie";
 import { useRouter } from "next/router";
 import { i18nEmpresa, i18nNavBar } from "../i18n";
+import Number from "../components/Number";
 
 type Props = {};
 
@@ -121,45 +122,29 @@ export default function Empresa({}: Props) {
           className="text-center text-primary font-semibold text-lg"
           data-aos="fade-in"
         >
-          Valores
+          {translations.valuesSubtitle}
         </p>
         <h1
           className="text-4xl text-center text-secondary font-bold "
           data-aos="fade-in"
         >
-          El courier sostenible para E-commerce
+          {translations.valuesTitle}
         </h1>
         <p
           className="md:text-center text-gray-500 pt-2 px-5 text-lg max-w-3xl mx-auto"
           data-aos="fade-in"
         >
-          El único servicio capaz de hacer una entrega desde tu almacén al
-          domicilio de tu cliente de forma{" "}
-          <b className="text-primary">sostenible</b>, no sólo cubriendo los
-          trayectos de última milla.
+          {translations.valuesDescription}
         </p>
         <div data-aos="fade-in" className="pb-16 pt-10">
           <div className="p-5 flex flex-col lg:flex-row rounded-lg w-fit drop-shadow-lg shadow-lg mx-auto pt-10 bg-white gap-20">
-            <div className="p-5 space-y-5">
-              <h1 className="text-4xl lg:text-5xl font-bold text-center text-primary">
-                100%
-              </h1>
-              <p className="text-center text-gray-500 ">
-                Del trayecto sostenible
-              </p>
-            </div>
-            <div className="p-5 space-y-5">
-              <h1 className="text-4xl lg:text-5xl font-bold text-center text-primary">
-                24/48h
-              </h1>
-              <p className="text-center text-gray-500">Servicio rápido</p>
-            </div>
-            <div className="p-5 space-y-5">
-              <h1 className="text-4xl lg:text-5xl font-bold text-center text-primary">
-                €
-              </h1>
-              <p className="text-center text-gray-500">Precio competitivo</p>
-            </div>
+            {translations.numbers.map((number, index) => {
+              return (
+                <Number title={number.title} key={index}>
+                  {number.children}
+                </Number>
+              );
+            })}
           </div>
         </div>
         {/* eslint-disable-next-line @next/next/no-img-element */}
