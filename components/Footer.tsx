@@ -1,18 +1,14 @@
-import { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { i18nFooter } from "../i18n";
 
 interface Props {
   animated?: Boolean;
   className?: string;
 }
 
-export default function Footer({ animated = true, className }: Props) {
-  useEffect(() => {
-    AOS.init();
-  }, []);
-
+export default function Footer({ animated = true, className = "" }: Props) {
+  const translations = i18nFooter[useRouter().locale as "en" | "es"];
   return (
     <footer
       className={
@@ -84,31 +80,31 @@ export default function Footer({ animated = true, className }: Props) {
 
             <div>
               <h3 className="text-gray-700 font-bold text-lg">
-                Sobre nosotros
+                {translations.aboutUs}
               </h3>
               <a
                 href="mailto:hola@ecodeliver.tech"
                 className="block mt-2 text-gray-600 hover:underline"
               >
-                Trabaja con nosotros
+                {translations.workWithUS}
               </a>
               <Link
                 href="/privacidad"
                 className="block mt-2 text-gray-600  hover:underline"
               >
-                Politica de privacidad
+                {translations.privPolicy}
               </Link>
               <Link
                 href="/identidad-corporativa"
                 className="block mt-2 text-gray-600  hover:underline"
               >
-                Identidad corporativa
+                {translations.brandIdentity}
               </Link>
             </div>
 
             <div>
               <h3 className="text-gray-700 font-semibold text-lg">
-                Contáctanos
+                {translations.contactUs}
               </h3>
               <a
                 href="mailto:hola@ecodeliver.tech"

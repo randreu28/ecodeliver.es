@@ -790,3 +790,22 @@ export const i18nArticles = {
   es: "Ver más",
   en: "See more",
 };
+
+export const i18nFooter = {
+  es: {
+    aboutUs: "Sobre nosotros",
+    workWithUS: "Trabaja con nosotros",
+    privPolicy: "Política de privacidad",
+    brandIdentity: "Identidad corporativa",
+
+    contactUs: "Contáctanos",
+  },
+  en: {
+    aboutUs: "About us",
+    workWithUS: "Work with us",
+    privPolicy: "Privacy policy",
+    brandIdentity: "Brand identity",
+
+    contactUs: "Contact us",
+  },
+};
