@@ -602,7 +602,7 @@ export const i18nParticular = {
   },
 };
 
-export const CTA = {
+export const i18nCTA = {
   es: {
     call: "Notifícame",
     placeholder: "Correo electrónico",

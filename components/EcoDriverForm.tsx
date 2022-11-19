@@ -1,16 +1,15 @@
 import Button from "./Button";
-import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { useForm } from "@formcarry/react";
 import { event } from "nextjs-google-analytics";
 import toast from "react-hot-toast";
-import { CTA } from "../i18n";
+import { i18nCTA } from "../i18n";
 import { useRouter } from "next/router";
 
 export default function EcoDriverForm() {
   const form = useRef<HTMLFormElement>(null!);
 
-  const translations = CTA[useRouter().locale as "es" | "en"];
+  const translations = i18nCTA[useRouter().locale as "es" | "en"];
 
   const { state, submit } = useForm({
     id: process.env.NEXT_PUBLIC_FORMCARRY_ID!,
