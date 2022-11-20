@@ -6,11 +6,11 @@ import type { Height } from "react-animate-height";
 
 interface Props {
   title: string | JSX.Element;
-  text: string | JSX.Element;
+  children: string | JSX.Element;
   isOpen?: boolean;
 }
 
-export default function Disclosure({ title, text, isOpen = false }: Props) {
+export default function Disclosure({ title, children, isOpen = false }: Props) {
   const [Open, setOpen] = useState<boolean>(isOpen);
   const [height, setHeight] = useState<Height>(0);
 
@@ -18,8 +18,7 @@ export default function Disclosure({ title, text, isOpen = false }: Props) {
     if (isOpen) {
       setHeight("auto");
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [isOpen]);
 
   const handleOpen = () => {
     setHeight(height === 0 ? "auto" : 0);
@@ -39,7 +38,9 @@ export default function Disclosure({ title, text, isOpen = false }: Props) {
         </h1>
       </div>
       <AnimateHeight duration={500} height={height}>
-        <p className="px-10 text-lg text-gray-500 overflow-hidden">{text}</p>
+        <p className="px-10 text-lg text-gray-500 overflow-hidden">
+          {children}
+        </p>
       </AnimateHeight>
     </div>
   );

@@ -9,8 +9,6 @@ import {
   UserGroupIcon,
 } from "@heroicons/react/outline";
 import Head from "next/head";
-import { useEffect, useState } from "react";
-import TextTransition, { presets } from "react-text-transition";
 import Navbar from "../components/Navbar";
 import Image from "next/image";
 import CloudLogo from "../components/CloudLogo";
@@ -21,45 +19,32 @@ import BusinessForm from "../components/BusinessForm";
 import Disclosure from "../components/Disclousure";
 import Footer from "../components/Footer";
 import Cookies from "js-cookie";
+import { useRouter } from "next/router";
+import { i18nEmpresa, i18nNavBar } from "../i18n";
+import Number from "../components/Number";
+import ValueProposition from "../components/ValueProposition";
 
 type Props = {};
 
-const navData = [
-  { name: "Inicio", href: "inicio" },
-  { name: "Valores", href: "valores" },
-  { name: "Sobre nosotros", href: "nosotros" },
-  { name: "FAQ", href: "faq" },
-];
-
-const WobblyTexts: string[] = ["sostenible", "transparente", "diferente"];
-
 export default function Empresa({}: Props) {
   Cookies.set("isBusiness", "true");
-  const [index, setIndex] = useState<number>(0);
+  const locale = useRouter().locale as "es" | "en";
+  const translations = i18nEmpresa[locale];
 
-  useEffect(() => {
-    const intervalId = setInterval(() => setIndex((index) => index + 1), 2000);
-    return () => clearTimeout(intervalId);
-  }, []);
   return (
     <>
       <Head>
-        <title>
-          ecoDeliver - Entrega de paqueteria sostenible para e-commerce
-        </title>
-        <meta
-          name="description"
-          content="Transporte de paquetería colaborativo y de última milla verde mediante vehículos eléctricos en España."
-        />
+        <title>{translations.metaTitle}</title>
+        <meta name="description" content={translations.metaDescription} />
         <meta
           property="og:image"
           content="https://res.cloudinary.com/ecodeliver-es/image/upload/v1659538036/stockImage3_podaof.jpg"
         />
       </Head>
-      <Navbar navData={navData} />
+      <Navbar navData={i18nNavBar[locale].navBusiness} />
       <Toaster position="bottom-left" />
 
-      <section id={navData[0].href}>
+      <section id={i18nNavBar[locale].navBusiness[0].href}>
         <main className="min-h-screen pt-20 grid grid-cols-1 xl:grid-cols-2 gap-1 md:gap-5 p-5 xl:max-w-[100rem] mx-auto">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -73,41 +58,29 @@ export default function Empresa({}: Props) {
             data-aos-delay="100"
           >
             <h1 className="text-secondary text-4xl md:text-5xl 2xl:text-6xl max-w-xl xl:max-w-4xl !leading-[1.15] font-semibold">
-              Más allá de la movilidad eléctrica, la entrega de paquetería más{" "}
-              <br />
-              <TextTransition
-                inline={true}
-                className="text-primary"
-                springConfig={presets.wobbly}
-              >
-                <span>{WobblyTexts[index % WobblyTexts.length]}</span>
-              </TextTransition>
+              {translations.heroSentence}
             </h1>
 
-            <div className="space-y-2 mt-10 text-gray-500">
+            <div className="space-y-2 mt-5 text-gray-500">
               <p className="text-lg font-normal pb-2">
-                Tienes una cuenta? Accede a la información de tus envíos aquí:
+                {translations.heroCtaDescription}
               </p>
               <div className="flex flex-col sm:flex-row gap-5 w-full">
                 <button
                   onClick={() => {
-                    toast.error(
-                      "Nuestros servidores no están disponibles. Porfavor, inténtalo de nuevo más tarde"
-                    );
+                    toast.error(translations.heroCtaToast);
                   }}
                   className="px-4 py-2 justify-center flex font-semibold tracking-wide text-lg text-white capitalize transition-colors duration-200 transform bg-primary rounded-md focus:ring focus:ring-green-300 focus:ring-opacity-80 hover:bg-green-500 focus:outline-none focus:bg-green-600"
                 >
-                  Inicia sesión
+                  {translations.heroCta}
                 </button>
                 <button
                   onClick={() => {
-                    toast.error(
-                      "Nuestros servidores no están disponibles. Porfavor, inténtalo de nuevo más tarde"
-                    );
+                    toast.error(translations.heroCtaToast);
                   }}
                   className="px-4 py-2 justify-center flex gap-5 font-semibold border border-green-100 tracking-wide text-lg text-primary capitalize transition-colors duration-200 transform bg-white shadow-md rounded-md focus:ring focus:ring-green-300 focus:ring-opacity-80 hover:bg-green-100 focus:outline-none focus:bg-green-100"
                 >
-                  Regístrate
+                  {translations.heroCta2}
                   <ArrowRightIcon className="w-6 h-6 my-auto" />
                 </button>
               </div>
@@ -139,56 +112,43 @@ export default function Empresa({}: Props) {
             className="text-center text-secondary text-4xl font-bold"
             data-aos="fade-up"
           >
-            Con la confianza de...
+            {translations.logosHeader}
           </h1>
           <CloudLogo />
         </div>
       </section>
 
-      <section id={navData[1].href} className="space-y-5">
+      <section
+        id={i18nNavBar[locale].navBusiness[1].href}
+        className="space-y-5"
+      >
         <p
           className="text-center text-primary font-semibold text-lg"
           data-aos="fade-in"
         >
-          Valores
+          {translations.numbersSubtitle}
         </p>
         <h1
           className="text-4xl text-center text-secondary font-bold "
           data-aos="fade-in"
         >
-          El courier sostenible para E-commerce
+          {translations.numbersTitle}
         </h1>
         <p
           className="md:text-center text-gray-500 pt-2 px-5 text-lg max-w-3xl mx-auto"
           data-aos="fade-in"
         >
-          El único servicio capaz de hacer una entrega desde tu almacén al
-          domicilio de tu cliente de forma{" "}
-          <b className="text-primary">sostenible</b>, no sólo cubriendo los
-          trayectos de última milla.
+          {translations.numbersDescription}
         </p>
         <div data-aos="fade-in" className="pb-16 pt-10">
           <div className="p-5 flex flex-col lg:flex-row rounded-lg w-fit drop-shadow-lg shadow-lg mx-auto pt-10 bg-white gap-20">
-            <div className="p-5 space-y-5">
-              <h1 className="text-4xl lg:text-5xl font-bold text-center text-primary">
-                100%
-              </h1>
-              <p className="text-center text-gray-500 ">
-                Del trayecto sostenible
-              </p>
-            </div>
-            <div className="p-5 space-y-5">
-              <h1 className="text-4xl lg:text-5xl font-bold text-center text-primary">
-                24/48h
-              </h1>
-              <p className="text-center text-gray-500">Servicio rápido</p>
-            </div>
-            <div className="p-5 space-y-5">
-              <h1 className="text-4xl lg:text-5xl font-bold text-center text-primary">
-                €
-              </h1>
-              <p className="text-center text-gray-500">Precio competitivo</p>
-            </div>
+            {translations.numbers.map((number, index) => {
+              return (
+                <Number title={number.title} key={index}>
+                  {number.children}
+                </Number>
+              );
+            })}
           </div>
         </div>
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -204,10 +164,10 @@ export default function Empresa({}: Props) {
               className="text-3xl font-semibold text-gray-800 lg:text-4xl max-w-lg pb-5"
               data-aos="fade-right"
             >
-              Con valores que complementan a los de tu marca
+              {translations.hiwTitle}
             </h1>
             <p className="text-gray-500 text-xl" data-aos="fade-right">
-              Juntos, hacemos la diferencia
+              {translations.hiwDescription}
             </p>
             <div className="mt-2" data-aos="fade-right">
               <span className="inline-block w-40 h-1 rounded-full bg-green-500" />
@@ -219,56 +179,19 @@ export default function Empresa({}: Props) {
                 className="w-full lg:w-1/2 grid grid-cols-1 gap-8 xl:gap-16 md:grid-cols-2"
                 data-aos="fade-right"
               >
-                <div className="space-y-3">
-                  <span className="inline-block p-3 text-green-500 bg-green-100 rounded-xl">
-                    <FingerPrintIcon className="w-6 h-6" />
-                  </span>
-                  <h1 className="text-2xl font-semibold text-gray-700 capitalize">
-                    Sostenibilidad
-                  </h1>
-                  <p className="text-gray-500">
-                    Al ofrecer un servicio en comunidad, compartimos recursos y
-                    salimos ganando todos! Ahorramos que camiones tengan que
-                    hacer el trayecto y salvamos emisiones.
-                  </p>
-                </div>
-                <div className="space-y-3">
-                  <span className="inline-block p-3 text-green-500 bg-green-100 rounded-xl">
-                    <ShieldCheckIcon className="h-6 w-6" />
-                  </span>
-                  <h1 className="text-2xl font-semibold text-gray-700 capitalize">
-                    Fiabilidad
-                  </h1>
-                  <p className="text-gray-500">
-                    El compromiso con nuestros clientes es lo más importante,
-                    por lo que te aseguramos que tu envío llegará bien y a
-                    tiempo.
-                  </p>
-                </div>
-                <div className="space-y-3">
-                  <span className="inline-block p-3 text-green-500 bg-green-100 rounded-xl">
-                    <AnnotationIcon className="h-6 w-6" />
-                  </span>
-                  <h1 className="text-2xl font-semibold text-gray-700 capitalize">
-                    Comunicación
-                  </h1>
-                  <p className="text-gray-500">
-                    La transparencia, eficacia y reflexión en cuanto a la
-                    entrega y la sostenibilidad es algo que nos identifica.
-                  </p>
-                </div>
-                <div className="space-y-3">
-                  <span className="inline-block p-3 text-green-500 bg-green-100 rounded-xl">
-                    <LightningBoltIcon className="h-6 w-6" />
-                  </span>
-                  <h1 className="text-2xl font-semibold text-gray-700 capitalize">
-                    Rapidez
-                  </h1>
-                  <p className="text-gray-500">
-                    Entrega 24/28h, incluso el mismo día en las ciudades más
-                    importantes de España.
-                  </p>
-                </div>
+                {translations.hiwValuePropositions.map(
+                  (valueProposition, index) => {
+                    return (
+                      <ValueProposition
+                        title={valueProposition.title}
+                        description={valueProposition.description}
+                        key={index}
+                      >
+                        {valueProposition.children}
+                      </ValueProposition>
+                    );
+                  }
+                )}
               </div>
               <div
                 className="hidden lg:flex lg:w-1/2 lg:justify-end"
@@ -287,62 +210,52 @@ export default function Empresa({}: Props) {
         </div>
       </section>
 
-      <section id={navData[2].href} className="container px-6 py-10 mx-auto">
+      <section
+        id={i18nNavBar[locale].navBusiness[2].href}
+        className="container px-6 pt-10 mx-auto"
+      >
         <p
           className="text-center text-primary font-semibold text-lg pb-2"
           data-aos="fade-in"
         >
-          Sobre nosotros
+          {translations.valuesSubtitle}
         </p>
         <h1
           className="text-4xl text-center text-secondary font-bold "
           data-aos="fade-in"
         >
-          ¿Cómo lo hacemos?
+          {translations.valuesTitle}
         </h1>
         <p
           className="md:text-center text-gray-500 pt-2 px-5 text-lg max-w-3xl mx-auto"
           data-aos="fade-in"
         >
-          Combinando nuestra flota de furgonetas totalmente eléctricas y la
-          colaboración de nuestra comunidad de{" "}
-          <span className="text-secondary font-semibold">
-            <span className="text-primary">eco</span>Drivers
-          </span>
+          {translations.valuesDescription}
         </p>
         <div
           className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3"
           data-aos="fade-in"
         >
-          <Value
-            title="Gestión centralizada"
-            text="Agrupamos y organizamos los paquetes en nuestro almacén para su recogida por los ecoDrivers."
-          >
-            <OfficeBuildingIcon className="h-6 w-6" />
-          </Value>
-
-          <Value
-            title="Transporte colaborativo"
-            text="Los ecoDrivers, de camino a su destino, pasan por el almacén a recoger paquetes en bolsas seguras y convenientes y las entregan en su ciudad de destino."
-          >
-            <UserGroupIcon className="h-6 w-6" />
-          </Value>
-
-          <Value
-            className="md:col-span-2 xl:col-span-1"
-            title="Última milla eléctrica"
-            text="Realizamos las entregas de última milla con nuestra flota de vehículos 100% eléctricos!"
-          >
-            <LightningBoltIcon className="h-6 w-6" />
-          </Value>
+          {translations.values.map((value, index) => {
+            return (
+              <Value
+                key={index}
+                text={value.text}
+                title={value.title}
+                className={value.className}
+              >
+                {value.children}
+              </Value>
+            );
+          })}
         </div>
         <div className="flex flex-col md:flex-row gap-5 pt-10">
           <div className="bg-green-50 space-y-5 p-10" data-aos="fade-right">
-            <h1 className="text-5xl font-bold text-secondary">Hablemos!</h1>
+            <h1 className="text-5xl font-bold text-secondary">
+              {translations.ctaTitle}
+            </h1>
             <p className="text-gray-500 text-lg max-w-lg">
-              Déjanos tus datos y te contactaremos para darte información o un
-              presupuesto personalizado en base a tus necesidades y volumen de
-              entregas.
+              {translations.ctaDescription}
             </p>
             <span className="flex flex-row gap-2 text-gray-500 text-lg">
               <MailIcon className="w-6 h-6 my-auto" />
@@ -357,63 +270,50 @@ export default function Empresa({}: Props) {
           className="text-center text-primary font-semibold pt-10 text-lg"
           data-aos="fade-in"
         >
-          Noticias
+          {translations.newsSubtitle}
         </p>
         <h1
           className="text-3xl font-semibold text-center text-secondary lg:text-4xl "
           data-aos="fade-in"
         >
-          Nos mencionan
+          {translations.newsTitle}
         </h1>
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 m-auto py-10"
           data-aos="fade-in"
         >
-          <Article
-            type="CaixaBank"
-            title="Imagin conecta a inversores con los emprendedores ganadores del ImaginPlanetChallenge"
-            text="imagin, la plataforma de servicios digitales y estilo de vida
-                impulsada por CaixaBank, ha organizado una sesión Demo Day en la
-                que los emprendedores ganadores de la primera edición del
-                imaginPlanet Challenge han tenido la oportunidad de presentar
-                sus iniciativas ante inversores, business angels, plataformas
-                aceleradoras y organizaciones de referencia del ecosistema
-                emprendedor."
-            extLink="https://www.caixabank.com/comunicacion/noticia/imagin-conecta-a-inversores-con-los-emprendedores-ganadores-del-imaginplanet-challenge_es.html?id=43056#"
-            imgLink="/media/articles/caixaBankArticle.jpg"
-          />
-          <Article
-            type="Via empresa"
-            title="EcoDeliver, el BlaBlaCar de los paquetes, a punto de empezar a operar en Barcelona"
-            text="La startup propone un modelo en el que la persona que tiene previsto hacer un trayecto aprovecha el espacio disponible para transportar paquetes"
-            extLink="https://www.viaempresa.cat/es/empresa/ecodeliver-blablacar-paquetes-barcelona_2170552_102.html"
-            imgLink="media/pilotTest.jpg"
-          />
-          <Article
-            className="md:col-span-2 lg:col-span-1"
-            type="lavanguardia"
-            title="ecoDeliver y Kidalos ganan la primera edición del imaginPlanet Challenge"
-            text="ecoDeliver y Kidalos han sido elegidos entre los 230 equipos participantes,
-             formados por más de 700 jóvenes de 16 universidades españolas que,
-              de la mano de imagin, han dado forma a sus ideas durante los tres últimos meses."
-            extLink="https://www.lavanguardia.com/vida/20210713/7597222/ecodeliver-kidalos-ganan-primera-edicion-imaginplanet-challenge.html"
-            imgLink="/media/articles/lavanguardiaArticle.webp"
-          />
+          {translations.news.map((article, index) => {
+            return (
+              <Article
+                key={index}
+                extLink={article.extLink}
+                imgLink={article.imgLink}
+                source={article.source}
+                title={article.title}
+                className={article.className}
+              >
+                {article.children}
+              </Article>
+            );
+          })}
         </div>
       </section>
 
-      <section id={navData[3].href} className="max-w-5xl px-5 mx-auto">
+      <section
+        id={i18nNavBar[locale].navBusiness[3].href}
+        className="max-w-5xl px-5 mx-auto"
+      >
         <p
           className="text-center text-primary font-semibold pb-2 text-lg"
           data-aos="fade-in"
         >
-          FAQ
+          {translations.faqSubtitle}
         </p>
         <h1
           className="text-center text-4xl lg:text-5xl font-bold md:px-10 mb-8"
           data-aos="fade-in"
         >
-          Preguntas frecuentes
+          {translations.faqTitle}
         </h1>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -422,65 +322,17 @@ export default function Empresa({}: Props) {
           alt=""
         />
         <div className="divide-y container pb-10">
-          <Disclosure
-            isOpen={true}
-            title={<>¿Cómo se garantiza la seguridad de los envíos? </>}
-            text={
-              <>
-                Tratamos tu envíos con el máximo cariño posible! Los ecoDrivers
-                los recogen en bolsas seguras y selladas con una abrazadera
-                única, que permite asegurar que no se ha accedido a la mercancía
-                desde el momento en que el usuario sale del almacén hasta que lo
-                entrega en destino. Además, tenemos la mercancía asegurada con
-                un seguro de mercancías.
-              </>
-            }
-          />
-          <Disclosure
-            title={
-              <>
-                ¿Cómo se garantiza que los envíos lleguen en el plazo esperado?
-              </>
-            }
-            text={
-              <>
-                Sabemos que como negocio, tu preocupación es vender y cuidar de
-                tus clientes, no la de hacer entregas. Para eso estamos
-                nosotros, y nuestra responsabilidad como courier es hacer la
-                entrega en el plazo acordado, por lo que incluso en el caso de
-                que no haya ecoDrivers disponibles para hacer el transporte de
-                una ruta determinada, contamos con medios alternativos de
-                transporte que garantizan la entrega y nos permiten seguir
-                actuando de acorde a nuestros valores.
-              </>
-            }
-          />
-          <Disclosure
-            title={<>¿Qué diferencia a ecoDeliver de las otras plataformas?</>}
-            text={
-              <>
-                El sector de envíos y entregas está viviendo un cambio muy
-                importante hacia la entrega sostenible, y hay otros servicios
-                que ofrecen esta posibilidad. No obstante, aún no existe un
-                método alternativo a la comunidad de ecoDeliver para hacer el
-                transporte de larga distancia. Nos diferencia este compromiso
-                medioambiental, el cuidado hacia las personas que nos
-                representan como nuestros repartidores, y nuestro compromiso
-                para ofrecer un servicio de calidad que no represente un
-                sobrecoste para nuestros clientes.
-              </>
-            }
-          />
-          <Disclosure
-            title={<>¿ecoDeliver sólo hace entregas para e-commerce?</>}
-            text={
-              <>
-                Pese a que tenemos la infraestructura y capacidad para
-                involucrarnos en diferentes tipos de entregas y proyectos, nos
-                centramos principalmente en entregas de paquetería pequeña.
-              </>
-            }
-          />
+          {translations.disclousures.map((disclousure, index) => {
+            return (
+              <Disclosure
+                key={index}
+                title={disclousure.title}
+                isOpen={disclousure.isOpen}
+              >
+                {disclousure.children}
+              </Disclosure>
+            );
+          })}
         </div>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img

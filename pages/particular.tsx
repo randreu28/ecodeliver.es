@@ -20,19 +20,19 @@ import Article from "../components/Article";
 import Disclosure from "../components/Disclousure";
 import Footer from "../components/Footer";
 import Cookies from "js-cookie";
-const navData = [
-  { name: "Inicio", href: "inicio" },
-  { name: "Cómo funciona", href: "como-funciona" },
-  { name: "Valores", href: "valores" },
-  { name: "Noticias", href: "noticias" },
-  { name: "FAQ", href: "faq" },
-];
-
-const WobblyTexts: string[] = ["sostenible", "transparente", "diferente"];
+import { i18nNavBar, i18nParticular } from "../i18n";
+import { useRouter } from "next/router";
+import Step from "../components/Step";
+import Number from "../components/Number";
 
 export default function Particular() {
+  const locale = useRouter().locale as "es" | "en";
+
   Cookies.set("isBusiness", "false");
   const [index, setIndex] = useState<number>(0);
+
+  const WobblyTexts: string[] = i18nParticular[locale].wooblyTexts;
+  const translations = i18nParticular[locale];
 
   useEffect(() => {
     const intervalId = setInterval(() => setIndex((index) => index + 1), 2000);
@@ -44,15 +44,15 @@ export default function Particular() {
   return (
     <>
       <Head>
-        <title>ecoDeliver - El BlaBlaCar de la paquetería, sostenible</title>
-        <meta
-          name="description"
-          content="Transporte de paquetería sostenible, mediante una entrega colaborativa que te permite cubrir los costes de tus viajes en coche por España"
-        />
+        <title>{translations.metaTitle}</title>
+        <meta name="description" content={translations.metaDescription} />
       </Head>
-      <Navbar navData={navData} />
+      <Navbar navData={i18nNavBar[locale].navParticular} />
       <Toaster position="bottom-left" />
-      <section id={navData[0].href} className="space-y-5">
+      <section
+        id={i18nNavBar[locale].navParticular[0].href}
+        className="space-y-5"
+      >
         <main className="min-h-screen pt-20 grid grid-cols-1 xl:grid-cols-2 gap-1 md:gap-5 p-5">
           {/*  eslint-disable-next-line @next/next/no-img-element */}
           <img
@@ -66,7 +66,7 @@ export default function Particular() {
             data-aos-delay="100"
           >
             <h1 className="text-secondary text-4xl md:text-5xl 2xl:text-6xl max-w-2xl !leading-[1.15]">
-              Viaja y únete a la comunidad de entrega de paquetería más{" "}
+              {translations.heroSentence}{" "}
               <TextTransition
                 inline={true}
                 className="text-primary"
@@ -76,24 +76,22 @@ export default function Particular() {
               </TextTransition>
             </h1>
             <div className="space-y-2 lg:mt-10 text-gray-500">
-              <p className="text-xl pb-2">Haz el seguimiento de tu paquete:</p>
+              <p className="text-xl pb-2">{translations.heroCtaDescription}</p>
               <div className="flex flex-row gap-5 flex-wrap">
                 <input
                   type="text"
                   className="px-4 py-2 text-lg text-secondary bg-white border border-gray-300 rounded-md focus:border-primary-40 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40 w-full sm:w-fit"
-                  placeholder="Número de seguimiento"
+                  placeholder={translations.heroCtaPlaceholder}
                   ref={search}
                 />
                 <Button
                   className="w-full sm:w-fit"
                   event={() => {
-                    toast.error(
-                      "Servidores no disponibles. Porfavor inténtalo mas tarde"
-                    );
+                    toast.error(translations.heroCtaToast);
                     search.current.value = "";
                   }}
                 >
-                  Busca
+                  {translations.heroCta}
                 </Button>
               </div>
             </div>
@@ -124,30 +122,28 @@ export default function Particular() {
             className="text-center text-secodary text-4xl font-semibold"
             data-aos="fade-up"
           >
-            Con el apoyo de...
+            {translations.logosHeader}
           </h1>
           <CloudLogo />
         </div>
       </section>
 
-      <section id={navData[1].href} className="bg-green-50 space-y-10">
+      <section
+        id={i18nNavBar[locale].navParticular[1].href}
+        className="bg-green-50 space-y-10"
+      >
         <div className="container px-6 py-10 mx-auto">
           <div className="lg:flex lg:items-center">
             <div className="w-full space-y-12 lg:w-1/2" data-aos="fade-right">
               <div>
                 <p className="text-primary font-semibold pb-1">
-                  Nuestro modelo
+                  {translations.hiwSubtitle}
                 </p>
                 <h1 className="text-3xl font-semibold text-gray-800 lg:text-4xl pb-3">
-                  ¿Cómo funciona?
+                  {translations.hiwTitle}
                 </h1>
                 <p className="text-gray-500 text-xl">
-                  Cualquiera que vaya a viajar entre ciudades puede ser un{" "}
-                  <b>
-                    <span className="text-primary">eco</span>Driver
-                  </b>
-                  , aprovechando el espacio libre en el coche, transportando
-                  paquetes consigo y cubriendo los gastos del viaje!
+                  {translations.hiwDescription}
                 </p>
                 <div>
                   <span className="inline-block w-40 h-1 rounded-full bg-green-500" />
@@ -155,68 +151,13 @@ export default function Particular() {
                   <span className="inline-block w-1 h-1 ml-1 rounded-full bg-green-500" />
                 </div>
               </div>
-              <div className="md:flex md:items-start md:-mx-4">
-                <span className="inline-block p-2 text-green-500 bg-green-200 rounded-xl md:mx-4">
-                  <p className="px-2 font-bold text-xl">1</p>
-                </span>
-                <div className="mt-4 md:mx-4 md:mt-0">
-                  <h1 className="text-2xl font-semibold text-secondary">
-                    Publica tu viaje en la App
-                  </h1>
-                  <p className="mt-3 text-gray-500">
-                    Tienes planeado viajar en coche? Completa tu perfil e
-                    indícanos la información de tu viaje en la app de{" "}
-                    <b>
-                      <span className="text-primary">eco</span>Deliver
-                    </b>
-                    .
-                  </p>
-                </div>
-              </div>
-              <div className="md:flex md:items-start md:-mx-4">
-                <span className="inline-block p-2 text-green-500 bg-green-200 rounded-xl md:mx-4">
-                  <p className="px-2 font-bold text-xl">2</p>
-                </span>
-                <div className="mt-4 md:mx-4 md:mt-0">
-                  <h1 className="text-2xl font-semibold text-secondary">
-                    Recoge los paquetes en nuestro almacén
-                  </h1>
-                  <p className="mt-3 text-gray-500 ">
-                    Te estaremos esperando con bolsas de paquetes a la salida de
-                    la ciudad.
-                  </p>
-                </div>
-              </div>
-              <div className="md:flex md:items-start md:-mx-4">
-                <span className="inline-block p-2 text-green-500 bg-green-200 rounded-xl md:mx-4">
-                  <p className="px-2 font-bold text-xl">3</p>
-                </span>
-                <div className="mt-4 md:mx-4 md:mt-0">
-                  <h1 className="text-2xl font-semibold text-secondary">
-                    Deja los paquetes al llegar a tu destino
-                  </h1>
-                  <p className="mt-3 text-gray-500">
-                    Cuando llegues a tu destino, dejas las bolsas con paquetes
-                    en nuestro almacén a la entrada de la ciudad y listo! Son 5
-                    minutos de desvío en cada ciudad.
-                  </p>
-                </div>
-              </div>
-              <div className="md:flex md:items-start md:-mx-4">
-                <span className="inline-block p-2 text-green-500 bg-green-200 rounded-xl md:mx-4">
-                  <p className="px-2 font-bold text-xl">4</p>
-                </span>
-                <div className="mt-4 md:mx-4 md:mt-0">
-                  <h1 className="text-2xl font-semibold text-secondary">
-                    Recibe el pago y ¡listo!
-                  </h1>
-                  <p className="mt-3 text-gray-500">
-                    Cubriendo los costes del viaje y evitando que un camión
-                    tenga que hacer el transporte (ahorrando todas esas
-                    emisiones!)
-                  </p>
-                </div>
-              </div>
+              {translations.hiwSteps.map((step, index) => {
+                return (
+                  <Step title={step.title} step={index + 1} key={index}>
+                    {step.description}
+                  </Step>
+                );
+              })}
             </div>
             <div
               className="hidden lg:flex lg:items-center lg:w-1/2 lg:justify-center"
@@ -240,245 +181,115 @@ export default function Particular() {
         />
         <div data-aos="fade-in">
           <div className="p-5 flex flex-col lg:flex-row rounded-lg w-fit shadow-lg mx-auto pt-10 bg-white gap-20">
-            <div className="p-5 space-y-5">
-              <h1 className="text-4xl lg:text-5xl font-bold text-center text-primary">
-                15.7 kgCO<sub>2</sub>
-              </h1>
-              <p className="text-center text-gray-500 ">
-                Ahorrados en un viaje
-                <br /> Barcelona-Madrid*
-              </p>
-            </div>
-            <div className="p-5 space-y-5">
-              <h1 className="text-4xl lg:text-5xl font-bold text-center text-primary">
-                ~50€
-              </h1>
-              <p className="text-center text-gray-500">
-                De remuneración en un viaje <br />
-                Barcelona-Valencia
-              </p>
-            </div>
-            <div className="p-5 space-y-5">
-              <h1 className="text-4xl lg:text-5xl font-bold text-center text-primary">
-                100%
-              </h1>
-              <p className="text-center text-gray-500">Sonrisas garantizadas</p>
-            </div>
+            {translations.numbers.map((number, index) => {
+              return (
+                <Number title={number.title} key={index}>
+                  {number.description}
+                </Number>
+              );
+            })}
           </div>
           <p className="text-gray-400 text-xs p-5 text-center">
-            *Datos de la guía de cálculo de emisiones de la Generalitat de
-            Cataluña y la CNMC
+            {translations.numberDisclaimer}
           </p>
         </div>
 
         <div className="container px-4 py-10 mx-auto lg:flex lg:items-center lg:justify-between">
           <div className="flex flex-col gap-3" data-aos="fade-right">
-            <h2 className="text-5xl font-bold tracking-tight text-gray-800 xl:text-6xl ">
-              ¿List@ para convertirte <br /> en un{" "}
-              <span className="text-primary">eco</span>Driver?
+            <h2 className="text-5xl font-bold tracking-tight text-gray-800 xl:text-6xl max-w-xl">
+              {translations.ctaTitle}
             </h2>
             <p className="text-gray-500 text-xl">
-              Te damos un toque cuando esté listo
+              {translations.ctaDescription}
             </p>
           </div>
           <EcoDriverForm />
         </div>
       </section>
 
-      <section id={navData[2].href} className="container px-6 py-10 mx-auto">
+      <section
+        id={i18nNavBar[locale].navParticular[2].href}
+        className="container px-6 py-10 mx-auto"
+      >
         <h1
           className="text-3xl font-semibold text-center text-secondary lg:text-4xl "
           data-aos="fade-in"
         >
-          Valores de nuestro servicio
+          {translations.valuesTitle}
         </h1>
         <p
           className="text-center text-gray-500 pt-2 text-lg"
           data-aos="fade-in"
         >
-          Porque el <b className="text-primary">por qué</b> importa
+          {translations.valuesSubtitle}
         </p>
 
         <div
           className="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-3"
           data-aos="fade-in"
         >
-          <Value
-            title={
-              <>
-                Somos{" "}
-                <span className="text-primary font-semibold">eco-friendly</span>
-              </>
-            }
-            text={
-              <>
-                Ya que siendo un ecoDriver ibas a viajar de todas formas, evitas
-                que un camión tenga que transportar esos paquetes.
-              </>
-            }
-          >
-            <FingerPrintIcon className="h-6 w-6" />
-          </Value>
-
-          <Value
-            title={
-              <>
-                Cuidamos de las{" "}
-                <span className="text-primary font-semibold">personas</span>
-              </>
-            }
-            text={
-              <>
-                Transportamos paquetes pero tratamos con personas. Por eso, te
-                cuidamos tanto a ti como a nuestros repartidores.
-              </>
-            }
-          >
-            <UserGroupIcon className="h-6 w-6" />
-          </Value>
-
-          <Value
-            title={
-              <>
-                Creamos{" "}
-                <span className="text-primary font-semibold">comunidad</span>
-              </>
-            }
-            text={
-              <>
-                Al ofrecer un servicio en comunidad, compartimos recursos y
-                salimos ganando todos!
-              </>
-            }
-          >
-            <UserAddIcon className="h-6 w-6" />
-          </Value>
-
-          <Value
-            title={
-              <>
-                Muy <span className="text-primary font-semibold">práctico</span>
-              </>
-            }
-            text={
-              <>
-                Disrumpimos el mercado, pero sin disrumpir tu viaje! Nos
-                centramos en que para ti todo vaya <i>sobre ruedas</i>.
-              </>
-            }
-          >
-            <SparklesIcon className="h-6 w-6" />
-          </Value>
-
-          <Value
-            title={
-              <>
-                <span className="text-primary font-semibold">
-                  Transparencia
-                </span>{" "}
-                ante todo
-              </>
-            }
-            text={
-              <>
-                Al ofrecer un servicio en comunidad, compartimos recursos y
-                salimos ganando todos!
-              </>
-            }
-          >
-            <BadgeCheckIcon className="w-6 h-6" />
-          </Value>
-
-          <Value
-            title={
-              <>
-                Cuidando de tu{" "}
-                <span className="text-primary font-semibold">seguridad</span>
-              </>
-            }
-            text={
-              <>
-                Cuidamos de los ecoDrivers y de los paquetes, verificando que se
-                cumplen nuestros protocolos de seguridad.
-              </>
-            }
-          >
-            <ShieldCheckIcon className="h-6 w-6" />
-          </Value>
+          {translations.values.map((value, index) => {
+            return (
+              <Value title={value.title} text={value.text} key={index}>
+                {value.children}
+              </Value>
+            );
+          })}
         </div>
       </section>
 
-      <section id={navData[3].href} className="container mx-auto px-6">
+      <section
+        id={i18nNavBar[locale].navParticular[3].href}
+        className="container mx-auto px-6"
+      >
         <p
           className="text-center text-primary font-semibold pt-2 text-lg"
           data-aos="fade-in"
         >
-          Noticias
+          {translations.newsSubtitle}
         </p>
         <h1
           className="text-3xl font-semibold text-center text-secondary lg:text-4xl "
           data-aos="fade-in"
         >
-          Nos mencionan
+          {translations.newsTitle}
         </h1>
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 m-auto py-10"
           data-aos="fade-in"
         >
-          <Article
-            type="CaixaBank"
-            title="Imagin conecta a inversores con los emprendedores ganadores del ImaginPlanetChallenge"
-            text="imagin, la plataforma de servicios digitales y estilo de vida
-                impulsada por CaixaBank, ha organizado una sesión Demo Day en la
-                que los emprendedores ganadores de la primera edición del
-                imaginPlanet Challenge han tenido la oportunidad de presentar
-                sus iniciativas ante inversores, business angels, plataformas
-                aceleradoras y organizaciones de referencia del ecosistema
-                emprendedor."
-            extLink="https://www.caixabank.com/comunicacion/noticia/imagin-conecta-a-inversores-con-los-emprendedores-ganadores-del-imaginplanet-challenge_es.html?id=43056#"
-            imgLink="/media/articles/caixaBankArticle.jpg"
-          />
-          <Article
-            type="Diari Ara"
-            title="Imagin premia a un 'Blablacar' de paquetería y una plataforma de juguetes compartidos"
-            text="La primera competición de emprendimiento medioambiental de Imagin, la
-                plataforma para jóvenes de CaixaBank, ya tiene ganadores. Se trata
-                de una solución que pretende utilizar vehículos privados para
-                transportar paquetes y de un proyecto que plantea alquilar juguetes
-                en lugar de comprarlas. Los jóvenes detrás de eCodeliver y
-                Kidalos, como se llaman estas dos ideas de empresa, han
-                marchado a un laboratorio en Lanzarote donde expertos de la misma
-                Imagin y un equipo de profesionales dedicados al emprendimiento, la
-                sostenibilidad y la innovación les ayudarán a desarrollar una
-                primera versión del producto que intentan construir."
-            extLink="https://www.ara.cat/economia/imagin-premia-blablacar-paqueteria-plataforma-joguines-compartides_1_4052007.html"
-            imgLink="media/articles/araArticle.webp"
-          />
-          <Article
-            className="md:col-span-2 lg:col-span-1"
-            type="lavanguardia"
-            title="ecoDeliver y Kidalos ganan la primera edición del imaginPlanet Challenge"
-            text="ecoDeliver y Kidalos han sido elegidos entre los 230 equipos participantes,
-             formados por más de 700 jóvenes de 16 universidades españolas que,
-              de la mano de imagin, han dado forma a sus ideas durante los tres últimos meses."
-            extLink="https://www.lavanguardia.com/vida/20210713/7597222/ecodeliver-kidalos-ganan-primera-edicion-imaginplanet-challenge.html"
-            imgLink="/media/articles/lavanguardiaArticle.webp"
-          />
+          {translations.articles.map((article, index) => {
+            return (
+              <Article
+                title={article.title}
+                className={article.className}
+                extLink={article.extLink}
+                imgLink={article.imgLink}
+                source={article.source}
+                key={index}
+              >
+                {article.children}
+              </Article>
+            );
+          })}
         </div>
       </section>
 
-      <section id={navData[4].href} className="max-w-5xl px-5 mx-auto">
+      <section
+        id={i18nNavBar[locale].navParticular[4].href}
+        className="max-w-5xl px-5 mx-auto"
+      >
         <p
           className="text-center text-primary font-semibold pb-2 text-lg"
           data-aos="fade-in"
         >
-          FAQ
+          {translations.faqSubtitle}
         </p>
         <h1
           className="text-center text-4xl lg:text-5xl font-bold md:px-10 mb-8"
           data-aos="fade-in"
         >
-          Preguntas frecuentes
+          {translations.faqTitle}
         </h1>
         {/*  eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -487,74 +298,17 @@ export default function Particular() {
           alt=""
         />
         <div className="divide-y container pb-10">
-          <Disclosure
-            isOpen={true}
-            title="¿Cuándo podré participar como ecoDriver? "
-            text={
-              <>
-                Actualmente estamos en las etapas finales de desarrollo y
-                nuestra aplicación estará disponible muy pronto! Además estamos
-                realizando pruebas piloto para las que tu colaboración será muy
-                bienvenida. Déjanos tu correo electrónico para que te avisemos
-                del launch ;)
-              </>
-            }
-          />
-          <Disclosure
-            title={<>¿El contenido de los paquetes es seguro?</>}
-            text={
-              <>
-                Si. Sólo transportamos paquetes de ecommerce (tiendas online) y
-                el contenido es conocido y declarado para cada paquete. El
-                contenido son artículos de cosmética, calzado, ropa y no se
-                transportan paquetes con contenido peligroso.
-              </>
-            }
-          />
-          <Disclosure
-            title={
-              <>
-                ¿Cómo se garantiza la seguridad tanto del ecoDriver como de los
-                paquetes?
-              </>
-            }
-            text={
-              <>
-                Como ecoDriver, eres un miembro verificado de nuestra comunidad
-                con tu identificación. Además, los paquetes se transportarán en
-                bolsas selladas hechas a medida, lo que garantiza que nadie más
-                que el remitente y el receptor puedan acceder a su interior a
-                menos que la bolsa se rompa. De esta forma, podemos garantizar
-                la seguridad del ecoDriver y del paquete gracias a nuestro
-                seguimiento constante de todo el proceso.
-              </>
-            }
-          />
-          <Disclosure
-            title={<>¿Realizar un transporte es legal?</>}
-            text={
-              <>
-                Si. De la misma manera en que funcionan otros servicios
-                parecidos como BlaBlaCar, al tratarse de un transporte no
-                profesional (donde no se genera un beneficio neto) no es
-                necesario contar con un título de transporte y se considera un
-                transporte particular, de toda la vida. .
-              </>
-            }
-          />
-          <Disclosure
-            title={
-              <>¿Cuánto dinero se paga por hacer un viaje como ecoDriver?</>
-            }
-            text={
-              <>
-                La remuneración se calcula teniendo en cuenta diferentes
-                parámetros, como el número de paquetes, la distancia recorrida,
-                el tipo de transporte… No obstante, en ningún caso se tendrá una
-                remuneración que sobrepase el coste del viaje.
-              </>
-            }
-          />
+          {translations.disclousures.map((disclousure, index) => {
+            return (
+              <Disclosure
+                title={disclousure.title}
+                isOpen={disclousure.isOpen}
+                key={index}
+              >
+                {disclousure.children}
+              </Disclosure>
+            );
+          })}
         </div>
         {/*  eslint-disable-next-line @next/next/no-img-element */}
         <img
