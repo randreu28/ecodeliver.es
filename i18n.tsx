@@ -406,8 +406,8 @@ export const i18nParticular = {
 
     /* Header */
     heroSentence:
-      "Travel, join our parcel delivery community and become the most",
-    wooblyTexts: ["sustainable", "collaborative", "transparent"],
+      "Travel, join our parcel delivery community and make your trip the most",
+    wooblyTexts: ["sustainable", "collaborative", "efficient"],
     heroCtaDescription: "Track your package:",
     heroCtaPlaceholder: "Tracking number",
     heroCta: "Search",
@@ -421,12 +421,12 @@ export const i18nParticular = {
     hiwTitle: "How does it work?",
     hiwDescription: (
       <>
-        Anyone who travels between cities can be an{" "}
+        If you travel between cities, become an{" "}
         <b>
-          <span className="text-primary">eco</span>Driver
-        </b>
-        , taking advantage of the free space in the car, transporting packages
-        with them and covering the expenses of the trip!
+          <span className="text-primary">eco</span>Driver!
+        </b>{" "}
+        Take advantage of the free space in the car to transport packages and
+        we&apos;ll help cover your trip&apos;s expenses!
       </>
     ),
     hiwSteps: [
