@@ -623,7 +623,7 @@ export const i18nParticular = {
         source: "CaixaBank",
         className: "",
         title:
-          "Imagin connects investors with the winner entrepeneurs of ImaginPlanetChallenge",
+          "Imagin connects investors with the winner entrepreneurs of ImaginPlanetChallenge",
         children: (
           <>
             Imagin rewards a parcel &apos;Blablacar&apos; and a shared toy
