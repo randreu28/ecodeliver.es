@@ -1,5 +1,5 @@
 import { DownloadIcon } from "@heroicons/react/outline";
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
 import CardCTA from "../components/CardCTA";
 import Footer from "../components/Footer";
@@ -11,10 +11,7 @@ export default function Identidad() {
     i18IdentidadCorporativa[useRouter().locale as "es" | "en"];
   return (
     <>
-      <Head>
-        <title>{translations.metaTitle}</title>
-        <meta name="robots" content="noindex,nofollow" />
-      </Head>
+      <NextSeo nofollow={true} noindex={true} />
       <SmNavbar />
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
