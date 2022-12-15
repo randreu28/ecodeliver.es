@@ -1,32 +1,21 @@
-import {
-  AnnotationIcon,
-  ArrowRightIcon,
-  FingerPrintIcon,
-  LightningBoltIcon,
-  MailIcon,
-  OfficeBuildingIcon,
-  ShieldCheckIcon,
-  UserGroupIcon,
-} from "@heroicons/react/outline";
+import { ArrowRightIcon, MailIcon } from "@heroicons/react/outline";
+import Cookies from "js-cookie";
 import Head from "next/head";
-import Navbar from "../components/Navbar";
 import Image from "next/image";
-import CloudLogo from "../components/CloudLogo";
+import { useRouter } from "next/router";
 import { toast, Toaster } from "react-hot-toast";
-import Value from "../components/Value";
 import Article from "../components/Article";
 import BusinessForm from "../components/BusinessForm";
+import CloudLogo from "../components/CloudLogo";
 import Disclosure from "../components/Disclousure";
 import Footer from "../components/Footer";
-import Cookies from "js-cookie";
-import { useRouter } from "next/router";
-import { i18nEmpresa, i18nNavBar } from "../i18n";
+import Navbar from "../components/Navbar";
 import Number from "../components/Number";
+import Value from "../components/Value";
 import ValueProposition from "../components/ValueProposition";
+import { i18nEmpresa, i18nNavBar } from "../i18n";
 
-type Props = {};
-
-export default function Empresa({}: Props) {
+export default function Empresa() {
   Cookies.set("isBusiness", "true");
   const locale = useRouter().locale as "es" | "en";
   const translations = i18nEmpresa[locale];

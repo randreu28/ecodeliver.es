@@ -1,29 +1,21 @@
-import Navbar from "../components/Navbar";
+import Cookies from "js-cookie";
 import Head from "next/head";
 import Image from "next/image";
-import TextTransition, { presets } from "react-text-transition";
+import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
+import TextTransition, { presets } from "react-text-transition";
+import Article from "../components/Article";
 import Button from "../components/Button";
 import CloudLogo from "../components/CloudLogo";
-import toast, { Toaster } from "react-hot-toast";
-import EcoDriverForm from "../components/EcoDriverForm";
-import Value from "../components/Value";
-import {
-  BadgeCheckIcon,
-  FingerPrintIcon,
-  ShieldCheckIcon,
-  SparklesIcon,
-  UserAddIcon,
-  UserGroupIcon,
-} from "@heroicons/react/outline";
-import Article from "../components/Article";
 import Disclosure from "../components/Disclousure";
+import EcoDriverForm from "../components/EcoDriverForm";
 import Footer from "../components/Footer";
-import Cookies from "js-cookie";
-import { i18nNavBar, i18nParticular } from "../i18n";
-import { useRouter } from "next/router";
-import Step from "../components/Step";
+import Navbar from "../components/Navbar";
 import Number from "../components/Number";
+import Step from "../components/Step";
+import Value from "../components/Value";
+import { i18nNavBar, i18nParticular } from "../i18n";
 
 export default function Particular() {
   const locale = useRouter().locale as "es" | "en";

@@ -1,12 +1,11 @@
-import "../globals.css";
 import "aos/dist/aos.css";
+import "../globals.css";
 
-import { GoogleAnalytics, usePageViews, event } from "nextjs-google-analytics";
 import AOS from "aos";
+import { event, GoogleAnalytics, usePageViews } from "nextjs-google-analytics";
 import { useEffect } from "react";
 
-import type { NextWebVitalsMetric } from "next/app";
-import type { AppProps } from "next/app";
+import type { AppProps, NextWebVitalsMetric } from "next/app";
 
 export function reportWebVitals({
   id,
