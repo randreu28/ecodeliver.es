@@ -48,7 +48,7 @@ export default function Identidad() {
       <img
         src="/media/brand/line-3.svg"
         className="hidden xl:block absolute left-0 h-32 -translate-y-72 -translate-x-1/2"
-        alt=""
+        alt="Support line"
       />
       <Footer className="top-0" />
     </>

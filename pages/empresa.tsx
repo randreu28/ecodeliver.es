@@ -30,7 +30,7 @@ export default function Empresa() {
           <img
             src="/media/brand/line-4.svg"
             className="hidden xl:block absolute left-0 h-1/6 -translate-x-1/2"
-            alt=""
+            alt="Decoration line"
           />
           <div
             className="m-auto font-semibold xl:order-2"
@@ -85,15 +85,15 @@ export default function Empresa() {
         <img
           src="/media/brand/line-6.svg"
           className="hidden xl:block absolute -translate-y-56 translate-x-1/3 right-0 h-1/6 scale-x-[-1] -z-10"
-          alt=""
+          alt="Decoration line"
         />
         <div>
-          <h1
+          <h2
             className="text-center text-secondary text-4xl font-bold"
             data-aos="fade-up"
           >
             {translations.logosHeader}
-          </h1>
+          </h2>
           <CloudLogo />
         </div>
       </section>
@@ -108,12 +108,12 @@ export default function Empresa() {
         >
           {translations.numbersSubtitle}
         </p>
-        <h1
+        <h2
           className="text-4xl text-center text-secondary font-bold "
           data-aos="fade-in"
         >
           {translations.numbersTitle}
-        </h1>
+        </h2>
         <p
           className="md:text-center text-gray-500 pt-2 px-5 text-lg max-w-3xl mx-auto"
           data-aos="fade-in"
@@ -135,17 +135,17 @@ export default function Empresa() {
         <img
           src="/media/brand/line-3.svg"
           className="hidden xl:block absolute right-0 h-36 translate-y-12 scale-x-[-1] translate-x-1/3"
-          alt=""
+          alt="Decoration line"
         />
 
         <div className="bg-green-50">
           <div className="container px-6 py-10 mx-auto">
-            <h1
+            <h2
               className="text-3xl font-semibold text-gray-800 lg:text-4xl max-w-lg pb-5"
               data-aos="fade-right"
             >
               {translations.hiwTitle}
-            </h1>
+            </h2>
             <p className="text-gray-500 text-xl" data-aos="fade-right">
               {translations.hiwDescription}
             </p>
@@ -182,7 +182,7 @@ export default function Empresa() {
                   height={500}
                   className="w-[28rem] h-[28rem] flex-shrink-0 object-cover xl:w-[34rem] xl:h-[34rem] rounded-full"
                   src="/media/stockImage1.jpg"
-                  alt=""
+                  alt="Support image"
                 />
               </div>
             </div>
@@ -200,12 +200,12 @@ export default function Empresa() {
         >
           {translations.valuesSubtitle}
         </p>
-        <h1
+        <h2
           className="text-4xl text-center text-secondary font-bold "
           data-aos="fade-in"
         >
           {translations.valuesTitle}
-        </h1>
+        </h2>
         <p
           className="md:text-center text-gray-500 pt-2 px-5 text-lg max-w-3xl mx-auto"
           data-aos="fade-in"
@@ -231,9 +231,9 @@ export default function Empresa() {
         </div>
         <div className="flex flex-col md:flex-row gap-5 pt-10">
           <div className="bg-green-50 space-y-5 p-10" data-aos="fade-right">
-            <h1 className="text-5xl font-bold text-secondary">
+            <h2 className="text-5xl font-bold text-secondary">
               {translations.ctaTitle}
-            </h1>
+            </h2>
             <p className="text-gray-500 text-lg max-w-lg">
               {translations.ctaDescription}
             </p>
@@ -252,12 +252,12 @@ export default function Empresa() {
         >
           {translations.newsSubtitle}
         </p>
-        <h1
+        <h2
           className="text-3xl font-semibold text-center text-secondary lg:text-4xl "
           data-aos="fade-in"
         >
           {translations.newsTitle}
-        </h1>
+        </h2>
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 m-auto py-10"
           data-aos="fade-in"
@@ -289,17 +289,17 @@ export default function Empresa() {
         >
           {translations.faqSubtitle}
         </p>
-        <h1
+        <h2
           className="text-center text-4xl lg:text-5xl font-bold md:px-10 mb-8"
           data-aos="fade-in"
         >
           {translations.faqTitle}
-        </h1>
+        </h2>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/media/brand/line-3.svg"
           className="hidden xl:block absolute left-0 h-1/6 -translate-x-1/2"
-          alt=""
+          alt="Decoration line"
         />
         <div className="divide-y container pb-10">
           {translations.disclousures.map((disclousure, index) => {
@@ -318,7 +318,7 @@ export default function Empresa() {
         <img
           src="/media/brand/line-1.svg"
           className="hidden xl:block absolute right-0 h-1/3 scale-x-[-1] -translate-y-48 translate-x-1/2"
-          alt=""
+          alt="Decoration line"
         />
         <Footer />
       </section>

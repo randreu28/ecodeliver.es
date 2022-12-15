@@ -45,7 +45,7 @@ export default function Particular() {
           <img
             src="/media/brand/line-6.svg"
             className="hidden xl:block absolute right-1/2"
-            alt=""
+            alt="Decoration line"
           />
           <div
             className="m-auto font-semibold"
@@ -102,15 +102,15 @@ export default function Particular() {
         <img
           src="/media/brand/line-4.svg"
           className="hidden xl:block absolute -translate-y-48 translate-x-1/3 right-0 h-1/6 scale-x-[-1] -z-10"
-          alt=""
+          alt="Decoration line"
         />
         <div>
-          <h1
+          <h2
             className="text-center text-secodary text-4xl font-semibold"
             data-aos="fade-up"
           >
             {translations.logosHeader}
-          </h1>
+          </h2>
           <CloudLogo />
         </div>
       </section>
@@ -126,9 +126,9 @@ export default function Particular() {
                 <p className="text-primary font-semibold pb-1">
                   {translations.hiwSubtitle}
                 </p>
-                <h1 className="text-3xl font-semibold text-gray-800 lg:text-4xl pb-3">
+                <h2 className="text-3xl font-semibold text-gray-800 lg:text-4xl pb-3">
                   {translations.hiwTitle}
-                </h1>
+                </h2>
                 <p className="text-gray-500 text-xl">
                   {translations.hiwDescription}
                 </p>
@@ -153,7 +153,7 @@ export default function Particular() {
               <Image
                 className="w-[28rem] h-[28rem] object-cover xl:w-[34rem] xl:h-[34rem] rounded-full"
                 src="/media/stockImage2.jpg"
-                alt=""
+                alt="Support image"
                 height={500}
                 width={500}
               />
@@ -164,7 +164,7 @@ export default function Particular() {
         <img
           src="/media/brand/line-3.svg"
           className="hidden xl:block absolute translate-x-1/3 -translate-y-40 right-0 h-1/6 scale-x-[-1]"
-          alt=""
+          alt="Decoration line"
         />
         <div data-aos="fade-in">
           <div className="p-5 flex flex-col lg:flex-row rounded-lg w-fit shadow-lg mx-auto pt-10 bg-white gap-20">
@@ -198,12 +198,12 @@ export default function Particular() {
         id={i18nNavBar[locale].navParticular[2].href}
         className="container px-6 py-10 mx-auto"
       >
-        <h1
+        <h2
           className="text-3xl font-semibold text-center text-secondary lg:text-4xl "
           data-aos="fade-in"
         >
           {translations.valuesTitle}
-        </h1>
+        </h2>
         <p
           className="text-center text-gray-500 pt-2 text-lg"
           data-aos="fade-in"
@@ -235,12 +235,12 @@ export default function Particular() {
         >
           {translations.newsSubtitle}
         </p>
-        <h1
+        <h2
           className="text-3xl font-semibold text-center text-secondary lg:text-4xl "
           data-aos="fade-in"
         >
           {translations.newsTitle}
-        </h1>
+        </h2>
         <div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 m-auto py-10"
           data-aos="fade-in"
@@ -272,17 +272,17 @@ export default function Particular() {
         >
           {translations.faqSubtitle}
         </p>
-        <h1
+        <h2
           className="text-center text-4xl lg:text-5xl font-bold md:px-10 mb-8"
           data-aos="fade-in"
         >
           {translations.faqTitle}
-        </h1>
+        </h2>
         {/*  eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/media/brand/line-3.svg"
           className="hidden xl:block absolute left-0 h-1/6 -translate-x-1/2"
-          alt=""
+          alt="Decoration line"
         />
         <div className="divide-y container pb-10">
           {translations.disclousures.map((disclousure, index) => {
@@ -301,7 +301,7 @@ export default function Particular() {
         <img
           src="/media/brand/line-1.svg"
           className="hidden xl:block absolute right-0 h-1/3 scale-x-[-1] -translate-y-48 translate-x-1/2"
-          alt=""
+          alt="Decoration line"
         />
         <Footer />
       </section>
