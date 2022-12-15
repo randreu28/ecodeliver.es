@@ -1,6 +1,5 @@
 import { ArrowRightIcon, MailIcon } from "@heroicons/react/outline";
 import Cookies from "js-cookie";
-import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { toast, Toaster } from "react-hot-toast";
@@ -22,14 +21,6 @@ export default function Empresa() {
 
   return (
     <>
-      <Head>
-        <title>{translations.metaTitle}</title>
-        <meta name="description" content={translations.metaDescription} />
-        <meta
-          property="og:image"
-          content="https://res.cloudinary.com/ecodeliver-es/image/upload/v1659538036/stockImage3_podaof.jpg"
-        />
-      </Head>
       <Navbar navData={i18nNavBar[locale].navBusiness} />
       <Toaster position="bottom-left" />
 

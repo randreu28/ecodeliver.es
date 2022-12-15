@@ -1,4 +1,4 @@
-import Head from "next/head";
+import { NextSeo } from "next-seo";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import SmNavbar from "../components/SmNavbar";
@@ -8,10 +8,7 @@ export default function Error() {
   const translations = i18n404[useRouter().locale as "es" | "en"];
   return (
     <>
-      <Head>
-        <title>{translations.metaTitle}</title>
-        <meta name="robots" content="noindex,nofollow" />
-      </Head>
+      <NextSeo title={translations.metaTitle} nofollow={true} noindex={true} />
       <SmNavbar />
       <div className="h-screen flex flex-col lg:flex-row pt-20 p-10 md:p-20 gap-10 md:gap-20">
         <div className="m-auto text-gray-600 text-center space-y-5">

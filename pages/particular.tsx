@@ -1,5 +1,4 @@
 import Cookies from "js-cookie";
-import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { useEffect, useRef, useState } from "react";
@@ -35,10 +34,6 @@ export default function Particular() {
 
   return (
     <>
-      <Head>
-        <title>{translations.metaTitle}</title>
-        <meta name="description" content={translations.metaDescription} />
-      </Head>
       <Navbar navData={i18nNavBar[locale].navParticular} />
       <Toaster position="bottom-left" />
       <section
