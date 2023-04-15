@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { toast, Toaster } from "react-hot-toast";
 import Article from "../components/Article";
 import BusinessForm from "../components/BusinessForm";
-import CloudLogo from "../components/CloudLogo";
+import { PrimaryCloudLogo, SecondaryCloudLogo } from "../components/CloudLogos";
 import Disclosure from "../components/Disclousure";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
@@ -94,7 +94,7 @@ export default function Empresa() {
           >
             {translations.logosHeader}
           </h2>
-          <CloudLogo />
+          <PrimaryCloudLogo />
         </div>
       </section>
 
@@ -314,6 +314,22 @@ export default function Empresa() {
             );
           })}
         </div>
+
+        <h2
+          className="text-center text-4xl lg:text-5xl font-bold md:px-10 mb-2"
+          data-aos="fade-in"
+        >
+          {translations.faqHonorableMentions}
+        </h2>
+
+        <p
+          className="text-center text-gray-500 pb-2 text-lg"
+          data-aos="fade-in"
+        >
+          {translations.faqHonorableMentionsSub}
+        </p>
+
+        <SecondaryCloudLogo />
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/media/brand/line-1.svg"

@@ -6,7 +6,7 @@ import toast, { Toaster } from "react-hot-toast";
 import TextTransition, { presets } from "react-text-transition";
 import Article from "../components/Article";
 import Button from "../components/Button";
-import CloudLogo from "../components/CloudLogo";
+import { PrimaryCloudLogo, SecondaryCloudLogo } from "../components/CloudLogos";
 import Disclosure from "../components/Disclousure";
 import EcoDriverForm from "../components/EcoDriverForm";
 import Footer from "../components/Footer";
@@ -111,7 +111,7 @@ export default function Particular() {
           >
             {translations.logosHeader}
           </h2>
-          <CloudLogo />
+          <PrimaryCloudLogo />
         </div>
       </section>
 
@@ -297,6 +297,22 @@ export default function Particular() {
             );
           })}
         </div>
+
+        <h2
+          className="text-center text-4xl lg:text-5xl font-bold md:px-10 mb-3"
+          data-aos="fade-in"
+        >
+          {translations.faqHonorableMentions}
+        </h2>
+
+        <p
+          className="text-center text-gray-500 pb-2 text-lg"
+          data-aos="fade-in"
+        >
+          {translations.faqHonorableMentionsSub}
+        </p>
+
+        <SecondaryCloudLogo />
         {/*  eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/media/brand/line-1.svg"
