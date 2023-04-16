@@ -329,8 +329,7 @@ export const i18nParticular = {
     /* FAQ */
     faqTitle: "Preguntas frequentes",
     faqSubtitle: "FAQ",
-    faqHonorableMentions: "Menciones honorables",
-    faqHonorableMentionsSub: "No podriamos estar aqui sin la ayuda de...",
+    faqHonorableMentions: "Financiados por...",
     disclousures: [
       {
         title: "¿Cuándo podré participar como ecoDriver?",
@@ -691,8 +690,7 @@ export const i18nParticular = {
     /* FAQ */
     faqTitle: "Frequently Asked Questions",
     faqSubtitle: "FAQ",
-    faqHonorableMentions: "Honorable mentions",
-    faqHonorableMentionsSub: "We couldn't be here without the help of...",
+    faqHonorableMentions: "Financed by...",
     disclousures: [
       {
         title: "When can I participate as an ecoDriver?",
@@ -964,8 +962,7 @@ export const i18nEmpresa = {
     /* FAQ */
     faqSubtitle: "FAQ",
     faqTitle: "Preguntas frecuentes",
-    faqHonorableMentions: "Menciones honorables",
-    faqHonorableMentionsSub: "No podríamos estar aqui sin la ayuda de...",
+    faqHonorableMentions: "Financiados por...",
     disclousures: [
       {
         title: "¿Cómo se garantiza la seguridad de los envíos?",
@@ -1233,8 +1230,7 @@ export const i18nEmpresa = {
     /* FAQ */
     faqSubtitle: "FAQ",
     faqTitle: "Frequently asked questions",
-    faqHonorableMentions: "Honorable mentions",
-    faqHonorableMentionsSub: "We couldn't be here without the help of...",
+    faqHonorableMentions: "Financed by...",
     disclousures: [
       {
         title: "How is the security of shipments guaranteed?",
