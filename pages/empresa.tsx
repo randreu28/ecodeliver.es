@@ -315,19 +315,12 @@ export default function Empresa() {
           })}
         </div>
 
-        <h2
-          className="text-center text-4xl lg:text-5xl font-bold md:px-10 mb-2"
+        <h3
+          className="text-center text-2xl font-semibold md:px-10 mb-2"
           data-aos="fade-in"
         >
           {translations.faqHonorableMentions}
-        </h2>
-
-        <p
-          className="text-center text-gray-500 pb-2 text-lg"
-          data-aos="fade-in"
-        >
-          {translations.faqHonorableMentionsSub}
-        </p>
+        </h3>
 
         <SecondaryCloudLogo />
         {/* eslint-disable-next-line @next/next/no-img-element */}
