@@ -50,15 +50,7 @@ export function PrimaryCloudLogo() {
 export function SecondaryCloudLogo() {
   return (
     <div className="max-w-screen-xl mx-auto my-20">
-      <div className="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
-        <div className="flex items-center justify-center">
-          <img
-            className="grayscale max-w-full h-24"
-            src="/media/cloudLogos/caixaEnginyers.png"
-            alt="cloud logo"
-          />
-        </div>
-
+      <div className="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         <div className="flex items-center justify-center">
           <img
             className="grayscale max-w-full h-12"
@@ -83,7 +75,7 @@ export function SecondaryCloudLogo() {
           />
         </div>
 
-        <div className="flex items-center justify-center md:col-span-2 lg:col-span-1">
+        <div className="flex items-center justify-center">
           <img
             className="grayscale max-w-full h-12"
             src="/media/cloudLogos/generalitat.png"
