@@ -1344,19 +1344,21 @@ export const i18nArticles = {
 export const i18nFooter = {
   es: {
     aboutUs: "Sobre nosotros",
-    workWithUS: "Trabaja con nosotros",
     privPolicy: "Política de privacidad",
     brandIdentity: "Identidad corporativa",
+    compromises: "Compromisos corporativos",
 
     contactUs: "Contáctanos",
+    workWithUs: "Trabaja con nosotros",
   },
   en: {
     aboutUs: "About us",
-    workWithUS: "Work with us",
     privPolicy: "Privacy policy",
     brandIdentity: "Brand identity",
+    compromises: "Corporate commitments",
 
     contactUs: "Contact us",
+    workWithUs: "Work with us",
   },
 };
 
