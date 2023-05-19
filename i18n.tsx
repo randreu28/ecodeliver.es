@@ -1559,3 +1559,139 @@ export const i18IdentidadCorporativa = {
     call: "Download",
   },
 };
+
+export const i18nCompromisos = {
+  es: {
+    metaTitle: "ecoDeliver - Nuestros compromisos",
+    title: "Nuestros compromisos 🙌",
+    description: (
+      <>
+        En ecoDeliver, creemos en ser transparentes con nuestras metas y
+        objetivos. Es por ello que queremos dejar al ojo público todo lo que nos
+        proponemos.
+      </>
+    ),
+    cards: [
+      {
+        title: "Política de anticorrupción",
+        imgLink: "/media/brand/manual.png",
+        download: "Politica_Anticorrupcion.pdf",
+        href: "/media/compromises/anticorrupcion.pdf",
+        children: (
+          <>
+            La política anticorrupción contiene todas nuestras medidas
+            anticorrupción, así como la protección de nuestra misión y canales
+            de comunicación para cualquier incidencia.
+          </>
+        ),
+      },
+      {
+        title: "Código ético",
+        imgLink: "/media/brand/manual.png",
+        download: "Codigo_Etico.pdf",
+        href: "/media/compromises/codigo_etico.pdf",
+        children: (
+          <>
+            Nuestro código ético resume nuestras creencias, valores y visión.
+            Resalta nuestra manera de resolver conflictos de interés,
+            confidencialidad y seguridad de información, entre otros.
+          </>
+        ),
+      },
+      {
+        title: "Política de protección al cliente",
+        imgLink: "/media/brand/manual.png",
+        download: "Politica_Proteccion_Cliente.pdf",
+        href: "/media/compromises/politica_proteccion_cliente.pdf",
+        children: (
+          <>
+            Nuestra política de protección al cliente detalla la comunicación a
+            nuestros clientes, el procedimiento y el plazo, el allanamiento y
+            desistimiento, entre otros.
+          </>
+        ),
+      },
+      {
+        title: "Plan de igualdad",
+        imgLink: "/media/brand/manual.png",
+        download: "Plan_Igualdad.pdf",
+        href: "/media/compromises/plan_igualdad.pdf",
+        children: (
+          <>
+            Nuestro plan de igualdad incluye nuestros objetivos generales en
+            materia de igualdad, condiciones de trabajo, ejercicio responsable
+            sobre los derechos de la vida personal, familiar y laboral, entre
+            otros.
+          </>
+        ),
+      },
+    ],
+    call: "Descargar",
+  },
+  en: {
+    metaTitle: "ecoDeliver - Our commitments",
+    title: "Our commitments 🙌",
+    description: (
+      <>
+        At ecoDeliver, we believe in being transparent about our objectives and
+        goals. That is why we want to leave in the public eye everything that we
+        we propose ourselves.
+      </>
+    ),
+    cards: [
+      {
+        title: "Anti-corruption policy",
+        imgLink: "/media/brand/manual.png",
+        download: "Politica_Anticorrupcion.pdf",
+        href: "/media/compromises/anticorrupcion.pdf",
+        children: (
+          <>
+            The anti-corruption policy contains all our measures
+            anti-corruption, as well as the protection of our mission and
+            channels communication for any incident.
+          </>
+        ),
+      },
+      {
+        title: "Ethical code",
+        imgLink: "/media/brand/manual.png",
+        download: "Codigo_Etico.pdf",
+        href: "/media/compromises/codigo_etico.pdf",
+        children: (
+          <>
+            Our code of ethics summarizes our beliefs, values ​​and vision. It
+            Highlights our way of resolving conflicts of interest,
+            confidentiality and information security, among others.
+          </>
+        ),
+      },
+      {
+        title: "Customer protection policy",
+        imgLink: "/media/brand/manual.png",
+        download: "Politica_Proteccion_Cliente.pdf",
+        href: "/media/compromises/politica_proteccion_cliente.pdf",
+        children: (
+          <>
+            Our customer protection policy details the communication to our
+            clients, the procedure and the term, the raid and withdrawal, among
+            others.
+          </>
+        ),
+      },
+      {
+        title: "Equality plan",
+        imgLink: "/media/brand/manual.png",
+        download: "Plan_Igualdad.pdf",
+        href: "/media/compromises/plan_igualdad.pdf",
+        children: (
+          <>
+            Our equality plan includes our general objectives in matters of
+            equality, working conditions, responsible exercise on the rights of
+            personal, family and work life, among others.
+          </>
+        ),
+      },
+    ],
+    call: "Download",
+  },
+};

@@ -82,12 +82,7 @@ export default function Footer({ animated = true, className = "" }: Props) {
               <h3 className="text-gray-700 font-bold text-lg">
                 {translations.aboutUs}
               </h3>
-              <a
-                href="mailto:hola@ecodeliver.tech"
-                className="block mt-2 text-gray-600 hover:underline"
-              >
-                {translations.workWithUS}
-              </a>
+
               <Link
                 href="/privacidad"
                 className="block mt-2 text-gray-600  hover:underline"
@@ -100,12 +95,24 @@ export default function Footer({ animated = true, className = "" }: Props) {
               >
                 {translations.brandIdentity}
               </Link>
+              <Link
+                href="/compromisos"
+                className="block mt-2 text-gray-600  hover:underline"
+              >
+                Nuestros compromisos
+              </Link>
             </div>
 
             <div>
               <h3 className="text-gray-700 font-semibold text-lg">
                 {translations.contactUs}
               </h3>
+              <a
+                href="mailto:hola@ecodeliver.tech"
+                className="block mt-2 text-gray-600 hover:underline"
+              >
+                {translations.workWithUS}
+              </a>
               <a
                 href="mailto:hola@ecodeliver.tech"
                 className="block mt-2 text-gray-600 hover:underline"
