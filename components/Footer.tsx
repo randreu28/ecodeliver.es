@@ -99,7 +99,7 @@ export default function Footer({ animated = true, className = "" }: Props) {
                 href="/compromisos"
                 className="block mt-2 text-gray-600  hover:underline"
               >
-                Nuestros compromisos
+                {translations.compromises}
               </Link>
             </div>
 
@@ -111,7 +111,7 @@ export default function Footer({ animated = true, className = "" }: Props) {
                 href="mailto:hola@ecodeliver.tech"
                 className="block mt-2 text-gray-600 hover:underline"
               >
-                {translations.workWithUS}
+                {translations.workWithUs}
               </a>
               <a
                 href="mailto:hola@ecodeliver.tech"
