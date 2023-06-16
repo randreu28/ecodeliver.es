@@ -29,8 +29,8 @@ export function PrimaryCloudLogo() {
 
         <div className="flex items-center justify-center">
           <img
-            className="grayscale max-w-full h-12"
-            src="/media/cloudLogos/upc.png"
+            className="grayscale max-w-full h-24"
+            src="/media/cloudLogos/eit.png"
             alt="cloud logo"
           />
         </div>
