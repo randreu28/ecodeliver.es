@@ -78,7 +78,7 @@ export function SecondaryCloudLogo() {
         <div className="flex items-center justify-center">
           <img
             className="grayscale max-w-full h-12"
-            src="/media/cloudLogos/generalitat.png"
+            src="/media/cloudLogos/AMB.png"
             alt="cloud logo"
           />
         </div>
