@@ -14,22 +14,6 @@ export default function SmNavbar({ className }: Props) {
       }
     >
       <Logo />
-      <div className="my-auto divide-x divide-gray-300 hidden lg:inline">
-        <Link
-          href="/particular"
-          rel="canonical"
-          className="pr-3 duration-200 hover:opacity-50"
-        >
-          Particular
-        </Link>
-        <Link
-          href="/empresa"
-          rel="canonical"
-          className="pl-3 duration-200 hover:opacity-50"
-        >
-          Empresa
-        </Link>
-      </div>
     </nav>
   );
 }
