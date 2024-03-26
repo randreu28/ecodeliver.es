@@ -54,7 +54,7 @@ export default function EcoDriverForm() {
             id="email"
             type="email"
             name="email"
-            className="px-4 py-2 text-secondary bg-white border border-gray-300 rounded-md sm:mx-2 text-lg focus:border-primary-40 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
+            className="px-2 py-2 text-secondary bg-white border border-gray-300 rounded-md sm:mx-2 focus:border-primary-40 focus:ring-green-300 focus:outline-none focus:ring focus:ring-opacity-40"
             placeholder={translations.placeholder}
             required
           />

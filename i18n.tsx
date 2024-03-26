@@ -9,7 +9,6 @@ import {
   UserAddIcon,
   UserGroupIcon,
 } from "@heroicons/react/outline";
-import Link from "next/link";
 
 export const i18nNavBar = {
   es: {
@@ -1297,19 +1296,7 @@ export const i18nCTA = {
   es: {
     call: "Notifícame",
     placeholder: "Correo electrónico",
-    disclaimer: (
-      <>
-        Tranquilo, no enviamos spam. Nunca. ¡Sólo actualizaciones <br />{" "}
-        importantes! Revisa nuestra{" "}
-        <Link
-          href="/privacidad"
-          target="_blank"
-          className="text-primary underline hover:opacity-75 duration-200"
-        >
-          politica de privacidad.
-        </Link>
-      </>
-    ),
+    disclaimer: "¡Sé el primero en ser notificado de nuestros avances!",
     onLoad: "Enviando...",
     onSuccess: "Tu correo ha sido enviado exitosamente",
     onError: "Ha ocurrido un error, porfavor inténtalo de nuevo más tarde",
@@ -1317,19 +1304,7 @@ export const i18nCTA = {
   en: {
     call: "Notify me",
     placeholder: "Your email",
-    disclaimer: (
-      <>
-        Don&apos;t worry, we don&apos;t send spam. Ever.
-        <br /> Only important updates! Review our{" "}
-        <Link
-          href="/privacidad"
-          target="_blank"
-          className="text-primary underline hover:opacity-75 duration-200"
-        >
-          privacy policy.
-        </Link>
-      </>
-    ),
+    disclaimer: "Be the first in being notified of our advancements!",
     onLoad: "Sending...",
     onSuccess: "Your email was sent succesfully!",
     onError: "An error occured, please try again later",
@@ -1695,5 +1670,28 @@ export const i18nCompromisos = {
       },
     ],
     call: "Download",
+  },
+};
+
+export const i18nSplashScreen = {
+  es: {
+    heroTitle1: "Tecnología disruptiva para la entrega ",
+    heroTitle2: "",
+    description:
+      "Transformando la entrega sostenible con tecnología inteligente y disruptiva",
+    explorePartnerships: "Explorando nuevos horizontes para partners",
+    contactSales: "Contactar ventas",
+    getInTouch: "Ponte en contacto",
+    learnMore: "Aprende más",
+  },
+  en: {
+    heroTitle1: "Disruptive technology for ",
+    heroTitle2: "delivery",
+    description:
+      "Transforming sustainable delivery with smart, disruptive technology",
+    explorePartnerships: "Exploring new horizons for partnership.",
+    contactSales: "Contact sales",
+    getInTouch: "Get in touch",
+    learnMore: "Learn more",
   },
 };
