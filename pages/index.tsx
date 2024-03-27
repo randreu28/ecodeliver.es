@@ -1,12 +1,12 @@
 import Image from "next/image";
-import Footer from "../components/Footer";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { i18nFooter, i18nParticular, i18nSplashScreen } from "../i18n";
-import TextTransition, { presets } from "react-text-transition";
 import { useEffect, useState } from "react";
-import EcoDriverForm from "../components/EcoDriverForm";
 import { Toaster } from "react-hot-toast";
+import TextTransition, { presets } from "react-text-transition";
+import { PrimaryCloudLogo, SecondaryCloudLogo } from "../components/CloudLogos";
+import EcoDriverForm from "../components/EcoDriverForm";
+import { i18nFooter, i18nParticular, i18nSplashScreen } from "../i18n";
 
 export default function Example() {
   const [index, setIndex] = useState<number>(0);
@@ -50,7 +50,7 @@ export default function Example() {
         </nav>
       </header>
 
-      <div className="px-6 pt-14 lg:px-8">
+      <div className="px-8 lg:px-8">
         <div
           className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
           aria-hidden="true"
@@ -64,7 +64,7 @@ export default function Example() {
           />
         </div>
 
-        <div className="mx-auto max-w-4xl py-32 sm:py-24 lg:py-32 min-h-screen">
+        <div className="m-auto flex flex-col justify-center max-w-4xl min-h-screen">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20 flex flex-row gap-2">
               <p>{splashScreenTranslations.explorePartnerships}</p>
@@ -73,7 +73,7 @@ export default function Example() {
                 className="flex flex-row gap-2 font-semibold text-primary"
                 aria-hidden="true"
               >
-                <p>Contact sales</p>
+                <p>{splashScreenTranslations.contactSales}</p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -125,6 +125,13 @@ export default function Example() {
           />
         </div>
       </div>
+
+      <h2 className="text-center text-2xl font-bold">
+        {splashScreenTranslations.supportedBy}
+      </h2>
+
+      <PrimaryCloudLogo />
+      <SecondaryCloudLogo />
 
       <footer className="container pt-5 pb-2 mx-auto space-y-2">
         <div className="flex">
@@ -195,7 +202,9 @@ export default function Example() {
                 </h3>
                 <Link
                   href="/privacidad"
-                  className="block mt-2 text-gray-600  hover:underline"
+                  className="block mt-2 text-gray-600 hover:underline pointer-events-none"
+                  aria-disabled
+                  tabIndex={-1}
                 >
                   {footerTranslations.privPolicy}
                 </Link>
