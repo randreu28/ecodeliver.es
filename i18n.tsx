@@ -50,9 +50,9 @@ export const i18nNavBar = {
 export const i18nParticular = {
   es: {
     /* MetaData */
-    metaTitle: "ecoDeliver - El BlaBlaCar de la paquetería, sostenible",
+    metaTitle: "Tecnología disruptiva para la entrega sostenible",
     metaDescription:
-      "Transporte de paquetería sostenible, mediante una entrega colaborativa que te permite cubrir los costes de tus viajes en coche por España",
+      "Iniciando la transformación de la entrega sostenible con tecnología inteligente y disruptiva. Estamos preparando más novedades para ti.",
 
     /* Header */
     heroSentence: "Viaja y únete a la comunidad de entrega de paquetería más",
@@ -400,9 +400,9 @@ export const i18nParticular = {
 
   en: {
     /* MetaData */
-    metaTitle: "ecoDeliver - The sustainable BlaBlacar of deliveries",
+    metaTitle: "Disruptive technology for sustainable delivery",
     metaDescription:
-      "Sustainable parcel delivery transportation, through a collaborative delivery that allows you to cover the costs of your car trips in Spain",
+      "Beginning the transformation of sustainable delivery with smart, disruptive technology. More to come soon.",
 
     /* Header */
     heroSentence:
