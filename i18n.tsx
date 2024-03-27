@@ -1672,26 +1672,27 @@ export const i18nCompromisos = {
     call: "Download",
   },
 };
-
 export const i18nSplashScreen = {
   es: {
     heroTitle1: "Tecnología disruptiva para la entrega ",
     heroTitle2: "",
     description:
-      "Transformando la entrega sostenible con tecnología inteligente y disruptiva",
+      "Iniciando la transformación de la entrega sostenible con tecnología inteligente y disruptiva. Estamos preparando más novedades para ti.",
     explorePartnerships: "Explorando nuevos horizontes para partners",
-    contactSales: "Contactar ventas",
+    contactSales: "Contáctanos",
     getInTouch: "Ponte en contacto",
     learnMore: "Aprende más",
+    supportedBy: "Apoyado por...",
   },
   en: {
     heroTitle1: "Disruptive technology for ",
     heroTitle2: "delivery",
     description:
-      "Transforming sustainable delivery with smart, disruptive technology",
+      "Beginning the transformation of sustainable delivery with smart, disruptive technology. More to come soon.",
     explorePartnerships: "Exploring new horizons for partnership.",
     contactSales: "Contact sales",
     getInTouch: "Get in touch",
     learnMore: "Learn more",
+    supportedBy: "Supported by...",
   },
 };
