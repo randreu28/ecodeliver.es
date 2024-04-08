@@ -56,7 +56,7 @@ export const i18nParticular = {
 
     /* Header */
     heroSentence: "Viaja y únete a la comunidad de entrega de paquetería más",
-    wooblyTexts: ["sostenible", "transparente", "diferente"],
+    wooblyTexts: ["sostenible", "colaborativo", "eficiente"],
     heroCtaDescription: "Haz el seguimiento de tu paquete:",
     heroCtaPlaceholder: "Número de seguimiento",
     heroCta: "Busca",
@@ -1674,10 +1674,10 @@ export const i18nCompromisos = {
 };
 export const i18nSplashScreen = {
   es: {
-    heroTitle1: "Tecnología disruptiva para la entrega ",
+    heroTitle1: "Tecnología disruptiva para un transporte ",
     heroTitle2: "",
     description:
-      "Iniciando la transformación de la entrega sostenible con tecnología inteligente y disruptiva. Estamos preparando más novedades para ti.",
+      "Únete a la transformación del transporte sostenible apostando por tecnología disruptiva. Estamos preparando grandes novedades.",
     explorePartnerships: "Explorando nuevos horizontes para partners",
     contactSales: "Contáctanos",
     getInTouch: "Ponte en contacto",
@@ -1686,9 +1686,9 @@ export const i18nSplashScreen = {
   },
   en: {
     heroTitle1: "Disruptive technology for ",
-    heroTitle2: "delivery",
+    heroTitle2: "transportation",
     description:
-      "Beginning the transformation of sustainable delivery with smart, disruptive technology. More to come soon.",
+      "Join the transformation of sustainable transportation through smart & disruptive technology. Big updates coming soon.",
     explorePartnerships: "Exploring new horizons for partnership.",
     contactSales: "Contact sales",
     getInTouch: "Get in touch",
