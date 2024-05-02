@@ -37,8 +37,9 @@ const { title, description, keywords, image } = Astro.props;
   <body class="dark">
     <Navbar />
 
-    <slot />
-
+    <div class="min-h-screen">
+      <slot />
+    </div>
     <Footer />
   </body>
 </html>
