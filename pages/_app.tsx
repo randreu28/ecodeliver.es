@@ -9,6 +9,8 @@ import type { AppProps, NextWebVitalsMetric } from "next/app";
 import { DefaultSeo } from "next-seo";
 import { useRouter } from "next/router";
 import { i18nParticular } from "../i18n";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 
 export function reportWebVitals({
   id,
@@ -64,6 +66,8 @@ function MyApp({ Component, pageProps }: AppProps) {
         }}
       />
       <GoogleAnalytics />
+      <SpeedInsights />
+      <Analytics />
       <Component {...pageProps} />
     </>
   );
