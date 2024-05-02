@@ -9,7 +9,7 @@ import type { AppProps, NextWebVitalsMetric } from "next/app";
 import { DefaultSeo } from "next-seo";
 import { useRouter } from "next/router";
 import { i18nParticular } from "../i18n";
-import { SpeedInsights } from "@vercel/speed-insights/next";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
 
 export function reportWebVitals({
@@ -28,6 +28,7 @@ export function reportWebVitals({
 
 function MyApp({ Component, pageProps }: AppProps) {
   usePageViews();
+  const router = useRouter()
 
   const translations = i18nParticular[useRouter().locale as "es" | "en"];
 
@@ -66,7 +67,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         }}
       />
       <GoogleAnalytics />
-      <SpeedInsights />
+      <SpeedInsights route={router.pathname} />
       <Analytics />
       <Component {...pageProps} />
     </>
