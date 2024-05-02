@@ -57,7 +57,7 @@ export const ecoDeliverTheme = plugin(
         "@apply border-border": {},
       },
       body: {
-        "@apply bg-slate-100 dark:bg-neutral-900 text-foreground": {},
+        "@apply bg-background text-foreground font-urbanist": {},
       },
     });
   },
@@ -128,6 +128,9 @@ export const ecoDeliverTheme = plugin(
         animation: {
           "accordion-down": "accordion-down 0.2s ease-out",
           "accordion-up": "accordion-up 0.2s ease-out",
+        },
+        fontFamily: {
+          urbanist: ["Urbanist"],
         },
       },
     },

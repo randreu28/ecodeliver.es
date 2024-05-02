@@ -32,6 +32,21 @@ const { title, description, keywords, image } = Astro.props;
     <meta name="twitter:image" content={image} />
   </head>
   <body>
+    <nav
+      class="flex items-center justify-between p-6 lg:px-8"
+      aria-label="Global"
+    >
+      <img src="/media/brand/logo.svg" width={50} height={50} alt="logo" />
+      <h2 class="my-auto text-2xl font-semibold">
+        <span class="text-primary">eco</span>
+        <span>Deliver</span>
+      </h2>
+    </nav>
+
     <slot />
   </body>
 </html>
+
+<style is:global>
+  @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+</style>
