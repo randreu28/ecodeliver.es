@@ -6,8 +6,9 @@ interface Props {
   description: string;
   keywords: string;
   image: string;
+  date?: Date;
 }
-const { title, description, keywords, image } = Astro.props;
+const { title, description, keywords, image, date } = Astro.props;
 ---
 
 <!doctype html>
@@ -19,6 +20,7 @@ const { title, description, keywords, image } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/media/brand/logo.svg" />
     <title>{title}</title>
+    {date && <meta name="date" content={date.toISOString()} />}
 
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
