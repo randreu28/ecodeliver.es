@@ -1,15 +1,24 @@
 import { useScramble } from "use-scramble";
+import type { UseScrambleProps } from "use-scramble";
 import { useEffect, useState } from "react";
 
-interface Props extends React.HTMLAttributes<HTMLParagraphElement> {
+interface Props extends React.HTMLAttributes<HTMLSpanElement> {
   texts: string[];
   frequency: number;
+  scrambleProps?: UseScrambleProps;
 }
 
-export default function DynamicText({ texts, frequency, ...props }: Props) {
+export default function DynamicText({
+  texts,
+  frequency,
+  scrambleProps,
+  ...props
+}: Props) {
   const [index, setIndex] = useState<number>(0);
   const { ref } = useScramble({
     text: texts[index],
+    speed: 0.5,
+    ...scrambleProps,
   });
 
   useEffect(() => {
@@ -25,5 +34,5 @@ export default function DynamicText({ texts, frequency, ...props }: Props) {
     return () => clearTimeout(intervalId);
   }, []);
 
-  return <p ref={ref} {...props} />;
+  return <span ref={ref} {...props} />;
 }
