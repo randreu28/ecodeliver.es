@@ -1,0 +1,67 @@
+---
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Corporate Image"
+  description="La marca corporativa de ecoDeliver, libre de uso para todo el mundo"
+  keywords="imagen, marca, corporativa,logo, ecoDeliver"
+  image="/media/brand/manual.png"
+>
+  <div class="container mx-auto p-5 space-y-5">
+    <h2 class="text-5xl font-bold">Nuestra identidad corporativa 🙌</h2>
+
+    <p class="text-lg text-foreground">
+      El propósito de estas pautas es facilitar que cualquiera que quiera usar
+      nuestra imagen corporativa pueda hacerlo respetando nuestra marca y
+      valores corporativos. Han sido diseñadas para asegurar que la marca
+      represente nuestros valores de la forma en que lo pretendíamos.
+    </p>
+
+    <p class="text-lg text-foreground">
+      ¿Eres un creativo? Considera valorarnos en <a
+        class="text-primary underline"
+        href="https://www.behance.net/gallery/125864213/ecoDeliver-Brand-Guidlines-20"
+        >Behance!</a
+      >
+    </p>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+      <Card
+        title="Manual de identidad"
+        picture="/media/brand/manual.png"
+        description="El manual contiene todo lo que necesitas para utilizar nuestra marca de la manera en que lo pretendíamos."
+        cta="Descargar"
+        href="/media/brand/manual.pdf"
+        download="ecoDeliver_brand_manual.pdf"
+      />
+
+      <Card
+        title="Logo"
+        picture="/media/brand/logo.png"
+        description="Incluye el logo en diferentes formatos (rasterizado, vectorial) y en diferentes temas (claro, oscuro)."
+        cta="Descargar"
+        href="/media/brand/logo.zip"
+        download="ecoDeliver_brand_logo.zip"
+      />
+
+      <Card
+        title="Tipografía"
+        picture="/media/brand/typography.png"
+        description="Nuestra tipografía de preferencia es Urbanist, diseñada por Corey Hu y una de las fuentes libres de Google Fonts."
+        cta="Descargar"
+        href="https://fonts.google.com/specimen/Urbanist?query=urbanist"
+      />
+
+      <Card
+        title="Líneas de soporte"
+        picture="/media/brand/logo.png"
+        description="Incluye diferentes líneas de soporte con diferentes tamaños, formas y longitudes."
+        cta="Descargar"
+        href="/media/brand/support-lines.zip"
+        download="ecoDeliver_brand_support_lines.zip"
+      />
+    </div>
+  </div>
+</Layout>
