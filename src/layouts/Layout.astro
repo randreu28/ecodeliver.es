@@ -8,6 +8,7 @@ interface Props {
   image: string;
   date?: Date;
   invisible?: boolean;
+  section?: string;
 }
 const {
   title,
@@ -16,6 +17,7 @@ const {
   image,
   date,
   invisible = false,
+  section,
 } = Astro.props;
 
 const cookie = Astro.request.headers.get("cookie");
@@ -52,7 +54,7 @@ const theme = cookie?.split("theme=")[1].split(";")[0];
   </head>
 
   <body>
-    <Navbar />
+    <Navbar section={section} />
 
     <!-- Background -->
     <div>
