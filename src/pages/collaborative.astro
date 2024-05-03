@@ -1,0 +1,20 @@
+---
+import Image from "astro/components/Image.astro";
+import Layout from "../layouts/Layout.astro";
+import stockImage from "../../public/media/stockImage3.jpg";
+---
+
+<Layout
+  title="Nuestro orígen"
+  description="Pioneros en la sostenibilidad a través de la colaboración"
+  keywords="ecoDeliver, tecnología, transporte, sostenible, eficiente, colaborativo"
+  image="/media/stockImage3.jpg"
+  section="/collaborative"
+>
+  <Image src={stockImage} alt="Caixa Bank" class="max-w-4xl mx-auto my-10" />
+
+  <div class="max-w-4xl mx-auto prose prose-lg dark:prose-invert">
+    <h2>Transporte colaborativo</h2>
+    <p>TODO</p>
+  </div>
+</Layout>

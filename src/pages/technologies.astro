@@ -1,0 +1,194 @@
+---
+import Image from "astro/components/Image.astro";
+import Layout from "../layouts/Layout.astro";
+import stockImage from "../../public/media/stockImage1.jpg";
+import ContactForm from "../components/ContactForm";
+---
+
+<Layout
+  title="Tecnología"
+  description="Pioneros en la sostenibilidad a través de la colaboración"
+  keywords="ecoDeliver, tecnología, transporte, sostenible, eficiente, colaborativo"
+  image="/media/stockImage1.jpg"
+  section="/technologies"
+>
+  <Image src={stockImage} alt="Caixa Bank" class="max-w-4xl mx-auto my-10" />
+
+  <section class="">
+    <div class="container px-6 py-10 mx-auto">
+      <h1 class="text-4xl font-semibold lg:text-3xl text-center">
+        Pioneros en la
+        <span class="underline decoration-primary">innovación</span>
+        tecnológica
+      </h1>
+
+      <p class="mt-4 xl:mt-6 text-muted-foreground text-center">
+        Capacitados para el desarrollo de aplicaciones de tecnología logística,
+        inteligencia artificial, optimización de rutas y más
+      </p>
+
+      <div
+        class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3"
+      >
+        <div class="p-8 space-y-3 border-2 border-primary rounded-xl">
+          <span class="inline-block text-primary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="size-8"><path d="M18 7V4H6l6 8-6 8h12v-3"></path></svg
+            >
+          </span>
+
+          <h1 class="text-xl font-semibold">
+            Algoritmos de coincidencia de demanda y precios
+          </h1>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+            ab nulla quod dignissimos vel non corrupti doloribus voluptatum
+            eveniet
+          </p>
+        </div>
+
+        <div class="p-8 space-y-3 border-2 border-primary rounded-xl">
+          <span class="inline-block text-primary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-8 h-8"
+              ><path d="M12 8V4H8"></path><rect
+                width="16"
+                height="12"
+                x="4"
+                y="8"
+                rx="2"></rect><path d="M2 14h2"></path><path d="M20 14h2"
+              ></path><path d="M15 13v2"></path><path d="M9 13v2"></path></svg
+            >
+          </span>
+
+          <h1 class="text-xl font-semibold">
+            Inteligencia artificial para logística
+          </h1>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+            ab nulla quod dignissimos vel non corrupti doloribus voluptatum
+            eveniet
+          </p>
+        </div>
+
+        <div class="p-8 space-y-3 border-2 border-primary rounded-xl">
+          <span class="inline-block text-primary">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="size-8"
+              ><circle cx="12" cy="4.5" r="2.5"></circle><path
+                d="m10.2 6.3-3.9 3.9"></path><circle cx="4.5" cy="12" r="2.5"
+              ></circle><path d="M7 12h10"></path><circle
+                cx="19.5"
+                cy="12"
+                r="2.5"></circle><path d="m13.8 17.7 3.9-3.9"></path><circle
+                cx="12"
+                cy="19.5"
+                r="2.5"></circle></svg
+            >
+          </span>
+
+          <h1 class="text-xl font-semibold">
+            Optimización de rutas en tiempo real
+          </h1>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+            ab nulla quod dignissimos vel non corrupti doloribus voluptatum
+            eveniet
+          </p>
+        </div>
+      </div>
+
+      <div class="max-w-4xl mx-auto prose prose-lg dark:prose-invert my-10">
+        <h1>Lorem ipsum</h1>
+        <blockquote>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </blockquote>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae
+          veritatis repellendus ratione quod qui vel, similique incidunt,
+          voluptate magni repellat et, ad ipsum quam consequatur? Facilis,
+          obcaecati fugit! Neque, vero!
+        </p>
+        <p>
+          Motivados por la creencia de que este espacio desperdiciado podría ser
+          aprovechado para transportar bienes de manera sostenible, nos
+          propusimos crear soluciones innovadoras que optimizaran la utilización
+          de los recursos existentes. Nuestra primera incursión involucró la
+          pionera de un modelo similar a "blablacar" pero adaptado para
+          paquetes, donde individuos podían aprovechar sus viajes planificados
+          para transportar paquetes a largas distancias, utilizando
+          efectivamente la capacidad sobrante de sus vehículos.
+        </p>
+        <p>
+          A medida que perfeccionamos nuestro modelo y expandimos nuestro
+          alcance, nos adentramos más en el ámbito de los operadores de
+          transporte de movilidad profesional, visualizando un futuro donde
+          incluso las líneas de autobuses podrían aprovechar el espacio
+          disponible en sus maleteros para transportar bienes, reduciendo así
+          aún más las emisiones de carbono y maximizando la eficiencia.
+        </p>
+        <h2>De Concepto a Realidad</h2>
+        <p>
+          Lo que comenzó como una iniciativa de base para abordar un problema
+          ambiental urgente pronto evolucionó hacia un próspero ecosistema de
+          soluciones de transporte sostenible. A medida que nuestro equipo
+          creció, también lo hizo nuestra experiencia, conocimiento del sector y
+          capacidades tecnológicas. Esta evolución allanó el camino para una
+          progresión natural hacia la oferta de nuestros servicios a otras
+          empresas dentro de la industria.
+        </p>
+        <h2>Expandiendo Horizontes</h2>
+        <p>
+          Hoy, ecoDeliver se encuentra a la vanguardia de la innovación en
+          transporte sostenible, con un enfoque multifacético que abarca tanto
+          la provisión de servicios como el desarrollo tecnológico. Basándonos
+          en nuestros principios fundamentales de colaboración y sostenibilidad,
+          ahora ofrecemos una gama de soluciones impulsadas por la tecnología
+          diseñadas para empoderar a las empresas en los sectores de transporte,
+          logística y movilidad.
+        </p>
+        <h2>Impulsando el Cambio Juntos</h2>
+        <p>
+          Nuestro viaje está lejos de terminar. Permanecemos firmes en nuestro
+          compromiso de impulsar un cambio positivo dentro de la industria del
+          transporte, una colaboración a la vez. Únete a nosotros mientras
+          continuamos explorando nuevas oportunidades, forjando asociaciones
+          significativas y liderando soluciones innovadoras que dan forma al
+          futuro de la movilidad sostenible.
+        </p>
+      </div>
+
+      <ContactForm />
+    </div>
+  </section>
+</Layout>
