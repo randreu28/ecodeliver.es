@@ -25,8 +25,8 @@ const { Content } = await post.render();
     />
     <div class="text-center space-y-4 pb-32">
       <p class="line-clamp-1">{post.data.date.toLocaleDateString()}</p>
-      <h1 class="text-5xl font-bold line-clamp-1">{post.data.title}</h1>
-      <p class="font-light max-w-3xl mx-auto line-clamp-3">
+      <h1 class="text-5xl font-bold">{post.data.title}</h1>
+      <p class="font-light max-w-3xl mx-auto">
         {post.data.description}
       </p>
     </div>
