@@ -9,10 +9,13 @@ interface Props {
   date?: Date;
 }
 const { title, description, keywords, image, date } = Astro.props;
+
+const cookie = Astro.request.headers.get("cookie");
+const theme = cookie?.split("theme=")[1].split(";")[0];
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class={theme ? theme : ""}>
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content={description} />
@@ -36,7 +39,7 @@ const { title, description, keywords, image, date } = Astro.props;
     <meta name="twitter:image" content={image} />
   </head>
 
-  <body class="dark">
+  <body>
     <Navbar />
 
     <!-- Background -->

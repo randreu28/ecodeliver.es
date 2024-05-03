@@ -1,11 +1,15 @@
+---
+import ThemeToggler from "./ThemeToggler";
+---
+
 <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
-  <a href="/">
+  <a href="/" class="flex items-center gap-4">
     <img src="/media/brand/logo.svg" width={50} height={50} alt="logo" />
-  </a>
-  <a href="/">
+
     <h2 class="my-auto text-2xl font-semibold">
       <span class="text-primary">eco</span>
       <span class="-ml-1">Deliver</span>
     </h2>
   </a>
+  <ThemeToggler client:only="react" />
 </nav>
