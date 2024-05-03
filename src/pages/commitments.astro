@@ -1,0 +1,67 @@
+---
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Compromisos"
+  description="En ecoDeliver, creemos en ser transparentes con nuestras metas y objetivos. Es por ello que queremos dejar al ojo público todo lo que nos proponemos."
+  keywords="Compromisos"
+  image="/media/brand/manual.png"
+>
+  <div class="container mx-auto p-5 space-y-5">
+    <h2 class="text-5xl font-bold">Nuestros compromisos 🙌</h2>
+
+    <p class="text-lg text-foreground">
+      En ecoDeliver, creemos en ser transparentes con nuestras metas y
+      objetivos. Es por ello que queremos dejar al ojo público todo lo que nos
+      proponemos.
+    </p>
+
+    <p class="text-lg text-foreground">
+      ¿Eres un creativo? Considera valorarnos en <a
+        class="text-primary underline"
+        href="https://www.behance.net/gallery/125864213/ecoDeliver-Brand-Guidlines-20"
+        >Behance!</a
+      >
+    </p>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
+      <Card
+        title="Política de anticorrupción"
+        picture="/media/brand/manual.png"
+        description="La política anticorrupción contiene todas nuestras medidas anticorrupción, así como la protección de nuestra misión y canales de comunicación para cualquier incidencia."
+        cta="Descargar"
+        href="/media/compromises/anticorrupcion.pdf"
+        download="ecoDeliver_anticorrupcion.pdf"
+      />
+
+      <Card
+        title="Código ético"
+        picture="/media/brand/manual.png"
+        description="Nuestro código ético resume nuestras creencias, valores y visión. Resalta nuestra manera de resolver conflictos de interés, confidencialidad y seguridad de información, entre otros."
+        cta="Descargar"
+        href="/media/compromises/codigo_etico.pdf"
+        download="ecoDeliver_codigo_etico.pdf"
+      />
+
+      <Card
+        title="Política de protección al cliente"
+        picture="/media/brand/manual.png"
+        description="Nuestra política de protección al cliente detalla la comunicación a nuestros clientes, el procedimiento y el plazo, el allanamiento y desistimiento, entre otros."
+        cta="Descargar"
+        href="/media/compromises/politica_proteccion_cliente.pdf"
+        download="ecoDeliver_politica_proteccion_cliente.pdf"
+      />
+
+      <Card
+        title="Plan de igualdad"
+        picture="/media/brand/manual.png"
+        description="Nuestro plan de igualdad incluye nuestros objetivos generales en materia de igualdad, condiciones de trabajo, ejercicio responsable sobre los derechos de la vida personal, familiar y laboral, entre otros."
+        cta="Descargar"
+        href="/media/compromises/plan_igualdad.pdf"
+        download="ecoDeliver_plan_igualdad.pdf"
+      />
+    </div>
+  </div>
+</Layout>
