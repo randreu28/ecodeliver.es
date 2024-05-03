@@ -1,4 +1,33 @@
+import { useForm } from "@formcarry/react";
+import { useRef } from "react";
+import { cn } from "../utils/utils";
+
 export default function ContactForm() {
+  const formRef = useRef<HTMLFormElement>(null!);
+  const { state, submit } = useForm({
+    id: "GPN_9w1_XvW",
+  });
+
+  function handleSubmit(e: React.SyntheticEvent<HTMLFormElement>) {
+    e.preventDefault();
+    submit(e);
+    formRef.current.reset();
+  }
+
+  let buttonText = "Enviar";
+
+  if (state.submitting) {
+    buttonText = "Enviando...";
+  }
+
+  if (state.submitted) {
+    buttonText = "Enviado!";
+  }
+
+  if (state.error) {
+    buttonText = "Algo ha ido mal. Inténtalo de nuevo más tarde";
+  }
+
   return (
     <section className="my-10">
       <div className="container px-6 py-12 mx-auto">
@@ -60,10 +89,15 @@ export default function ContactForm() {
                 ¿En qué te podemos ayudar?
               </h1>
 
-              <form className="mt-6">
+              <form className="mt-6" onSubmit={handleSubmit}>
                 <div className="flex-1">
-                  <label className="block mb-2 text-sm ">Nombre</label>
+                  <label htmlFor="name" className="block mb-2 text-sm ">
+                    Nombre
+                  </label>
                   <input
+                    id="name"
+                    required
+                    name="name"
                     type="text"
                     placeholder="Elon Musk"
                     className="block w-full px-5 py-3 mt-2 bg-background placeholder-gray-400 border border-muted-foreground rounded-md focus:border-primary focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40"
@@ -71,10 +105,16 @@ export default function ContactForm() {
                 </div>
 
                 <div className="flex-1 mt-6">
-                  <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">
+                  <label
+                    htmlFor="email"
+                    className="block mb-2 text-sm text-gray-600 dark:text-gray-200"
+                  >
                     Email address
                   </label>
                   <input
+                    required
+                    id="email"
+                    name="email"
                     type="email"
                     placeholder="elon@tesla.com"
                     className="block w-full px-5 py-3 mt-2 bg-background placeholder-gray-400 border border-muted-foreground rounded-md focus:border-primary focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40"
@@ -82,17 +122,30 @@ export default function ContactForm() {
                 </div>
 
                 <div className="w-full mt-6">
-                  <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">
+                  <label
+                    htmlFor="message"
+                    className="block mb-2 text-sm text-gray-600 dark:text-gray-200"
+                  >
                     Mensaje
                   </label>
                   <textarea
+                    required
+                    id="message"
+                    name="message"
                     className="block w-full px-5 py-3 mt-2 bg-background placeholder-gray-400 border border-muted-foreground rounded-md focus:border-primary focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40 h-32"
                     placeholder="Quiero regalaros unos teslas..."
                   />
                 </div>
 
-                <button className="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide capitalize transition-colors duration-300 transform bg-primary rounded-md hover:bg-primary/90 focus:outline-none focus:ring focus:ring-primary focus:ring-opacity-50">
-                  Contáctanos
+                <button
+                  className={cn([
+                    "w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-foreground transition-colors duration-300 transform rounded-md focus:outline-none bg-primary",
+                    state.submitting && "bg-gray-500 cursor-wait",
+                    state.submitted && "bg-primary",
+                    state.error && "bg-destructive",
+                  ])}
+                >
+                  {buttonText}
                 </button>
               </form>
             </div>
