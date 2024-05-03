@@ -2,15 +2,18 @@
 import { getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 
-const posts = await getCollection("posts");
+return Astro.redirect("/404");
+
+/* const posts = await getCollection("posts");
 
 const { slug } = Astro.params;
 const post = posts.find((post) => post.slug === slug);
 if (!post) return Astro.redirect("/404");
 
-const { Content } = await post.render();
+const { Content } = await post.render(); */
 ---
 
+<!-- 
 <Layout
   title={post.data.title}
   description={post.data.description}
@@ -35,3 +38,4 @@ const { Content } = await post.render();
     </div>
   </div>
 </Layout>
+ -->

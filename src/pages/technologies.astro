@@ -1,8 +1,6 @@
 ---
-import Image from "astro/components/Image.astro";
-import Layout from "../layouts/Layout.astro";
-import stockImage from "../../public/media/stockImage1.jpg";
 import ContactForm from "../components/ContactForm";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout
@@ -12,7 +10,11 @@ import ContactForm from "../components/ContactForm";
   image="/media/stockImage1.jpg"
   section="/technologies"
 >
-  <Image src={stockImage} alt="Caixa Bank" class="max-w-4xl mx-auto my-10" />
+  <img
+    src="/media/stockImage1.jpg"
+    alt="Caixa Bank"
+    class="max-w-4xl mx-auto my-10"
+  />
 
   <section class="">
     <div class="container px-6 py-10 mx-auto">

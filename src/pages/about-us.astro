@@ -1,7 +1,5 @@
 ---
-import Image from "astro/components/Image.astro";
 import Layout from "../layouts/Layout.astro";
-import originsPic from "../../public/media/articles/caixaBankArticle.jpg";
 ---
 
 <Layout
@@ -11,7 +9,11 @@ import originsPic from "../../public/media/articles/caixaBankArticle.jpg";
   image="/media/articles/caixaBankArticle.jpg"
   section="/about-us"
 >
-  <Image src={originsPic} alt="Caixa Bank" class="max-w-4xl mx-auto my-10" />
+  <img
+    src="/media/articles/caixaBankArticle.jpg"
+    alt="Caixa Bank"
+    class="max-w-4xl mx-auto my-10"
+  />
 
   <div class="max-w-4xl mx-auto prose prose-lg dark:prose-invert">
     <h1>Nuestro Orígen</h1>
