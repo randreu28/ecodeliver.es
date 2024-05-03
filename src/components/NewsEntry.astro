@@ -1,0 +1,51 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image: string;
+  href: string;
+
+  author: string;
+  newsPaper: string;
+  newsLogo: string;
+}
+const { title, description, image, href, author, newsLogo, newsPaper } =
+  Astro.props;
+---
+
+<div>
+  <div class="relative">
+    <img
+      class="object-cover object-center w-full h-64 rounded-lg lg:h-80"
+      src={image}
+      alt=""
+    />
+
+    <div class="absolute bottom-0 flex p-3 bg-white dark:bg-gray-900">
+      <img
+        class="object-cover object-center w-10 h-10 rounded-full"
+        src={newsLogo}
+        alt=""
+      />
+
+      <div class="mx-4">
+        <h1 class="text-sm text-gray-700 dark:text-gray-200">{author}</h1>
+        <p class="text-sm text-gray-500 dark:text-gray-400">{newsPaper}</p>
+      </div>
+    </div>
+  </div>
+
+  <h1 class="mt-6 text-xl font-semibold text-gray-800 dark:text-white">
+    {title}
+  </h1>
+
+  <hr class="w-32 my-6 text-blue-500" />
+
+  <p class="text-sm text-gray-500 dark:text-gray-400">{description}</p>
+
+  <a
+    href="#"
+    class="inline-block mt-4 text-blue-500 underline hover:text-blue-400"
+    >Read more</a
+  >
+</div>

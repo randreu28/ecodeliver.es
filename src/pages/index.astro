@@ -1,6 +1,7 @@
 ---
 import CloudLogos from "../components/CloudLogos.astro";
 import DynamicText from "../components/DynamicText";
+import NewsEntry from "../components/NewsEntry.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -331,6 +332,50 @@ import Layout from "../layouts/Layout.astro";
     >
     </div>
   </div>
+
+  <!-- News -->
+
+  <section>
+    <div class="container px-6 py-10 mx-auto">
+      <div class="text-center">
+        <h1 class="text-2xl font-semibold capitalize lg:text-3xl">Noticias</h1>
+      </div>
+
+      <div
+        class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2 xl:grid-cols-3"
+      >
+        <NewsEntry
+          title="La vanguardia"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugit dolorum amet dolores praesentium, alias nam? Tempore"
+          image="/media/articles/araArticle.webp"
+          href="/"
+          author="Tom Hank"
+          newsPaper="La vanguardia"
+          newsLogo="https://play-lh.googleusercontent.com/_LHdH6rPNns7806B0wc-eYjlgOh45dg3b5NjMwlLqQ0P3vGaEDxeHQLqizW-k6rwpSfw"
+        />
+
+        <NewsEntry
+          title="La vanguardia"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugit dolorum amet dolores praesentium, alias nam? Tempore"
+          image="/media/articles/araArticle.webp"
+          href="/"
+          author="Tom Hank"
+          newsPaper="La vanguardia"
+          newsLogo="https://play-lh.googleusercontent.com/_LHdH6rPNns7806B0wc-eYjlgOh45dg3b5NjMwlLqQ0P3vGaEDxeHQLqizW-k6rwpSfw"
+        />
+
+        <NewsEntry
+          title="La vanguardia"
+          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugit dolorum amet dolores praesentium, alias nam? Tempore"
+          image="/media/articles/araArticle.webp"
+          href="/"
+          author="Tom Hank"
+          newsPaper="La vanguardia"
+          newsLogo="https://play-lh.googleusercontent.com/_LHdH6rPNns7806B0wc-eYjlgOh45dg3b5NjMwlLqQ0P3vGaEDxeHQLqizW-k6rwpSfw"
+        />
+      </div>
+    </div>
+  </section>
 
   <CloudLogos />
 </Layout>
