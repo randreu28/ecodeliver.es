@@ -15,21 +15,6 @@ import Layout from "../layouts/Layout.astro";
   <div
     class="m-auto flex flex-col justify-center max-w-4xl min-h-[calc(100vh-100px)] text-center px-4"
   >
-    <!-- Background -->
-    <div
-      class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
-      aria-hidden="true"
-    >
-      <div
-        class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-primary to-blue-700 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-        style={{
-          clipPath:
-            "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-        }}
-      >
-      </div>
-    </div>
-
     <!-- Contact us header -->
     <div class="mb-8 sm:flex sm:justify-center mx-auto">
       <div
@@ -68,7 +53,7 @@ import Layout from "../layouts/Layout.astro";
       <DynamicText
         frequency={2000}
         texts={["sostenible", "eficiente", "colaborativo"]}
-        className="text-4xl font-bold tracking-tight text-primary sm:text-6xl"
+        className="text-4xl font-bold tracking-tight bg-gradient-to-r text-transparent bg-clip-text from-primary to-teal-500 sm:text-6xl"
         client:load
       />
     </h1>
@@ -77,21 +62,6 @@ import Layout from "../layouts/Layout.astro";
       Únete a la transformación del transporte sostenible apostando por
       tecnología disruptiva. Estamos preparando grandes novedades.
     </p>
-
-    <!-- Background -->
-    <div
-      class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
-      aria-hidden="true"
-    >
-      <div
-        class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-primary to-blue-700 opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
-        style={{
-          clipPath:
-            "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-        }}
-      >
-      </div>
-    </div>
   </div>
 
   <!-- Section 1 -->
@@ -100,19 +70,19 @@ import Layout from "../layouts/Layout.astro";
     <div class="lg:-mx-6 lg:flex lg:items-center lg:space-x-12">
       <img
         class="object-cover object-center lg:w-1/2 lg:mx-6 w-full h-96 rounded-lg lg:h-[36rem]"
-        src="https://images.unsplash.com/photo-1499470932971-a90681ce8530?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+        src="/media/pilotTest.jpg"
         alt=""
       />
 
       <div class="lg:pr-8 pt-4 my-auto">
         <div class="lg:max-w-lg">
           <h2 class="text-base font-semibold leading-7 text-primary">
-            Deploy faster
+            Featuring
           </h2>
           <p
             class="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
           >
-            A better workflow
+            Avant-guard technology from point A to point B
           </p>
           <p class="mt-6 text-lg leading-8">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
@@ -197,21 +167,6 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- Background -->
-  <div
-    class="absolute top-[1117px] inset-x-0 -z-10 transform-gpu overflow-hidden blur-3xl"
-    aria-hidden="true"
-  >
-    <div
-      class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-primary to-blue-700 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-      style={{
-        clipPath:
-          "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
-      }}
-    >
-    </div>
-  </div>
-
   <!-- Section 2 -->
   <section class="overflow-hidden py-24 sm:py-32">
     <div class="mx-auto max-w-7xl px-6 lg:px-8">
@@ -221,12 +176,12 @@ import Layout from "../layouts/Layout.astro";
         <div class="lg:pr-8 lg:pt-4 my-auto">
           <div class="lg:max-w-lg">
             <h2 class="text-base font-semibold leading-7 text-primary">
-              Deploy faster
+              Featuring
             </h2>
             <p
               class="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
             >
-              A better workflow
+              The network for collaborative transportation
             </p>
             <p class="mt-6 text-lg leading-8">
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores
@@ -309,7 +264,7 @@ import Layout from "../layouts/Layout.astro";
           </div>
         </div>
         <img
-          src="https://tailwindui.com/img/component-images/dark-project-app-screenshot.png"
+          src="/media/pilotTest.jpg"
           alt="Product screenshot"
           class="max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 md:-ml-4 lg:-ml-0"
           width="1200"
@@ -318,23 +273,7 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </section>
 
-  <!-- Background -->
-  <div
-    class="absolute top-[2000px] inset-x-0 -z-10 transform-gpu overflow-hidden blur-3xl"
-    aria-hidden="true"
-  >
-    <div
-      class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-primary to-blue-700 opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
-      style={{
-        clipPath:
-          "polygon(25% 18%, 45% 54%, 35% 76%, 76% 44%, 94% 67%, 82% 100%, 31% 87%, 0% 30%)",
-      }}
-    >
-    </div>
-  </div>
-
   <!-- News -->
-
   <section>
     <div class="container px-6 py-10 mx-auto">
       <div class="text-center">
