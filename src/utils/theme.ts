@@ -28,7 +28,7 @@ export const ecoDeliverTheme = plugin(
         "--radius": "0.5rem",
       },
       ".dark": {
-        "--background": "20 14.3% 4.1%",
+        "--background": "140 20% 5%",
         "--foreground": "0 0% 95%",
         "--card": "24 9.8% 10%",
         "--card-foreground": "0 0% 95%",
