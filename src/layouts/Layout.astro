@@ -7,8 +7,16 @@ interface Props {
   keywords: string;
   image: string;
   date?: Date;
+  invisible?: boolean;
 }
-const { title, description, keywords, image, date } = Astro.props;
+const {
+  title,
+  description,
+  keywords,
+  image,
+  date,
+  invisible = false,
+} = Astro.props;
 
 const cookie = Astro.request.headers.get("cookie");
 const theme = cookie?.split("theme=")[1].split(";")[0];
@@ -22,6 +30,10 @@ const theme = cookie?.split("theme=")[1].split(";")[0];
     <meta name="keywords" content={keywords} />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/media/brand/logo.svg" />
+    <meta
+      name="robots"
+      content={invisible ? "noindex,follow" : "index,follow"}
+    />
     <title>{title}</title>
     {date && <meta name="date" content={date.toISOString()} />}
 

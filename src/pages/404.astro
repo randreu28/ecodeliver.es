@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import roberto from "../../public/media/Roberto.png";
+---
+
+<Layout
+  title="404"
+  description="Página no encontrada"
+  keywords="404, página no encontrada"
+  image="/media/brand/logo.png"
+  invisible
+>
+  <div
+    class="h-screen flex flex-col lg:flex-row pt-20 p-10 md:p-20 gap-10 md:gap-20"
+  >
+    <div class="m-auto text-center space-y-5">
+      <h1 class="text-primary text-5xl lg:text-8xl font-extrabold">
+        Página no encontrada
+      </h1>
+      <h2 class="text-3xl font-bold">
+        No hemos podido encontrar lo que buscabas...
+      </h2>
+      <p class="pt-5 text-xl max-w-lg mx-auto">
+        Para animarte, te introducimos a Roberto, la mascota oficial de
+        ecoDeliver!
+      </p>
+    </div>
+    <div class="m-auto">
+      <Image
+        alt=""
+        class="object-contain pb-10 lg:pb-0 w-[500px] xl:w-[600px] mx-auto"
+        src={roberto}
+        width={700}
+        height={700}
+        loading="eager"
+      />
+    </div>
+  </div>
+</Layout>
