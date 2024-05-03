@@ -1,5 +1,6 @@
 ---
 import CloudLogos from "../components/CloudLogos.astro";
+import ContactForm from "../components/ContactForm";
 import DynamicText from "../components/DynamicText";
 import NewsEntry from "../components/NewsEntry.astro";
 import Layout from "../layouts/Layout.astro";
@@ -277,7 +278,7 @@ import Layout from "../layouts/Layout.astro";
         <img
           src="/media/stockImage2.jpg"
           alt="Product screenshot"
-          class="max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 md:-ml-4 lg:-ml-0"
+          class="hidden lg:block max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 md:-ml-4 lg:-ml-0"
           width="1200"
         />
       </div>
@@ -326,6 +327,8 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
   </section>
+
+  <ContactForm client:visible />
 
   <!-- Logos -->
   <h1 class="text-2xl font-semibold capitalize lg:text-3xl text-center">
