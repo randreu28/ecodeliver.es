@@ -73,12 +73,18 @@ import Layout from "../layouts/Layout.astro";
 
   <!-- Section 1 -->
   <section class="container px-6 py-10 mx-auto">
-    <div class="lg:-mx-6 lg:flex lg:items-center lg:space-x-12">
-      <img
-        class="object-cover object-center lg:w-1/2 lg:mx-6 w-full h-96 rounded-lg lg:h-[36rem]"
-        src="/media/pilotTest.jpg"
-        alt=""
-      />
+    <div
+      class="lg:-mx-6 flex flex-col gap-5 lg:flex-row lg:items-center lg:space-x-12"
+    >
+      <video
+        autoplay="true"
+        loop="true"
+        muted
+        class="object-cover object-center lg:w-1/2 lg:mx-6 w-full h-96 rounded-lg lg:h-[36rem] order-2 lg:order-[0]"
+      >
+        <source src="/media/h3-video.mp4" type="video/mp4" />
+        Tu navegador no soporta videos
+      </video>
 
       <div class="lg:pr-8 pt-4 my-auto">
         <div class="lg:max-w-lg">
@@ -88,15 +94,15 @@ import Layout from "../layouts/Layout.astro";
           <p
             class="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
           >
-            Tecnología de vanguardia del punto A al punto B
+            Tecnología de vanguardia con análisis predictivo de demanada
           </p>
           <p class="mt-6 text-lg leading-8">
-            Nuestra Inteligencia Artificial aplicada a la logística aprovecha el
-            poder de algoritmos avanzados y análisis de datos para automatizar y
+            Nuestros sistema de análisis logístico aprovecha el poder de
+            algoritmos avanzados y análisis de datos para automatizar y
             optimizar procesos de enrutamiento, entrega y comunicación.
           </p>
           <dl
-            class="mt-10 max-w-xl space-y-8 text-base leading-7 text-muted-foregroundlg:max-w-none"
+            class="mt-10 max-w-xl space-y-8 text-base leading-7 text-muted-foreground lg:max-w-none"
           >
             <div class="relative pl-9">
               <dt class="inline font-semibold text-foreground">
@@ -170,124 +176,122 @@ import Layout from "../layouts/Layout.astro";
           </dl>
         </div>
 
-        <a href="/posts/test" class="inline-block mt-10 text-primary underline"
-          >Leer más</a
+        <a
+          href="/technologies"
+          class="inline-block mt-10 text-primary underline">Leer más</a
         >
       </div>
     </div>
   </section>
 
   <!-- Section 2 -->
-  <section class="overflow-hidden py-24 sm:py-32">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div
-        class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
-      >
-        <div class="lg:pr-8 lg:pt-4 my-auto">
-          <div class="lg:max-w-lg">
-            <h2 class="text-base font-semibold leading-7 text-primary">
-              Presentando
-            </h2>
-            <p
-              class="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
-            >
-              La red para transporte colaborativo 0 emisiones
-            </p>
-            <p class="mt-6 text-lg leading-8">
-              Desbloqueamos una logística eficiente y sostenible a través de la
-              colaboración. Conectamos empresas, operadores y conductores en una
-              plataforma unificada, facilitando una colaboración fluida y una
-              utilización optimizada de los recursos.
-            </p>
-            <dl
-              class="mt-10 max-w-xl space-y-8 text-base leading-7 text-muted-foregroundlg:max-w-none"
-            >
-              <div class="relative pl-9">
-                <dt class="inline font-semibold text-foreground text-lg">
-                  <svg
-                    class="absolute left-1 top-1 h-5 w-5 text-primary"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    fill="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    ><path d="m8 6 4-4 4 4"></path><path
-                      d="M12 2v10.3a4 4 0 0 1-1.172 2.872L4 22"></path><path
-                      d="m20 22-5-5"></path></svg
-                  >
+  <section class="container px-6 py-10 mx-aut">
+    <div
+      class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2"
+    >
+      <div class="lg:pr-8 lg:pt-4 my-auto">
+        <div class="lg:max-w-lg">
+          <h2 class="text-base font-semibold leading-7 text-primary">
+            Presentando
+          </h2>
+          <p
+            class="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
+          >
+            La red para transporte colaborativo 0 emisiones
+          </p>
+          <p class="mt-6 text-lg leading-8">
+            Desbloqueamos una logística eficiente y sostenible a través de la
+            colaboración. Conectamos empresas, operadores y conductores en una
+            plataforma unificada, facilitando una colaboración fluida y una
+            utilización optimizada de los recursos.
+          </p>
+          <dl
+            class="mt-10 max-w-xl space-y-8 text-base leading-7 text-muted-foregroundlg:max-w-none"
+          >
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-foreground text-lg">
+                <svg
+                  class="absolute left-1 top-1 h-5 w-5 text-primary"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  fill="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  ><path d="m8 6 4-4 4 4"></path><path
+                    d="M12 2v10.3a4 4 0 0 1-1.172 2.872L4 22"></path><path
+                    d="m20 22-5-5"></path></svg
+                >
 
-                  Matcheo dinámico
-                </dt>
-                <dd class="inline"></dd>
-              </div>
-              <div class="relative pl-9">
-                <dt class="inline font-semibold text-foreground text-lg">
-                  <svg
-                    class="absolute left-1 top-1 h-5 w-5 text-primary"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    ><path
-                      d="M12 3v17a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a1 1 0 0 1-1 1H3"
-                    ></path><path d="m16 19 2 2 4-4"></path></svg
-                  >
-                  Capacidad compartida
-                </dt>
-                <dd class="inline"></dd>
-              </div>
-              <div class="relative pl-9">
-                <dt class="inline font-semibold text-foreground text-lg">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="absolute left-1 top-1 h-5 w-5 text-primary"
-                    ><path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"
-                    ></path><path d="M14 13.12c0 2.38 0 6.38-1 8.88"
-                    ></path><path d="M17.29 21.02c.12-.6.43-2.3.5-3.02"
-                    ></path><path d="M2 12a10 10 0 0 1 18-6"></path><path
-                      d="M2 16h.01"></path><path
-                      d="M21.8 16c.2-2 .131-5.354 0-6"></path><path
-                      d="M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2"></path><path
-                      d="M8.65 22c.21-.66.45-1.32.57-2"></path><path
-                      d="M9 6.8a6 6 0 0 1 9 5.2v2"></path></svg
-                  >
-                  Reduciendo la huella de carbono
-                </dt>
-                <dd class="inline"></dd>
-              </div>
-            </dl>
+                Matcheo dinámico
+              </dt>
+              <dd class="inline"></dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-foreground text-lg">
+                <svg
+                  class="absolute left-1 top-1 h-5 w-5 text-primary"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  ><path
+                    d="M12 3v17a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a1 1 0 0 1-1 1H3"
+                  ></path><path d="m16 19 2 2 4-4"></path></svg
+                >
+                Capacidad compartida
+              </dt>
+              <dd class="inline"></dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-foreground text-lg">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="absolute left-1 top-1 h-5 w-5 text-primary"
+                  ><path d="M12 10a2 2 0 0 0-2 2c0 1.02-.1 2.51-.26 4"
+                  ></path><path d="M14 13.12c0 2.38 0 6.38-1 8.88"></path><path
+                    d="M17.29 21.02c.12-.6.43-2.3.5-3.02"></path><path
+                    d="M2 12a10 10 0 0 1 18-6"></path><path d="M2 16h.01"
+                  ></path><path d="M21.8 16c.2-2 .131-5.354 0-6"></path><path
+                    d="M5 19.5C5.5 18 6 15 6 12a6 6 0 0 1 .34-2"></path><path
+                    d="M8.65 22c.21-.66.45-1.32.57-2"></path><path
+                    d="M9 6.8a6 6 0 0 1 9 5.2v2"></path></svg
+                >
+                Reduciendo la huella de carbono
+              </dt>
+              <dd class="inline"></dd>
+            </div>
+          </dl>
 
-            <a
-              href="/posts/test"
-              class="inline-block mt-10 text-primary underline">Leer más</a
-            >
-          </div>
+          <a
+            href="/collaborative"
+            class="inline-block mt-10 text-primary underline">Leer más</a
+          >
         </div>
-        <img
-          src="/media/stockImage2.jpg"
-          alt="Product screenshot"
-          class="hidden lg:block max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10 md:-ml-4 lg:-ml-0"
-          width="1200"
-        />
       </div>
+
+      <img
+        class="object-cover object-center max-w-none lg:mx-6 w-full h-96 rounded-lg lg:h-[36rem]"
+        src="/media/pilotTest.jpg"
+        alt=""
+      />
     </div>
   </section>
 
