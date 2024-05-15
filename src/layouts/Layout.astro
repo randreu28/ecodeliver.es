@@ -120,4 +120,13 @@ const theme = cookie?.split("theme=")[1].split(";")[0];
     font-style: normal;
     font-variation-settings: "GRAD" 0;
   }
+
+  .slider {
+    @apply
+    [&::-webkit-slider-runnable-track]:rounded-full 
+    [&::-webkit-slider-thumb]:appearance-none 
+    [&::-webkit-slider-thumb]:size-5
+    [&::-webkit-slider-thumb]:rounded-full 
+    [&::-webkit-slider-thumb]:bg-primary;
+}
 </style>
