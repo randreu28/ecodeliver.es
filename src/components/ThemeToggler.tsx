@@ -19,7 +19,7 @@ export default function ThemeToggler() {
   };
 
   return (
-    <button onClick={toggleTheme}>
+    <button onClick={toggleTheme} aria-label="Cambiar tema">
       {isDarkMode ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"

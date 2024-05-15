@@ -43,7 +43,11 @@ export default function EmissionBar() {
       </p>
 
       <div className="">
+        <label htmlFor="packageRange" className="sr-only">
+          Numero de paquetes
+        </label>
         <input
+          id="packageRange"
           type="range"
           min={RANGE_MIN}
           max={RANGE_MAX}
