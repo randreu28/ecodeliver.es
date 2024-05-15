@@ -30,7 +30,7 @@ export const TechCard = ({ children, className }: Props) => {
   return (
     <div
       className={cn(
-        "p-0.5  bg-transparent aspect-square flex items-center justify-center w-full h-full relative"
+        "p-0.5 bg-transparent aspect-square flex items-center justify-center w-full h-full relative"
       )}
     >
       <div
@@ -60,10 +60,10 @@ export function CardPattern({ mouseX, mouseY, randomString }: any) {
         style={style}
       />
       <motion.div
-        className="absolute inset-0 rounded-2xl opacity-0 mix-blend-overlay  group-hover/card:opacity-100"
+        className="absolute inset-0 rounded-2xl opacity-0 mix-blend-overlay group-hover/card:opacity-100"
         style={style}
       >
-        <p className="absolute inset-x-0 text-xs h-full break-words whitespace-pre-wrap text-white font-mono font-bold transition duration-500">
+        <p className="absolute inset-x-0 text-xs h-full break-words whitespace-pre-wrap font-mono font-bold transition duration-500">
           {randomString}
         </p>
       </motion.div>
