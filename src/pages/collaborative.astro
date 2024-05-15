@@ -1,15 +1,18 @@
 ---
+import { Image } from "astro:assets";
 import ContactForm from "../components/ContactForm";
 import EmissionBar from "../components/EmissionBar";
 import Value from "../components/Value.astro";
 import Layout from "../layouts/Layout.astro";
+import stockImage2 from "../media/stockImage2.jpg"
+import stockImage3 from "../media/stockImage3.jpg"
 ---
 
 <Layout
       title="Nuestro orígen"
       description="Pioneros en la sostenibilidad a través de la colaboración"
       keywords="ecoDeliver, tecnología, transporte, sostenible, eficiente, colaborativo"
-      image="/media/stockImage2.jpg"
+      image="/media/stockImage3.jpg"
       section="/collaborative"
     >
       <section class="w-full py-12 md:py-24 lg:py-32">
@@ -38,7 +41,7 @@ import Layout from "../layouts/Layout.astro";
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
-                  ></path>
+                  />
                 </svg>
               </a>
             </div>
@@ -52,10 +55,10 @@ import Layout from "../layouts/Layout.astro";
             </p>
 
           </div>
-          <img
+          <Image
             alt="Hero"
             class="mx-auto aspect-square overflow-hidden rounded-xl object-cover sm:w-full"
-            src="/media/stockImage2.jpg"
+            src={stockImage2}
           />
         </div>
       </section>
@@ -280,9 +283,9 @@ import Layout from "../layouts/Layout.astro";
           </div>
 
           <div class="hidden lg:flex lg:items-center lg:w-1/2 lg:justify-center">
-            <img
+            <Image
               class="size-[28rem] object-cover xl:size-[34rem] rounded-full"
-              src="/media/stockImage3.jpg"
+              src={stockImage3}
               alt="image"
             />
           </div>

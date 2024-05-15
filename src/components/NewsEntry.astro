@@ -1,39 +1,22 @@
 ---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+
 interface Props {
   title: string;
   description: string;
-  image: string;
+  image: ImageMetadata;
   href: string;
-
-  author: string;
-  newsPaper: string;
-  newsLogo: string;
 }
-const { title, description, image, href, author, newsLogo, newsPaper } =
-  Astro.props;
+const { title, description, image, href } = Astro.props;
 ---
 
 <div>
-  <div class="relative">
-    <img
+  <Image
       class="object-cover object-center w-full h-64 rounded-lg lg:h-80"
       src={image}
       alt=""
     />
-
-    <div class="absolute bottom-0 flex p-3 bg-background">
-      <img
-        class="object-cover object-center w-10 h-10 rounded-full"
-        src={newsLogo}
-        alt=""
-      />
-
-      <div class="mx-4">
-        <h1 class="text-sm font-semibold">{author}</h1>
-        <p class="text-sm text-foreground font-light">{newsPaper}</p>
-      </div>
-    </div>
-  </div>
 
   <h1 class="mt-6 text-xl font-semibold">
     {title}

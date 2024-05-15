@@ -1,9 +1,12 @@
 ---
+import { Image } from "astro:assets";
 import CloudLogos from "../components/CloudLogos.astro";
 import ContactForm from "../components/ContactForm";
 import DynamicText from "../components/DynamicText";
 import NewsEntry from "../components/NewsEntry.astro";
 import Layout from "../layouts/Layout.astro";
+import lavanguardiaArticle from "../media/articles/lavanguardiaArticle.webp"
+import pilotTest from "../media/pilotTest.jpg"
 ---
 
 <Layout
@@ -287,9 +290,9 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
 
-      <img
+      <Image
         class="object-cover object-center max-w-none lg:mx-6 w-full h-96 rounded-lg lg:h-[36rem]"
-        src="/media/pilotTest.jpg"
+        src={pilotTest}
         alt=""
       />
     </div>
@@ -308,31 +311,22 @@ import Layout from "../layouts/Layout.astro";
         <NewsEntry
           title="La vanguardia"
           description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugit dolorum amet dolores praesentium, alias nam? Tempore"
-          image="/media/articles/araArticle.webp"
+          image={lavanguardiaArticle}
           href="/"
-          author="Tom Hank"
-          newsPaper="La vanguardia"
-          newsLogo="https://play-lh.googleusercontent.com/_LHdH6rPNns7806B0wc-eYjlgOh45dg3b5NjMwlLqQ0P3vGaEDxeHQLqizW-k6rwpSfw"
         />
 
-        <NewsEntry
+         <NewsEntry
           title="La vanguardia"
           description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugit dolorum amet dolores praesentium, alias nam? Tempore"
-          image="/media/articles/araArticle.webp"
+          image={lavanguardiaArticle}
           href="/"
-          author="Tom Hank"
-          newsPaper="La vanguardia"
-          newsLogo="https://play-lh.googleusercontent.com/_LHdH6rPNns7806B0wc-eYjlgOh45dg3b5NjMwlLqQ0P3vGaEDxeHQLqizW-k6rwpSfw"
         />
 
-        <NewsEntry
+         <NewsEntry
           title="La vanguardia"
           description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugit dolorum amet dolores praesentium, alias nam? Tempore"
-          image="/media/articles/araArticle.webp"
+          image={lavanguardiaArticle}
           href="/"
-          author="Tom Hank"
-          newsPaper="La vanguardia"
-          newsLogo="https://play-lh.googleusercontent.com/_LHdH6rPNns7806B0wc-eYjlgOh45dg3b5NjMwlLqQ0P3vGaEDxeHQLqizW-k6rwpSfw"
         />
       </div>
     </div>

@@ -6,7 +6,7 @@ interface Props {
   title: string;
   description: string;
   keywords: string;
-  image: string;
+  image?: string;
   date?: Date;
   invisible?: boolean;
   section?: string;
@@ -43,7 +43,7 @@ const theme = cookie?.split("theme=")[1].split(";")[0];
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={image} />
+    {image && <meta property="og:image" content={image} />}
     <meta property="og:url" content={Astro.url.pathname} />
     <meta property="og:type" content="website" />
 
@@ -51,7 +51,7 @@ const theme = cookie?.split("theme=")[1].split(";")[0];
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={image} />
+    {image && <meta name="twitter:image" content={image} />}
   </head>
 
   <body>
