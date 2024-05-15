@@ -33,7 +33,7 @@ export default function ContactForm() {
       <div className="container px-6 py-12 mx-auto">
         <div className="lg:flex lg:items-center lg:-mx-6">
           <div className="lg:w-1/2 lg:mx-6">
-            <h1 className="text-4xl font-semibold text-gray-800 capitalize dark:text-white lg:text-6xl">
+            <h1 className="text-4xl font-semibold capitalize lg:text-6xl">
               ¡Contáctanos!
             </h1>
 
@@ -65,7 +65,7 @@ export default function ContactForm() {
           </div>
 
           <div className="mt-8 lg:w-1/2 lg:mx-6 ">
-            <div className="w-full px-8 py-10 mx-auto overflow-hidden rounded-lg shadow-2xl lg:max-w-xl shadow-gray-300/50 dark:shadow-black/50 border-2 border-muted-foreground">
+            <div className="w-full px-8 py-10 mx-auto overflow-hidden rounded-lg">
               <h1 className="text-lg font-medium">
                 ¿En qué te podemos ayudar?
               </h1>
