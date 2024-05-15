@@ -1,4 +1,6 @@
 ---
+import ContactForm from "../components/ContactForm";
+import Value from "../components/Value.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -9,14 +11,85 @@ import Layout from "../layouts/Layout.astro";
   image="/media/stockImage3.jpg"
   section="/collaborative"
 >
-  <img
-    src="/media/stockImage3.jpg"
-    alt="Caixa Bank"
-    class="max-w-4xl mx-auto my-10"
-  />
+   <section class="w-full py-12 md:py-24 lg:py-32">
+      <div class="container grid items-center gap-6 px-4 md:px-6 lg:grid-cols-2 lg:gap-10">
+        <div class="space-y-4">
+            
+          
+          <h1 class="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
+            Transporte colaborativo, simplificado
+          </h1>
+          <p class="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
+            Utilizamos el espacio vacío en vehículos que ya van a viajar y optimizamos la cadena logística.
+          </p>
 
-  <div class="max-w-4xl mx-auto prose prose-lg dark:prose-invert">
-    <h2>Transporte colaborativo</h2>
-    <p>TODO</p>
-  </div>
+          <div class="rounded-full px-3 py-1 text-sm leading-6 text-muted-foreground ring-1 ring-muted-foreground/20 flex flex-row gap-2 w-fit">
+            <p class="hidden lg:block text-muted-foreground">
+              Explorando nuevos horizontes para partners
+            </p>
+
+            <a
+              href="#contact-us"
+              class="flex flex-row gap-2 font-semibold text-primary"
+              aria-hidden="true"
+            >
+              <p>Contáctanos</p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width={1.5}
+                stroke="currentColor"
+                class="w-4 h-4 my-auto"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <img
+          alt="Hero"
+          class="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full"          
+          src="/media/stockImage1.jpg"
+        />
+      </div>
+    </section>
+
+
+  <h2 class="text-center text-3xl font-bold my-5">¿Porqué el modelo colaborativo?</h2>
+
+  <section class="grid grid-cols-1 gap-4 mt-8 xl:mt-12 xl:gap-8 md:grid-cols-2 xl:grid-cols-3 container">
+
+    <Value title="Compromiso con la sostenibilidad" description="Aprovechamos el espacio vacío en vehículos que ya están en tránsito, reduciendo la necesidad de camiones adicionales y disminuyendo la huella de carbono.">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M7.864 4.243A7.5 7.5 0 0 1 19.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 0 0 4.5 10.5a7.464 7.464 0 0 1-1.15 3.993m1.989 3.559A11.209 11.209 0 0 0 8.25 10.5a3.75 3.75 0 1 1 7.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 0 1-3.6 9.75m6.633-4.596a18.666 18.666 0 0 1-2.485 5.33" />
+      </svg>
+    </Value>
+
+    <Value title="Enfoque en el bienestar" description="Nos preocupamos por nuestros socios y sus empleados, asegurando que todos los involucrados en la cadena de suministro estén bien cuidados y valorados.">
+     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="size-8"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+    </Value>
+
+    <Value title="Fomento de la comunidad" description="Al colaborar con nosotros, se une a una red de empresas que comparten recursos y conocimientos, creando un ecosistema de beneficios mutuos.">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="size-8"><path stroke-linecap="round" stroke-linejoin="round" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path></svg>
+    </Value>
+
+    <Value title="Innovación práctica" description="Revolucionamos el mercado logístico sin interrumpir sus operaciones. Nos enfocamos en que todo funcione de manera fluida y eficiente.">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="size-8"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+    </Value>
+
+    <Value title="Transparencia total" description="Promovemos la transparencia en todas nuestras operaciones, asegurando que nuestros socios tengan una visión clara y precisa de cada paso del proceso.">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="size-8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+    </Value>
+
+    <Value title="Seguridad garantizada" description="Implementamos rigurosos protocolos de seguridad para proteger tanto a los transportistas como a los paquetes, asegurando la integridad de cada envío.">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="size-8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+    </Value>
+  </section>
+  
+  <ContactForm/>
 </Layout>
