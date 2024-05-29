@@ -8,12 +8,15 @@ import Layout from "@/layouts/Layout.astro";
 import lavanguardiaArticle from "@/media/articles/lavanguardiaArticle.webp"
 import pilotTest from "@/media/pilotTest.jpg"
 import { getRelativeLocaleUrl } from "astro:i18n";
+import { getI18N } from "@/i18n"
+
+const i18n = getI18N(Astro.currentLocale || "es").homepage
 ---
 
 <Layout
-  title="ecoDeliver"
-  description="Tecnología disruptiva para un transporte sostenible, eficiente y colaborativo"
-  keywords="ecoDeliver, tecnología, transporte, sostenible, eficiente, colaborativo"
+  title={i18n.title}
+  description={i18n.description}
+  keywords={i18n.keywords}
   image="/media/brand/brand.png"
 >
   <!-- Hero section -->
@@ -26,7 +29,7 @@ import { getRelativeLocaleUrl } from "astro:i18n";
         class="rounded-full px-3 py-1 text-sm leading-6 text-muted-foreground ring-1 ring-muted-foreground/20 flex flex-row gap-2 w-fit"
       >
         <p class="hidden lg:block text-muted-foreground">
-          Explorando nuevos horizontes para partners
+         {i18n.hero.exploring}
         </p>
 
         <a
@@ -34,7 +37,7 @@ import { getRelativeLocaleUrl } from "astro:i18n";
           class="flex flex-row gap-2 font-semibold text-primary bg-background"
 
         >
-          <p>Contáctanos</p>
+          <p>{i18n.hero.contactUs}</p>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -54,24 +57,23 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 
     <!-- Hero title -->
     <h1 class="text-4xl font-bold tracking-tight sm:text-6xl">
-      <span>Tecnología disruptiva para un transporte</span>
+      <span>{i18n.hero.title}</span>
       <DynamicText
         frequency={2000}
-        texts={["sostenible", "eficiente", "colaborativo"]}
+        texts={i18n.hero.dynamicTexts}
         className="text-4xl font-bold tracking-tight bg-gradient-to-r text-transparent bg-clip-text from-primary to-teal-500 sm:text-6xl"
         client:load
       />
     </h1>
     <!-- Hero description -->
     <p class="mt-6 text-lg font-light max-w-2xl mx-auto text-muted-foreground">
-      Únete a la transformación del transporte sostenible apostando por
-      tecnología disruptiva. Estamos preparando grandes novedades.
+      {i18n.hero.description}
     </p>
   </div>
 
   <!-- Logos -->
   <h1 class="text-2xl font-semibold lg:text-3xl text-center">
-    Con el apoyo de...
+    {i18n.cloudLogosTitle}
   </h1>
   <CloudLogos />
 
@@ -93,17 +95,15 @@ import { getRelativeLocaleUrl } from "astro:i18n";
       <div class="lg:pr-8 pt-4 my-auto">
         <div class="lg:max-w-lg">
           <h2 class="text-base font-semibold leading-7 text-primary">
-            Presentando
+            {i18n.featureSection1.prelude}
           </h2>
           <p
             class="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
           >
-            Tecnología de vanguardia con análisis predictivo de demanada
+            {i18n.featureSection1.title}
           </p>
           <p class="mt-6 text-lg leading-8">
-            Nuestros sistema de análisis logístico aprovecha el poder de
-            algoritmos avanzados y análisis de datos para automatizar y
-            optimizar procesos de enrutamiento, entrega y comunicación.
+            {i18n.featureSection1.description}
           </p>
           <dl
             class="mt-10 max-w-xl space-y-8 text-base leading-7 text-muted-foreground lg:max-w-none"
@@ -125,7 +125,7 @@ import { getRelativeLocaleUrl } from "astro:i18n";
                     d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"
                   ></path><circle cx="18" cy="5" r="3"></circle></svg
                 >
-                Optimización dinmámica de rutas de entrega
+                {i18n.featureSection1.features[0]}
               </dt>
               <dd class="inline"></dd>
             </div>
@@ -154,7 +154,7 @@ import { getRelativeLocaleUrl } from "astro:i18n";
                     d="M6 18a4 4 0 0 1-1.967-.516"></path><path
                     d="M19.967 17.484A4 4 0 0 1 18 18"></path></svg
                 >
-                Toma de decisiones automatizada
+                {i18n.featureSection1.features[1]}
               </dt>
               <dd class="inline"></dd>
             </div>
@@ -174,7 +174,7 @@ import { getRelativeLocaleUrl } from "astro:i18n";
                   ><path d="m22 2-7 20-4-9-9-4Z"></path><path d="M22 2 11 13"
                   ></path></svg
                 >
-                Comunicación instantánea y altamente capacitada
+                {i18n.featureSection1.features[2]}
               </dt>
             </div>
           </dl>
@@ -184,7 +184,7 @@ import { getRelativeLocaleUrl } from "astro:i18n";
           href={getRelativeLocaleUrl(Astro.currentLocale || "es", "/technologies")}
           class="inline-block mt-10 text-primary underline"
         >
-          Leer más
+          {i18n.featureSection1.cta}
         </a>
       </div>
     </div>
@@ -198,18 +198,15 @@ import { getRelativeLocaleUrl } from "astro:i18n";
       <div class="lg:pr-8 lg:pt-4 my-auto">
         <div class="lg:max-w-lg">
           <h2 class="text-base font-semibold leading-7 text-primary">
-            Presentando
+            {i18n.featureSection2.prelude}
           </h2>
           <p
             class="mt-2 text-3xl font-bold tracking-tight text-foreground sm:text-4xl"
           >
-            La red para transporte colaborativo 0 emisiones
+            {i18n.featureSection2.title}
           </p>
           <p class="mt-6 text-lg leading-8">
-            Desbloqueamos una logística eficiente y sostenible a través de la
-            colaboración. Conectamos empresas, operadores y conductores en una
-            plataforma unificada, facilitando una colaboración fluida y una
-            utilización optimizada de los recursos.
+            {i18n.featureSection2.description}
           </p>
           <dl
             class="mt-10 max-w-xl space-y-8 text-base leading-7 text-muted-foregroundlg:max-w-none"
@@ -233,7 +230,7 @@ import { getRelativeLocaleUrl } from "astro:i18n";
                     d="m20 22-5-5"></path></svg
                 >
 
-                Matcheo dinámico
+                {i18n.featureSection2.features[0]}
               </dt>
               <dd class="inline"></dd>
             </div>
@@ -254,7 +251,7 @@ import { getRelativeLocaleUrl } from "astro:i18n";
                     d="M12 3v17a1 1 0 0 1-1 1H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a1 1 0 0 1-1 1H3"
                   ></path><path d="m16 19 2 2 4-4"></path></svg
                 >
-                Capacidad compartida
+                {i18n.featureSection2.features[1]}
               </dt>
               <dd class="inline"></dd>
             </div>
@@ -280,7 +277,7 @@ import { getRelativeLocaleUrl } from "astro:i18n";
                     d="M8.65 22c.21-.66.45-1.32.57-2"></path><path
                     d="M9 6.8a6 6 0 0 1 9 5.2v2"></path></svg
                 >
-                Reduciendo la huella de carbono
+                {i18n.featureSection2.features[2]}
               </dt>
               <dd class="inline"></dd>
             </div>
@@ -290,7 +287,7 @@ import { getRelativeLocaleUrl } from "astro:i18n";
             href={getRelativeLocaleUrl(Astro.currentLocale || "es", "/collaborative")}
             class="inline-block mt-10 text-primary underline"
           >
-            Leer más
+            {i18n.featureSection2.cta}
           </a>
         </div>
       </div>
@@ -307,30 +304,34 @@ import { getRelativeLocaleUrl } from "astro:i18n";
   <section>
     <div class="container px-6 py-10 mx-auto">
       <div class="text-center">
-        <h1 class="text-2xl font-semibold capitalize lg:text-3xl">Noticias</h1>
+        <h1 class="text-2xl font-semibold capitalize lg:text-3xl">{i18n.news.title}</h1>
       </div>
 
       <div
         class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2 xl:grid-cols-3"
       >
+      
         <NewsEntry
-          title="La vanguardia"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugit dolorum amet dolores praesentium, alias nam? Tempore"
+          title={i18n.news.cards[0].title}
+          description={i18n.news.cards[0].description}
+          cta={i18n.news.cards[0].cta}
           image={lavanguardiaArticle}
           href="/"
         />
 
          <NewsEntry
-          title="La vanguardia"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugit dolorum amet dolores praesentium, alias nam? Tempore"
+          title={i18n.news.cards[1].title}
+          description={i18n.news.cards[1].description}
+          cta={i18n.news.cards[1].cta}
           image={lavanguardiaArticle}
           href="/"
         />
 
          <NewsEntry
-          title="La vanguardia"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugit dolorum amet dolores praesentium, alias nam? Tempore"
+          title={i18n.news.cards[2].title}
+          description={i18n.news.cards[2].description}
           image={lavanguardiaArticle}
+          cta={i18n.news.cards[2].cta}
           href="/"
         />
       </div>

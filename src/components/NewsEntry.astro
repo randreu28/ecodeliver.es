@@ -5,10 +5,11 @@ import { Image } from 'astro:assets';
 interface Props {
   title: string;
   description: string;
+  cta: string;
   image: ImageMetadata;
   href: string;
 }
-const { title, description, image, href } = Astro.props;
+const { title, description, image, href,cta } = Astro.props;
 ---
 
 <div>
@@ -29,6 +30,7 @@ const { title, description, image, href } = Astro.props;
   <a
     href={href}
     class="inline-block mt-4 text-primary underline hover:text-primary/50"
-    >Read more</a
+    target="_blank"
+    >{cta}</a
   >
 </div>

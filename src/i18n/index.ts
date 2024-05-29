@@ -9,7 +9,7 @@ import spanish from "./es.json";
  * @param locale The locale identifier.
  * @returns The localization resources for the specified locale.
  */
-export function getI18N(locale = "es") {
+export function getI18N(locale: string) {
   switch (locale) {
     case "en":
       return english;
