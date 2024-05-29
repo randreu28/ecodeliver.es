@@ -1,3 +1,13 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+const links = [
+  { href: getRelativeLocaleUrl(Astro.currentLocale || "es", "privacidad"), label: "Politica de privacidad", disabled: true },
+  { href: getRelativeLocaleUrl(Astro.currentLocale || "es", "corporate-image"), label: "Identidad corporativa" },
+  { href: getRelativeLocaleUrl(Astro.currentLocale || "es", "commitments"), label: "Compromisos" },
+];
+---
+
 <footer class="container pt-5 pb-2 mx-auto space-y-2">
   <div class="flex">
     <div class="w-full">
@@ -75,19 +85,15 @@
 
         <div>
           <h3 class="text-foreground font-bold text-lg">Acerca de nosotros</h3>
-          <a
-            href="/privacidad"
-            class="block mt-2 hover:underline pointer-events-none"
-            aria-disabled
-          >
-            Politica de privacidad
-          </a>
-          <a href="/corporate-image" class="block mt-2 hover:underline">
-            Identidad corporativa
-          </a>
-          <a href="/commitments" class="block mt-2 hover:underline">
-            Compromisos
-          </a>
+          {links.map((link) => (
+            <a
+              href={link.href}
+              class={`block mt-2 hover:underline ${link.disabled ? 'pointer-events-none' : ''}`}
+              aria-disabled={link.disabled}
+            >
+              {link.label}
+            </a>
+          ))}
         </div>
 
         <div>

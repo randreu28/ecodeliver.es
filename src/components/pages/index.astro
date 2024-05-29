@@ -7,6 +7,7 @@ import NewsEntry from "@/components/NewsEntry.astro";
 import Layout from "@/layouts/Layout.astro";
 import lavanguardiaArticle from "@/media/articles/lavanguardiaArticle.webp"
 import pilotTest from "@/media/pilotTest.jpg"
+import { getRelativeLocaleUrl } from "astro:i18n";
 ---
 
 <Layout
@@ -180,9 +181,11 @@ import pilotTest from "@/media/pilotTest.jpg"
         </div>
 
         <a
-          href="/technologies"
-          class="inline-block mt-10 text-primary underline">Leer más</a
+          href={getRelativeLocaleUrl(Astro.currentLocale || "es", "/technologies")}
+          class="inline-block mt-10 text-primary underline"
         >
+          Leer más
+        </a>
       </div>
     </div>
   </section>
@@ -284,9 +287,11 @@ import pilotTest from "@/media/pilotTest.jpg"
           </dl>
 
           <a
-            href="/collaborative"
-            class="inline-block mt-10 text-primary underline">Leer más</a
+            href={getRelativeLocaleUrl(Astro.currentLocale || "es", "/collaborative")}
+            class="inline-block mt-10 text-primary underline"
           >
+            Leer más
+          </a>
         </div>
       </div>
 
