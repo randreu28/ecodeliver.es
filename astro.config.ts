@@ -12,4 +12,12 @@ export default defineConfig({
     webAnalytics: { enabled: true },
     imageService: true,
   }),
+  i18n: {
+    defaultLocale: "es",
+    locales: ["en", "es"],
+    routing: {
+      redirectToDefaultLocale: true,
+      prefixDefaultLocale: true,
+    },
+  },
 });
