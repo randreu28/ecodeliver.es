@@ -1,8 +1,13 @@
 import { useForm } from "@formcarry/react";
 import { useRef } from "react";
 import { cn } from "../utils/utils";
+import type { getI18N } from "@/i18n";
 
-export default function ContactForm() {
+type Props = {
+  i18n: ReturnType<typeof getI18N>["contactForm"];
+};
+
+export default function ContactForm({ i18n }: Props) {
   const formRef = useRef<HTMLFormElement>(null!);
   const { state, submit } = useForm({
     id: "GPN_9w1_XvW",
@@ -14,18 +19,18 @@ export default function ContactForm() {
     formRef.current.reset();
   }
 
-  let buttonText = "Enviar";
+  let buttonText = i18n.submit;
 
   if (state.submitting) {
-    buttonText = "Enviando...";
+    buttonText = i18n.submitting;
   }
 
   if (state.submitted) {
-    buttonText = "Enviado!";
+    buttonText = i18n.submitted;
   }
 
   if (state.error) {
-    buttonText = "Algo ha ido mal. Inténtalo de nuevo más tarde";
+    buttonText = i18n.error;
   }
 
   return (
@@ -34,7 +39,7 @@ export default function ContactForm() {
         <div className="lg:flex lg:items-center lg:-mx-6">
           <div className="lg:w-1/2 lg:mx-6">
             <h1 className="text-4xl font-semibold capitalize lg:text-6xl">
-              ¡Contáctanos!
+              {i18n.title}
             </h1>
 
             <div className="mt-6 space-y-8 md:mt-8">
@@ -66,21 +71,22 @@ export default function ContactForm() {
 
           <div className="mt-8 lg:w-1/2 lg:mx-6 ">
             <div className="w-full px-8 py-10 mx-auto overflow-hidden rounded-lg">
-              <h1 className="text-lg font-medium">
-                ¿En qué te podemos ayudar?
-              </h1>
+              <h1 className="text-lg font-medium">{i18n.title}</h1>
 
               <form className="mt-6" onSubmit={handleSubmit}>
                 <div className="flex-1">
-                  <label htmlFor="name" className="block mb-2 text-sm ">
-                    Nombre
+                  <label
+                    htmlFor="name"
+                    className="block mb-2 text-sm text-gray-600 dark:text-gray-200"
+                  >
+                    {i18n.name}
                   </label>
                   <input
                     id="name"
                     required
                     name="name"
                     type="text"
-                    placeholder="Elon Musk"
+                    placeholder={i18n.namePlaceholder}
                     className="block w-full px-5 py-3 mt-2 bg-background placeholder-gray-400 border border-muted-foreground rounded-md focus:border-primary focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40"
                   />
                 </div>
@@ -90,14 +96,14 @@ export default function ContactForm() {
                     htmlFor="email"
                     className="block mb-2 text-sm text-gray-600 dark:text-gray-200"
                   >
-                    Correo electrónico
+                    {i18n.email}
                   </label>
                   <input
                     required
                     id="email"
                     name="email"
                     type="email"
-                    placeholder="elon@tesla.com"
+                    placeholder={i18n.emailPlaceholder}
                     className="block w-full px-5 py-3 mt-2 bg-background placeholder-gray-400 border border-muted-foreground rounded-md focus:border-primary focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40"
                   />
                 </div>
@@ -107,14 +113,14 @@ export default function ContactForm() {
                     htmlFor="message"
                     className="block mb-2 text-sm text-gray-600 dark:text-gray-200"
                   >
-                    Mensaje
+                    {i18n.message}
                   </label>
                   <textarea
                     required
                     id="message"
                     name="message"
                     className="block w-full px-5 py-3 mt-2 bg-background placeholder-gray-400 border border-muted-foreground rounded-md focus:border-primary focus:ring-primary focus:outline-none focus:ring focus:ring-opacity-40 h-32"
-                    placeholder="Quiero regalaros unos teslas..."
+                    placeholder={i18n.messagePlaceholder}
                   />
                 </div>
 

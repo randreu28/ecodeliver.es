@@ -76,22 +76,20 @@
                     "cta": "Leer más"
                 }
             ]
-        },
-        "contactUs": {
-            "title": "¡Contáctanos!",
-            "description": "¿En qué te podemos ayudar?",
-            "form": {
-                "name": "Nombre",
-                "namePlaceholder": "Elon Musk",
-                "email": "Correo electrónico",
-                "emailPlaceholder": "elon@musk.com",
-                "message": "Mensaje",
-                "messagePlaceholder": "Quisiera regalaros unos teslas...",
-                "submit": "Enviar",
-                "submitting": "Enviando...",
-                "submitted": "Enviado",
-                "error": "Algo ha ido mal"
-            }
         }
+    },
+    "contactForm": {
+        "title": "¡Contáctanos!",
+        "description": "¿En qué te podemos ayudar?",
+        "name": "Nombre",
+        "namePlaceholder": "Elon Musk",
+        "email": "Correo electrónico",
+        "emailPlaceholder": "elon@musk.com",
+        "message": "Mensaje",
+        "messagePlaceholder": "Quisiera regalaros unos teslas...",
+        "submit": "Enviar",
+        "submitting": "Enviando...",
+        "submitted": "Enviado",
+        "error": "Algo ha ido mal"
     }
 }

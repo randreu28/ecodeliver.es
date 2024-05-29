@@ -11,6 +11,7 @@ import { getRelativeLocaleUrl } from "astro:i18n";
 import { getI18N } from "@/i18n"
 
 const i18n = getI18N(Astro.currentLocale || "es").homepage
+const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm
 ---
 
 <Layout
@@ -338,5 +339,5 @@ const i18n = getI18N(Astro.currentLocale || "es").homepage
     </div>
   </section>
 
-  <ContactForm client:visible />
+  <ContactForm i18n={contactFormI18n} client:visible />
 </Layout>
