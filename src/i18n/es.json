@@ -36,8 +36,8 @@
         "cloudLogosTitle": "Con el apoyo de...",
         "featureSection1": {
             "prelude": "Presentando",
-            "title": "Tecnología de vanguardia con análisis predictivo de demanada",
-            "description": "Nuestros sistema de análisis logístico aprovecha el poder de algoritmos avanzados y análisis de datos para automatizar y optimizar procesos de enrutamiento, entrega y comunicación.",
+            "title": "Tecnología de vanguardia, basada en IA de última generación",
+            "description": "Aplicamos los últimos avances en IA, algoritmia, matemática aplicada y demand-matching para ofrecer soluciones disruptivas para logística y transporte.",
             "features": [
                 "Optimización dinmámica de rutas de entrega",
                 "Toma de decisiones automatizada",
@@ -47,8 +47,8 @@
         },
         "featureSection2": {
             "prelude": "Presentando",
-            "title": "La red para transporte colaborativo 0 emisiones",
-            "description": "Desbloqueamos una logística eficiente y sostenible a través de la colaboración. Conectamos empresas, operadores y conductores en una plataforma unificada, facilitando una colaboración fluida y una utilización optimizada de los recursos.",
+            "title": "Un transporte colaborativo para un mundo más verde",
+            "description": "Hacemos posible logística eficiente y sostenible a través de la colaboración. Conectamos empresas, conductores y operadores con espacio libre en sus viajes en un ecosistema unificado. Así, hacemos tus viajes más baratos y eliminamos camiones de la carretera",
             "features": [
                 "Matcheo dinámico",
                 "Capacidad compartida",
@@ -61,18 +61,18 @@
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugit dolorum amet dolores praesentium, alias nam? Tempore",
             "cards": [
                 {
-                    "title": "Título de la noticia",
-                    "description": "Descripción de la noticia",
+                    "title": "El Consorci de la Zona Franca presenta la incubadora de alta tecnología en logística 4.0",
+                    "description": "ecoDeliver se enorgullece de participar en la nueva incubadora de alta tecnología en logística 4.0 presentada por el Consorci de la Zona Franca, un paso adelante hacia la innovación y sostenibilidad en el sector.",
                     "cta": "Leer más"
                 },
                 {
-                    "title": "Título de la noticia",
-                    "description": "Descripción de la noticia",
+                    "title": "ecoDeliver revoluciona la logística de última milla",
+                    "description": "ecoDeliver, conocido como el 'BlaBlaCar de la paquetería', está transformando la logística de última milla mediante la economía colaborativa, reduciendo emisiones de CO2 y optimizando el uso de recursos.",
                     "cta": "Leer más"
                 },
                 {
-                    "title": "Título de la noticia",
-                    "description": "Descripción de la noticia",
+                    "title": "ecoDeliver, el courier de paquetería de la 'bodega' del bus",
+                    "description": "ecoDeliver está revolucionando el transporte colaborativo y sostenible, optimizando el uso del espacio en autobuses y reduciendo las emisiones de CO2. Con su enfoque innovador, la empresa está transformando la logística urbana en ciudades como Barcelona, Madrid y Málaga.",
                     "cta": "Leer más"
                 }
             ]
