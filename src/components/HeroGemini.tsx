@@ -8,9 +8,11 @@ import {
 import React from "react";
 import { cn } from "../utils/utils";
 import DynamicText from "./DynamicText";
+import { getI18N } from "@/i18n";
 
 type Props = {
   className?: string;
+  i18n: ReturnType<typeof getI18N>["technologies"]["heroSection"];
 };
 
 const transition: AnimationProps["transition"] = {
@@ -20,7 +22,7 @@ const transition: AnimationProps["transition"] = {
 
 const colors = ["#16a34a", "#14b8a6", "#17d4ff", "#4FABFF", "#00ffae"];
 
-export const HeroGemini = ({ className }: Props) => {
+export const HeroGemini = ({ className, i18n }: Props) => {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -41,33 +43,20 @@ export const HeroGemini = ({ className }: Props) => {
       ref={ref}
     >
       <div className={cn("sticky top-52 h-[60vh] text-center", className)}>
-        <h1 className="text-4xl font-bold sm:text-6xl">
-          Tecnología de vanguardia <br />
-          hecha{" "}
+        <h1 className="text-4xl font-bold sm:text-6xl max-w-3xl mx-auto">
+          {i18n.title}{" "}
           <span className="bg-gradient-to-r leading-normal text-transparent bg-clip-text from-primary to-teal-500">
-            a tu medida
+            {i18n.title2}
           </span>
         </h1>
         <p className="text-xs md:text-xl font-normal text-muted-foreground mt-4 max-w-lg mx-auto">
-          Diseñamos tecnología innovadora para integrarla al flujo de trabajo de
-          tu empresa
+          {i18n.description}
         </p>
         <br />
         <DynamicText
           className="font-bold text-xl bg-gradient-to-r text-transparent bg-clip-text from-primary to-teal-500"
           frequency={2000}
-          texts={[
-            "Gestión inteligente de flotas",
-            "Optimización de entregas",
-            "Rastreo en tiempo real",
-            "Automatización de rutas",
-            "Análisis predictivo de envíos",
-            "Monitoreo de vehículos 24/7",
-            "Optimización de carga y descarga",
-            "Integración con sistemas ERP",
-            "Reportes de desempeño en tiempo real",
-            "Soluciones de última milla",
-          ]}
+          texts={i18n.dynamicTexts}
         />
 
         <svg

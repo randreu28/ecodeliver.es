@@ -6,6 +6,7 @@ import { TechCard } from "@/components/TechCard";
 import { getI18N } from "@/i18n";
 
 const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm;
+const i18n = getI18N(Astro.currentLocale || "es").technologies;
 ---
 
 <Layout
@@ -16,20 +17,17 @@ const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm;
   section="/technologies"
 >
   <!-- Hero section -->
-  <HeroGemini client:load />
+  <HeroGemini i18n={i18n.heroSection} client:load />
 
   <!-- Features -->
   <section>
     <div class="container px-6 py-10 mx-auto">
       <h1 class="text-4xl font-semibold lg:text-3xl text-center">
-        Pioneros en la
-        <span class="underline decoration-primary">innovación</span>
-        tecnológica
+        {i18n.featuresTitle}
       </h1>
 
       <p class="mt-4 xl:mt-6 text-muted-foreground text-center">
-        Capacitados para el desarrollo de aplicaciones de tecnología logística,
-        inteligencia artificial, optimización de rutas y más
+        {i18n.featuresDescription}
       </p>
 
       <div
@@ -52,13 +50,11 @@ const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm;
           </span>
 
           <h1 class="text-xl font-semibold">
-            Algoritmos de coincidencia de demanda y precios
+            {i18n.features[0].title}
           </h1>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-            ab nulla quod dignissimos vel non corrupti doloribus voluptatum
-            eveniet
+            {i18n.features[0].description}
           </p>
         </div>
 
@@ -86,13 +82,11 @@ const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm;
           </span>
 
           <h1 class="text-xl font-semibold">
-            Inteligencia artificial para logística
+            {i18n.features[1].title}
           </h1>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-            ab nulla quod dignissimos vel non corrupti doloribus voluptatum
-            eveniet
+            {i18n.features[1].description}
           </p>
         </div>
 
@@ -122,13 +116,11 @@ const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm;
           </span>
 
           <h1 class="text-xl font-semibold">
-            Optimización de rutas en tiempo real
+            {i18n.features[2].title}
           </h1>
 
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-            ab nulla quod dignissimos vel non corrupti doloribus voluptatum
-            eveniet
+            {i18n.features[2].description}
           </p>
         </div>
       </div>
@@ -138,17 +130,16 @@ const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm;
   <section class="h-[80vh] lg:h-screen md:p-10">
     <TechCard className="font-bold" client:load>
       <div
-        class="text-4xl md:text-[8rem] lg:text-[10rem] md:leading-[8rem] lg:leading-[10rem] uppercase pb-10 md:pb-32 font-bold bg-gradient-to-r text-transparent bg-clip-text from-primary to-teal-500 -z-10"
+        class="text-4xl md:text-[8rem] lg:text-[10rem] md:leading-[8rem] lg:leading-[10rem] uppercase pb-10 md:pb-32 font-bold bg-gradient-to-r text-transparent bg-clip-text from-primary to-teal-500 -z-10 max-w-4xl"
       >
-        <h2 class="text-center">Tenemos <p>una meta</p></h2>
+        <h2 class="text-center">{i18n.goalSection.title}</h2>
       </div>
       <div class="text-2xl md:text-4xl max-w-2xl p-5">
         <h3 class="pb-5">
-          Transformar la logística basada en el combustible fósil mediante la
-          tecnología.
+          {i18n.goalSection.description[0]}
         </h3>
 
-        <h3 class="">Así de simple.</h3>
+        <h3 class="">{i18n.goalSection.description[1]}</h3>
       </div>
     </TechCard>
   </section>
