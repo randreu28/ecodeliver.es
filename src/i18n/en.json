@@ -190,5 +190,72 @@
                 ]
             }
         }
+    },
+    "collaborative": {
+        "title": "Nuestro orígen",
+        "description": "Pioneros en la sostenibilidad a través de la colaboración",
+        "keywords": "ecoDeliver, tecnología, transporte, sostenible, eficiente, colaborativo",
+        "hero": {
+            "exploring": "Explorando nuevos horizontes para partners",
+            "contactUs": "Contáctanos",
+            "title": "Transporte colaborativo, simplificado",
+            "description": "Utilizamos el espacio vacío en vehículos que ya van a viajar y optimizamos la cadena logística."
+        },
+        "whyCollaborative": "¿Por qué el modelo colaborativo?",
+        "values": [
+            {
+                "title": "Compromiso con la sostenibilidad",
+                "description": "Aprovechamos el espacio vacío en vehículos que ya están en tránsito, reduciendo la necesidad de camiones adicionales y disminuyendo la huella de carbono."
+            },
+            {
+                "title": "Enfoque en el bienestar",
+                "description": "Nos preocupamos por nuestros socios y sus empleados, asegurando que todos los involucrados en la cadena de suministro estén bien cuidados y valorados."
+            },
+            {
+                "title": "Fomento de la comunidad",
+                "description": "Al colaborar con nosotros, se une a una red de empresas que comparten recursos y conocimientos, creando un ecosistema de beneficios mutuos."
+            },
+            {
+                "title": "Innovación práctica",
+                "description": "Revolucionamos el mercado logístico sin interrumpir sus operaciones. Nos enfocamos en que todo funcione de manera fluida y eficiente."
+            },
+            {
+                "title": "Transparencia total",
+                "description": "Promovemos la transparencia en todas nuestras operaciones, asegurando que nuestros socios tengan una visión clara y precisa de cada paso del proceso."
+            },
+            {
+                "title": "Seguridad garantizada",
+                "description": "Implementamos rigurosos protocolos de seguridad para proteger tanto a los transportistas como a los paquetes, asegurando la integridad de cada envío."
+            }
+        ],
+        "emissionBar": {
+            "title": "¿Por qué apostamos por el modelo colaborativo?",
+            "of": "de",
+            "accordingTo": "Ahorrados al usar el modelo colaborativo en vez de camiones diesel convencionales, de acuerdo con la",
+            "ref1": "Universidad de Cambridge",
+            "and": "y",
+            "ref2": "Universidad de Oxford",
+            "packages": "paquetes",
+            "packageQuantity": "número de paquetes"
+        },
+        "benefitsTitle": "¿Por qué apostamos por el modelo colaborativo?",
+        "benefits": [
+            {
+                "title": "Reducir Costos de Transporte",
+                "description": "Al optimizar nuestras rutas y compartir recursos, ayudamos a reducir significativamente los costos de transporte para su empresa."
+            },
+            {
+                "title": "Transporte de Última Milla y de Larga Distancia",
+                "description": "Ofrecemos soluciones integrales para el transporte de última milla y de larga distancia, asegurando la entrega eficiente y puntual de sus productos."
+            },
+            {
+                "title": "Gestión del Marketplace",
+                "description": "Facilitamos la gestión de su mercado, conectando a transportistas y empresas para maximizar la eficiencia y minimizar los costos."
+            },
+            {
+                "title": "Hacer que Cada Viaje Cuente, Reduciendo CO2",
+                "description": "Nos comprometemos a reducir la huella de carbono optimizando cada viaje, promoviendo prácticas sostenibles y responsables."
+            }
+        ]
     }
 }

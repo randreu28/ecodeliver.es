@@ -9,12 +9,13 @@ import stockImage3 from "@/media/stockImage3.jpg";
 import { getI18N } from "@/i18n";
 
 const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm;
+const i18n = getI18N(Astro.currentLocale || "es").collaborative;
 ---
 
 <Layout
-  title="Nuestro orígen"
-  description="Pioneros en la sostenibilidad a través de la colaboración"
-  keywords="ecoDeliver, tecnología, transporte, sostenible, eficiente, colaborativo"
+  title={i18n.title}
+  description={i18n.description}
+  keywords={i18n.keywords}
   image="/media/stockImage3.jpg"
   section="/collaborative"
 >
@@ -27,14 +28,14 @@ const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm;
           class="rounded-full px-3 py-1 text-sm leading-6 text-muted-foreground ring-1 ring-muted-foreground/20 flex flex-row gap-2 w-fit"
         >
           <p class="hidden lg:block text-muted-foreground">
-            Explorando nuevos horizontes para partners
+            {i18n.hero.exploring}
           </p>
 
           <a
             href="#contact-us"
             class="flex flex-row gap-2 font-semibold text-primary"
           >
-            <p>Contáctanos</p>
+            <p>{i18n.hero.contactUs}</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -52,11 +53,10 @@ const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm;
         </div>
 
         <h1 class="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-          Transporte colaborativo, simplificado
+          {i18n.hero.title}
         </h1>
         <p class="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
-          Utilizamos el espacio vacío en vehículos que ya van a viajar y
-          optimizamos la cadena logística.
+          {i18n.hero.description}
         </p>
       </div>
       <Image
@@ -70,15 +70,15 @@ const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm;
   </section>
 
   <h2 class="text-center text-3xl font-bold my-5">
-    ¿Porqué el modelo colaborativo?
+    {i18n.whyCollaborative}
   </h2>
 
   <section
     class="grid grid-cols-1 gap-4 mt-8 xl:mt-12 xl:gap-8 md:grid-cols-2 xl:grid-cols-3 container"
   >
     <Value
-      title="Compromiso con la sostenibilidad"
-      description="Aprovechamos el espacio vacío en vehículos que ya están en tránsito, reduciendo la necesidad de camiones adicionales y disminuyendo la huella de carbono."
+      title={i18n.values[0].title}
+      description={i18n.values[0].description}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -97,8 +97,8 @@ const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm;
     </Value>
 
     <Value
-      title="Enfoque en el bienestar"
-      description="Nos preocupamos por nuestros socios y sus empleados, asegurando que todos los involucrados en la cadena de suministro estén bien cuidados y valorados."
+      title={i18n.values[1].title}
+      description={i18n.values[1].description}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -118,8 +118,8 @@ const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm;
     </Value>
 
     <Value
-      title="Fomento de la comunidad"
-      description="Al colaborar con nosotros, se une a una red de empresas que comparten recursos y conocimientos, creando un ecosistema de beneficios mutuos."
+      title={i18n.values[2].title}
+      description={i18n.values[2].description}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -139,8 +139,8 @@ const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm;
     </Value>
 
     <Value
-      title="Innovación práctica"
-      description="Revolucionamos el mercado logístico sin interrumpir sus operaciones. Nos enfocamos en que todo funcione de manera fluida y eficiente."
+      title={i18n.values[3].title}
+      description={i18n.values[3].description}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -160,8 +160,8 @@ const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm;
     </Value>
 
     <Value
-      title="Transparencia total"
-      description="Promovemos la transparencia en todas nuestras operaciones, asegurando que nuestros socios tengan una visión clara y precisa de cada paso del proceso."
+      title={i18n.values[4].title}
+      description={i18n.values[4].description}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -181,8 +181,8 @@ const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm;
     </Value>
 
     <Value
-      title="Seguridad garantizada"
-      description="Implementamos rigurosos protocolos de seguridad para proteger tanto a los transportistas como a los paquetes, asegurando la integridad de cada envío."
+      title={i18n.values[5].title}
+      description={i18n.values[5].description}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -202,15 +202,14 @@ const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm;
     </Value>
   </section>
 
-  <EmissionBar client:visible />
+  <EmissionBar client:visible i18n={i18n.emissionBar} />
 
   <section class="">
     <div class="container px-6 py-10 mx-auto lg:flex lg:items-center">
       <div class="w-full space-y-12 lg:w-1/2">
         <div>
-          <h1 class="text-2xl font-semibold lg:text-3xl">
-            ¿Porqué apostamos por el
-            <br /> modelo colaborativo?
+          <h1 class="text-2xl font-semibold lg:text-3xl max-w-md">
+            {i18n.benefitsTitle}
           </h1>
 
           <div class="mt-2">
@@ -249,12 +248,12 @@ const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm;
           </span>
 
           <div class="mt-4 md:mx-4 md:mt-0">
-            <h1 class="text-xl font-semibold">Reducir Costos de Transporte</h1>
+            <h1 class="text-xl font-semibold">
+              {i18n.benefits[0].title}
+            </h1>
 
             <p class="mt-3 text-muted-foreground">
-              Al optimizar nuestras rutas y compartir recursos, ayudamos a
-              reducir significativamente los costos de transporte para su
-              empresa.
+              {i18n.benefits[0].description}
             </p>
           </div>
         </div>
@@ -282,13 +281,11 @@ const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm;
 
           <div class="mt-4 md:mx-4 md:mt-0">
             <h1 class="text-xl font-semibold">
-              Transporte de Última Milla y de Larga Distancia
+              {i18n.benefits[1].title}
             </h1>
 
             <p class="mt-3 text-muted-foreground">
-              Ofrecemos soluciones integrales para el transporte de última milla
-              y de larga distancia, asegurando la entrega eficiente y puntual de
-              sus productos.
+              {i18n.benefits[1].description}
             </p>
           </div>
         </div>
@@ -319,11 +316,12 @@ const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm;
           </span>
 
           <div class="mt-4 md:mx-4 md:mt-0">
-            <h1 class="text-xl font-semibold">Gestión del Marketplace</h1>
+            <h1 class="text-xl font-semibold">
+              {i18n.benefits[2].title}
+            </h1>
 
             <p class="mt-3 text-muted-foreground">
-              Facilitamos la gestión de su mercado, conectando a transportistas
-              y empresas para maximizar la eficiencia y minimizar los costos.
+              {i18n.benefits[2].description}
             </p>
           </div>
         </div>
@@ -356,12 +354,11 @@ const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm;
 
           <div class="mt-4 md:mx-4 md:mt-0">
             <h1 class="text-xl font-semibold">
-              Hacer que Cada Viaje Cuente, Reduciendo CO2
+              {i18n.benefits[3].title}
             </h1>
 
             <p class="mt-3 text-muted-foreground">
-              Nos comprometemos a reducir la huella de carbono optimizando cada
-              viaje, promoviendo prácticas sostenibles y responsables.
+              {i18n.benefits[3].description}
             </p>
           </div>
         </div>
