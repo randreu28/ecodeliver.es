@@ -200,29 +200,29 @@
             "exploring": "Explorando nuevos horizontes para partners",
             "contactUs": "Contáctanos",
             "title": "Transporte colaborativo, simplificado",
-            "description": "Utilizamos el espacio vacío en vehículos que ya van a viajar y optimizamos la cadena logística."
+            "description": "Aprovechamos el espacio vacío en vehículos que ya van a viajar y optimizamos la cadena logística."
         },
-        "whyCollaborative": "¿Porqué el modelo colaborativo?",
+        "whyCollaborative": "¿Por qué apostar por la colaboración?",
         "values": [
             {
                 "title": "Compromiso con la sostenibilidad",
-                "description": "Aprovechamos el espacio vacío en vehículos que ya están en tránsito, reduciendo la necesidad de camiones adicionales y disminuyendo la huella de carbono."
+                "description": "Aprovechamos el espacio vacío en vehículos que ya iban a desplazarse, reduciendo la necesidad de mover más camiones y disminuyendo la huella de carbono."
             },
             {
                 "title": "Enfoque en el bienestar",
-                "description": "Nos preocupamos por nuestros socios y sus empleados, asegurando que todos los involucrados en la cadena de suministro estén bien cuidados y valorados."
+                "description": "Nuestra responsabilidad social va más allá de la sostenibilidad medioambiental. Ponemos siempre a las personas en el corazón de nuestra labor."
             },
             {
                 "title": "Fomento de la comunidad",
-                "description": "Al colaborar con nosotros, se une a una red de empresas que comparten recursos y conocimientos, creando un ecosistema de beneficios mutuos."
+                "description": "Al colaborar con nosotros, apuesta por una red de empresas que comparten recursos y oportunidades, creando un ecosistema de beneficios mutuos."
             },
             {
                 "title": "Innovación práctica",
-                "description": "Revolucionamos el mercado logístico sin interrumpir sus operaciones. Nos enfocamos en que todo funcione de manera fluida y eficiente."
+                "description": "Reinventamos el mercado logístico garantizando el flujo operativo. Aseguramos el funcionamiento fluido y eficiente de toda la cadena."
             },
             {
                 "title": "Transparencia total",
-                "description": "Promovemos la transparencia en todas nuestras operaciones, asegurando que nuestros socios tengan una visión clara y precisa de cada paso del proceso."
+                "description": "La transparencia es nuestra política, garantizamos a nuestros socios la visión clara y precisa a lo largo del proceso."
             },
             {
                 "title": "Seguridad garantizada",
@@ -230,43 +230,43 @@
             }
         ],
         "emissionBar": {
-            "title": "¿Por qué apostamos por el modelo colaborativo?",
+            "title": "Imagina un futuro con nosotros",
             "of": "de",
-            "accordingTo": "Ahorrados al usar el modelo colaborativo en vez de camiones diesel convencionales, de acuerdo con la",
-            "ref1": "guía de cálculo de emisiones de la Generalitat de Cataluña ",
-            "and": "y",
-            "ref2": "el ministerio de transporte y sostenibilidad español",
+            "accordingTo": "Ahorrados con el transporte colaborativo vs la logística tradicional, para calcular los 2M de envíos diarios en España de acuerdo a la",
+            "ref1": "guía de calculo de emisiones de la Generalitat de Cataluña",
+            "and": "y datos de la",
+            "ref2": "CNMC",
             "packages": "paquetes",
             "packageQuantity": "número de paquetes"
         },
-        "benefitsTitle": "¿Por qué apostamos por el modelo colaborativo?",
+        "benefitsTitle": "¿Qué valor aportamos?",
         "benefits": [
             {
-                "title": "Reducir Costos de Transporte",
-                "description": "Al optimizar nuestras rutas y compartir recursos, ayudamos a reducir significativamente los costos de transporte para su empresa."
+                "title": "Reducir costos de transporte",
+                "description": "Al optimizar nuestras rutas y compartir recursos, ayudamos a reducir significativamente el coste del transporte."
             },
             {
-                "title": "Transporte de Última Milla y de Larga Distancia",
+                "title": "Transporte de última milla y de larga distancia",
                 "description": "Ofrecemos soluciones integrales para el transporte de última milla y de larga distancia, asegurando la entrega eficiente y puntual de sus productos."
             },
             {
-                "title": "Gestión del Marketplace",
-                "description": "Facilitamos la gestión de su mercado, conectando a transportistas y empresas para maximizar la eficiencia y minimizar los costos."
+                "title": "Gestión del marketplace",
+                "description": "Facilitamos la gestión de su mercado, conectando a transportistas y empresas, ahorrando tiempo de gestión."
             },
             {
-                "title": "Hacer que Cada Viaje Cuente, Reduciendo CO2",
+                "title": "Hacer que cada viaje cuente, reduciendo CO2",
                 "description": "Nos comprometemos a reducir la huella de carbono optimizando cada viaje, promoviendo prácticas sostenibles y responsables."
             }
         ]
     },
     "aboutUs": {
-        "title": "Nuestro Orígen",
+        "title": "Nuestro orígen",
         "description": "Pioneros en la sostenibilidad a través de la colaboración",
         "keywords": "ecoDeliver, tecnología, transporte, sostenible, eficiente, colaborativo",
         "content": {
             "section1": {
-                "heading": "Nuestro Orígen",
-                "blockquote": "Pioneros en Sostenibilidad a Través de la Colaboración",
+                "heading": "Nuestro orígen",
+                "blockquote": "Pioneros en sostenibilidad a través de la colaboración",
                 "paragraphs": [
                     "En ecoDeliver, nuestro viaje comenzó con una visión simple pero poderosa: revolucionar la industria del transporte a través de la colaboración y la sostenibilidad. Todo comenzó con una observación aguda de nuestros fundadores, quienes notaron la ineficiencia y el impacto ambiental de innumerables vehículos recorriendo nuestras carreteras con amplio espacio vacío.",
                     "Motivados por la creencia de que este espacio desperdiciado podría ser aprovechado para transportar bienes de manera sostenible, nos propusimos crear soluciones innovadoras que optimizaran la utilización de los recursos existentes. Nuestra primera incursión involucró la pionera de un modelo similar a 'blablacar' pero adaptado para paquetes, donde individuos podían aprovechar sus viajes planificados para transportar paquetes a largas distancias, utilizando efectivamente la capacidad sobrante de sus vehículos."
@@ -279,7 +279,7 @@
                 ]
             },
             "section3": {
-                "heading": "De Concepto a Realidad",
+                "heading": "De concepto a realidad",
                 "paragraphs": [
                     "Lo que comenzó como una iniciativa de base para abordar un problema ambiental urgente pronto evolucionó hacia un próspero ecosistema de soluciones de transporte sostenible. A medida que nuestro equipo creció, también lo hizo nuestra experiencia, conocimiento del sector y capacidades tecnológicas. Esta evolución allanó el camino para una progresión natural hacia la oferta de nuestros servicios a otras empresas dentro de la industria."
                 ]
@@ -291,7 +291,7 @@
                 ]
             },
             "section5": {
-                "heading": "Impulsando el Cambio Juntos",
+                "heading": "Impulsando el cambio juntos",
                 "paragraphs": [
                     "Nuestro viaje está lejos de terminar. Permanecemos firmes en nuestro compromiso de impulsar un cambio positivo dentro de la industria del transporte, una colaboración a la vez. Únete a nosotros mientras continuamos explorando nuevas oportunidades, forjando asociaciones significativas y liderando soluciones innovadoras que dan forma al futuro de la movilidad sostenible."
                 ]
