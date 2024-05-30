@@ -4,7 +4,9 @@ import { Image } from "astro:assets";
 import roberto from "@/media/Roberto.png";
 import { getI18N } from "@/i18n";
 
-const i18n = getI18N(Astro.currentLocale || "es").notFound;
+const i18n = getI18N(
+  Astro.currentLocale || Astro.preferredLocale || "es"
+).notFound;
 ---
 
 <Layout
