@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 interface Props {
   title: string;
   picture: string;
@@ -12,7 +14,7 @@ const { title, picture, description, cta, href, download } = Astro.props;
 ---
 
 <div class="space-y-5">
-  <img
+  <Image
     src={picture}
     alt=""
     class="object-cover"
