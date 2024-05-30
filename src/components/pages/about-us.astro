@@ -6,12 +6,13 @@ import caixaBankArticle from "@/media/articles/caixaBankArticle.jpg";
 import { getI18N } from "@/i18n";
 
 const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm;
+const i18n = getI18N(Astro.currentLocale || "es").aboutUs;
 ---
 
 <Layout
-  title="Nuestro orígen"
-  description="Pioneros en la sostenibilidad a través de la colaboración"
-  keywords="ecoDeliver, tecnología, transporte, sostenible, eficiente, colaborativo"
+  title={i18n.title}
+  description={i18n.description}
+  keywords={i18n.keywords}
   image="/media/articles/caixaBankArticle.jpg"
   section="/about-us"
 >
@@ -25,73 +26,38 @@ const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm;
   <div
     class="max-w-4xl mx-auto prose prose-lg prose-blockquote:border-gray-500 dark:prose-invert p-2"
   >
-    <h1>Nuestro Orígen</h1>
+    <h1>{i18n.content.section1.heading}</h1>
     <blockquote>
-      Pioneros en Sostenibilidad a Través de la Colaboración
+      {i18n.content.section1.blockquote}
     </blockquote>
     <p>
-      En ecoDeliver, nuestro viaje comenzó con una visión simple pero poderosa:
-      revolucionar la industria del transporte a través de la colaboración y la
-      sostenibilidad. Todo comenzó con una observación aguda de nuestros
-      fundadores, quienes notaron la ineficiencia y el impacto ambiental de
-      innumerables vehículos recorriendo nuestras carreteras con amplio espacio
-      vacío.
+      {i18n.content.section1.paragraphs[0]}
     </p>
     <p>
-      Motivados por la creencia de que este espacio desperdiciado podría ser
-      aprovechado para transportar bienes de manera sostenible, nos propusimos
-      crear soluciones innovadoras que optimizaran la utilización de los
-      recursos existentes. Nuestra primera incursión involucró la pionera de un
-      modelo similar a "blablacar" pero adaptado para paquetes, donde individuos
-      podían aprovechar sus viajes planificados para transportar paquetes a
-      largas distancias, utilizando efectivamente la capacidad sobrante de sus
-      vehículos.
+      {i18n.content.section1.paragraphs[1]}
     </p>
 
     <blockquote class="text-5xl">
-      Creemos que la sostenibilidad puede ser conseguida a través de la
-      colaboración
+      {i18n.content.section2.blockquote}
     </blockquote>
     <p>
-      A medida que perfeccionamos nuestro modelo y expandimos nuestro alcance,
-      nos adentramos más en el ámbito de los operadores de transporte de
-      movilidad profesional, visualizando un futuro donde incluso las líneas de
-      autobuses podrían aprovechar el espacio disponible en sus maleteros para
-      transportar bienes, reduciendo así aún más las emisiones de carbono y
-      maximizando la eficiencia.
+      {i18n.content.section2.paragraphs[0]}
     </p>
-    <h2>De Concepto a Realidad</h2>
+    <h2>{i18n.content.section3.heading}</h2>
     <p>
-      Lo que comenzó como una iniciativa de base para abordar un problema
-      ambiental urgente pronto evolucionó hacia un próspero ecosistema de
-      soluciones de transporte sostenible. A medida que nuestro equipo creció,
-      también lo hizo nuestra experiencia, conocimiento del sector y capacidades
-      tecnológicas. Esta evolución allanó el camino para una progresión natural
-      hacia la oferta de nuestros servicios a otras empresas dentro de la
-      industria.
+      {i18n.content.section3.paragraphs[0]}
     </p>
 
     <blockquote class="text-5xl text-right border-l-0 border-r-4 pr-5">
-      Queremos expandir los horizontes de la innovación en transporte sostenible
+      {i18n.content.section4.blockquote}
     </blockquote>
 
     <p>
-      Hoy, ecoDeliver se encuentra a la vanguardia de la innovación en
-      transporte sostenible, con un enfoque multifacético que abarca tanto la
-      provisión de servicios como el desarrollo tecnológico. Basándonos en
-      nuestros principios fundamentales de colaboración y sostenibilidad, ahora
-      ofrecemos una gama de soluciones impulsadas por la tecnología diseñadas
-      para empoderar a las empresas en los sectores de transporte, logística y
-      movilidad.
+      {i18n.content.section4.paragraphs[0]}
     </p>
-    <h2>Impulsando el Cambio Juntos</h2>
+    <h2>{i18n.content.section5.heading}</h2>
     <p>
-      Nuestro viaje está lejos de terminar. Permanecemos firmes en nuestro
-      compromiso de impulsar un cambio positivo dentro de la industria del
-      transporte, una colaboración a la vez. Únete a nosotros mientras
-      continuamos explorando nuevas oportunidades, forjando asociaciones
-      significativas y liderando soluciones innovadoras que dan forma al futuro
-      de la movilidad sostenible.
+      {i18n.content.section5.paragraphs[0]}
     </p>
   </div>
 
