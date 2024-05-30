@@ -172,15 +172,15 @@
         "features": [
             {
                 "title": "Algoritmos de coincidencia de demanda y precios",
-                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet"
+                "description": "Explora cómo nuestros algoritmos avanzados analizan tendencias de mercado y ajustan precios en tiempo real para maximizar la eficiencia y la rentabilidad."
             },
             {
                 "title": "Inteligencia artificial para logística",
-                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet"
+                "description": "Descubre el poder de la IA en la logística, capaz de prever complicaciones, optimizar rutas y gestionar inventarios con una precisión asombrosa."
             },
             {
                 "title": "Optimización de rutas en tiempo real",
-                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet"
+                "description": "Nuestro sistema dinámico no solo traza rutas, sino que las recalcula al instante ante cualquier imprevisto, asegurando entregas puntuales y eficientes."
             }
         ],
         "goalSection": {
