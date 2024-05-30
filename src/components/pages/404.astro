@@ -2,28 +2,30 @@
 import Layout from "@/layouts/Layout.astro";
 import { Image } from "astro:assets";
 import roberto from "@/media/Roberto.png";
+import { getI18N } from "@/i18n";
+
+const i18n = getI18N(Astro.currentLocale || "es").notFound;
 ---
 
 <Layout
-  title="404"
-  description="Página no encontrada"
-  keywords="404, página no encontrada"
+  title={i18n.title}
+  description={i18n.description}
+  keywords={""}
   image="/media/brand/logo.png"
   invisible
 >
   <div
     class="h-screen flex flex-col lg:flex-row pt-20 p-10 md:p-20 gap-10 md:gap-20"
   >
-    <div class="m-auto text-center space-y-5">
+    <div class="m-auto text-center space-y-5 max-w-2xl">
       <h1 class="text-primary text-5xl lg:text-8xl font-extrabold">
-        Página no encontrada
+        {i18n.title}
       </h1>
       <h2 class="text-3xl font-bold">
-        No hemos podido encontrar lo que buscabas...
+        {i18n.intro}
       </h2>
       <p class="pt-5 text-xl max-w-lg mx-auto">
-        Para animarte, te introducimos a Roberto, la mascota oficial de
-        ecoDeliver!
+        {i18n.description}
       </p>
     </div>
     <div class="m-auto">

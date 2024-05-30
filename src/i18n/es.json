@@ -296,5 +296,10 @@
                 ]
             }
         }
+    },
+    "notFound": {
+        "title": "Página no encontrada",
+        "description": "No hemos podido encontrar lo que buscabas...",
+        "intro": "Para animarte, te introducimos a Roberto, la mascota oficial de ecoDeliver!"
     }
 }
