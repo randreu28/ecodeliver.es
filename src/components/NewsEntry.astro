@@ -1,23 +1,24 @@
 ---
-import type { ImageMetadata } from 'astro';
-import { Image } from 'astro:assets';
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
 
 interface Props {
   title: string;
+  className?: string;
   description: string;
   cta: string;
   image: ImageMetadata;
   href: string;
 }
-const { title, description, image, href,cta } = Astro.props;
+const { title, description, image, href, cta, className } = Astro.props;
 ---
 
-<div>
+<div class={className}>
   <Image
-      class="object-cover object-center w-full h-64 rounded-lg lg:h-80"
-      src={image}
-      alt=""
-    />
+    class="object-cover object-center w-full h-64 rounded-lg lg:h-80"
+    src={image}
+    alt=""
+  />
 
   <h1 class="mt-6 text-xl font-semibold">
     {title}
@@ -30,7 +31,6 @@ const { title, description, image, href,cta } = Astro.props;
   <a
     href={href}
     class="inline-block mt-4 text-primary underline hover:text-primary/50"
-    target="_blank"
-    >{cta}</a
+    target="_blank">{cta}</a
   >
 </div>
