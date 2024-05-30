@@ -1,305 +1,299 @@
 {
     "navbar": {
-        "home": "Tecnologías",
-        "collaborative": "Transporte Collaborativo",
-        "origin": "Nuestro origen"
+        "home": "Technologies",
+        "collaborative": "Collaborative Transport",
+        "origin": "Our Origin"
     },
     "footer": {
-        "col1Header": "Acerca de nosotros",
+        "col1Header": "About Us",
         "col1": {
-            "privacyPolicy": "Política de privacidad",
-            "corporateIdentity": "Identidad corporativa",
-            "compromises": "Compromisos"
+            "privacyPolicy": "Privacy Policy",
+            "corporateIdentity": "Corporate Identity",
+            "compromises": "Commitments"
         },
-        "col2Header": "Contacto",
+        "col2Header": "Contact",
         "col2": {
-            "workWithUs": "Trabaja con nosotros",
-            "contactEmail": "hola@ecodeliver.tech"
+            "workWithUs": "Work with Us",
+            "contactEmail": "hello@ecodeliver.tech"
         },
-        "copyright": "© 2024 ecoDeliver. Todos los derechos reservados."
+        "copyright": "© 2024 ecoDeliver. All rights reserved."
     },
     "homepage": {
         "title": "ecoDeliver",
-        "description": "Tecnología disruptiva para un transporte sostenible, eficiente y colaborativo",
-        "keywords": "ecoDeliver, tecnología, transporte, sostenible, eficiente, colaborativo",
+        "description": "Disruptive technology for sustainable, efficient, and collaborative transport",
+        "keywords": "ecoDeliver, technology, transport, sustainable, efficient, collaborative",
         "hero": {
-            "exploring": "Explorando nuevos horizontes para partners",
-            "contactUs": "Contáctanos",
-            "title": "Tecnología disruptiva para un transporte",
+            "exploring": "Exploring new horizons for partners",
+            "contactUs": "Contact Us",
+            "title": "Disruptive technology for transport",
             "dynamicTexts": [
-                "sostenible",
-                "eficiente",
-                "colaborativo"
+                "sustainable",
+                "efficient",
+                "collaborative"
             ],
-            "description": "Únete a la transformación del transporte sostenible apostando por tecnología disruptiva. Estamos preparando grandes novedades."
+            "description": "Join the transformation of sustainable transport by betting on disruptive technology. We are preparing great news."
         },
-        "cloudLogosTitle": "Con el apoyo de...",
+        "cloudLogosTitle": "With the support of...",
         "featureSection1": {
-            "prelude": "Presentando",
-            "title": "Tecnología de vanguardia con análisis predictivo de demanada",
-            "description": "Nuestros sistema de análisis logístico aprovecha el poder de algoritmos avanzados y análisis de datos para automatizar y optimizar procesos de enrutamiento, entrega y comunicación.",
+            "prelude": "Presenting",
+            "title": "Cutting-Edge Technology, based on state-of-the-art AI",
+            "description": "We apply the latest advances in AI, algorithms, applied mathematics, and demand-matching to offer disruptive solutions for logistics and transportation.",
             "features": [
-                "Optimización dinmámica de rutas de entrega",
-                "Toma de decisiones automatizada",
-                "Comunicación instantánea y altamente capacitada"
+                "Dynamic delivery route optimization",
+                "Automated decision-making",
+                "Instant and highly skilled communication"
             ],
-            "cta": "Leer más"
+            "cta": "Read more"
         },
         "featureSection2": {
-            "prelude": "Presentando",
-            "title": "La red para transporte colaborativo 0 emisiones",
-            "description": "Desbloqueamos una logística eficiente y sostenible a través de la colaboración. Conectamos empresas, operadores y conductores en una plataforma unificada, facilitando una colaboración fluida y una utilización optimizada de los recursos.",
+            "prelude": "Presenting",
+            "title": "Collaborative transportation for a greener world",
+            "description": "We make efficient and sustainable logistics possible through collaboration. We connect companies, drivers, and operators with available space on their trips in a unified ecosystem. Thus, we make your trips cheaper and remove trucks from the road.",
             "features": [
-                "Matcheo dinámico",
-                "Capacidad compartida",
-                "Reduciendo la huella de carbono"
+                "Dynamic matching",
+                "Shared capacity",
+                "Reducing carbon footprint"
             ],
-            "cta": "Leer más"
+            "cta": "Read more"
         },
         "news": {
-            "title": "Noticias",
+            "title": "News",
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugit dolorum amet dolores praesentium, alias nam? Tempore",
             "cards": [
                 {
-                    "title": "Título de la noticia",
-                    "description": "Descripción de la noticia",
-                    "cta": "Leer más"
+                    "title": "News title",
+                    "description": "News description",
+                    "cta": "Read more"
                 },
                 {
-                    "title": "Título de la noticia",
-                    "description": "Descripción de la noticia",
-                    "cta": "Leer más"
+                    "title": "News title",
+                    "description": "News description",
+                    "cta": "Read more"
                 },
                 {
-                    "title": "Título de la noticia",
-                    "description": "Descripción de la noticia",
-                    "cta": "Leer más"
+                    "title": "News title",
+                    "description": "News description",
+                    "cta": "Read more"
                 }
             ]
         }
     },
     "contactForm": {
-        "title": "¡Contáctanos!",
-        "description": "¿En qué te podemos ayudar?",
-        "name": "Nombre",
+        "title": "Contact Us!",
+        "description": "What can we help you with?",
+        "name": "Name",
         "namePlaceholder": "Elon Musk",
-        "email": "Correo electrónico",
+        "email": "Email",
         "emailPlaceholder": "elon@musk.com",
-        "message": "Mensaje",
-        "messagePlaceholder": "Quisiera regalaros unos teslas...",
-        "submit": "Enviar",
-        "submitting": "Enviando...",
-        "submitted": "Enviado",
-        "error": "Algo ha ido mal"
+        "message": "Message",
+        "messagePlaceholder": "I would like to give you some Teslas...",
+        "submit": "Send",
+        "submitting": "Sending...",
+        "submitted": "Sent",
+        "error": "Something went wrong"
     },
     "commitmentsPage": {
-        "title": "Compromisos",
-        "description": "En ecoDeliver, creemos en ser transparentes con nuestras metas y objetivos. Es por ello que queremos dejar al ojo público todo lo que nos proponemos.",
-        "keywords": "Compromisos",
-        "header": "Nuestros compromisos 🙌",
-        "intro": "En ecoDeliver, creemos en ser transparentes con nuestras metas y objetivos. Es por ello que queremos dejar al ojo público todo lo que nos proponemos.",
-        "creativeCall": "¿Eres un creativo? Considera valorarnos en",
+        "title": "Commitments",
+        "description": "At ecoDeliver, we believe in being transparent about our goals and objectives. That's why we want to make everything we propose public.",
+        "keywords": "Commitments",
+        "header": "Our Commitments 🙌",
+        "intro": "At ecoDeliver, we believe in being transparent about our goals and objectives. That's why we want to make everything we propose public.",
+        "creativeCall": "Are you a creative? Consider rating us on",
         "cards": [
             {
-                "title": "Política de anticorrupción",
-                "description": "La política anticorrupción contiene todas nuestras medidas anticorrupción, así como la protección de nuestra misión y canales de comunicación para cualquier incidencia."
+                "title": "Anti-corruption policy",
+                "description": "The anti-corruption policy contains all our anti-corruption measures, as well as the protection of our mission and communication channels for any incidents."
             },
             {
-                "title": "Código ético",
-                "description": "Nuestro código ético resume nuestras creencias, valores y visión. Resalta nuestra manera de resolver conflictos de interés, confidencialidad y seguridad de información, entre otros."
+                "title": "Ethical code",
+                "description": "Our ethical code summarizes our beliefs, values, and vision. It highlights our way of resolving conflicts of interest, confidentiality, and information security, among others."
             },
             {
-                "title": "Política de protección al cliente",
-                "description": "Nuestra política de protección al cliente detalla la comunicación a nuestros clientes, el procedimiento y el plazo, el allanamiento y desistimiento, entre otros."
+                "title": "Customer protection policy",
+                "description": "Our customer protection policy details communication to our customers, the procedure and timeframe, the settlement and withdrawal, among others."
             },
             {
-                "title": "Plan de igualdad",
-                "description": "Nuestro plan de igualdad incluye nuestros objetivos generales en materia de igualdad, condiciones de trabajo, ejercicio responsable sobre los derechos de la vida personal, familiar y laboral, entre otros."
+                "title": "Equality plan",
+                "description": "Our equality plan includes our general objectives in terms of equality, working conditions, responsible exercise over the rights of personal, family, and work life, among others."
             }
         ],
-        "cta": "Descargar"
+        "cta": "Download"
     },
     "corporateImagePage": {
         "title": "Corporate Image",
-        "description": "La marca corporativa de ecoDeliver, libre de uso para todo el mundo",
-        "keywords": "imagen, marca, corporativa, logo, ecoDeliver",
-        "header": "Nuestra identidad corporativa 🙌",
-        "intro": "El propósito de estas pautas es facilitar que cualquiera que quiera usar nuestra imagen corporativa pueda hacerlo respetando nuestra marca y valores corporativos. Han sido diseñadas para asegurar que la marca represente nuestros valores de la forma en que lo pretendíamos.",
-        "creativeCall": "¿Eres un creativo? Considera valorarnos en",
+        "description": "The corporate brand of ecoDeliver, free for everyone to use",
+        "keywords": "image, brand, corporate, logo, ecoDeliver",
+        "header": "Our Corporate Identity 🙌",
+        "intro": "The purpose of these guidelines is to make it easy for anyone who wants to use our corporate image to do so while respecting our brand and corporate values. They have been designed to ensure that the brand represents our values in the way we intended.",
+        "creativeCall": "Are you a creative? Consider rating us on",
         "cards": [
             {
-                "title": "Manual de identidad",
-                "description": "El manual contiene todo lo que necesitas para utilizar nuestra marca de la manera en que lo pretendíamos."
+                "title": "Identity manual",
+                "description": "The manual contains everything you need to use our brand in the way we intended."
             },
             {
                 "title": "Logo",
-                "description": "Incluye el logo en diferentes formatos (rasterizado, vectorial) y en diferentes temas (claro, oscuro)."
+                "description": "Includes the logo in different formats (rasterized, vector) and in different themes (light, dark)."
             },
             {
-                "title": "Tipografía",
-                "description": "Nuestra tipografía de preferencia es Urbanist, diseñada por Corey Hu y una de las fuentes libres de Google Fonts."
+                "title": "Typography",
+                "description": "Our preferred typography is Urbanist, designed by Corey Hu and one of the free fonts from Google Fonts."
             },
             {
-                "title": "Líneas de soporte",
-                "description": "Incluye diferentes líneas de soporte con diferentes tamaños, formas y longitudes."
+                "title": "Support lines",
+                "description": "Includes different support lines with different sizes, shapes, and lengths."
             }
         ],
-        "cta": "Descargar"
+        "cta": "Download"
     },
     "technologies": {
-        "title": "Tecnología",
-        "description": "Pioneros en la sostenibilidad a través de la colaboración",
-        "keywords": "ecoDeliver, tecnología, transporte, sostenible, eficiente, colaborativo",
+        "title": "Technology",
+        "description": "Pioneers in the transition to a greener world through collaboration",
+        "keywords": "ecoDeliver, technology, transport, sustainable, efficient, collaborative",
         "heroSection": {
-            "title": "Tecnología de vanguardia hecha",
-            "title2": "a tu medida",
-            "description": "Diseñamos tecnología innovadora para integrarlo al flujo de trabajo de tu empresa",
+            "title": "Latest technology",
+            "title2": "made to your needs",
+            "description": "We design innovative technology to integrate it into your business's workflow",
             "dynamicTexts": [
-                "Gestión inteligente de flotas",
-                "Optimización de entregas",
-                "Rastreo en tiempo real",
-                "Automatización de rutas",
-                "Análisis predictivo de envíos",
-                "Monitoreo de vehículos 24/7",
-                "Optimización de carga y descarga",
-                "Integración con sistemas ERP",
-                "Reportes de desempeño en tiempo real",
-                "Soluciones de última milla"
+                "Dynamic pricing algorithms",
+                "Artificial Intelligence for logistics",
+                "Real-time route optimization"
             ]
         },
-        "featuresTitle": "Pioneros en la innovación tecnológica",
-        "featuresDescription": "Capacitados para el desarrollo de aplicaciones de tecnología logística, inteligencia artificial, optimización de rutas y más",
+        "featuresTitle": "Pioneers in innovation technology",
+        "featuresDescription": "Capacitated to develop logistics technology applications, artificial intelligence, route optimization, and more",
         "features": [
             {
-                "title": "Algoritmos de coincidencia de demanda y precios",
+                "title": "Dynamic demand and price matching algorithms",
                 "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet"
             },
             {
-                "title": "Inteligencia artificial para logística",
+                "title": "AI for logistics",
                 "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet"
             },
             {
-                "title": "Optimización de rutas en tiempo real",
+                "title": "Real-time route optimization",
                 "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet"
             }
         ],
         "goalSection": {
-            "title": "Tenemos una meta",
+            "title": "WE HAVE A MISSION",
             "description": [
-                "Transformar la logística basada en el combustible fósil mediante la tecnología.",
-                "Así de simple."
+                "To create solutions that bring sustainability to transportation through technology.",
+                "It's that simple.",
+                "Inspire our creativity with your greatest challenge!"
             ]
         }
     },
     "collaborative": {
-        "title": "Nuestro orígen",
-        "description": "Pioneros en la sostenibilidad a través de la colaboración",
-        "keywords": "ecoDeliver, tecnología, transporte, sostenible, eficiente, colaborativo",
+        "title": "Collaborative transportation",
+        "description": "Pioneers in the transition to a greener world through collaboration",
+        "keywords": "ecoDeliver, technology, transport, sustainable, efficient, collaborative",
         "hero": {
-            "exploring": "Explorando nuevos horizontes para partners",
-            "contactUs": "Contáctanos",
-            "title": "Transporte colaborativo, simplificado",
-            "description": "Utilizamos el espacio vacío en vehículos que ya van a viajar y optimizamos la cadena logística."
+            "exploring": "Exploring new horizons for partners",
+            "contactUs": "Contact Us",
+            "title": "Collaborative transportation, simplified",
+            "description": "We utilize the empty space in vehicles that are already traveling and optimize the logistics chain."
         },
-        "whyCollaborative": "¿Porqué el modelo colaborativo?",
+        "whyCollaborative": "Why bet on collaboration?",
         "values": [
             {
-                "title": "Compromiso con la sostenibilidad",
-                "description": "Aprovechamos el espacio vacío en vehículos que ya están en tránsito, reduciendo la necesidad de camiones adicionales y disminuyendo la huella de carbono."
+                "title": "Commitment to sustainability",
+                "description": "We utilize the empty space in vehicles that were already going to travel, reducing the need for more trucks and decreasing the carbon footprint."
             },
             {
-                "title": "Enfoque en el bienestar",
-                "description": "Nos preocupamos por nuestros socios y sus empleados, asegurando que todos los involucrados en la cadena de suministro estén bien cuidados y valorados."
+                "title": "Focus on well-being",
+                "description": "Our social responsibility goes beyond environmental sustainability. We always put people at the heart of our work."
             },
             {
-                "title": "Fomento de la comunidad",
-                "description": "Al colaborar con nosotros, se une a una red de empresas que comparten recursos y conocimientos, creando un ecosistema de beneficios mutuos."
+                "title": "Fostering community",
+                "description": "By collaborating with us, you bet on a network of companies that share resources and opportunities, creating an ecosystem of mutual benefits."
             },
             {
-                "title": "Innovación práctica",
-                "description": "Revolucionamos el mercado logístico sin interrumpir sus operaciones. Nos enfocamos en que todo funcione de manera fluida y eficiente."
+                "title": "Practical innovation",
+                "description": "We reinvent the logistics market ensuring operational flow. We guarantee the smooth and efficient operation of the entire chain."
             },
             {
-                "title": "Transparencia total",
-                "description": "Promovemos la transparencia en todas nuestras operaciones, asegurando que nuestros socios tengan una visión clara y precisa de cada paso del proceso."
+                "title": "Total transparency",
+                "description": "Transparency is our policy, we guarantee our partners a clear and precise view throughout the process."
             },
             {
-                "title": "Seguridad garantizada",
-                "description": "Implementamos rigurosos protocolos de seguridad para proteger tanto a los transportistas como a los paquetes, asegurando la integridad de cada envío."
+                "title": "Guaranteed security",
+                "description": "We implement rigorous security protocols to protect both carriers and packages, ensuring the integrity of each shipment."
             }
         ],
         "emissionBar": {
-            "title": "¿Por qué apostamos por el modelo colaborativo?",
-            "of": "de",
-            "accordingTo": "Ahorrados al usar el modelo colaborativo en vez de camiones diesel convencionales, de acuerdo con la",
-            "ref1": "guía de cálculo de emisiones de la Generalitat de Cataluña ",
-            "and": "y",
-            "ref2": "el ministerio de transporte y sostenibilidad español",
-            "packages": "paquetes",
-            "packageQuantity": "número de paquetes"
+            "title": "Imagine a future with us",
+            "of": "of",
+            "accordingTo": "Saved with collaborative transportation vs. traditional logistics, according to the",
+            "ref1": "emissions calculation guide of the Generalitat of Catalonia",
+            "and": "and",
+            "ref2": "data from the CNMC",
+            "packages": "packages",
+            "packageQuantity": "number of packages"
         },
-        "benefitsTitle": "¿Por qué apostamos por el modelo colaborativo?",
+        "benefitsTitle": "What value do we bring?",
         "benefits": [
             {
-                "title": "Reducir Costos de Transporte",
-                "description": "Al optimizar nuestras rutas y compartir recursos, ayudamos a reducir significativamente los costos de transporte para su empresa."
+                "title": "Reduce Transportation Costs",
+                "description": "By optimizing our routes and sharing resources, we help significantly reduce transportation costs."
             },
             {
-                "title": "Transporte de Última Milla y de Larga Distancia",
-                "description": "Ofrecemos soluciones integrales para el transporte de última milla y de larga distancia, asegurando la entrega eficiente y puntual de sus productos."
+                "title": "Last Mile and Long Distance Transport",
+                "description": "We offer comprehensive solutions for last mile and long-distance transport, ensuring efficient and timely delivery of your products."
             },
             {
-                "title": "Gestión del Marketplace",
-                "description": "Facilitamos la gestión de su mercado, conectando a transportistas y empresas para maximizar la eficiencia y minimizar los costos."
+                "title": "Marketplace Management",
+                "description": "We facilitate the management of your market, connecting carriers and companies, saving management time."
             },
             {
-                "title": "Hacer que Cada Viaje Cuente, Reduciendo CO2",
-                "description": "Nos comprometemos a reducir la huella de carbono optimizando cada viaje, promoviendo prácticas sostenibles y responsables."
+                "title": "Making Every Trip Count, Reducing CO2",
+                "description": "We are committed to reducing the carbon footprint by optimizing every trip, promoting sustainable and responsible practices."
             }
         ]
     },
     "aboutUs": {
-        "title": "Nuestro Orígen",
-        "description": "Pioneros en la sostenibilidad a través de la colaboración",
-        "keywords": "ecoDeliver, tecnología, transporte, sostenible, eficiente, colaborativo",
+        "title": "Our Origin",
+        "description": "Pioneers in Sustainability Through Collaboration",
+        "keywords": "ecoDeliver, technology, transport, sustainable, efficient, collaborative",
         "content": {
             "section1": {
-                "heading": "Nuestro Orígen",
-                "blockquote": "Pioneros en Sostenibilidad a Través de la Colaboración",
+                "heading": "Our Origin",
+                "blockquote": "Pioneers in Sustainability Through Collaboration",
                 "paragraphs": [
-                    "En ecoDeliver, nuestro viaje comenzó con una visión simple pero poderosa: revolucionar la industria del transporte a través de la colaboración y la sostenibilidad. Todo comenzó con una observación aguda de nuestros fundadores, quienes notaron la ineficiencia y el impacto ambiental de innumerables vehículos recorriendo nuestras carreteras con amplio espacio vacío.",
-                    "Motivados por la creencia de que este espacio desperdiciado podría ser aprovechado para transportar bienes de manera sostenible, nos propusimos crear soluciones innovadoras que optimizaran la utilización de los recursos existentes. Nuestra primera incursión involucró la pionera de un modelo similar a 'blablacar' pero adaptado para paquetes, donde individuos podían aprovechar sus viajes planificados para transportar paquetes a largas distancias, utilizando efectivamente la capacidad sobrante de sus vehículos."
+                    "At ecoDeliver, our journey started with a simple yet powerful vision: to revolutionize the transportation industry through collaboration and sustainability. It all began with a keen observation by our founders, Patrick & Mateu, who noticed the inefficiency and environmental impact of countless vehicles traveling our roads with ample empty space.",
+                    "Driven by the belief that this wasted space could be used to transport goods sustainably, we aimed to create innovative solutions to optimize resource utilization. Our initial effort involved pioneering a model similar to \"BlaBlaCar\" for packages, where individuals could use their planned trips to transport packages over long distances, effectively using their vehicle's extra capacity."
                 ]
             },
             "section2": {
-                "blockquote": "Creemos que la sostenibilidad puede ser conseguida a través de la colaboración",
+                "blockquote": "We believe sustainability can be achieved through collaboration",
                 "paragraphs": [
-                    "A medida que perfeccionamos nuestro modelo y expandimos nuestro alcance, nos adentramos más en el ámbito de los operadores de transporte de movilidad profesional, visualizando un futuro donde incluso las líneas de autobuses podrían aprovechar el espacio disponible en sus maleteros para transportar bienes, reduciendo así aún más las emisiones de carbono y maximizando la eficiencia."
+                    "As we refined our model and expanded our reach, we delved into the realm of professional mobility transport operators. We envisioned a future where even bus lines could use their available trunk space to transport goods, further reducing carbon emissions and maximizing efficiency."
                 ]
             },
             "section3": {
-                "heading": "De Concepto a Realidad",
+                "heading": "From Concept to Reality",
                 "paragraphs": [
-                    "Lo que comenzó como una iniciativa de base para abordar un problema ambiental urgente pronto evolucionó hacia un próspero ecosistema de soluciones de transporte sostenible. A medida que nuestro equipo creció, también lo hizo nuestra experiencia, conocimiento del sector y capacidades tecnológicas. Esta evolución allanó el camino para una progresión natural hacia la oferta de nuestros servicios a otras empresas dentro de la industria."
+                    "What started as a grassroots initiative to tackle an urgent environmental problem soon evolved into a thriving ecosystem of sustainable transportation solutions. As our team grew, so did our expertise, industry knowledge, and technological capabilities. This evolution paved the way for a natural progression toward offering our services to other companies within the industry."
                 ]
             },
             "section4": {
-                "blockquote": "Queremos expandir los horizontes de la innovación en transporte sostenible",
+                "blockquote": "We aim to expand the horizons of innovation in sustainable transport",
                 "paragraphs": [
-                    "Hoy, ecoDeliver se encuentra a la vanguardia de la innovación en transporte sostenible, con un enfoque multifacético que abarca tanto la provisión de servicios como el desarrollo tecnológico. Basándonos en nuestros principios fundamentales de colaboración y sostenibilidad, ahora ofrecemos una gama de soluciones impulsadas por la tecnología diseñadas para empoderar a las empresas en los sectores de transporte, logística y movilidad."
+                    "Today, ecoDeliver is at the forefront of innovation in sustainable transportation, with a multifaceted approach encompassing both service provision and technological development. Based on our core principles of collaboration and sustainability, we now offer a range of technology-driven solutions designed to empower companies in the transportation, logistics, and mobility sectors."
                 ]
             },
             "section5": {
-                "heading": "Impulsando el Cambio Juntos",
+                "heading": "Driving Change Together",
                 "paragraphs": [
-                    "Nuestro viaje está lejos de terminar. Permanecemos firmes en nuestro compromiso de impulsar un cambio positivo dentro de la industria del transporte, una colaboración a la vez. Únete a nosotros mientras continuamos explorando nuevas oportunidades, forjando asociaciones significativas y liderando soluciones innovadoras que dan forma al futuro de la movilidad sostenible."
+                    "Our journey is far from over. We remain steadfast in our commitment to driving positive change within the transportation industry, one collaboration at a time. Join us as we continue to explore new opportunities, forge meaningful partnerships, and lead innovative solutions shaping the future of sustainable mobility."
                 ]
             }
         }
     },
     "notFound": {
-        "title": "Página no encontrada",
-        "description": "No hemos podido encontrar lo que buscabas...",
-        "intro": "Para animarte, te introducimos a Roberto, la mascota oficial de ecoDeliver!"
+        "title": "Page not found",
+        "description": "We couldn't find what you were looking for...",
+        "intro": "To inspire you, we introduce you to Roberto, the official pet of ecoDeliver!"
     }
 }
