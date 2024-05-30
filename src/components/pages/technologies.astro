@@ -13,7 +13,6 @@ const i18n = getI18N(Astro.currentLocale || "es").technologies;
   title={i18n.title}
   description={i18n.description}
   keywords={i18n.keywords}
-  image="/media/stockImage1.jpg"
 >
   <!-- Hero section -->
   <HeroGemini i18n={i18n.heroSection} client:load />
@@ -89,7 +88,9 @@ const i18n = getI18N(Astro.currentLocale || "es").technologies;
           </p>
         </div>
 
-        <div class="p-8 space-y-3 border-2 border-primary rounded-xl">
+        <div
+          class="p-8 space-y-3 border-2 border-primary rounded-xl col-span-1 md:col-span-2 xl:col-span-1"
+        >
           <span class="inline-block text-primary">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -129,16 +130,18 @@ const i18n = getI18N(Astro.currentLocale || "es").technologies;
   <section class="h-[80vh] lg:h-screen md:p-10">
     <TechCard className="font-bold" client:load>
       <div
-        class="text-4xl md:text-[8rem] lg:text-[10rem] md:leading-[8rem] lg:leading-[10rem] uppercase pb-10 md:pb-32 font-bold bg-gradient-to-r text-transparent bg-clip-text from-primary to-teal-500 -z-10 max-w-4xl"
+        class="text-4xl md:text-[8rem] lg:text-[10rem] md:leading-[8rem] lg:leading-[10rem] uppercase pb-10 md:pb-32 font-bold bg-gradient-to-r text-transparent bg-clip-text from-primary to-teal-500 -z-10 max-w-5xl"
       >
         <h2 class="text-center">{i18n.goalSection.title}</h2>
       </div>
-      <div class="text-2xl md:text-4xl max-w-2xl p-5">
-        <h3 class="pb-5">
+      <div class="text-xl md:text-4xl max-w-5xl p-5 space-y-3">
+        <h3>
           {i18n.goalSection.description[0]}
         </h3>
 
-        <h3 class="">{i18n.goalSection.description[1]}</h3>
+        <h3>{i18n.goalSection.description[1]}</h3>
+
+        <h3>{i18n.goalSection.description[2]}</h3>
       </div>
     </TechCard>
   </section>
