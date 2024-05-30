@@ -144,51 +144,51 @@
                 "description": "Incluye diferentes líneas de soporte con diferentes tamaños, formas y longitudes."
             }
         ],
-        "cta": "Descargar",
-        "technologies": {
-            "title": "Tecnología",
-            "description": "Pioneros en la sostenibilidad a través de la colaboración",
-            "keywords": "ecoDeliver, tecnología, transporte, sostenible, eficiente, colaborativo",
-            "heroSection": {
-                "title": "Tecnología de vanguardia hecha",
-                "title2": "a tu medida",
-                "description": "Diseñamos tecnología innovadora para integrarlo al flujo de trabajo de tu empresa",
-                "dynamicTexts": [
-                    "Gestión inteligente de flotas",
-                    "Optimización de entregas",
-                    "Rastreo en tiempo real",
-                    "Automatización de rutas",
-                    "Análisis predictivo de envíos",
-                    "Monitoreo de vehículos 24/7",
-                    "Optimización de carga y descarga",
-                    "Integración con sistemas ERP",
-                    "Reportes de desempeño en tiempo real",
-                    "Soluciones de última milla"
-                ]
+        "cta": "Descargar"
+    },
+    "technologies": {
+        "title": "Tecnología",
+        "description": "Pioneros en la sostenibilidad a través de la colaboración",
+        "keywords": "ecoDeliver, tecnología, transporte, sostenible, eficiente, colaborativo",
+        "heroSection": {
+            "title": "Tecnología de vanguardia hecha",
+            "title2": "a tu medida",
+            "description": "Diseñamos tecnología innovadora para integrarlo al flujo de trabajo de tu empresa",
+            "dynamicTexts": [
+                "Gestión inteligente de flotas",
+                "Optimización de entregas",
+                "Rastreo en tiempo real",
+                "Automatización de rutas",
+                "Análisis predictivo de envíos",
+                "Monitoreo de vehículos 24/7",
+                "Optimización de carga y descarga",
+                "Integración con sistemas ERP",
+                "Reportes de desempeño en tiempo real",
+                "Soluciones de última milla"
+            ]
+        },
+        "featuresTitle": "Pioneros en la innovación tecnológica",
+        "featuresDescription": "Capacitados para el desarrollo de aplicaciones de tecnología logística, inteligencia artificial, optimización de rutas y más",
+        "features": [
+            {
+                "title": "Algoritmos de coincidencia de demanda y precios",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet"
             },
-            "featuresTitle": "Pioneros en la innovación tecnológica",
-            "featuresDescription": "Capacitados para el desarrollo de aplicaciones de tecnología logística, inteligencia artificial, optimización de rutas y más",
-            "features": [
-                {
-                    "title": "Algoritmos de coincidencia de demanda y precios",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet"
-                },
-                {
-                    "title": "Inteligencia artificial para logística",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet"
-                },
-                {
-                    "title": "Optimización de rutas en tiempo real",
-                    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet"
-                }
-            ],
-            "goalSection": {
-                "title": "Tenemos una meta",
-                "description": [
-                    "Transformar la logística basada en el combustible fósil mediante la tecnología.",
-                    "Así de simple."
-                ]
+            {
+                "title": "Inteligencia artificial para logística",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet"
+            },
+            {
+                "title": "Optimización de rutas en tiempo real",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet"
             }
+        ],
+        "goalSection": {
+            "title": "Tenemos una meta",
+            "description": [
+                "Transformar la logística basada en el combustible fósil mediante la tecnología.",
+                "Así de simple."
+            ]
         }
     },
     "collaborative": {
