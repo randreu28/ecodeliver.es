@@ -5,7 +5,9 @@ import ContactForm from "@/components/ContactForm";
 import DynamicText from "@/components/DynamicText";
 import NewsEntry from "@/components/NewsEntry.astro";
 import Layout from "@/layouts/Layout.astro";
-import lavanguardiaArticle from "@/media/articles/lavanguardiaArticle.webp";
+import caixaBank from "@/media/articles/caixaBankArticle.jpg";
+import latinoArticle from "@/media/articles/latinoArticle.jpeg";
+import araArticle from "@/media/articles/araArticle.webp";
 import pilotTest from "@/media/pilotTest.jpg";
 import { getRelativeLocaleUrl } from "astro:i18n";
 import { getI18N } from "@/i18n";
@@ -322,24 +324,24 @@ const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm;
           title={i18n.news.cards[0].title}
           description={i18n.news.cards[0].description}
           cta={i18n.news.cards[0].cta}
-          image={lavanguardiaArticle}
-          href="/"
+          image={caixaBank}
+          href="https://zfbarcelona.es/actualidad/noticias/el-consorci-de-la-zona-franca-presenta-la-incubadora-de-alta-tecnologia-en-logistica-4-0/"
         />
 
         <NewsEntry
           title={i18n.news.cards[1].title}
           description={i18n.news.cards[1].description}
           cta={i18n.news.cards[1].cta}
-          image={lavanguardiaArticle}
-          href="/"
+          image={latinoArticle}
+          href="https://www.esdelatino.com/la-innovacion-el-mejor-aliado-del-reparto-de-la-ultima-milla/"
         />
 
         <NewsEntry
           title={i18n.news.cards[2].title}
           description={i18n.news.cards[2].description}
-          image={lavanguardiaArticle}
+          image={araArticle}
           cta={i18n.news.cards[2].cta}
-          href="/"
+          href="https://www.viaempresa.cat/es/economia/ecodeliver-mensajero-bodega-bus_2195182_102.html"
           className="col-span-1 md:col-span-2 xl:col-span-1"
         />
       </div>
