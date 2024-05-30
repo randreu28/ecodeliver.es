@@ -1,22 +1,24 @@
 ---
+import { getI18N } from "@/i18n";
 import { cn } from "../utils/utils";
 import ThemeToggler from "./ThemeToggler";
 import { getRelativeLocaleUrl } from "astro:i18n";
 
 const currentUrl = new URL(Astro.request.url).pathname;
+const i18n = getI18N(Astro.currentLocale || "es").navbar;
 
 const navbar = [
   {
     href: getRelativeLocaleUrl(Astro.currentLocale || "es", "technologies"),
-    label: "Tecnologías",
+    label: i18n.tech,
   },
   {
     href: getRelativeLocaleUrl(Astro.currentLocale || "es", "collaborative"),
-    label: "Transporte colaborativo",
+    label: i18n.collaborative,
   },
   {
     href: getRelativeLocaleUrl(Astro.currentLocale || "es", "about-us"),
-    label: "Nuestro orígen",
+    label: i18n.origin,
   },
 ];
 ---
