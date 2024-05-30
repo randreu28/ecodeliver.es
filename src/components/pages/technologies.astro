@@ -3,6 +3,9 @@ import ContactForm from "@/components/ContactForm";
 import Layout from "@/layouts/Layout.astro";
 import { HeroGemini } from "@/components/HeroGemini";
 import { TechCard } from "@/components/TechCard";
+import { getI18N } from "@/i18n";
+
+const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm;
 ---
 
 <Layout
@@ -150,5 +153,5 @@ import { TechCard } from "@/components/TechCard";
     </TechCard>
   </section>
 
-  <ContactForm client:load />
+  <ContactForm i18n={contactFormI18n} client:load />
 </Layout>

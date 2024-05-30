@@ -2,7 +2,10 @@
 import { Image } from "astro:assets";
 import ContactForm from "@/components/ContactForm";
 import Layout from "@/layouts/Layout.astro";
-import caixaBankArticle from "@/media/articles/caixaBankArticle.jpg"
+import caixaBankArticle from "@/media/articles/caixaBankArticle.jpg";
+import { getI18N } from "@/i18n";
+
+const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm;
 ---
 
 <Layout
@@ -19,9 +22,11 @@ import caixaBankArticle from "@/media/articles/caixaBankArticle.jpg"
     loading="eager"
   />
 
-  <div class="max-w-4xl mx-auto prose prose-lg prose-blockquote:border-gray-500 dark:prose-invert p-2">
+  <div
+    class="max-w-4xl mx-auto prose prose-lg prose-blockquote:border-gray-500 dark:prose-invert p-2"
+  >
     <h1>Nuestro Orígen</h1>
-    <blockquote >
+    <blockquote>
       Pioneros en Sostenibilidad a Través de la Colaboración
     </blockquote>
     <p>
@@ -43,7 +48,10 @@ import caixaBankArticle from "@/media/articles/caixaBankArticle.jpg"
       vehículos.
     </p>
 
-    <blockquote class="text-5xl">Creemos que la sostenibilidad puede ser conseguida a través de la colaboración</blockquote>
+    <blockquote class="text-5xl">
+      Creemos que la sostenibilidad puede ser conseguida a través de la
+      colaboración
+    </blockquote>
     <p>
       A medida que perfeccionamos nuestro modelo y expandimos nuestro alcance,
       nos adentramos más en el ámbito de los operadores de transporte de
@@ -63,8 +71,10 @@ import caixaBankArticle from "@/media/articles/caixaBankArticle.jpg"
       industria.
     </p>
 
-    <blockquote class="text-5xl text-right border-l-0 border-r-4 pr-5">Queremos expandir los horizontes de la innovación en transporte sostenible</blockquote>
-  
+    <blockquote class="text-5xl text-right border-l-0 border-r-4 pr-5">
+      Queremos expandir los horizontes de la innovación en transporte sostenible
+    </blockquote>
+
     <p>
       Hoy, ecoDeliver se encuentra a la vanguardia de la innovación en
       transporte sostenible, con un enfoque multifacético que abarca tanto la
@@ -85,5 +95,5 @@ import caixaBankArticle from "@/media/articles/caixaBankArticle.jpg"
     </p>
   </div>
 
-  <ContactForm  client:load/>
+  <ContactForm i18n={contactFormI18n} client:load />
 </Layout>
