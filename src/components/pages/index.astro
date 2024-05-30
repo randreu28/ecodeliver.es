@@ -5,13 +5,13 @@ import ContactForm from "@/components/ContactForm";
 import DynamicText from "@/components/DynamicText";
 import NewsEntry from "@/components/NewsEntry.astro";
 import Layout from "@/layouts/Layout.astro";
-import lavanguardiaArticle from "@/media/articles/lavanguardiaArticle.webp"
-import pilotTest from "@/media/pilotTest.jpg"
+import lavanguardiaArticle from "@/media/articles/lavanguardiaArticle.webp";
+import pilotTest from "@/media/pilotTest.jpg";
 import { getRelativeLocaleUrl } from "astro:i18n";
-import { getI18N } from "@/i18n"
+import { getI18N } from "@/i18n";
 
-const i18n = getI18N(Astro.currentLocale || "es").homepage
-const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm
+const i18n = getI18N(Astro.currentLocale || "es").homepage;
+const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm;
 ---
 
 <Layout
@@ -30,13 +30,12 @@ const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm
         class="rounded-full px-3 py-1 text-sm leading-6 text-muted-foreground ring-1 ring-muted-foreground/20 flex flex-row gap-2 w-fit"
       >
         <p class="hidden lg:block text-muted-foreground">
-         {i18n.hero.exploring}
+          {i18n.hero.exploring}
         </p>
 
         <a
           href="#contact-us"
           class="flex flex-row gap-2 font-semibold text-primary bg-background"
-
         >
           <p>{i18n.hero.contactUs}</p>
           <svg
@@ -182,7 +181,10 @@ const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm
         </div>
 
         <a
-          href={getRelativeLocaleUrl(Astro.currentLocale || "es", "/technologies")}
+          href={getRelativeLocaleUrl(
+            Astro.currentLocale || "es",
+            "/technologies"
+          )}
           class="inline-block mt-10 text-primary underline"
         >
           {i18n.featureSection1.cta}
@@ -285,7 +287,10 @@ const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm
           </dl>
 
           <a
-            href={getRelativeLocaleUrl(Astro.currentLocale || "es", "/collaborative")}
+            href={getRelativeLocaleUrl(
+              Astro.currentLocale || "es",
+              "/collaborative"
+            )}
             class="inline-block mt-10 text-primary underline"
           >
             {i18n.featureSection2.cta}
@@ -305,13 +310,14 @@ const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm
   <section>
     <div class="container px-6 py-10 mx-auto">
       <div class="text-center">
-        <h1 class="text-2xl font-semibold capitalize lg:text-3xl">{i18n.news.title}</h1>
+        <h1 class="text-2xl font-semibold capitalize lg:text-3xl">
+          {i18n.news.title}
+        </h1>
       </div>
 
       <div
         class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2 xl:grid-cols-3"
       >
-      
         <NewsEntry
           title={i18n.news.cards[0].title}
           description={i18n.news.cards[0].description}
@@ -320,7 +326,7 @@ const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm
           href="/"
         />
 
-         <NewsEntry
+        <NewsEntry
           title={i18n.news.cards[1].title}
           description={i18n.news.cards[1].description}
           cta={i18n.news.cards[1].cta}
@@ -328,7 +334,7 @@ const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm
           href="/"
         />
 
-         <NewsEntry
+        <NewsEntry
           title={i18n.news.cards[2].title}
           description={i18n.news.cards[2].description}
           image={lavanguardiaArticle}

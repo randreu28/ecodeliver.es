@@ -1,23 +1,32 @@
 ---
 import { cn } from "../utils/utils";
 import ThemeToggler from "./ThemeToggler";
-import { getRelativeLocaleUrl } from 'astro:i18n';
-interface Props {
-  section?: string;
-}
+import { getRelativeLocaleUrl } from "astro:i18n";
 
-const { section } = Astro.props;
+const currentUrl = new URL(Astro.request.url).pathname;
 
 const navbar = [
-  { href: getRelativeLocaleUrl(Astro.currentLocale || "es", "technologies"), label: "Tecnologías" },
-  { href: getRelativeLocaleUrl(Astro.currentLocale || "es", "collaborative"), label: "Transporte colaborativo" },
-  { href: getRelativeLocaleUrl(Astro.currentLocale || "es", "about-us"), label: "Nuestro orígen" },
+  {
+    href: getRelativeLocaleUrl(Astro.currentLocale || "es", "technologies"),
+    label: "Tecnologías",
+  },
+  {
+    href: getRelativeLocaleUrl(Astro.currentLocale || "es", "collaborative"),
+    label: "Transporte colaborativo",
+  },
+  {
+    href: getRelativeLocaleUrl(Astro.currentLocale || "es", "about-us"),
+    label: "Nuestro orígen",
+  },
 ];
 ---
 
 <nav class="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
   <div class="flex items-center gap-10 text-lg">
-    <a href={getRelativeLocaleUrl(Astro.currentLocale || "es", "/")} class="flex items-center gap-4">
+    <a
+      href={getRelativeLocaleUrl(Astro.currentLocale || "es", "/")}
+      class="flex items-center gap-4"
+    >
       <img src="/media/brand/logo.svg" width={50} height={50} alt="logo" />
       <h2 class="my-auto text-2xl font-semibold">
         <span class="text-primary">eco</span>
@@ -30,7 +39,7 @@ const navbar = [
         <a
           href={links.href}
           class={cn([
-            links.href === section && "text-primary font-semibold",
+            links.href === currentUrl && "text-primary font-semibold",
             "hover:underline hidden lg:block",
           ])}
         >
