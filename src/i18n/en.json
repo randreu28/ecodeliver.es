@@ -91,5 +91,32 @@
         "submitting": "Enviando...",
         "submitted": "Enviado",
         "error": "Algo ha ido mal"
+    },
+    "commitmentsPage": {
+        "title": "Compromisos",
+        "description": "En ecoDeliver, creemos en ser transparentes con nuestras metas y objetivos. Es por ello que queremos dejar al ojo público todo lo que nos proponemos.",
+        "keywords": "Compromisos",
+        "header": "Nuestros compromisos 🙌",
+        "intro": "En ecoDeliver, creemos en ser transparentes con nuestras metas y objetivos. Es por ello que queremos dejar al ojo público todo lo que nos proponemos.",
+        "creativeCall": "¿Eres un creativo? Considera valorarnos en",
+        "cards": [
+            {
+                "title": "Política de anticorrupción",
+                "description": "La política anticorrupción contiene todas nuestras medidas anticorrupción, así como la protección de nuestra misión y canales de comunicación para cualquier incidencia."
+            },
+            {
+                "title": "Código ético",
+                "description": "Nuestro código ético resume nuestras creencias, valores y visión. Resalta nuestra manera de resolver conflictos de interés, confidencialidad y seguridad de información, entre otros."
+            },
+            {
+                "title": "Política de protección al cliente",
+                "description": "Nuestra política de protección al cliente detalla la comunicación a nuestros clientes, el procedimiento y el plazo, el allanamiento y desistimiento, entre otros."
+            },
+            {
+                "title": "Plan de igualdad",
+                "description": "Nuestro plan de igualdad incluye nuestros objetivos generales en materia de igualdad, condiciones de trabajo, ejercicio responsable sobre los derechos de la vida personal, familiar y laboral, entre otros."
+            }
+        ],
+        "cta": "Descargar"
     }
 }

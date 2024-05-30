@@ -1,25 +1,28 @@
 ---
 import Card from "@/components/Card.astro";
+import { getI18N } from "@/i18n";
 import Layout from "@/layouts/Layout.astro";
+
+const i18n = getI18N(Astro.currentLocale || "es").homepage;
+const commitmI18n = getI18N(Astro.currentLocale || "es").commitmentsPage;
 ---
 
 <Layout
-  title="Compromisos"
-  description="En ecoDeliver, creemos en ser transparentes con nuestras metas y objetivos. Es por ello que queremos dejar al ojo público todo lo que nos proponemos."
-  keywords="Compromisos"
-  image="/media/brand/manual.png"
+  title={i18n.title}
+  description={i18n.description}
+  keywords={i18n.keywords}
+  image="/media/brand/man0ual.png"
 >
   <div class="container mx-auto p-5 space-y-5">
-    <h2 class="text-5xl font-bold">Nuestros compromisos 🙌</h2>
+    <h2 class="text-5xl font-bold">{commitmI18n.header}</h2>
 
     <p class="text-lg text-foreground">
-      En ecoDeliver, creemos en ser transparentes con nuestras metas y
-      objetivos. Es por ello que queremos dejar al ojo público todo lo que nos
-      proponemos.
+      {commitmI18n.intro}]
     </p>
 
     <p class="text-lg text-foreground">
-      ¿Eres un creativo? Considera valorarnos en <a
+      {commitmI18n.creativeCall}
+      <a
         class="text-primary underline"
         href="https://www.behance.net/gallery/125864213/ecoDeliver-Brand-Guidlines-20"
         >Behance!</a
@@ -28,37 +31,37 @@ import Layout from "@/layouts/Layout.astro";
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
       <Card
-        title="Política de anticorrupción"
+        title={commitmI18n.cards[0].title}
         picture="/media/brand/manual.png"
-        description="La política anticorrupción contiene todas nuestras medidas anticorrupción, así como la protección de nuestra misión y canales de comunicación para cualquier incidencia."
-        cta="Descargar"
+        description={commitmI18n.cards[0].description}
+        cta={commitmI18n.cta}
         href="/media/compromises/anticorrupcion.pdf"
         download="ecoDeliver_anticorrupcion.pdf"
       />
 
       <Card
-        title="Código ético"
+        title={commitmI18n.cards[1].title}
         picture="/media/brand/manual.png"
-        description="Nuestro código ético resume nuestras creencias, valores y visión. Resalta nuestra manera de resolver conflictos de interés, confidencialidad y seguridad de información, entre otros."
-        cta="Descargar"
+        description={commitmI18n.cards[1].description}
+        cta={commitmI18n.cta}
         href="/media/compromises/codigo_etico.pdf"
         download="ecoDeliver_codigo_etico.pdf"
       />
 
       <Card
-        title="Política de protección al cliente"
+        title={commitmI18n.cards[2].title}
         picture="/media/brand/manual.png"
-        description="Nuestra política de protección al cliente detalla la comunicación a nuestros clientes, el procedimiento y el plazo, el allanamiento y desistimiento, entre otros."
-        cta="Descargar"
+        description={commitmI18n.cards[2].description}
+        cta={commitmI18n.cta}
         href="/media/compromises/politica_proteccion_cliente.pdf"
         download="ecoDeliver_politica_proteccion_cliente.pdf"
       />
 
       <Card
-        title="Plan de igualdad"
+        title={commitmI18n.cards[3].title}
         picture="/media/brand/manual.png"
-        description="Nuestro plan de igualdad incluye nuestros objetivos generales en materia de igualdad, condiciones de trabajo, ejercicio responsable sobre los derechos de la vida personal, familiar y laboral, entre otros."
-        cta="Descargar"
+        description={commitmI18n.cards[3].description}
+        cta={commitmI18n.cta}
         href="/media/compromises/plan_igualdad.pdf"
         download="ecoDeliver_plan_igualdad.pdf"
       />
