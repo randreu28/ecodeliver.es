@@ -1,26 +1,30 @@
 ---
 import Card from "@/components/Card.astro";
+import { getI18N } from "@/i18n";
 import Layout from "@/layouts/Layout.astro";
+
+const i18n = getI18N(Astro.currentLocale || "es").homepage;
+const corporateImageI18n = getI18N(
+  Astro.currentLocale || "es"
+).corporateImagePage;
 ---
 
 <Layout
-  title="Corporate Image"
-  description="La marca corporativa de ecoDeliver, libre de uso para todo el mundo"
-  keywords="imagen, marca, corporativa,logo, ecoDeliver"
+  title={i18n.title}
+  description={i18n.description}
+  keywords={i18n.keywords}
   image="/media/brand/manual.png"
 >
   <div class="container mx-auto p-5 space-y-5">
-    <h2 class="text-5xl font-bold">Nuestra identidad corporativa 🙌</h2>
+    <h2 class="text-5xl font-bold">{corporateImageI18n.header}</h2>
 
     <p class="text-lg text-foreground">
-      El propósito de estas pautas es facilitar que cualquiera que quiera usar
-      nuestra imagen corporativa pueda hacerlo respetando nuestra marca y
-      valores corporativos. Han sido diseñadas para asegurar que la marca
-      represente nuestros valores de la forma en que lo pretendíamos.
+      {corporateImageI18n.intro}
     </p>
 
     <p class="text-lg text-foreground">
-      ¿Eres un creativo? Considera valorarnos en <a
+      {corporateImageI18n.creativeCall}
+      <a
         class="text-primary underline"
         href="https://www.behance.net/gallery/125864213/ecoDeliver-Brand-Guidlines-20"
         >Behance!</a
@@ -29,36 +33,36 @@ import Layout from "@/layouts/Layout.astro";
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-5">
       <Card
-        title="Manual de identidad"
+        title={corporateImageI18n.cards[0].title}
         picture="/media/brand/manual.png"
-        description="El manual contiene todo lo que necesitas para utilizar nuestra marca de la manera en que lo pretendíamos."
-        cta="Descargar"
+        description={corporateImageI18n.cards[0].description}
+        cta={corporateImageI18n.cta}
         href="/media/brand/manual.pdf"
         download="ecoDeliver_brand_manual.pdf"
       />
 
       <Card
-        title="Logo"
+        title={corporateImageI18n.cards[1].title}
         picture="/media/brand/logo.png"
-        description="Incluye el logo en diferentes formatos (rasterizado, vectorial) y en diferentes temas (claro, oscuro)."
-        cta="Descargar"
+        description={corporateImageI18n.cards[1].description}
+        cta={corporateImageI18n.cta}
         href="/media/brand/logo.zip"
         download="ecoDeliver_brand_logo.zip"
       />
 
       <Card
-        title="Tipografía"
+        title={corporateImageI18n.cards[2].title}
         picture="/media/brand/typography.png"
-        description="Nuestra tipografía de preferencia es Urbanist, diseñada por Corey Hu y una de las fuentes libres de Google Fonts."
-        cta="Descargar"
+        description={corporateImageI18n.cards[2].description}
+        cta={corporateImageI18n.cta}
         href="https://fonts.google.com/specimen/Urbanist?query=urbanist"
       />
 
       <Card
-        title="Líneas de soporte"
+        title={corporateImageI18n.cards[3].title}
         picture="/media/brand/logo.png"
-        description="Incluye diferentes líneas de soporte con diferentes tamaños, formas y longitudes."
-        cta="Descargar"
+        description={corporateImageI18n.cards[3].description}
+        cta={corporateImageI18n.cta}
         href="/media/brand/support-lines.zip"
         download="ecoDeliver_brand_support_lines.zip"
       />

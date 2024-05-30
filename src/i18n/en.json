@@ -118,5 +118,32 @@
             }
         ],
         "cta": "Descargar"
+    },
+    "corporateImagePage": {
+        "title": "Corporate Image",
+        "description": "La marca corporativa de ecoDeliver, libre de uso para todo el mundo",
+        "keywords": "imagen, marca, corporativa, logo, ecoDeliver",
+        "header": "Nuestra identidad corporativa 🙌",
+        "intro": "El propósito de estas pautas es facilitar que cualquiera que quiera usar nuestra imagen corporativa pueda hacerlo respetando nuestra marca y valores corporativos. Han sido diseñadas para asegurar que la marca represente nuestros valores de la forma en que lo pretendíamos.",
+        "creativeCall": "¿Eres un creativo? Considera valorarnos en",
+        "cards": [
+            {
+                "title": "Manual de identidad",
+                "description": "El manual contiene todo lo que necesitas para utilizar nuestra marca de la manera en que lo pretendíamos."
+            },
+            {
+                "title": "Logo",
+                "description": "Incluye el logo en diferentes formatos (rasterizado, vectorial) y en diferentes temas (claro, oscuro)."
+            },
+            {
+                "title": "Tipografía",
+                "description": "Nuestra tipografía de preferencia es Urbanist, diseñada por Corey Hu y una de las fuentes libres de Google Fonts."
+            },
+            {
+                "title": "Líneas de soporte",
+                "description": "Incluye diferentes líneas de soporte con diferentes tamaños, formas y longitudes."
+            }
+        ],
+        "cta": "Descargar"
     }
 }
