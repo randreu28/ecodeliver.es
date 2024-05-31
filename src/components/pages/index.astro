@@ -59,12 +59,14 @@ const contactFormI18n = getI18N(Astro.currentLocale || "es").contactForm;
     <!-- Hero title -->
     <h1 class="text-4xl font-bold tracking-tight sm:text-6xl">
       <span>{i18n.hero.title}</span>
+      {Astro.currentLocale === "en" && <br />}
       <DynamicText
         frequency={2000}
         texts={i18n.hero.dynamicTexts}
         className="text-4xl font-bold tracking-tight bg-gradient-to-r text-transparent bg-clip-text from-primary to-teal-500 sm:text-6xl"
         client:load
       />
+      {Astro.currentLocale === "en" && <span>{i18n.hero.title2}</span>}
     </h1>
     <!-- Hero description -->
     <p class="mt-6 text-lg font-light max-w-2xl mx-auto text-muted-foreground">

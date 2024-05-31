@@ -45,7 +45,7 @@ export const HeroGemini = ({ className, i18n }: Props) => {
       <div className={cn("sticky top-52 h-[60vh] text-center", className)}>
         <h1 className="text-4xl font-bold sm:text-6xl max-w-3xl mx-auto">
           {i18n.title}{" "}
-          <span className="bg-gradient-to-r leading-normal text-transparent bg-clip-text from-primary to-teal-500">
+          <span className="bg-gradient-to-r leading-tight text-transparent bg-clip-text from-primary to-teal-500">
             {i18n.title2}
           </span>
         </h1>
