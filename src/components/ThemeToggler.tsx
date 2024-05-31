@@ -1,6 +1,8 @@
 import { useState } from "react";
 
-export default function ThemeToggler() {
+interface Props extends React.HTMLAttributes<HTMLButtonElement> {}
+
+export default function ThemeToggler({ ...props }: Props) {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(() =>
     document.cookie.includes("theme=dark")
   );
@@ -19,7 +21,7 @@ export default function ThemeToggler() {
   };
 
   return (
-    <button onClick={toggleTheme} aria-label="Cambiar tema">
+    <button onClick={toggleTheme} aria-label="Cambiar tema" {...props}>
       {isDarkMode ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"

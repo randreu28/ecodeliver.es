@@ -3,22 +3,31 @@ import { getI18N } from "@/i18n";
 import { cn } from "../utils/utils";
 import ThemeToggler from "./ThemeToggler";
 import { getRelativeLocaleUrl } from "astro:i18n";
+import { Navbar as MobileNavbar } from "./Navbar";
 
 const currentUrl = new URL(Astro.request.url).pathname;
 const i18n = getI18N(Astro.currentLocale || "es").navbar;
 
 const navbar = [
   {
+    href: getRelativeLocaleUrl(Astro.currentLocale || "es", "/"),
+    label: i18n.home,
+    active: getRelativeLocaleUrl(Astro.currentLocale || "es", "/") === currentUrl,
+  },
+  {
     href: getRelativeLocaleUrl(Astro.currentLocale || "es", "technologies"),
     label: i18n.tech,
+    active: getRelativeLocaleUrl(Astro.currentLocale || "es", "technologies") === currentUrl,
   },
   {
     href: getRelativeLocaleUrl(Astro.currentLocale || "es", "collaborative"),
     label: i18n.collaborative,
+    active: getRelativeLocaleUrl(Astro.currentLocale || "es", "collaborative") === currentUrl,
   },
   {
     href: getRelativeLocaleUrl(Astro.currentLocale || "es", "about-us"),
     label: i18n.origin,
+    active: getRelativeLocaleUrl(Astro.currentLocale || "es", "about-us") === currentUrl,
   },
 ];
 ---
@@ -41,7 +50,7 @@ const navbar = [
         <a
           href={links.href}
           class={cn([
-            links.href === currentUrl && "text-primary font-semibold",
+            links.active && "text-primary font-semibold",
             "hover:underline hidden lg:block",
           ])}
         >
@@ -51,5 +60,7 @@ const navbar = [
     }
   </div>
 
-  <ThemeToggler client:only="react" />
+  <ThemeToggler className="hidden lg:block" client:only="react" />
+
+  <MobileNavbar client:only links={navbar} />
 </nav>

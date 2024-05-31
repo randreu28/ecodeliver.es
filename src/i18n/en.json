@@ -1,5 +1,6 @@
 {
     "navbar": {
+        "home": "Home",
         "tech": "Technologies",
         "collaborative": "Collaborative Transport",
         "origin": "Our Origin"
