@@ -59,21 +59,20 @@
         },
         "news": {
             "title": "News",
-            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis fugit dolorum amet dolores praesentium, alias nam? Tempore",
             "cards": [
                 {
-                    "title": "News title",
-                    "description": "News description",
+                    "title": "The Consorci de la Zona Franca presents the high-tech incubator in logistics 4.0",
+                    "description": "ecoDeliver is proud to participate in the new high-tech incubator in logistics 4.0 presented by the Consorci de la Zona Franca, a step forward towards innovation and sustainability in the sector.",
                     "cta": "Read more"
                 },
                 {
-                    "title": "News title",
-                    "description": "News description",
+                    "title": "ecoDeliver revolutionizes last-mile logistics",
+                    "description": "ecoDeliver, known as the 'BlaBlaCar of parcel delivery', is transforming last-mile logistics through the sharing economy, reducing CO2 emissions and optimizing resource use.",
                     "cta": "Read more"
                 },
                 {
-                    "title": "News title",
-                    "description": "News description",
+                    "title": "ecoDeliver, the parcel courier of the bus 'hold'",
+                    "description": "ecoDeliver is revolutionizing collaborative and sustainable transport, optimizing the use of space in buses and reducing CO2 emissions. With its innovative approach, the company is transforming urban logistics in cities like Barcelona, Madrid, and Málaga.",
                     "cta": "Read more"
                 }
             ]
