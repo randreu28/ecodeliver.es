@@ -83,11 +83,11 @@
         "title": "¡Contáctanos!",
         "description": "¿En qué te podemos ayudar?",
         "name": "Nombre",
-        "namePlaceholder": "Elon Musk",
+        "namePlaceholder": "John Doe",
         "email": "Correo electrónico",
-        "emailPlaceholder": "elon@musk.com",
+        "emailPlaceholder": "john@doe.com",
         "message": "Mensaje",
-        "messagePlaceholder": "Quisiera regalaros unos teslas...",
+        "messagePlaceholder": "Tu mensaje...",
         "submit": "Enviar",
         "submitting": "Enviando...",
         "submitted": "Enviado",
@@ -269,7 +269,7 @@
                 "heading": "Nuestro orígen",
                 "blockquote": "Pioneros en sostenibilidad a través de la colaboración",
                 "paragraphs": [
-                    "En ecoDeliver, nuestro viaje comenzó con una visión simple pero poderosa: revolucionar la industria del transporte a través de la colaboración y la sostenibilidad. Todo comenzó con una observación aguda de nuestros fundadores, quienes notaron la ineficiencia y el impacto ambiental de innumerables vehículos recorriendo nuestras carreteras con amplio espacio vacío.",
+                    "En ecoDeliver, nuestro viaje comenzó con una visión simple pero poderosa: revolucionar la industria del transporte a través de la colaboración y la sostenibilidad. Todo comenzó con una observación aguda de nuestros fundadores, Patrick y Mateu, quienes notaron la ineficiencia y el impacto ambiental de innumerables vehículos recorriendo nuestras carreteras con amplio espacio vacío.",
                     "Motivados por la creencia de que este espacio desperdiciado podría ser aprovechado para transportar bienes de manera sostenible, nos propusimos crear soluciones innovadoras que optimizaran la utilización de los recursos existentes. Nuestra primera incursión involucró la pionera de un modelo similar a 'blablacar' pero adaptado para paquetes, donde individuos podían aprovechar sus viajes planificados para transportar paquetes a largas distancias, utilizando efectivamente la capacidad sobrante de sus vehículos."
                 ]
             },
