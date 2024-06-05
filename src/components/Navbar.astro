@@ -12,22 +12,29 @@ const navbar = [
   {
     href: getRelativeLocaleUrl(Astro.currentLocale || "es", "/"),
     label: i18n.home,
-    active: getRelativeLocaleUrl(Astro.currentLocale || "es", "/") === currentUrl,
+    active:
+      getRelativeLocaleUrl(Astro.currentLocale || "es", "/") === currentUrl,
   },
   {
     href: getRelativeLocaleUrl(Astro.currentLocale || "es", "technologies"),
     label: i18n.tech,
-    active: getRelativeLocaleUrl(Astro.currentLocale || "es", "technologies") === currentUrl,
+    active:
+      getRelativeLocaleUrl(Astro.currentLocale || "es", "technologies") ===
+      currentUrl,
   },
   {
     href: getRelativeLocaleUrl(Astro.currentLocale || "es", "collaborative"),
     label: i18n.collaborative,
-    active: getRelativeLocaleUrl(Astro.currentLocale || "es", "collaborative") === currentUrl,
+    active:
+      getRelativeLocaleUrl(Astro.currentLocale || "es", "collaborative") ===
+      currentUrl,
   },
   {
     href: getRelativeLocaleUrl(Astro.currentLocale || "es", "about-us"),
     label: i18n.origin,
-    active: getRelativeLocaleUrl(Astro.currentLocale || "es", "about-us") === currentUrl,
+    active:
+      getRelativeLocaleUrl(Astro.currentLocale || "es", "about-us") ===
+      currentUrl,
   },
 ];
 ---
@@ -62,5 +69,5 @@ const navbar = [
 
   <ThemeToggler className="hidden lg:block" client:only="react" />
 
-  <MobileNavbar client:only links={navbar} />
+  <MobileNavbar links={navbar} client:only />
 </nav>

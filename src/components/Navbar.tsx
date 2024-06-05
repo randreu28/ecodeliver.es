@@ -31,7 +31,7 @@ export function Navbar({ links }: Props) {
           ></path>
         </svg>
       </MenuButton>
-      <MenuItems className="absolute right-0 mt-2 w-48 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-20">
+      <MenuItems className="absolute right-0 mt-2 w-48 origin-top-right divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-20">
         <div className="py-1">
           {links.map((link) => (
             <MenuItem key={link.href}>
