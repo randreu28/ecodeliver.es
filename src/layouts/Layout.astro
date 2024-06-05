@@ -20,7 +20,7 @@ const {
 } = Astro.props;
 
 const cookie = Astro.request.headers.get("cookie");
-const theme = cookie?.split("theme=")[1].split(";")[0];
+const theme = cookie?.includes("theme=dark") ? "dark" : "light";
 ---
 
 <!doctype html>
