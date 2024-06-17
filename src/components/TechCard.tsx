@@ -35,7 +35,7 @@ export const TechCard = ({ children, className }: Props) => {
     >
       <div
         onMouseMove={onMouseMove}
-        className="group/card rounded-3xl w-full relative overflow-hidden bg-transparent flex items-center justify-center h-full"
+        className="group/card rounded-3xl w-full relative overflow-hidden bg-transparent flex items-center justify-center h-fit p-5 lg:p-10"
       >
         <CardPattern
           mouseX={mouseX}
