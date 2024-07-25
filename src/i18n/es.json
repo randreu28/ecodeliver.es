@@ -245,19 +245,19 @@
         "steps": [
             {
                 "title": "Publica tu viaje en la App",
-                "description": "Tienes planeado viajar? No importa si vas en coche, bus o tren, completa tu perfil e indicanos la inforamción de tu viaje en la app de ecoDeliver"
+                "description": "¿Tienes planeado viajar? No importa si vas en coche, bus o tren, completa tu perfil e indicanos la información de tu viaje en la app de ecoDeliver"
             },
             {
-                "title": "Recoge los paquetes en nuestro almacén",
+                "title": "Recoge los paquetes en nuestro punto de encuentro",
                 "description": "Te estaremos esperando con bolsas de paquetes a la salida de la ciuidad"
             },
             {
                 "title": "Deja los paquetes al llegar a tu destino",
-                "description": "Cuando llegues a tu destino, djeas las bolsas con paquetes en nuestro almacén a la entrada de la ciuidad y listo! Son 5 minutos de desvío en cada ciuidad"
+                "description": "Cuando llegues a tu destino, deja las bolsas con paquetes en nuestro punto de encuentro. Tendremos un punto de encuentro en las estaciones de tren, bus o en las salidas de la ciuidad"
             },
             {
                 "title": "Recibe el pago y ¡listo!",
-                "description": "Cubriendo los costes del viaje y evitando que un camión tenga que hacer el transporte (ahorrando todas esas emisiones!)"
+                "description": "Cubriendo los costes del viaje y evitando que un camión tenga que hacer el transporte, ¡ahorrando todas esas emisiones!"
             }
         ]
     },

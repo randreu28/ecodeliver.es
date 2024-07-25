@@ -241,12 +241,12 @@
                 "description": "Planning to travel? Whether by car, bus, or train, complete your profile and provide your trip information in the ecoDeliver app"
             },
             {
-                "title": "Pick up the packages at our warehouse",
+                "title": "Pick up the packages at our meeting point",
                 "description": "We will be waiting for you with bags of packages at the city exit"
             },
             {
                 "title": "Drop off the packages upon arrival at your destination",
-                "description": "When you arrive at your destination, drop off the bags with packages at our warehouse at the city entrance and that's it! It's a 5-minute detour in each city"
+                "description": "When you arrive at your destination, drop off the bags with packages at our meeting point and that's it! Our meeting points will be at the train stations, bus stations, or at the city exits"
             },
             {
                 "title": "Receive the payment and you're done!",
