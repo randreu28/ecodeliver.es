@@ -233,23 +233,24 @@
             "packages": "packages",
             "packageQuantity": "number of packages"
         },
-        "benefitsTitle": "What value do we bring?",
-        "benefits": [
+        "howItWorks": "How does it work?",
+        "howItWorksDescription": "Anyone traveling between cities can be an ecoDriver, whether it's a car, bus, or train trip, transporting packages can cover the travel expenses!",
+        "steps": [
             {
-                "title": "Reduce Transportation Costs",
-                "description": "By optimizing our routes and sharing resources, we help significantly reduce transportation costs."
+                "title": "Publish your trip in the App",
+                "description": "Planning to travel? Whether by car, bus, or train, complete your profile and provide your trip information in the ecoDeliver app"
             },
             {
-                "title": "Last Mile and Long Distance Transport",
-                "description": "We offer comprehensive solutions for last mile and long-distance transport, ensuring efficient and timely delivery of your products."
+                "title": "Pick up the packages at our warehouse",
+                "description": "We will be waiting for you with bags of packages at the city exit"
             },
             {
-                "title": "Marketplace Management",
-                "description": "We facilitate the management of your market, connecting carriers and companies, saving management time."
+                "title": "Drop off the packages upon arrival at your destination",
+                "description": "When you arrive at your destination, drop off the bags with packages at our warehouse at the city entrance and that's it! It's a 5-minute detour in each city"
             },
             {
-                "title": "Making Every Trip Count, Reducing CO2",
-                "description": "We are committed to reducing the carbon footprint by optimizing every trip, promoting sustainable and responsible practices."
+                "title": "Receive the payment and you're done!",
+                "description": "Covering the travel costs and preventing a truck from having to make the transport (saving all those emissions!)"
             }
         ]
     },

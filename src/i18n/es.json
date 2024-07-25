@@ -240,23 +240,24 @@
             "packages": "paquetes",
             "packageQuantity": "número de paquetes"
         },
-        "benefitsTitle": "¿Qué valor aportamos?",
-        "benefits": [
+        "howItWorks": "¿Cómo funciona?",
+        "howItWorksDescription": "Cualquiera que vaya a viajar entre ciudades puede ser un ecoDriver, no importa si es un viaje en coche, bus o tren, transportando paquetes consigo puede cubrir los gastos del viaje!",
+        "steps": [
             {
-                "title": "Reducir costos de transporte",
-                "description": "Al optimizar nuestras rutas y compartir recursos, ayudamos a reducir significativamente el coste del transporte."
+                "title": "Publica tu viaje en la App",
+                "description": "Tienes planeado viajar? No importa si vas en coche, bus o tren, completa tu perfil e indicanos la inforamción de tu viaje en la app de ecoDeliver"
             },
             {
-                "title": "Transporte de última milla y de larga distancia",
-                "description": "Ofrecemos soluciones integrales para el transporte de última milla y de larga distancia, asegurando la entrega eficiente y puntual de sus productos."
+                "title": "Recoge los paquetes en nuestro almacén",
+                "description": "Te estaremos esperando con bolsas de paquetes a la salida de la ciuidad"
             },
             {
-                "title": "Gestión del marketplace",
-                "description": "Facilitamos la gestión de su mercado, conectando a transportistas y empresas, ahorrando tiempo de gestión."
+                "title": "Deja los paquetes al llegar a tu destino",
+                "description": "Cuando llegues a tu destino, djeas las bolsas con paquetes en nuestro almacén a la entrada de la ciuidad y listo! Son 5 minutos de desvío en cada ciuidad"
             },
             {
-                "title": "Hacer que cada viaje cuente, reduciendo CO2",
-                "description": "Nos comprometemos a reducir la huella de carbono optimizando cada viaje, promoviendo prácticas sostenibles y responsables."
+                "title": "Recibe el pago y ¡listo!",
+                "description": "Cubriendo los costes del viaje y evitando que un camión tenga que hacer el transporte (ahorrando todas esas emisiones!)"
             }
         ]
     },
