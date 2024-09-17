@@ -1,18 +1,19 @@
 ---
 import { Image } from "astro:assets";
-import barcelonaActiva from "../media/cloudLogos/barcelonaActiva.png"
-import eit from "../media/cloudLogos/eit.png"
-import logisticsIncubator from "../media/cloudLogos/logisticsIncubator.png"
-import zonaFranca from "../media/cloudLogos/zonaFranca.png"
-import AMB from "../media/cloudLogos/AMB.png"
-
+import barcelonaActiva from "../media/cloudLogos/barcelonaActiva.png";
+import logisticsIncubator from "../media/cloudLogos/logisticsIncubator.png";
+import zonaFranca from "../media/cloudLogos/zonaFranca.png";
+import nextGeneration from "../media/cloudLogos/nextGeneration.png";
+import planRecuperacion from "../media/cloudLogos/planRecuperacion.png";
 ---
 
-<div class="max-w-screen-xl mx-auto my-10 brightness-50 dark:brightness-100">
-  <div class="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5">
+<div class="max-w-screen-xl mx-auto my-10 p-10">
+  <div
+    class="gap-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 grayscale dark:invert"
+  >
     <div class="flex items-center justify-center">
-      <Image 
-        class="max-w-full h-12 object-scale-down "
+      <Image
+        class="max-w-full h-12 object-scale-down"
         src={barcelonaActiva}
         alt="cloud logo"
         loading="eager"
@@ -21,16 +22,7 @@ import AMB from "../media/cloudLogos/AMB.png"
 
     <div class="flex items-center justify-center">
       <Image
-        class="max-w-full h-24  object-scale-down"
-        src={eit}
-        alt="cloud logo"
-        loading="eager"
-      />
-    </div>
-
-    <div class="flex items-center justify-center md:col-span-2 lg:col-span-1">
-      <Image
-        class="max-w-full h-12  object-scale-down"
+        class="max-w-full h-12 object-scale-down"
         src={logisticsIncubator}
         alt="cloud logo"
         loading="eager"
@@ -39,7 +31,7 @@ import AMB from "../media/cloudLogos/AMB.png"
 
     <div class="flex items-center justify-center">
       <Image
-        class="max-w-full h-12  object-scale-down"
+        class="max-w-full h-12 object-scale-down"
         src={zonaFranca}
         alt="cloud logo"
         loading="eager"
@@ -48,8 +40,17 @@ import AMB from "../media/cloudLogos/AMB.png"
 
     <div class="flex items-center justify-center">
       <Image
-        class="max-w-full h-12  object-scale-down"
-        src={AMB}
+        class="max-w-full h-12 object-scale-down"
+        src={nextGeneration}
+        alt="cloud logo"
+        loading="eager"
+      />
+    </div>
+
+    <div class="flex items-center justify-center md:col-span-2 lg:col-span-1">
+      <Image
+        class="max-w-full h-12 object-scale-down"
+        src={planRecuperacion}
         alt="cloud logo"
         loading="eager"
       />
