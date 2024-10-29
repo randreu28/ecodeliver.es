@@ -163,18 +163,18 @@
         },
         "featuresTitle": "Pioneers in innovation technology",
         "featuresDescription": "Capacitated to develop logistics technology applications, artificial intelligence, route optimization, and more",
-        "features": [
+       "features": [
             {
                 "title": "Dynamic demand and price matching algorithms",
-                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet"
+                "description": "Explore how our advanced algorithms analyze market trends and adjust prices in real-time to maximize efficiency and profitability."
             },
             {
                 "title": "AI for logistics",
-                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet"
+                "description": "Discover the power of AI in logistics, capable of anticipating complications, optimizing routes, and managing inventory with remarkable precision."
             },
             {
                 "title": "Real-time route optimization",
-                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non corrupti doloribus voluptatum eveniet"
+                "description": "Our dynamic system not only plots routes but recalculates them instantly when faced with unexpected events, ensuring timely and efficient deliveries."
             }
         ],
         "goalSection": {
